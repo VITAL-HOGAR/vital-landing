@@ -5,56 +5,59 @@
 <title>Guía Gratuita | 10 Cuidados Esenciales para tu Adulto Mayor en Casa - Vitalhogar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body { background: #dfe7ee; font-family: 'Open Sans', Arial, sans-serif; }
-  .page { width: 210mm; min-height: 297mm; margin: 12px auto; background: white; position: relative; overflow: hidden; page-break-after: always; box-shadow: 0 4px 20px rgba(0,0,0,.18); display: flex; flex-direction: column; }
-  .page-img { width: 100%; height: 95mm; object-fit: cover; display: block; }
+  .page { width: 210mm; height: 296mm; margin: 12px auto; background: white; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.18); display: flex; flex-direction: column; page-break-after: always; break-after: page; }
+  .page:last-of-type { page-break-after: auto; break-after: auto; }
+  .page-img { width: 100%; height: 90mm; object-fit: cover; display: block; }
   .page-body { flex: 1; padding: 8mm 10mm 14mm; }
   .tint-blue { background: #F7FBFF; } .tint-green { background: #F1F8F2; }
   .tint-warm { background: #FFF8EF; } .tint-rose { background: #FFF5F7; }
-  .full { position: relative; flex: 1; }
-  .full img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-  .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,50,90,.95) 0%, rgba(20,50,90,.55) 45%, rgba(20,50,90,.15) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 12mm; color: white; text-align: center; gap: 10px; }
+  .cover-img { width: 100%; height: 175mm; object-fit: cover; display: block; }
+  .cover-box { flex: 1; background: linear-gradient(160deg, #2A6EBB 0%, #14325A 100%); color: white; padding: 8mm 12mm; text-align: center; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
   .badge { background: #4CAF50; display: inline-block; padding: 6px 20px; border-radius: 50px; font-weight: bold; margin: 0 auto; }
-  .overlay h1 { font-size: 2em; line-height: 1.2; }
-  .overlay p { opacity: .95; }
+  .cover-box h1 { font-size: 1.9em; line-height: 1.2; }
+  .cover-box p { opacity: .95; }
   .brand { letter-spacing: 3px; font-weight: bold; color: #BDE3FF; font-size: .9em; }
-  .page-head { text-align: center; margin-bottom: 18px; }
+  .page-head { text-align: center; margin-bottom: 16px; }
   .page-head h2 { color: #2A6EBB; font-size: 1.5em; }
   .line { width: 70px; height: 4px; background: #4CAF50; margin: 8px auto; border-radius: 2px; }
-  .tip { background: white; border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(42,110,187,.12); border-left: 6px solid #4CAF50; }
+  .tip { background: white; border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(42,110,187,.12); border-left: 6px solid #4CAF50; }
   .tip h3 { color: #2A6EBB; font-size: 1.1em; margin-bottom: 6px; }
-  .tip p { color: #444; line-height: 1.55; }
-  .intro { color: #444; line-height: 1.7; text-align: center; font-size: 1.08em; margin-top: 14px; }
-  .logo-c { text-align: center; margin: 16px 0; }
-  .logo-c img { max-width: 170px; border-radius: 10px; }
-  .alerta { background: white; border-left: 6px solid #FF9800; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; color: #5D4037; box-shadow: 0 2px 10px rgba(255,152,0,.15); }
-  .venta { background: #2A6EBB; color: white; border-radius: 14px; padding: 22px; text-align: center; margin-top: 14px; }
-  .venta h3 { font-size: 1.4em; margin-bottom: 10px; }
-  .venta p { margin: 6px 0; }
+  .tip p { color: #444; line-height: 1.5; }
+  .intro { color: #444; line-height: 1.7; text-align: center; font-size: 1.05em; margin-top: 12px; }
+  .logo-c { text-align: center; margin: 12px 0; }
+  .logo-c img { max-width: 150px; border-radius: 10px; }
+  .alerta { background: white; border-left: 6px solid #FF9800; border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; color: #5D4037; box-shadow: 0 2px 10px rgba(255,152,0,.15); }
+  .venta { background: #2A6EBB; color: white; border-radius: 14px; padding: 18px; text-align: center; margin-top: 10px; }
+  .venta h3 { font-size: 1.3em; margin-bottom: 8px; }
+  .venta p { margin: 5px 0; }
   .venta a { color: #BDE3FF; font-weight: bold; word-break: break-all; }
   .foot { position: absolute; bottom: 5mm; left: 0; right: 0; text-align: center; font-size: .78em; color: #9aa7b5; }
   .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; }
-  @media print { body { background: white; } .page { margin: 0; box-shadow: none; } .btn-pdf { display: none; } }
-  @media (max-width: 800px) { .page { width: 100%; min-height: auto; } .page-img { height: 260px; } }
+  @media (max-width: 800px) { .page { width: 100%; height: auto; min-height: 90vh; } .page-img { height: 240px; } .cover-img { height: 55vh; } }
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; width: 210mm; height: 296mm; }
+    .page-img { height: 90mm; }
+    .cover-img { height: 175mm; }
+    .btn-pdf { display: none; }
+  }
 </style>
 </head>
 <body>
 
 <button class="btn-pdf" onclick="window.print()">📥 DESCARGAR PDF</button>
 
-<!-- 💡 PARA CAMBIAR UNA FOTO: copia el link de un <img> y pégalo en otro. Así de simple. -->
-
 <!-- ══════════ PÁGINA 1: PORTADA ══════════ -->
 <div class="page">
-  <div class="full">
-    <img src="https://i.imgur.com/qvoQuQx.png" alt="Portada Vitalhogar">
-    <div class="overlay">
-      <span class="badge">GUÍA GRATUITA</span>
-      <h1>10 Cuidados Esenciales para tu Adulto Mayor en Casa</h1>
-      <p>Consejos reales de nuestro equipo de cuidados domiciliarios</p>
-      <div class="brand">VITALHOGAR · CUIDADOS DOMICILIARIOS</div>
-    </div>
+  <img class="cover-img" src="https://i.imgur.com/qvoQuQx.png" alt="Portada Vitalhogar">
+  <div class="cover-box">
+    <span class="badge">GUÍA GRATUITA</span>
+    <h1>10 Cuidados Esenciales para tu Adulto Mayor en Casa</h1>
+    <p>Consejos reales de nuestro equipo de cuidados domiciliarios</p>
+    <div class="brand">VITALHOGAR · CUIDADOS DOMICILIARIOS</div>
   </div>
 </div>
 
@@ -162,13 +165,11 @@
 
 <!-- ══════════ PÁGINA 10: CONTRAPORTADA ══════════ -->
 <div class="page">
-  <div class="full">
-    <img src="https://i.imgur.com/OGPTWwJ.png" alt="Comparte esta guía">
-    <div class="overlay">
-      <h1>Comparte esta guía ❤️</h1>
-      <p>Si te sirvió, compártela con una familia que la necesite.<br>El cuidado de nuestros mayores es tarea de todos.</p>
-      <div class="brand">VITALHOGAR · CÚCUTA · vitalhogarcd@gmail.com</div>
-    </div>
+  <img class="cover-img" src="https://i.imgur.com/OGPTWwJ.png" alt="Comparte esta guía">
+  <div class="cover-box">
+    <h1>Comparte esta guía ❤️</h1>
+    <p>Si te sirvió, compártela con una familia que la necesite.<br>El cuidado de nuestros mayores es tarea de todos.</p>
+    <div class="brand">VITALHOGAR · CÚCUTA · vitalhogarcd@gmail.com</div>
   </div>
 </div>
 
