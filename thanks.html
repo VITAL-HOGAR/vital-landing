@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gracias por tu mensaje - Vitalhogar</title>
+  <title>¡Gracias por contactarnos! - Vitalhogar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -28,27 +28,6 @@
       margin-bottom: 20px;
       line-height: 1.5em;
     }
-    .cta a {
-      background-color: #25D366;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.2em;
-      display: inline-block;
-      margin-top: 20px;
-    }
-    .cta a:hover {
-      background-color: #128C7E;
-    }
-    footer {
-      background-color: #2A6EBB;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-      font-size: 0.9em;
-    }
     img {
       max-width: 100%;
       border-radius: 12px;
@@ -58,32 +37,102 @@
       max-width: 200px;
       margin-top: 10px;
     }
+    
+    /* SECCIÓN DE PRÓXIMOS PASOS */
+    .next-steps {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      margin: 30px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .next-steps h3 {
+      color: #2A6EBB;
+      font-size: 1.4em;
+      margin-bottom: 20px;
+    }
+    .next-steps-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .next-steps-btn {
+      padding: 18px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .next-steps-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+    }
+    .btn-facebook {
+      background: linear-gradient(135deg, #1877F2 0%, #0D47A1 100%);
+      color: white;
+    }
+    .btn-volver {
+      background: linear-gradient(135deg, #757575 0%, #424242 100%);
+      color: white;
+    }
+    
+    footer {
+      background-color: #2A6EBB;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6em; }
+      .next-steps-btn { font-size: 1em; padding: 15px 20px; }
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>¡Gracias por tu mensaje!</h1>
+  <h1>¡Gracias por tu mensaje! 🎉</h1>
   <p>Hemos recibido tu solicitud en <strong>Vitalhogar Cuidados Domiciliarios</strong>.  
   Nuestro equipo la revisará y te responderá muy pronto.</p>
 
-  <!-- Imagen inspiradora real -->
   <img src="https://img.magnific.com/foto-gratis/joven-enfermera-vestida-uniforme-azul-hablando-mujer-mayor-hogar-ancianos_482257-22514.jpg?semt=ais_hybrid&w=740&q=80" 
        alt="Gracias por tu mensaje - Vitalhogar">
 
-  <!-- Logo oficial -->
   <div class="logo">
     <img src="https://i.imgur.com/01YZxey.jpeg" alt="Logo oficial Vitalhogar">
   </div>
 
   <p><strong>Tu bienestar es nuestra prioridad.</strong></p>
 
-  <p>Si deseas atención inmediata, también puedes escribirnos directamente por WhatsApp:</p>
-
-  <div class="cta">
-    <a href="https://wa.me/573182347187?text=Hola%20Vitalhogar,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank">
-      📲 Ir a WhatsApp
-    </a>
+  <!-- SECCIÓN DE PRÓXIMOS PASOS -->
+  <div class="next-steps">
+    <h3>Mientras tanto, conéctate con nosotros:</h3>
+    <div class="next-steps-buttons">
+      <a href="https://wa.link/8zq5xe" target="_blank" class="next-steps-btn btn-whatsapp">
+        📲 Atención inmediata por WhatsApp
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61577077622661" target="_blank" class="next-steps-btn btn-facebook">
+        🔵 Síguenos en Facebook
+      </a>
+      <a href="index.html" class="next-steps-btn btn-volver">
+        ← Volver al inicio
+      </a>
+    </div>
   </div>
 </div>
 
