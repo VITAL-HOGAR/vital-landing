@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vitalhogar Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; background-color: #F7FBFF; margin: 0; padding: 0; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; text-align: center; }
+    .logo img { max-width: 220px; height: auto; margin-bottom: 20px; }
+    h1 { color: #2A6EBB; font-size: 2em; margin-bottom: 10px; }
+    h2 { color: #4CAF50; font-size: 1.3em; margin-bottom: 20px; }
+    p { font-size: 1.1em; line-height: 1.5em; margin-bottom: 20px; }
+    ul { list-style: none; padding: 0; margin: 20px 0; text-align: left; display: inline-block; }
+    ul li { margin: 10px 0; font-size: 1em; }
+    ul li::before { content: "✔ "; color: #4CAF50; font-weight: bold; }
+    .cta { margin-top: 25px; }
+    .cta a { background-color: #25D366; color: white; padding: 15px 25px; border-radius: 8px; text-decoration: none; font-size: 1.2em; display: inline-block; }
+    .cta a:hover { background-color: #128C7E; }
+    form { margin-top: 30px; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto; }
+    form label { display: block; margin-bottom: 5px; font-weight: bold; color: #2A6EBB; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; }
+    form button { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; }
+    form button:hover { background-color: #2A6EBB; }
+    footer { background-color: #2A6EBB; color: white; text-align: center; padding: 15px; margin-top: 30px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="logo">
+    <img src="https://i.imgur.com/01YZxey.jpeg" alt="Logo Vitalhogar">
+  </div>
+  <h1>Vitalhogar Cuidados Domiciliarios</h1>
+  <h2>Cuidamos con amor y profesionalismo</h2>
+  <p>Atención de calidad en tu hogar con auxiliares confiables, respaldo legal y servicio 24/7.</p>
+
+  <ul>
+    <li>Turnos disponibles: 6h, 8h, 12h y 24h</li>
+    <li>Auxiliares calificados y con prestaciones</li>
+    <li>Cuidados a adultos mayores y pacientes</li>
+    <li>Guardias 24/7 disponibles</li>
+  </ul>
+
+  <div class="cta">
+    <a href="https://wa.me/573182347187?text=Hola%20Vitalhogar,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank">
+      📲 Contáctanos por WhatsApp
+    </a>
+  </div>
+
+  <!-- Formulario conectado a Formspree -->
+  <form id="contactForm" action="https://formspree.io/f/mnpavbdq" method="POST">
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="telefono">Teléfono</label>
+    <input type="text" id="telefono" name="telefono" required>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</div>
+
+<footer>
+  <p>Vitalhogar © 2026 | Cúcuta, Norte de Santander | vitalhogarcd@gmail.com</p>
+</footer>
+
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      // ✅ Envío exitoso → redirigir a la página de agradecimiento
+      window.location.href = "thanks.html";
+    } else {
+      alert("Hubo un error, intenta nuevamente.");
+    }
+  });
+</script>
+
+</body>
+</html>
