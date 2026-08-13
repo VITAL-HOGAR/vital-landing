@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Vitalhogar Landing Page</title>
+  <title>Vitalhogar - Cuidados Domiciliarios Profesionales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cuidados domiciliarios profesionales para adultos mayores en Cúcuta. Auxiliares calificados, servicio 24/7, respaldo legal.">
   <style>
     body { font-family: 'Open Sans', sans-serif; background-color: #F7FBFF; margin: 0; padding: 0; }
     .container { max-width: 900px; margin: 0 auto; padding: 20px; text-align: center; }
@@ -14,15 +15,80 @@
     ul { list-style: none; padding: 0; margin: 20px 0; text-align: left; display: inline-block; }
     ul li { margin: 10px 0; font-size: 1em; }
     ul li::before { content: "✔ "; color: #4CAF50; font-weight: bold; }
-    .cta { margin-top: 25px; }
-    .cta a { background-color: #25D366; color: white; padding: 15px 25px; border-radius: 8px; text-decoration: none; font-size: 1.2em; display: inline-block; }
-    .cta a:hover { background-color: #128C7E; }
+    
+    /* SECCIÓN HUB - BOTONES DE ACCIÓN */
+    .hub-section {
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px 20px;
+      margin: 30px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .hub-section h3 {
+      color: #2A6EBB;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    .hub-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .hub-btn {
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .hub-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .btn-cliente {
+      background: linear-gradient(135deg, #E91E63 0%, #C2185B 100%);
+      color: white;
+    }
+    .btn-auxiliar {
+      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+      color: white;
+    }
+    .btn-facebook {
+      background: linear-gradient(135deg, #1877F2 0%, #0D47A1 100%);
+      color: white;
+    }
+    .btn-guia {
+      background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+      color: white;
+    }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: white;
+    }
+    .btn-whatsapp:hover { background-color: #128C7E; }
+    
+    /* Formulario */
     form { margin-top: 30px; text-align: left; max-width: 500px; margin-left: auto; margin-right: auto; }
     form label { display: block; margin-bottom: 5px; font-weight: bold; color: #2A6EBB; }
-    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; }
-    form button { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; box-sizing: border-box; }
+    form button { background-color: #4CAF50; color: white; padding: 12px 20px; border: none; border-radius: 8px; font-size: 1.1em; cursor: pointer; width: 100%; }
     form button:hover { background-color: #2A6EBB; }
     footer { background-color: #2A6EBB; color: white; text-align: center; padding: 15px; margin-top: 30px; font-size: 0.9em; }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6em; }
+      h2 { font-size: 1.1em; }
+      .hub-btn { font-size: 1em; padding: 18px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -42,10 +108,23 @@
     <li>Guardias 24/7 disponibles</li>
   </ul>
 
-  <div class="cta">
-    <a href="https://wa.me/573182347187?text=Hola%20Vitalhogar,%20quiero%20más%20información%20sobre%20sus%20servicios." target="_blank">
-      📲 Contáctanos por WhatsApp
-    </a>
+  <!-- SECCIÓN HUB - BOTONES DE ACCIÓN -->
+  <div class="hub-section">
+    <h3>¿Cómo podemos ayudarte?</h3>
+    <div class="hub-buttons">
+      <a href="https://wa.link/8zq5xe" target="_blank" class="hub-btn btn-cliente">
+        ❤️ SOY FAMILIA - Busco Cuidado
+      </a>
+      <a href="https://wa.link/lrrq79" target="_blank" class="hub-btn btn-auxiliar">
+        👩‍⚕️ SOY AUXILIAR - Quiero Trabajar
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61577077622661" target="_blank" class="hub-btn btn-facebook">
+        🔵 Síguenos en Facebook
+      </a>
+      <a href="#contactForm" class="hub-btn btn-whatsapp" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'}); return false;">
+        📧 Enviar Mensaje por Email
+      </a>
+    </div>
   </div>
 
   <!-- Formulario conectado a Formspree -->
@@ -81,7 +160,6 @@
       headers: { 'Accept': 'application/json' }
     });
     if (response.ok) {
-      // ✅ Envío exitoso → redirigir a la página de agradecimiento
       window.location.href = "thanks.html";
     } else {
       alert("Hubo un error, intenta nuevamente.");
