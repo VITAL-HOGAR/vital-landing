@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Las Manos Que Cuidan | Vital Hogar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: #cfd8e0; font-family: Georgia, 'Times New Roman', serif; color: #222; }
+  .page { width: 210mm; min-height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; display: flex; flex-direction: column; }
+  .page:last-of-type { page-break-after: auto; }
+  .full { position: relative; height: 296mm; }
+  .full img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+  .ov-dark { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,30,60,.96) 0%, rgba(10,30,60,.45) 50%, rgba(10,30,60,.15) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 14mm; color: white; text-align: center; gap: 8px; }
+  .ov-dark .brand { letter-spacing: 4px; font-size: .85em; color: #E8C766; font-weight: bold; }
+  .ov-dark h1 { font-size: 2.6em; letter-spacing: 3px; color: #E8C766; line-height: 1.1; text-shadow: 0 2px 8px rgba(0,0,0,.5); }
+  .ov-dark .sub { font-size: 1em; font-style: italic; opacity: .95; max-width: 150mm; margin: 0 auto; }
+  .ov-dark .autor { margin-top: 6px; font-size: .9em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 6px 0; max-width: 120mm; margin-left: auto; margin-right: auto; }
+  .part { background: #1d5a8a; color: white; justify-content: center; align-items: center; text-align: center; padding: 20mm; gap: 10px; }
+  .part .num { font-size: 3.2em; color: #E8C766; }
+  .part h2 { font-size: 1.9em; letter-spacing: 2px; }
+  .part p { font-style: italic; opacity: .9; }
+  .chap-img { width: 100%; height: 78mm; object-fit: cover; display: block; }
+  .chap-body { flex: 1; padding: 8mm 12mm 12mm; }
+  .kicker { color: #b08a2e; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; }
+  h3.chap { color: #1d5a8a; font-size: 1.45em; margin: 4px 0 12px; }
+  p { text-align: justify; font-size: 10pt; line-height: 1.62; margin-bottom: 9px; }
+  p strong { color: #14406b; }
+  .quote { border-left: 4px solid #E8C766; margin: 12px 0; padding: 8px 14px; font-style: italic; color: #6b5a1f; background: #faf6ea; font-size: 10.5pt; }
+  .box { background: white; border: 1px solid #d8d2c4; border-radius: 10px; padding: 12px 14px; margin: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .box h4 { color: #1d5a8a; font-size: .95em; margin-bottom: 6px; }
+  .box ul { margin-left: 16px; } .box li { font-size: 9.6pt; line-height: 1.5; margin-bottom: 3px; text-align: justify; }
+  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 10px 12px; border-radius: 8px; margin: 10px 0; font-size: 9.6pt; }
+  .foot { position: absolute; bottom: 5mm; left: 0; right: 0; text-align: center; font-size: .72em; color: #a09a8c; letter-spacing: 1px; }
+  .logo-mini { width: 26mm; display: block; margin: 0 auto 8px; }
+  .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; font-family: Arial; }
+  @media (max-width: 800px) { .page { width: 100%; min-height: auto; } .chap-img { height: 240px; } .full { height: 92vh; } }
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; height: 296mm; min-height: auto; }
+    .full { height: 296mm; }
+    .chap-img { height: 78mm; }
+    .btn-pdf { display: none; }
+  }
+</style>
+</head>
+<body>
+<button class="btn-pdf" onclick="window.print()">📥 COMPRAR / DESCARGAR PDF</button>
+
+<!-- ══ PORTADA ══ -->
+<div class="page"><div class="full">
+  <img src="https://i.imgur.com/gpNgkyV.png" alt="Portada">
+  <div class="ov-dark">
+    <div class="brand">VITAL HOGAR · CUIDADOS DOMICILIARIOS</div>
+    <h1>LAS MANOS<br>QUE CUIDAN</h1>
+    <div class="sub">Lo que casi treinta años de enfermería domiciliaria me enseñaron sobre la vida, la muerte y el amor en el cuarto de una casa cualquiera</div>
+    <div class="autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta</div>
+  </div>
+</div></div>
+
+<!-- ══ ADVERTENCIA ══ -->
+<div class="page"><div class="chap-body" style="padding-top:25mm;">
+  <img class="logo-mini" src="https://i.imgur.com/01YZxey.jpeg" alt="Vital Hogar">
+  <h3 class="chap" style="text-align:center;">ADVERTENCIA ANTES DE EMPEZAR</h3>
+  <p>Este libro no es para leerlo cómodo en un sofá con café.</p>
+  <p>Este libro es para la mujer que a las tres de la mañana sostiene la mano de una madre que ya no la reconoce. Para el hombre que aprendió a poner una sonda porque nadie le enseñó y el paciente no podía esperar. Para la hija que llora en el baño para que su padre no la oiga, y sale con una sonrisa mentirosa diciendo <strong>"todo está bien, papá"</strong>.</p>
+  <p>Si buscas un manual clínico con palabras bonitas y diagramas de colores, cierra este libro. Aquí no hay literatura adornada. <strong>Hay verdad.</strong> La que aprendí en casi treinta años de rodillas en pisos de baldosa, de camas que olían a orina y a vida, de heridas que parecían no acabar, de niños que no podían caminar pero me enseñaron a vivir, y de viejos que se murieron agarrándome la mano pidiéndome que no me fuera.</p>
+  <p>Casi treinta años. Miles de pacientes. Cientos de muertes. Y una certeza que me mantiene en pie aunque la espalda me cruja como árbol viejo:</p>
+  <div class="quote">Cuidar a otro ser humano es el acto más sagrado que existe en esta tierra. Y nadie te lo va a agradecer lo suficiente. Pero lo haces igual. Porque alguien tiene que hacerlo. Y ese alguien eres tú.</div>
+</div>
+<div class="foot">LAS MANOS QUE CUIDAN · Vital Hogar</div></div>
+
+<!-- ══ PRÓLOGO ══ -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/XIOs7Qh.png" alt="Manos">
+  <div class="chap-body">
+    <div class="kicker">Prólogo</div>
+    <h3 class="chap">Las manos que me sostuvieron</h3>
+    <p>Mi primera paciente no me enseñó a cuidar. Me enseñó <strong>por qué</strong> se cuida.</p>
+    <p>Era 1997. Yo tenía veinte años y me temblaban las manos frente a la cama de doña Mercedes, una señora menuda con los ojos más vivos que he visto. Notó mi miedo, me sostuvo la mano con una fuerza que no parecía de sus ochenta y tres años, y me dijo:</p>
+    <div class="quote">"No tiembles, mijo. El temblor se quita con oficio. Pero si un día se te quita el miedo, ese día renuncia. El miedo es el respeto. Y el respeto es el amor trabajando."</div>
+    <p>Me quedé casi treinta años. Vi úlceras que empezaron por una arruga de la sábana, pulmones que se llenaron por un sorbo de agua dado con afán, familias rotas por no pedir ayuda. Y milagros que nadie aplaude: un abuelo que volvió a caminar al baño, una niña que dijo "mamá" con pictogramas, un hijo que aprendió a bañar a su padre y lloró de orgullo en la ducha.</p>
+    <p>Este libro no es un manual de enfermería. Es lo que le diría a mi propio hijo si mañana tuviera que cuidar a alguien que ama. Está escrito con la cabeza de un profesional y el corazón de quien ha sostenido miles de manos. Algunas ya no están. <strong>Todas me enseñaron.</strong></p>
+    <p>Si cuidas a alguien, este libro es para ti. Y si nadie te lo ha dicho hoy: <strong>gracias. El mundo necesita más manos como las tuyas.</strong></p>
+  </div>
+  <div class="foot">LAS MANOS QUE CUIDAN · Prólogo</div>
+</div>
+
+<!-- ══ PARTE I ══ -->
+<div class="page part"><div class="num">I</div><h2>LA CASA NO ES UN HOSPITAL</h2><p>Donde el cuidado aprende las reglas del hogar</p></div>
+
+<!-- CAP 1 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/ivC3NhR.png" alt="La puerta">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 1</div>
+    <h3 class="chap">El día que entras a una casa y la vida te cambia</h3>
+    <p>La primera vez que entré a una casa como enfermero tenía veinte años y creía que lo sabía todo. Venía del hospital con sus protocolos, sus luces frías y mi estetoscopio colgado como medalla.</p>
+    <p>Me abrió una señora de setenta años, bajita, manos deformadas por la artritis, delantal manchado de yuca. "Usted es el enfermero", dijo. No preguntó. Afirmó.</p>
+    <p>En el cuarto del fondo, su marido: setenta y seis años, un ACV, el lado izquierdo paralizado y la mirada fija en el techo. La señora me dijo la frase que escucharía miles de veces y que nunca dejó de dolerme:</p>
+    <div class="quote">"Él era un hombre fuerte. Mire cómo quedó."</div>
+    <p>No lloraba. Decía la verdad con la misma naturalidad con que decía que la sopa estaba lista. Y ahí entendí lo que ningún libro me enseñó: <strong>en el hospital cuidas pacientes. En la casa cuidas vidas. Y una vida no es lo mismo que un paciente.</strong></p>
+    <p>La enfermedad no destruye cuerpos: destruye identidades. Tu trabajo no es solo curar heridas; es ayudar a reconstruir la identidad de alguien que siente que ya no sirve para nada.</p>
+    <div class="quote">"La casa no es un hospital chiquito. Es un universo con sus propias reglas, rituales y dolores."</div>
+  </div>
+  <div class="foot">PARTE I · La casa no es un hospital</div>
+</div>
+
+<!-- CAP 2 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/5QukO0s.png" alt="El álbum">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 2</div>
+    <h3 class="chap">Las cuatro verdades de la casa</h3>
+    <p><strong>Primera verdad: en la casa mandan las rutinas, no los protocolos.</strong> La familia desayuna a las siete, el nieto llega a las tres, la vecina visita los miércoles y el baño se hace cuando llega el agua. Adáptate al ritmo de la casa como el agua al recipiente. Pero hay una línea que no se cruza: <strong>los medicamentos no negocian.</strong> La amoxicilina no espera a que termine la novela.</p>
+    <p><strong>Segunda verdad: el cuidador principal está más enfermo que el paciente.</strong> He visto cuidadores morirse antes que el paciente. No de cáncer: de agotamiento, de comer las sobras, de dormir lo que queda. En 2003 vi morir a una señora que cuidaba a su esposo con Alzheimer. Ella murió de un infarto a los sesenta y dos. Él vivió tres años más, sin recordar que ella existió. Desde ese día, lo primero que evalúo al entrar a una casa no es al paciente: <strong>es al cuidador.</strong></p>
+    <p><strong>Tercera verdad: el baño es el campo de batalla.</strong> Baño limpio, con jabón, toallas y barra: alguien se está esforzando. Baño oscuro, mojado y sin apoyos: emergencia no declarada. Si solo puedes mejorar una cosa en la casa, mejora el baño. <strong>El baño seguro salva más vidas que cualquier medicamento.</strong></p>
+    <p><strong>Cuarta verdad: la cocina decide el pronóstico.</strong> El adulto mayor que no come proteína pierde músculo, movilidad e independencia. <strong>Si el paciente no come, no importa cuánta medicina le des: el cuerpo sin combustible es un motor que se apaga.</strong></p>
+    <div class="box"><h4>✅ Checklist "Diagnóstico de la casa" (primer día)</h4><ul>
+      <li>Baño: ¿barra, silla, tapete, luz?</li><li>Camas: ¿altura, sábanas secas?</li><li>Pasillos: ¿tapetes, cables, luz?</li><li>Cocina: ¿proteína, texturas, agua?</li><li>Nevera: ¿medicamentos ordenados, vencidos?</li><li>Cuidador: ¿duerme, come, llora a escondidas?</li>
+    </ul></div>
+  </div>
+  <div class="foot">PARTE I · La casa no es un hospital</div>
+</div>
+
+<!-- ══ PARTE II ══ -->
+<div class="page part"><div class="num">II</div><h2>EL ARTE DE TOCAR</h2><p>Porque la técnica sin amor humilla, y el amor sin técnica lastima</p></div>
+
+<!-- CAP 3 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/gpNgkyV.png" alt="Las manos que curan">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 3</div>
+    <h3 class="chap">Las manos que curan</h3>
+    <p>En 1999 un médico viejo me dijo: "Muchacho, usted toca a los pacientes como si fueran cosas. <strong>Tóquelos como si fueran personas y verá cómo cambian.</strong>"</p>
+    <p>Lo creí una estupidez. Al día siguiente curé a don Carlos, tres meses con una úlcera en el sacro que no cerraba. Antes de ponerme los guantes, le tomé la mano: "Don Carlos, ¿cómo amaneció?". Me miró como si le hablaran en otro idioma. "Con dolor", dijo. "¿Dónde?". <strong>"En el alma."</strong></p>
+    <p>Empecé a curar al hombre, no a la herida. La herida cerró en tres semanas. No cambié el producto ni la técnica: cambié la intención.</p>
+    <p><strong>Las manos transmiten lo que la boca calla.</strong> Si tocas con prisa y fastidio, el cuerpo lo sabe y se cierra. Si tocas con calma y presencia, el cuerpo se abre y responde. La curación empieza antes del primer apósito: empieza en la intención de tus manos.</p>
+    <div class="quote">"Primero se cura el alma. La piel viene después."</div>
+  </div>
+  <div class="foot">PARTE II · El arte de tocar</div>
+</div>
+
+<!-- CAP 4 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/LDfj7v3.png" alt="Movilización">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 4</div>
+    <h3 class="chap">Cómo mover un cuerpo que ya no se mueve solo</h3>
+    <p>Me lesioné la espalda tres veces: por ignorancia, por prisa y por orgullo. La tercera, un paciente de noventa kilos, sin ayuda: "yo puedo solo". No pude. Disco lumbar roto, tres meses sin trabajar. Desde ese día, mi regla: <strong>si necesitas ayuda, pídela. Si no hay ayuda, no lo muevas. Espera.</strong></p>
+    <div class="box"><h4>🔄 Sentar en el borde de la cama</h4><ul>
+      <li>Gíralo hacia el lado libre.</li><li>Sube la cabecera gradual: la sangre necesita redistribuirse o se desmaya.</li><li>Brazo por detrás de los hombros. Nunca del cuello.</li><li>Piernas al borde, una por una.</li><li>Un minuto sentado antes de pararlo.</li>
+    </ul></div>
+    <div class="box"><h4>🔄 Cama → silla</h4><ul>
+      <li>Silla frenada (regla número uno).</li><li>Que te agarre de los hombros; tú de la cintura o cinturón de transferencia.</li><li>Tus rodillas tocan sus rodillas: lo bloqueas si falla.</li><li>"Uno, dos, tres": en tres se levanta y gira. No lo cargas: lo guías.</li><li>Baja lento: trabajan tus piernas, no tu espalda.</li>
+    </ul></div>
+    <div class="alerta">🚨 <strong>Si se cae al piso:</strong> NO lo levantes de inmediato. Evalúa: ¿duele algo? ¿mueve las extremidades? Dolor de cadera o pierna que no responde = emergencias, posible fractura. Y <strong>nunca lo jales de los brazos</strong>: el hombro del adulto mayor se luxa con mirar feo.</div>
+    <div class="quote">"Se levanta con las piernas, se sostiene con el corazón."</div>
+  </div>
+  <div class="foot">PARTE II · El arte de tocar</div>
+</div>
+
+<!-- CAP 5 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/xrKSR14.png" alt="El baño">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 5</div>
+    <h3 class="chap">El baño que dignifica</h3>
+    <p>A los veintiún años bañé a un señor de ochenta, viudo, fractura de cadera. Rápido, práctico, sin hablar. Al terminar me dijo algo que me destrozó el ego: <strong>"Muchacho, ¿usted nunca ha bañado a un hombre con dignidad? Mi esposa me bañaba con cariño. Usted me bañó con prisa."</strong></p>
+    <p>Desde ese día entendí: <strong>el baño no es para limpiar el cuerpo. Es para restaurar el alma.</strong></p>
+    <div class="box"><h4>🛁 El ritual</h4><ul>
+      <li>Prepara TODO antes: el frío y la espera humillan.</li><li>Puerta cerrada: la privacidad no es opcional.</li><li>Explícale cada paso aunque tenga demencia: el tono de voz le dice que está seguro.</li><li>Tapa lo que no estás lavando: la exposición prolongada es violencia silenciosa.</li><li>De arriba hacia abajo, secando cada zona. Zona íntima al final, de adelante hacia atrás.</li><li>Seca a palmaditas: la piel del adulto mayor es delgada como papel.</li><li>Ropa limpia y la frase mágica: "Quedó usted muy bien presentable."</li>
+    </ul></div>
+    <div class="alerta">⚠️ <strong>Piel (tu alarma):</strong> cambios de posición cada 2 horas; revisa talones, sacro, codos, omóplatos y nuca. Mancha roja que NO blanquea al presionar = daño empezando → alivia presión y consulta HOY. No masajees lo rojo, no dejes sábanas húmedas. La úlcera se forma en horas, no en semanas.</div>
+    <div class="quote">"Nadie debe salir de un baño sintiéndose menos persona de la que entró."</div>
+  </div>
+  <div class="foot">PARTE II · El arte de tocar</div>
+</div>
+
+<!-- ══ PARTE III ══ -->
+<div class="page part"><div class="num">III</div><h2>LAS HERIDAS QUE NO SE VEN</h2><p>Medicamentos y alimentación: los silenciosos que deciden todo</p></div>
+
+<!-- CAP 6 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/Wge2EHT.png" alt="Medicamentos">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 6</div>
+    <h3 class="chap">Los seis correctos</h3>
+    <p>La señora Ruth tomó la pastilla de su esposo "porque eran iguales, blanquitas". Terminó en urgencias por una hipoglucemia que no era suya. Desde entonces enseño una regla: <strong>la memoria falla; el método no.</strong></p>
+    <div class="box"><h4>📋 Antes de dar CUALQUIER medicamento</h4><ul>
+      <li>✅ Correcto paciente · ✅ Medicamento · ✅ Dosis</li><li>✅ Hora · ✅ Vía · ✅ Vencimiento</li><li>Pastillero semanal con NOMBRE y DOSIS en cada casilla. Nunca "la blanca" o "la redonda". Los colores mienten; las etiquetas no.</li>
+    </ul></div>
+    <div class="alerta">🚫 <strong>Nunca tritures medicamentos de liberación prolongada:</strong> es dar de golpe una dosis de 24 horas. Si no traga, pide jarabe o gotas. ⚠️ Somnolencia nueva, confusión o mareo tras medicamento nuevo → no lo suspendas por cuenta: llama al médico hoy.</div>
+    <div class="quote">"En medicamentos, la duda vale más que la prisa."</div>
+  </div>
+  <div class="foot">PARTE III · Las heridas que no se ven</div>
+</div>
+
+<!-- CAP 7 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/O7YQzux.png" alt="Alimentación">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 7</div>
+    <h3 class="chap">La alimentación como acto de amor</h3>
+    <p>En 2012, una señora con Alzheimer avanzada dejó de comer. La familia le ofrecía todo; ella cerraba la boca. Hasta que llegó la nieta de ocho años con una manzana: se sentó a su lado, la partió en pedacitos y se la dio mientras le contaba del colegio. La señora se comió media manzana.</p>
+    <p>La familia, asombrada, me preguntó cómo. Y esa es la lección más grande de mi vida sobre alimentación: <strong>la gente no come nutrientes. Come emociones.</strong></p>
+    <div class="box"><h4>✅ Reglas para alimentar a quien no quiere comer</h4><ul>
+      <li>Nunca con afán: el paciente lo siente y se cierra.</li><li>Porciones pequeñas: dos cucharadas. Un plato lleno asusta.</li><li>Tibio, no hirviendo: lo caliente quema y asusta.</li><li>Si tose al beber, espesa el líquido (textura néctar): el agua fina va al pulmón y causa neumonía por aspiración.</li><li>Sentado a 90°, y 30 minutos sentado después de comer.</li>
+    </ul></div>
+    <p><strong>💧 La sed miente:</strong> el adulto mayor no siente sed. Agua cada 2 horas aunque diga que no. Orina oscura = deshidratación.</p>
+    <div class="quote">"Una mesa en paz alimenta más que el plato."</div>
+  </div>
+  <div class="foot">PARTE III · Las heridas que no se ven</div>
+</div>
+
+<!-- ══ PARTE IV ══ -->
+<div class="page part"><div class="num">IV</div><h2>CUANDO LA VIDA SE PELIGRA</h2><p>Los tres minutos que lo deciden todo</p></div>
+
+<!-- CAP 8 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/yfpIKNw.png" alt="Emergencia">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 8</div>
+    <h3 class="chap">La emergencia que nadie espera</h3>
+    <p>En 2016, once de la noche: la hija de un paciente con Parkinson, histérica, su padre atragantado con carne, sin respirar. "Pon el teléfono en altavoz. Escúchame. Esto es lo que vas a hacer." Brazo bajo la axila, puño bajo el esternón, tirón hacia arriba. Al tercer tirón, la carne salió volando.</p>
+    <p>Esa noche entendí: <strong>en una emergencia domiciliaria, tú eres la ambulancia, el hospital y el médico. Y los primeros tres minutos deciden todo.</strong></p>
+    <div class="box"><h4>🚨 Atragantamiento y ACV</h4><ul>
+      <li>Si tose, déjalo toser: la tos vale más que cualquier maniobra.</li><li>Si no tose ni habla: Heimlich. Si pierde el conocimiento: piso, vía aérea, compresiones.</li><li>ACV: cara torcida al sonreír · un brazo no se levanta · palabra arrastrada · TIEMPO. Dos signos = emergencias YA. No aspirina, no comida, no espera.</li>
+    </ul></div>
+    <div class="box"><h4>🪪 La Tarjeta de la Nevera (pégala HOY)</h4><ul>
+      <li>NOMBRE / EDAD / SANGRE · DIAGNÓSTICOS · ALERGIAS</li><li>MEDICAMENTOS · CONTACTO 1 y 2 · MÉDICO · EPS</li>
+    </ul></div>
+    <div class="alerta">🚫 Nunca: agua a un desmayado · dedos en la boca en convulsión · retirar objetos clavados · pasta o café en quemaduras · mover a quien cayó con dolor de cuello o espalda.</div>
+    <div class="quote">"En la emergencia, el pánico pregunta; la calma actúa."</div>
+  </div>
+  <div class="foot">PARTE IV · Cuando la vida se peligra</div>
+</div>
+
+<!-- CAP 9 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/rW7Odb9.png" alt="El niño">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 9</div>
+    <h3 class="chap">Cuando el paciente es un niño</h3>
+    <p>En 2014 empecé a cuidar a un niño de seis años con parálisis cerebral severa. Su madre me recibió con esa mezcla de esperanza y desconfianza que solo tienen los padres de niños con discapacidad: han visto pasar tantos que prometen y no cumplen, que ya no creen en nada. "Usted viene a cambiar la sonda", dijo. "Sí, señora." <strong>"Pues lave sus manos. Aquí no entramos con gérmenes."</strong></p>
+    <p>Esa mujer me enseñó más que cualquier curso: <strong>un niño con discapacidad no es un niño roto. Es un niño que experimenta el mundo de otra manera. Tu trabajo no es arreglarlo: es acompañarlo.</strong></p>
+    <div class="box"><h4>🧩 Lo que aprendí</h4><ul>
+      <li>El niño te habla aunque no use palabras: espalda arqueada = dolor; rigidez = incomodidad; sonrisa = vas bien.</li>
+      <li>Las rutinas son sagradas: si lo bañas a las cinco, no a las seis. El caos angustia.</li>
+      <li>La familia necesita descanso REAL: ofréceles quedarte una noche completa para que duerman.</li>
+      <li>Nunca digas "pobrecito" delante del niño. La lástima es una forma de desprecio.</li>
+      <li>Celebra lo mínimo: para una madre, un dedo movido a propósito es el universo entero.</li>
+    </ul></div>
+    <div class="quote">"No apures su paso: acompáñalo."</div>
+  </div>
+  <div class="foot">PARTE IV · Cuando la vida se peligra</div>
+</div>
+
+<!-- ══ PARTE V ══ -->
+<div class="page part"><div class="num">V</div><h2>EL CUIDADOR QUE NADIE CUIDA</h2><p>Porque no puedes servir de una taza vacía</p></div>
+
+<!-- CAP 10 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/9CLimZW.png" alt="El cuidador">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 10</div>
+    <h3 class="chap">El síndrome del cuidador quemado</h3>
+    <p>En 2019 conocí a una mujer que llevaba doce años cuidando a su esposo con demencia. Doce años sin vacaciones, sin dormir cuatro horas seguidas. Pesaba cuarenta kilos, ojeras hasta la barbilla, manos temblorosas. "Señora, usted necesita descansar." Me respondió: <strong>"¿Descansar de qué? Si me muero, ¿quién lo cuida?"</strong> Tres meses después murió de un infarto. Tenía cincuenta y nueve años.</p>
+    <div class="alerta">⚠️ <strong>Señales de colapso:</strong> pérdida de peso sin explicación · insomnio · irritabilidad · llanto fácil · olvidar tus propias citas · aislarte · y ese pensamiento de "sería mejor que se muriera para descansar". Ese pensamiento no te hace mala persona: te hace humano. Y es la señal más clara de que necesitas ayuda inmediata.</div>
+    <div class="box"><h4>🛟 Plan de supervivencia</h4><ul>
+      <li>Dos horas sagradas al día donde otro se hace cargo. Aunque pagues: es oxígeno, no gasto.</li>
+      <li>Pide ayuda específica: "quédate con mamá el sábado de 2 a 5 para ir al médico".</li>
+      <li>Tu cita médica es tan importante como la del paciente.</li>
+      <li>Busca un grupo de apoyo: saber que no eres el único en el infierno devuelve la cordura.</li>
+      <li>Permítete el enojo. Llora, grita en una almohada. Y después lávate la cara y vuelve.</li>
+      <li>Respiración 4-7-8: inhala 4, sostén 7, exhala 8. Cuatro veces.</li>
+    </ul></div>
+    <div class="quote">"No puedes servir de una taza vacía. Pedir ayuda no es falla: es amor inteligente."</div>
+  </div>
+  <div class="foot">PARTE V · El cuidador que nadie cuida</div>
+</div>
+
+<!-- ══ PARTE VI ══ -->
+<div class="page part"><div class="num">VI</div><h2>EL PLAN DE ACCIÓN</h2><p>Tus primeros treinta días, paso a paso</p></div>
+
+<!-- CAP 11 -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/Wge2EHT.png" alt="Plan">
+  <div class="chap-body">
+    <div class="kicker">Capítulo 11</div>
+    <h3 class="chap">Los primeros treinta días</h3>
+    <div class="box"><h4>📅 Semana a semana</h4><ul>
+      <li><strong>Día 1:</strong> recorre la casa como un ladrón buscando peligros. El baño es prioridad uno.</li>
+      <li><strong>Día 2:</strong> medicamentos: lista, dosis, horarios, vencidos a la basura, cuadro en la nevera.</li>
+      <li><strong>Día 3:</strong> rutina de higiene definida. Encamado: organiza el baño en cama.</li>
+      <li><strong>Día 4:</strong> alimentación: texturas, agua. Tose al beber → médico evalúa deglución.</li>
+      <li><strong>Día 5:</strong> citas médicas: tratante, especialistas… y LA TUYA.</li>
+      <li><strong>Día 6:</strong> red de apoyo: nombres, teléfonos y qué puede hacer cada uno.</li>
+      <li><strong>Día 7:</strong> DESCANSA. Otra persona se encarga. Aunque pagues: es inversión.</li>
+      <li><strong>Días 8–14:</strong> rutinas fijas. La rutina da seguridad al paciente y estructura al cuidador.</li>
+      <li><strong>Días 15–21:</strong> evalúa y ajusta; pide lo que necesites.</li>
+      <li><strong>Días 22–28:</strong> tu cuerpo y tu mente: camina 30 minutos, sal de la casa.</li>
+      <li><strong>Día 29:</strong> lo legal: testamento, poderes, seguros. No esperes a la urgencia.</li>
+      <li><strong>Día 30:</strong> tu estado emocional. Ajusta. El cuidado es dinámico.</li>
+    </ul></div>
+    <div class="box"><h4>✅ Checklist diaria (imprime y marca)</h4><ul>
+      <li>☐ Posiciones · ☐ Agua cada 2h · ☐ Seis correctos · ☐ Piel · ☐ Movimiento · ☐ Un momento de calma · ☐ ¿Y tú, cómo estás hoy?</li>
+    </ul></div>
+  </div>
+  <div class="foot">PARTE VI · El plan de acción</div>
+</div>
+
+<!-- ══ EPÍLOGO ══ -->
+<div class="page">
+  <img class="chap-img" src="https://i.imgur.com/5QukO0s.png" alt="Epílogo">
+  <div class="chap-body">
+    <div class="kicker">Epílogo</div>
+    <h3 class="chap">La última lección</h3>
+    <p>En 2024 cuidé a un señor de noventa y un años en sus últimos días. Cáncer terminal. La familia cumplió su deseo: morir en casa.</p>
+    <p>La última noche me senté a su lado. No hablaba; respiraba lento. Le tomé la mano y sentí cómo la presión de sus dedos se iba apagando. A las tres de la mañana abrió los ojos, me miró y dijo:</p>
+    <div class="quote">"Gracias por no dejarme solo."</div>
+    <p>Cerró los ojos. Y no los volvió a abrir.</p>
+    <p>Casi treinta años. Miles de pacientes. Pero esa frase es la que me define. Porque al final no se trata de técnicas, protocolos ni medicamentos. Se trata de <strong>no dejar solo a nadie en el momento más vulnerable de su vida.</strong></p>
+    <p>Tú que cuidas hoy, escúchame: no necesitas saberlo todo ni hacerlo perfecto. Solo necesitas estar ahí. Presente. Con las manos listas y el corazón dispuesto. El resto se aprende en el camino. Yo llevo casi treinta años aprendiendo. <strong>Y todavía me falta.</strong></p>
+    <p>Doña Mercedes tenía razón: el día que se me quite el miedo, renuncio. Casi treinta años después, sigo temblando un poquito cada vez que sostengo una mano nueva.</p>
+    <p><strong>Y sigo aquí.</strong></p>
+    <p style="text-align:right; font-style:italic;">— El Autor</p>
+  </div>
+  <div class="foot">LAS MANOS QUE CUIDAN · Epílogo</div>
+</div>
+
+<!-- ══ CONTRAPORTADA DE VENTA ══ -->
+<div class="page"><div class="full">
+  <img src="https://i.imgur.com/gpNgkyV.png" alt="Vital Hogar">
+  <div class="ov-dark">
+    <h1 style="font-size:1.7em;">NO TIENES QUE<br>HACERLO SOLO</h1>
+    <p class="sub">Si al terminar este libro sientes que el peso es demasiado, que las noches son muy largas o que tus manos ya no alcanzan: no es falla. Es la señal.</p>
+    <p class="sub" style="font-weight:bold;">Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas, auxiliares verificados y el mismo respeto que aprendí en casi treinta años.</p>
+    <div class="autor">VITAL HOGAR · Cuidados Domiciliarios<br>Cuidamos con amor y profesionalismo<br>📲 Familias: wa.link/8zq5xe · 🩺 Auxiliares: wa.link/lrrq79<br>🌐 vital-landing-gamma.vercel.app</div>
+    <p class="sub" style="font-size:.85em;">Porque cuidar es sagrado. Y nadie debería hacerlo con las manos vacías ni el corazón solo.</p>
+  </div>
+</div></div>
+
+</body>
+</html>
