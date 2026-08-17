@@ -10,20 +10,17 @@
   body { background: #cfd8e0; font-family: Georgia, 'Times New Roman', serif; color: #222; }
   .page { width: 210mm; min-height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; display: flex; flex-direction: column; }
   .page:last-of-type { page-break-after: auto; }
-  /* PORTADAS */
-  .full { position: relative; flex: 1; }
+  .full { position: relative; height: 296mm; }
   .full img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
   .ov-dark { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,30,60,.96) 0%, rgba(10,30,60,.45) 50%, rgba(10,30,60,.15) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 14mm; color: white; text-align: center; gap: 8px; }
   .ov-dark .brand { letter-spacing: 4px; font-size: .85em; color: #E8C766; font-weight: bold; }
   .ov-dark h1 { font-size: 2.6em; letter-spacing: 3px; color: #E8C766; line-height: 1.1; text-shadow: 0 2px 8px rgba(0,0,0,.5); }
   .ov-dark .sub { font-size: 1em; font-style: italic; opacity: .95; max-width: 150mm; margin: 0 auto; }
   .ov-dark .autor { margin-top: 6px; font-size: .9em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 6px 0; max-width: 120mm; margin-left: auto; margin-right: auto; }
-  /* PARTES */
   .part { background: #1d5a8a; color: white; justify-content: center; align-items: center; text-align: center; padding: 20mm; gap: 10px; }
   .part .num { font-size: 3.2em; color: #E8C766; }
   .part h2 { font-size: 1.9em; letter-spacing: 2px; }
   .part p { font-style: italic; opacity: .9; }
-  /* CAPITULOS */
   .chap-img { width: 100%; height: 78mm; object-fit: cover; display: block; }
   .chap-body { flex: 1; padding: 8mm 12mm 12mm; }
   .kicker { color: #b08a2e; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; }
@@ -38,8 +35,14 @@
   .foot { position: absolute; bottom: 5mm; left: 0; right: 0; text-align: center; font-size: .72em; color: #a09a8c; letter-spacing: 1px; }
   .logo-mini { width: 26mm; display: block; margin: 0 auto 8px; }
   .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; font-family: Arial; }
-  @media print { body { background: white; } .page { margin: 0; box-shadow: none; } .btn-pdf { display: none; } }
-  @media (max-width: 800px) { .page { width: 100%; min-height: auto; } .chap-img { height: 240px; } }
+  @media (max-width: 800px) { .page { width: 100%; min-height: auto; } .chap-img { height: 240px; } .full { height: 92vh; } }
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; height: 296mm; min-height: auto; }
+    .full { height: 296mm; }
+    .chap-img { height: 78mm; }
+    .btn-pdf { display: none; }
+  }
 </style>
 </head>
 <body>
