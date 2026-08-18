@@ -8,54 +8,54 @@
   @page { size: A4; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body { background: #cfd8e0; font-family: Georgia, 'Times New Roman', serif; color: #222; }
-  .page { width: 210mm; min-height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; display: flex; flex-direction: column; }
-  .full { position: relative; height: 296mm; }
-  .full img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-  .ov-dark { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,30,60,.96) 0%, rgba(10,30,60,.45) 50%, rgba(10,30,60,.15) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 14mm; color: white; text-align: center; gap: 8px; }
-  .ov-dark .brand { letter-spacing: 4px; font-size: .85em; color: #E8C766; font-weight: bold; }
-  .ov-dark h1 { font-size: 2.6em; letter-spacing: 3px; color: #E8C766; line-height: 1.1; text-shadow: 0 2px 8px rgba(0,0,0,.5); }
-  .ov-dark .sub { font-size: 1em; font-style: italic; opacity: .95; max-width: 150mm; margin: 0 auto; }
-  .banda { background: #E8C766; color: #14406b; font-weight: bold; font-size: .85em; letter-spacing: 2px; padding: 5px 14px; border-radius: 20px; margin: 0 auto; }
-  .ov-dark .autor { margin-top: 6px; font-size: .9em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 6px 0; max-width: 120mm; margin-left: auto; margin-right: auto; }
-  .part { background: #1d5a8a; color: white; justify-content: center; align-items: center; text-align: center; padding: 20mm; gap: 10px; }
+  .page { width: 210mm; height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; }
+  .page:last-of-type { page-break-after: auto; }
+  .cover { background: #0e2a4d; color: white; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16mm 14mm; text-align: center; }
+  .c-brand { letter-spacing: 4px; font-size: .8em; color: #E8C766; font-weight: bold; }
+  .cover h1 { font-size: 2.5em; letter-spacing: 3px; color: #E8C766; line-height: 1.15; margin-top: 4mm; }
+  .c-img { width: 100%; border: 1px solid #E8C766; padding: 2mm; background: #0a2038; }
+  .c-img img { width: 100%; height: 118mm; object-fit: contain; display: block; }
+  .c-sub { font-style: italic; font-size: .95em; opacity: .95; max-width: 160mm; }
+  .banda { background: #E8C766; color: #14406b; font-weight: bold; font-size: .8em; letter-spacing: 2px; padding: 4px 16px; border-radius: 20px; }
+  .c-autor { font-size: .85em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 5px 0; max-width: 130mm; }
+  .part { background: #1d5a8a; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20mm; gap: 10px; }
   .part .num { font-size: 3.2em; color: #E8C766; }
   .part h2 { font-size: 1.9em; letter-spacing: 2px; }
   .part p { font-style: italic; opacity: .9; }
-  .chap-img { width: 100%; height: 70mm; object-fit: cover; display: block; }
-  .chap-body { flex: 1; padding: 7mm 12mm 12mm; }
-  .kicker { color: #b08a2e; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; }
-  h3.chap { color: #1d5a8a; font-size: 1.35em; margin: 4px 0 10px; }
-  p { text-align: justify; font-size: 9.6pt; line-height: 1.55; margin-bottom: 8px; }
-  p strong { color: #14406b; }
-  .quote { border-left: 4px solid #E8C766; margin: 10px 0; padding: 7px 12px; font-style: italic; color: #6b5a1f; background: #faf6ea; font-size: 10pt; }
-  .box { background: white; border: 1px solid #d8d2c4; border-radius: 10px; padding: 10px 12px; margin: 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
-  .box h4 { color: #1d5a8a; font-size: .9em; margin-bottom: 5px; }
-  .box ul { margin-left: 15px; } .box li { font-size: 9.2pt; line-height: 1.45; margin-bottom: 3px; text-align: justify; }
-  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 8px 10px; border-radius: 8px; margin: 8px 0; font-size: 9.2pt; }
-  .foot { position: absolute; bottom: 5mm; left: 0; right: 0; text-align: center; font-size: .72em; color: #a09a8c; letter-spacing: 1px; }
+  .flow { width: 210mm; margin: 0 auto; background: #FDFBF7; padding: 12mm 14mm; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+  .flow p { text-align: justify; font-size: 10pt; line-height: 1.6; margin-bottom: 9px; }
+  .flow p strong { color: #14406b; }
+  .kicker { color: #b08a2e; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; margin-top: 10mm; }
+  h3.chap { color: #1d5a8a; font-size: 1.4em; margin: 3px 0 10px; break-after: avoid; }
+  .sep { text-align: center; color: #b08a2e; font-size: 1.2em; margin: 10mm 0; }
+  .fig { margin: 6mm 0; background: #14406b; padding: 2mm; border: 1px solid #d8d2c4; break-inside: avoid; }
+  .fig img { width: 100%; height: 88mm; object-fit: contain; display: block; }
+  .quote { border-left: 4px solid #E8C766; margin: 10px 0; padding: 8px 14px; font-style: italic; color: #6b5a1f; background: #faf6ea; font-size: 10.5pt; break-inside: avoid; }
+  .box { background: white; border: 1px solid #d8d2c4; border-radius: 10px; padding: 12px 14px; margin: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); break-inside: avoid; }
+  .box h4 { color: #1d5a8a; font-size: .95em; margin-bottom: 6px; }
+  .box ul { margin-left: 16px; } .box li { font-size: 9.6pt; line-height: 1.5; margin-bottom: 3px; text-align: justify; }
+  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 10px 12px; border-radius: 8px; margin: 10px 0; font-size: 9.6pt; break-inside: avoid; }
   .logo-mini { width: 26mm; display: block; margin: 0 auto 8px; }
   .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; font-family: Arial; }
-  @media (max-width: 800px) { .page { width: 100%; min-height: auto; } .chap-img { height: 220px; } .full { height: 92vh; } }
-  @media print { body { background: white; } .page { margin: 0; box-shadow: none; height: 296mm; min-height: auto; } .full { height: 296mm; } .chap-img { height: 70mm; } .btn-pdf { display: none; } }
+  @media print { body { background: white; } .page, .flow { margin: 0; box-shadow: none; } .flow { padding: 12mm 14mm; } .btn-pdf { display: none; } }
+  @media (max-width: 800px) { .page, .flow { width: 100%; } .c-img img, .fig img { height: auto; } }
 </style>
 </head>
 <body>
 <button class="btn-pdf" onclick="window.print()">📥 COMPRAR / DESCARGAR PDF</button>
 
-<!-- ══ PORTADA EDICIÓN AMPLIADA ══ -->
-<div class="page"><div class="full">
-  <img src="https://i.imgur.com/gpNgkyV.png" alt="Portada">
-  <div class="ov-dark">
-    <div class="brand">VITAL HOGAR · CUIDADOS DOMICILIARIOS</div>
-    <h1>LAS MANOS<br>QUE CUIDAN</h1>
-    <div class="sub">Lo que casi treinta años de enfermería domiciliaria me enseñaron sobre la vida, la muerte y el amor en el cuarto de una casa cualquiera</div>
-    <div class="banda">EDICIÓN AMPLIADA · 33 CAPÍTULOS</div>
-    <div class="autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta</div>
-  </div>
-</div></div>
+<!-- ══ PORTADA PREMIUM ══ -->
+<div class="page cover">
+  <div class="c-brand">VITAL HOGAR · CUIDADOS DOMICILIARIOS</div>
+  <h1>LAS MANOS<br>QUE CUIDAN</h1>
+  <div class="c-img"><img src="https://i.imgur.com/gpNgkyV.png" alt="Portada"></div>
+  <div class="c-sub">Lo que casi treinta años de enfermería domiciliaria me enseñaron sobre la vida, la muerte y el amor en el cuarto de una casa cualquiera</div>
+  <div class="banda">EDICIÓN AMPLIADA · 33 CAPÍTULOS</div>
+  <div class="c-autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta</div>
+</div>
 
 <!-- ══ ADVERTENCIA ══ -->
-<div class="page"><div class="chap-body" style="padding-top:25mm;">
+<div class="flow">
   <img class="logo-mini" src="https://i.imgur.com/01YZxey.jpeg" alt="Vital Hogar">
   <h3 class="chap" style="text-align:center;">ADVERTENCIA ANTES DE EMPEZAR</h3>
   <p>Este libro no es para leerlo cómodo en un sofá con café.</p>
@@ -64,792 +64,642 @@
   <p>Casi treinta años. Miles de pacientes. Cientos de muertes. Y una certeza que me mantiene en pie aunque la espalda me cruja como árbol viejo:</p>
   <div class="quote">Cuidar a otro ser humano es el acto más sagrado que existe en esta tierra. Y nadie te lo va a agradecer lo suficiente. Pero lo haces igual. Porque alguien tiene que hacerlo. Y ese alguien eres tú.</div>
 </div>
-<div class="foot">LAS MANOS QUE CUIDAN · Edición Ampliada</div></div>
 
 <!-- ══ PRÓLOGO ══ -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/XIOs7Qh.png" alt="Manos">
-  <div class="chap-body">
-    <div class="kicker">Prólogo</div>
-    <h3 class="chap">Las manos que me sostuvieron</h3>
-    <p>Mi primera paciente no me enseñó a cuidar. Me enseñó <strong>por qué</strong> se cuida. Era 1997. Yo tenía veinte años y me temblaban las manos frente a la cama de doña Mercedes, una señora menuda con los ojos más vivos que he visto. Notó mi miedo, me sostuvo la mano y me dijo:</p>
-    <div class="quote">"No tiembles, mijo. El temblor se quita con oficio. Pero si un día se te quita el miedo, ese día renuncia. El miedo es el respeto. Y el respeto es el amor trabajando."</div>
-    <p>Me quedé casi treinta años. Vi úlceras que empezaron por una arruga de la sábana, pulmones que se llenaron por un sorbo de agua dado con afán, familias rotas por no pedir ayuda. Y milagros que nadie aplaude: un abuelo que volvió a caminar al baño, una niña que dijo "mamá" con pictogramas, un hijo que aprendió a bañar a su padre y lloró de orgullo en la ducha.</p>
-    <p>Este libro no es un manual de enfermería. Es lo que le diría a mi propio hijo si mañana tuviera que cuidar a alguien que ama. Está escrito con la cabeza de un profesional y el corazón de quien ha sostenido miles de manos. Algunas ya no están. <strong>Todas me enseñaron.</strong></p>
-    <p>Si cuidas a alguien, este libro es para ti. Y si nadie te lo ha dicho hoy: <strong>gracias. El mundo necesita más manos como las tuyas.</strong></p>
-  </div>
-  <div class="foot">LAS MANOS QUE CUIDAN · Prólogo</div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/XIOs7Qh.png" alt="Manos"></div>
+  <div class="kicker">Prólogo</div>
+  <h3 class="chap">Las manos que me sostuvieron</h3>
+  <p>Mi primera paciente no me enseñó a cuidar. Me enseñó <strong>por qué</strong> se cuida. Era 1997. Yo tenía veinte años y me temblaban las manos frente a la cama de doña Mercedes, una señora menuda con los ojos más vivos que he visto. Notó mi miedo, me sostuvo la mano y me dijo:</p>
+  <div class="quote">"No tiembles, mijo. El temblor se quita con oficio. Pero si un día se te quita el miedo, ese día renuncia. El miedo es el respeto. Y el respeto es el amor trabajando."</div>
+  <p>Me quedé casi treinta años. Vi úlceras que empezaron por una arruga de la sábana, pulmones que se llenaron por un sorbo de agua dado con afán, familias rotas por no pedir ayuda. Y milagros que nadie aplaude: un abuelo que volvió a caminar al baño, una niña que dijo "mamá" con pictogramas, un hijo que aprendió a bañar a su padre y lloró de orgullo en la ducha.</p>
+  <p>Este libro no es un manual de enfermería. Es lo que le diría a mi propio hijo si mañana tuviera que cuidar a alguien que ama. Está escrito con la cabeza de un profesional y el corazón de quien ha sostenido miles de manos. Algunas ya no están. <strong>Todas me enseñaron.</strong></p>
+  <p>Si cuidas a alguien, este libro es para ti. Y si nadie te lo ha dicho hoy: <strong>gracias. El mundo necesita más manos como las tuyas.</strong></p>
 </div>
 
 <!-- ══ PARTE I ══ -->
 <div class="page part"><div class="num">I</div><h2>LA CASA NO ES UN HOSPITAL</h2><p>Donde el cuidado aprende las reglas del hogar</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/ivC3NhR.png" alt="La puerta"></div>
+  <div class="kicker">Capítulo 1</div>
+  <h3 class="chap">El día que entras a una casa y la vida te cambia</h3>
+  <p>La primera vez que entré a una casa como enfermero tenía veinte años y creía que lo sabía todo. Me abrió una señora de setenta años, bajita, manos de artritis, delantal manchado de yuca. "Usted es el enfermero", dijo. No preguntó. Afirmó. En el cuarto del fondo, su marido: un ACV, el lado izquierdo paralizado, la mirada en el techo. Y la frase que nunca dejó de dolerme: <strong>"Él era un hombre fuerte. Mire cómo quedó."</strong></p>
+  <p>Ahí entendí lo que ningún libro me enseñó: <strong>en el hospital cuidas pacientes; en la casa cuidas vidas.</strong> La enfermedad no destruye cuerpos: destruye identidades. Tu trabajo no es solo curar heridas: es ayudar a reconstruir la identidad de alguien que siente que ya no sirve para nada.</p>
+  <div class="box"><h4>🚪 El ritual de la entrada</h4><ul>
+    <li>Toca y espera: eres el invitado con estetoscopio.</li>
+    <li>Saluda PRIMERO al paciente: "¿me permite?" — el permiso antes del tacto.</li>
+    <li>No abras gavetas ni opines del cuadro: la casa se toca con permiso.</li>
+    <li>Los primeros diez minutos son de ojos, no de manos.</li>
+    <li>Sal con la próxima visita pactada: la casa que sabe cuándo vuelves, descansa.</li>
+  </ul></div>
+  <div class="quote">"La casa no es un hospital chiquito: es un universo con sus propias reglas, rituales y dolores."</div>
+  <p>Si hoy vas a entrar por primera vez a una casa con enfermo: <strong>no tienes que hacerlo solo.</strong></p>
 
-<!-- CAP 1 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/ivC3NhR.png" alt="La puerta">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 1</div>
-    <h3 class="chap">El día que entras a una casa y la vida te cambia</h3>
-    <p>La primera vez que entré a una casa como enfermero tenía veinte años y creía que lo sabía todo. Me abrió una señora de setenta años, bajita, manos de artritis, delantal manchado de yuca. "Usted es el enfermero", dijo. No preguntó. Afirmó. En el cuarto del fondo, su marido: un ACV, el lado izquierdo paralizado, la mirada en el techo. Y la frase que nunca dejó de dolerme: <strong>"Él era un hombre fuerte. Mire cómo quedó."</strong></p>
-    <p>Ahí entendí lo que ningún libro me enseñó: <strong>en el hospital cuidas pacientes; en la casa cuidas vidas.</strong> La enfermedad no destruye cuerpos: destruye identidades. Tu trabajo no es solo curar heridas: es ayudar a reconstruir la identidad de alguien que siente que ya no sirve para nada.</p>
-    <div class="box"><h4>🚪 El ritual de la entrada</h4><ul>
-      <li>Toca y espera: eres el invitado con estetoscopio.</li>
-      <li>Saluda PRIMERO al paciente: "¿me permite?" — el permiso antes del tacto.</li>
-      <li>No abras gavetas ni opines del cuadro: la casa se toca con permiso.</li>
-      <li>Los primeros diez minutos son de ojos, no de manos.</li>
-      <li>Sal con la próxima visita pactada: la casa que sabe cuándo vuelves, descansa.</li>
-    </ul></div>
-    <div class="quote">"La casa no es un hospital chiquito: es un universo con sus propias reglas, rituales y dolores."</div>
-    <p>Si hoy vas a entrar por primera vez a una casa con enfermo: <strong>no tienes que hacerlo solo.</strong></p>
-  </div>
-  <div class="foot">PARTE I · La casa no es un hospital</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 2 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/5QukO0s.png" alt="El álbum">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 2</div>
-    <h3 class="chap">Las cuatro verdades de la casa… y la quinta</h3>
-    <p><strong>Primera:</strong> en la casa mandan las rutinas, no los protocolos; pero los medicamentos no negocian. <strong>Segunda:</strong> el cuidador principal está más enfermo que el paciente: en 2003 vi morir a una señora que cuidaba a su esposo con Alzheimer; ella murió de un infarto a los sesenta y dos, él vivió tres años más sin recordar que ella existió. <strong>Tercera:</strong> el baño es el campo de batalla: el baño seguro salva más vidas que cualquier medicamento. <strong>Cuarta:</strong> la cocina decide el pronóstico: el cuerpo sin combustible es un motor que se apaga.</p>
-    <p><strong>Quinta verdad (me tomó diez años):</strong> en esa casa YA había alguien cuidando. No llegas a rescatar: llegas a relevar. Pregunta primero "¿cómo lo han cuidado hasta hoy?" y honra lo que funcione antes de cambiarlo.</p>
-    <div class="box"><h4>✅ Diagnóstico de la casa (primer día)</h4><ul>
-      <li>Baño (barra, silla, tapete, luz) · Cama (altura, sábanas)</li><li>Pasillos (tapetes, cables) · Cocina (proteína, texturas, agua)</li><li>Nevera (vencidos) · El cuidador (¿duerme? ¿come? ¿llora a escondidas?)</li><li>La historia previa (¿quién cuidaba?) · El mapa afectivo (fotos, la silla de quién)</li>
-    </ul></div>
-    <div class="quote">"No llegas a rescatar: llegas a relevar. La diferencia es el respeto."</div>
-  </div>
-  <div class="foot">PARTE I · La casa no es un hospital</div>
+  <div class="fig"><img src="https://i.imgur.com/5QukO0s.png" alt="El álbum"></div>
+  <div class="kicker">Capítulo 2</div>
+  <h3 class="chap">Las cuatro verdades de la casa… y la quinta</h3>
+  <p><strong>Primera:</strong> en la casa mandan las rutinas, no los protocolos; pero los medicamentos no negocian. <strong>Segunda:</strong> el cuidador principal está más enfermo que el paciente: en 2003 vi morir a una señora que cuidaba a su esposo con Alzheimer; ella murió de un infarto a los sesenta y dos, él vivió tres años más sin recordar que ella existió. <strong>Tercera:</strong> el baño es el campo de batalla: el baño seguro salva más vidas que cualquier medicamento. <strong>Cuarta:</strong> la cocina decide el pronóstico: el cuerpo sin combustible es un motor que se apaga.</p>
+  <p><strong>Quinta verdad (me tomó diez años):</strong> en esa casa YA había alguien cuidando. No llegas a rescatar: llegas a relevar. Pregunta primero "¿cómo lo han cuidado hasta hoy?" y honra lo que funcione antes de cambiarlo.</p>
+  <div class="box"><h4>✅ Diagnóstico de la casa (primer día)</h4><ul>
+    <li>Baño (barra, silla, tapete, luz) · Cama (altura, sábanas)</li>
+    <li>Pasillos (tapetes, cables) · Cocina (proteína, texturas, agua)</li>
+    <li>Nevera (vencidos) · El cuidador (¿duerme? ¿come? ¿llora a escondidas?)</li>
+    <li>La historia previa (¿quién cuidaba?) · El mapa afectivo (fotos, la silla de quién)</li>
+  </ul></div>
+  <div class="quote">"No llegas a rescatar: llegas a relevar. La diferencia es el respeto."</div>
 </div>
 
 <!-- ══ PARTE II ══ -->
 <div class="page part"><div class="num">II</div><h2>EL ARTE DE TOCAR</h2><p>Porque la técnica sin amor humilla, y el amor sin técnica lastima</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/gpNgkyV.png" alt="Manos que curan"></div>
+  <div class="kicker">Capítulo 3</div>
+  <h3 class="chap">Las manos que curan</h3>
+  <p>En 1999 un médico viejo me dijo: "Muchacho, usted toca a los pacientes como si fueran cosas. <strong>Tóquelos como si fueran personas y verá cómo cambian.</strong>" Al día siguiente curé a don Carlos, tres meses con una úlcera que no cerraba. Antes de los guantes le tomé la mano: "¿Cómo amaneció, don Carlos?" Me miró como si le hablaran en otro idioma: "Con dolor. <strong>En el alma.</strong>" Empecé a curar al hombre, no a la herida: cerró en tres semanas. No cambié el producto: cambié la intención.</p>
+  <div class="box"><h4>🤲 El ritual del tacto</h4><ul>
+    <li>Manos tibias siempre: la mano fría es la primera violencia.</li>
+    <li>Saludo de tres segundos: mano + nombre + mirada, ANTES del guante.</li>
+    <li>Anuncia el tacto: "voy a tomarle la mano".</li>
+    <li>La mano antes que la herida; la herida de última.</li>
+    <li>Narra lo que haces: el silencio técnico asusta más que el dolor.</li>
+    <li>La música de su época también cura piel.</li>
+  </ul></div>
+  <div class="quote">"Primero se cura el alma. La piel viene después."</div>
 
-<!-- CAP 3 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/gpNgkyV.png" alt="Las manos que curan">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 3</div>
-    <h3 class="chap">Las manos que curan</h3>
-    <p>En 1999 un médico viejo me dijo: "Muchacho, usted toca a los pacientes como si fueran cosas. <strong>Tóquelos como si fueran personas y verá cómo cambian.</strong>" Al día siguiente curé a don Carlos, tres meses con una úlcera que no cerraba. Antes de los guantes le tomé la mano: "¿Cómo amaneció, don Carlos?" Me miró como si le hablaran en otro idioma: "Con dolor. <strong>En el alma.</strong>" Empecé a curar al hombre, no a la herida: cerró en tres semanas. No cambié el producto: cambié la intención.</p>
-    <div class="box"><h4>🤲 El ritual del tacto</h4><ul>
-      <li>Manos tibias siempre: la mano fría es la primera violencia.</li>
-      <li>Saludo de tres segundos: mano + nombre + mirada, ANTES del guante.</li>
-      <li>Anuncia el tacto: "voy a tomarle la mano".</li>
-      <li>La mano antes que la herida; la herida de última.</li>
-      <li>Narra lo que haces: el silencio técnico asusta más que el dolor.</li>
-      <li>La música de su época también cura piel.</li>
-    </ul></div>
-    <div class="quote">"Primero se cura el alma. La piel viene después."</div>
-  </div>
-  <div class="foot">PARTE II · El arte de tocar</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 4 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/LDfj7v3.png" alt="Movilización">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 4</div>
-    <h3 class="chap">Cómo mover un cuerpo que ya no se mueve solo</h3>
-    <p>Me rompí el disco lumbar por orgullo: "yo puedo solo". No pude. Desde ese día mi religión es una: <strong>si necesitas ayuda, pídela; si no hay ayuda, no lo muevas: espera.</strong></p>
-    <div class="box"><h4>🧰 Antes del cuerpo: el escenario y el aliado</h4><ul>
-      <li>Cinturón de transferencia (o sábana doblada en banda): nadie hala a nadie.</li>
-      <li>Camino despejado, silla FRENADA, cama a la altura de tus rodillas.</li>
-      <li>Cuéntale el plan: "usted empuja con la pierna buena cuando diga tres".</li>
-      <li>"Nariz sobre los dedos" · uno, dos, TRES: no lo cargas, lo guías.</li>
-      <li>Sentado un minuto; después pregunta: "¿cómo quedó?"</li>
-    </ul></div>
-    <div class="alerta">🚨 Caído en el piso: NO lo levantes: evalúa. Dolor de cadera o pierna que no responde = emergencias. Nunca del brazo: el hombro del adulto mayor se luxa con un jalón.</div>
-    <div class="quote">"Se levanta con las piernas, se sostiene con el corazón, y se pregunta con la voz."</div>
-  </div>
-  <div class="foot">PARTE II · El arte de tocar</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/LDfj7v3.png" alt="Movilización"></div>
+  <div class="kicker">Capítulo 4</div>
+  <h3 class="chap">Cómo mover un cuerpo que ya no se mueve solo</h3>
+  <p>Me rompí el disco lumbar por orgullo: "yo puedo solo". No pude. Desde ese día mi religión es una: <strong>si necesitas ayuda, pídela; si no hay ayuda, no lo muevas: espera.</strong></p>
+  <div class="box"><h4>🧰 Antes del cuerpo: el escenario y el aliado</h4><ul>
+    <li>Cinturón de transferencia (o sábana doblada en banda): nadie hala a nadie.</li>
+    <li>Camino despejado, silla FRENADA, cama a la altura de tus rodillas.</li>
+    <li>Cuéntale el plan: "usted empuja con la pierna buena cuando diga tres".</li>
+    <li>"Nariz sobre los dedos" · uno, dos, TRES: no lo cargas, lo guías.</li>
+    <li>Sentado un minuto; después pregunta: "¿cómo quedó?"</li>
+  </ul></div>
+  <div class="alerta">🚨 Caído en el piso: NO lo levantes: evalúa. Dolor de cadera o pierna que no responde = emergencias. Nunca del brazo: el hombro del adulto mayor se luxa con un jalón.</div>
+  <div class="quote">"Se levanta con las piernas, se sostiene con el corazón, y se pregunta con la voz."</div>
 
-<!-- CAP 5 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/xrKSR14.png" alt="El baño">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 5</div>
-    <h3 class="chap">El baño que dignifica</h3>
-    <p>A los veintiún años bañé rápido y sin hablar a un señor de ochenta, viudo, fractura de cadera. Al terminar me destrozó el ego: <strong>"Muchacho, ¿usted nunca ha bañado a un hombre con dignidad? Mi esposa me bañaba con cariño. Usted me bañó con prisa."</strong> Desde ese día entendí: el baño no es para limpiar el cuerpo: es para restaurar el alma.</p>
-    <div class="box"><h4>🛁 El ritual completo</h4><ul>
-      <li>Calienta el cuarto antes; prepara TODO: el frío y la espera humillan.</li>
-      <li>Puerta cerrada; narra cada paso; tapa lo que no lavas (toalla-escudo).</li>
-      <li>Orden del respeto: cara primero, zona íntima al final, de adelante hacia atrás.</li>
-      <li>Seca a palmaditas; el peine es la ceremonia final que devuelve identidad.</li>
-      <li>Y la frase mágica: "Quedó usted muy bien presentable."</li>
-    </ul></div>
-    <div class="alerta">⚠️ Piel: cambios cada 2 horas; rojo que NO blanquea al presionar = daño empezando → consulta HOY. Nunca masajear lo rojo, ni donas inflables, ni sábanas húmedas. La úlcera se forma en horas.</div>
-    <div class="quote">"Nadie debe salir de un baño sintiéndose menos persona de la que entró. Y el peine también es medicina."</div>
-  </div>
-  <div class="foot">PARTE II · El arte de tocar</div>
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/xrKSR14.png" alt="El baño"></div>
+  <div class="kicker">Capítulo 5</div>
+  <h3 class="chap">El baño que dignifica</h3>
+  <p>A los veintiún años bañé rápido y sin hablar a un señor de ochenta, viudo, fractura de cadera. Al terminar me destrozó el ego: <strong>"Muchacho, ¿usted nunca ha bañado a un hombre con dignidad? Mi esposa me bañaba con cariño. Usted me bañó con prisa."</strong> Desde ese día entendí: el baño no es para limpiar el cuerpo: es para restaurar el alma.</p>
+  <div class="box"><h4>🛁 El ritual completo</h4><ul>
+    <li>Calienta el cuarto antes; prepara TODO: el frío y la espera humillan.</li>
+    <li>Puerta cerrada; narra cada paso; tapa lo que no lavas (toalla-escudo).</li>
+    <li>Orden del respeto: cara primero, zona íntima al final, de adelante hacia atrás.</li>
+    <li>Seca a palmaditas; el peine es la ceremonia final que devuelve identidad.</li>
+    <li>Y la frase mágica: "Quedó usted muy bien presentable."</li>
+  </ul></div>
+  <div class="alerta">⚠️ Piel: cambios cada 2 horas; rojo que NO blanquea al presionar = daño empezando → consulta HOY. Nunca masajear lo rojo, ni donas inflables, ni sábanas húmedas. La úlcera se forma en horas.</div>
+  <div class="quote">"Nadie debe salir de un baño sintiéndose menos persona de la que entró. Y el peine también es medicina."</div>
 </div>
 
 <!-- ══ PARTE III ══ -->
 <div class="page part"><div class="num">III</div><h2>LAS HERIDAS QUE NO SE VEN</h2><p>Medicamentos y alimentación: los silenciosos que deciden todo</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/Wge2EHT.png" alt="Medicamentos"></div>
+  <div class="kicker">Capítulo 6</div>
+  <h3 class="chap">Los seis correctos: la memoria falla, el método no</h3>
+  <p>La señora Ruth terminó en urgencias por la pastilla "blanquita" de su esposo. Desde entonces, una religión: <strong>los colores mienten; las etiquetas no.</strong></p>
+  <div class="box"><h4>🗄️ La farmacia de la casa</h4><ul>
+    <li>Un solo lugar (ni cocina por calor, ni baño por humedad); lejos del nieto curioso y de la abuela con demencia.</li>
+    <li>La bolsa de la verdad: una vez al mes TODOS los frascos —incluidos los "naturales"— viajan a la consulta.</li>
+    <li>Dosis olvidada: nunca dobles; insulina y anticoagulantes tienen reglas propias: se llama, no se googla.</li>
+    <li>El domingo de la farmacia: pastillero con NOMBRE y DOSIS + cuaderno de quién dio qué.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Somnolencia nueva, confusión o mareo tras medicamento nuevo = llama al médico HOY; no lo suspendas por cuenta.</div>
+  <div class="quote">"En medicamentos, la duda vale más que la prisa. Y el método vale más que la memoria."</div>
 
-<!-- CAP 6 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/Wge2EHT.png" alt="Medicamentos">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 6</div>
-    <h3 class="chap">Los seis correctos: la memoria falla, el método no</h3>
-    <p>La señora Ruth terminó en urgencias por la pastilla "blanquita" de su esposo. Desde entonces, una religión: <strong>los colores mienten; las etiquetas no.</strong></p>
-    <div class="box"><h4>🗄️ La farmacia de la casa</h4><ul>
-      <li>Un solo lugar (ni cocina por calor, ni baño por humedad); lejos del nieto curioso y de la abuela con demencia.</li>
-      <li>La bolsa de la verdad: una vez al mes TODOS los frascos —incluidos los "naturales"— viajan a la consulta.</li>
-      <li>Dosis olvidada: nunca dobles; insulina y anticoagulantes tienen reglas propias: se llama, no se googla.</li>
-      <li>El domingo de la farmacia: pastillero con NOMBRE y DOSIS + cuaderno de quién dio qué.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Somnolencia nueva, confusión o mareo tras medicamento nuevo = llama al médico HOY; no lo suspendas por cuenta.</div>
-    <div class="quote">"En medicamentos, la duda vale más que la prisa. Y el método vale más que la memoria."</div>
-  </div>
-  <div class="foot">PARTE III · Las heridas que no se ven</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 7 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/O7YQzux.png" alt="Alimentación">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 7</div>
-    <h3 class="chap">La alimentación como acto de amor</h3>
-    <p>En 2012, una señora con Alzheimer avanzada dejó de comer. Hasta que la nieta de ocho años llegó con una manzana, se sentó a su lado y se la dio en pedacitos mientras le contaba del colegio. Se comió media manzana. La lección más grande de mi vida: <strong>la gente no come nutrientes: come emociones.</strong></p>
-    <div class="box"><h4>🪑 La escena que abre el apetito</h4><ul>
-      <li>Siéntate a su altura: de pie eres el jefe; sentado, la compañía.</li>
-      <li>Plato pequeño, su cuchara, tibio y despacio; el menú de la memoria (el sancocho de 1960).</li>
-      <li>Si cierra la boca: pausa de 20 minutos, cambia la luz, vuelve con dos cucharadas.</li>
-      <li>Boca limpia quiere comer: higiene oral antes y después.</li>
-      <li>Sentado a 90° y 30 minutos después; si tose al beber, espesa (textura néctar).</li>
-      <li>La sed miente: agua cada 2 horas aunque diga que no.</li>
-    </ul></div>
-    <div class="quote">"No le des de comer al diagnóstico: dale de comer a la historia. Una mesa en paz alimenta más que el plato."</div>
-  </div>
-  <div class="foot">PARTE III · Las heridas que no se ven</div>
+  <div class="fig"><img src="https://i.imgur.com/O7YQzux.png" alt="Alimentación"></div>
+  <div class="kicker">Capítulo 7</div>
+  <h3 class="chap">La alimentación como acto de amor</h3>
+  <p>En 2012, una señora con Alzheimer avanzada dejó de comer. Hasta que la nieta de ocho años llegó con una manzana, se sentó a su lado y se la dio en pedacitos mientras le contaba del colegio. Se comió media manzana. La lección más grande de mi vida: <strong>la gente no come nutrientes: come emociones.</strong></p>
+  <div class="box"><h4>🪑 La escena que abre el apetito</h4><ul>
+    <li>Siéntate a su altura: de pie eres el jefe; sentado, la compañía.</li>
+    <li>Plato pequeño, su cuchara, tibio y despacio; el menú de la memoria (el sancocho de 1960).</li>
+    <li>Si cierra la boca: pausa de 20 minutos, cambia la luz, vuelve con dos cucharadas.</li>
+    <li>Boca limpia quiere comer: higiene oral antes y después.</li>
+    <li>Sentado a 90° y 30 minutos después; si tose al beber, espesa (textura néctar).</li>
+    <li>La sed miente: agua cada 2 horas aunque diga que no.</li>
+  </ul></div>
+  <div class="quote">"No le des de comer al diagnóstico: dale de comer a la historia. Una mesa en paz alimenta más que el plato."</div>
 </div>
 
 <!-- ══ PARTE IV ══ -->
 <div class="page part"><div class="num">IV</div><h2>CUANDO LA VIDA SE PELIGRA</h2><p>Los tres minutos que lo deciden todo</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/yfpIKNw.png" alt="Emergencia"></div>
+  <div class="kicker">Capítulo 8</div>
+  <h3 class="chap">La emergencia que nadie espera</h3>
+  <p>En 2016, once de la noche: la hija de un paciente con Parkinson, histérica, su padre atragantado con carne. "Pon el teléfono en altavoz." Brazo bajo la axila, puño bajo el esternón, tirón hacia arriba. Al tercer tirón, la carne salió volando. Esa noche entendí: <strong>en la emergencia domiciliaria tú eres la ambulancia, el hospital y el médico.</strong></p>
+  <div class="box"><h4>🎭 El simulacro que nadie hace</h4><ul>
+    <li>Una tarde tranquila, ensayen UNA vez: quién llama al 123 · quién abre la puerta · quién agarra la maleta (documentos, lista de meds, gafas, cargador) · quién acompaña.</li>
+    <li>Atragantado: si tose, déjalo toser; si no, Heimlich; si se desmaya, piso y compresiones.</li>
+    <li>ACV: cara torcida · brazo caído · palabra arrastrada = corre. No aspirina, no comida.</li>
+    <li>Desmayado: piernas arriba y nada de agua hasta que despierte.</li>
+  </ul></div>
+  <p>Y después de la emergencia: <strong>el que actuó también tiembla:</strong> cuéntalo, llóralo, descansa. El héroe sin descanso es el próximo paciente.</p>
+  <div class="quote">"En la emergencia, el pánico pregunta; la calma actúa. Y después de la calma, el héroe también se cuida."</div>
 
-<!-- CAP 8 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/yfpIKNw.png" alt="Emergencia">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 8</div>
-    <h3 class="chap">La emergencia que nadie espera</h3>
-    <p>En 2016, once de la noche: la hija de un paciente con Parkinson, histérica, su padre atragantado con carne. "Pon el teléfono en altavoz." Brazo bajo la axila, puño bajo el esternón, tirón hacia arriba. Al tercer tirón, la carne salió volando. Esa noche entendí: <strong>en la emergencia domiciliaria tú eres la ambulancia, el hospital y el médico.</strong></p>
-    <div class="box"><h4>🎭 El simulacro que nadie hace</h4><ul>
-      <li>Una tarde tranquila, ensayen UNA vez: quién llama al 123 · quién abre la puerta · quién agarra la maleta (documentos, lista de meds, gafas, cargador) · quién acompaña.</li>
-      <li>Atragantado: si tose, déjalo toser; si no, Heimlich; si se desmaya, piso y compresiones.</li>
-      <li>ACV: cara torcida · brazo caído · palabra arrastrada = corre. No aspirina, no comida.</li>
-      <li>Desmayado: piernas arriba y nada de agua hasta que despierte.</li>
-    </ul></div>
-    <p>Y después de la emergencia: <strong>el que actuó también tiembla:</strong> cuéntalo, llóralo, descansa. El héroe sin descanso es el próximo paciente.</p>
-    <div class="quote">"En la emergencia, el pánico pregunta; la calma actúa. Y después de la calma, el héroe también se cuida."</div>
-  </div>
-  <div class="foot">PARTE IV · Cuando la vida se peligra</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 9 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/rW7Odb9.png" alt="El niño">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 9</div>
-    <h3 class="chap">Cuando el paciente es un niño</h3>
-    <p>En 2014 empecé a cuidar a un niño de seis años con parálisis cerebral severa. Su madre me recibió con esperanza y desconfianza: "Usted viene a cambiar la sonda. <strong>Pues lave sus manos. Aquí no entramos con gérmenes.</strong>" Esa mujer me enseñó más que cualquier curso: un niño con discapacidad no es un niño roto: es un niño que experimenta el mundo de otra manera. Tu trabajo no es arreglarlo: es acompañarlo.</p>
-    <div class="box"><h4>👁️ A la altura de sus ojos</h4><ul>
-      <li>Agáchate: el que mira de frente, se cree.</li>
-      <li>El niño te habla sin palabras: espalda arqueada = dolor; rigidez = incomodidad; sonrisa = vas bien.</li>
-      <li>Los hermanos invisibles también existen: dales su hora propia.</li>
-      <li>La maleta que trabaja: plastilina, burbujas, ensartar: el juego es terapia con disfraz.</li>
-      <li>Nunca "pobrecito" delante de él: la lástima es desprecio.</li>
-      <li>Celebra lo mínimo: un dedo movido a propósito es el universo entero.</li>
-    </ul></div>
-    <div class="quote">"No apures su paso: acompáñalo. Y no olvides al que camina al lado."</div>
-  </div>
-  <div class="foot">PARTE IV · Cuando la vida se peligra</div>
+  <div class="fig"><img src="https://i.imgur.com/rW7Odb9.png" alt="El niño"></div>
+  <div class="kicker">Capítulo 9</div>
+  <h3 class="chap">Cuando el paciente es un niño</h3>
+  <p>En 2014 empecé a cuidar a un niño de seis años con parálisis cerebral severa. Su madre me recibió con esperanza y desconfianza: "Usted viene a cambiar la sonda. <strong>Pues lave sus manos. Aquí no entramos con gérmenes.</strong>" Esa mujer me enseñó más que cualquier curso: un niño con discapacidad no es un niño roto: es un niño que experimenta el mundo de otra manera. Tu trabajo no es arreglarlo: es acompañarlo.</p>
+  <div class="box"><h4>👁️ A la altura de sus ojos</h4><ul>
+    <li>Agáchate: el que mira de frente, se cree.</li>
+    <li>El niño te habla sin palabras: espalda arqueada = dolor; rigidez = incomodidad; sonrisa = vas bien.</li>
+    <li>Los hermanos invisibles también existen: dales su hora propia.</li>
+    <li>La maleta que trabaja: plastilina, burbujas, ensartar: el juego es terapia con disfraz.</li>
+    <li>Nunca "pobrecito" delante de él: la lástima es desprecio.</li>
+    <li>Celebra lo mínimo: un dedo movido a propósito es el universo entero.</li>
+  </ul></div>
+  <div class="quote">"No apures su paso: acompáñalo. Y no olvides al que camina al lado."</div>
 </div>
 
 <!-- ══ PARTE V ══ -->
 <div class="page part"><div class="num">V</div><h2>EL CUIDADOR QUE NADIE CUIDA</h2><p>Porque no puedes servir de una taza vacía</p></div>
-
-<!-- CAP 10 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/9CLimZW.png" alt="El cuidador">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 10</div>
-    <h3 class="chap">El síndrome del cuidador quemado</h3>
-    <p>En 2019 conocí a una mujer que llevaba doce años cuidando a su esposo con demencia: doce años sin vacaciones, sin dormir cuatro horas seguidas. "Señora, usted necesita descansar." Me respondió: <strong>"¿Descansar de qué? Si me muero, ¿quién lo cuida?"</strong> Tres meses después murió de un infarto. Tenía cincuenta y nueve años. Esa frase era la enfermedad hablando, no ella.</p>
-    <div class="box"><h4>🌡️ El termómetro del cuidador (domingo, 3 preguntas)</h4><ul>
-      <li>¿Dormí esta semana? · ¿Comí sentada esta semana? · ¿Me reí esta semana?</li>
-      <li>Dos "no" = alarma. Tres "no" = emergencia tuya.</li>
-      <li>La culpa es el jefe malo: "si descanso, abandono" es la mentira que mata. Descansar ES cuidar.</li>
-      <li>La lista de los tres: tres nombres con teléfono y turno ANTES de necesitarlos.</li>
-      <li>Respiración 4-7-8: inhala 4, sostén 7, exhala 8. Cuatro veces, antes de reaccionar.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Señales de colapso: pérdida de peso, insomnio, llanto fácil, aislarte, y ese pensamiento de "sería mejor que se muriera para descansar". No te hace mala persona: te hace humano. Y es la señal de pedir ayuda inmediata.</div>
-    <div class="quote">"No puedes servir de una taza vacía. Y la culpa es el único jefe al que hay que renunciarle."</div>
-    <p>Si te reconociste en estas líneas: <strong>no tienes que seguir cargándolas solo.</strong></p>
-  </div>
-  <div class="foot">PARTE V · El cuidador que nadie cuida</div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/9CLimZW.png" alt="El cuidador"></div>
+  <div class="kicker">Capítulo 10</div>
+  <h3 class="chap">El síndrome del cuidador quemado</h3>
+  <p>En 2019 conocí a una mujer que llevaba doce años cuidando a su esposo con demencia: doce años sin vacaciones, sin dormir cuatro horas seguidas. "Señora, usted necesita descansar." Me respondió: <strong>"¿Descansar de qué? Si me muero, ¿quién lo cuida?"</strong> Tres meses después murió de un infarto. Tenía cincuenta y nueve años. Esa frase era la enfermedad hablando, no ella.</p>
+  <div class="box"><h4>🌡️ El termómetro del cuidador (domingo, 3 preguntas)</h4><ul>
+    <li>¿Dormí esta semana? · ¿Comí sentada esta semana? · ¿Me reí esta semana?</li>
+    <li>Dos "no" = alarma. Tres "no" = emergencia tuya.</li>
+    <li>La culpa es el jefe malo: "si descanso, abandono" es la mentira que mata. Descansar ES cuidar.</li>
+    <li>La lista de los tres: tres nombres con teléfono y turno ANTES de necesitarlos.</li>
+    <li>Respiración 4-7-8: inhala 4, sostén 7, exhala 8. Cuatro veces, antes de reaccionar.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Señales de colapso: pérdida de peso, insomnio, llanto fácil, aislarte, y ese pensamiento de "sería mejor que se muriera para descansar". No te hace mala persona: te hace humano. Y es la señal de pedir ayuda inmediata.</div>
+  <div class="quote">"No puedes servir de una taza vacía. Y la culpa es el único jefe al que hay que renunciarle."</div>
+  <p>Si te reconociste en estas líneas: <strong>no tienes que seguir cargándolas solo.</strong></p>
 </div>
 
 <!-- ══ PARTE VI ══ -->
 <div class="page part"><div class="num">VI</div><h2>EL PLAN DE ACCIÓN</h2><p>Tus primeros treinta días, paso a paso</p></div>
-
-<!-- CAP 11 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/Wge2EHT.png" alt="Plan">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 11</div>
-    <h3 class="chap">Los primeros treinta días</h3>
-    <div class="box"><h4>📅 El mes que ordena el caos</h4><ul>
-      <li><strong>Día 1–2:</strong> recorrido de casa (el baño primero) + pastillero con nombre y dosis + Tarjeta de la Nevera.</li>
-      <li><strong>Día 3–4:</strong> rutina de higiene + alimentación y texturas (tose al beber → médico).</li>
-      <li><strong>Día 5–6:</strong> citas médicas (y LA TUYA) + red de apoyo con nombres y turnos.</li>
-      <li><strong>Día 7:</strong> DESCANSA: otra persona se encarga. Es inversión, no gasto.</li>
-      <li><strong>Días 8–21:</strong> rutinas fijas, evalúa y ajusta, pide lo que falte.</li>
-      <li><strong>Días 22–30:</strong> camina 30 minutos, lo legal (testamento, poderes), y tu estado emocional.</li>
-    </ul></div>
-    <div class="box"><h4>📓 Las tres herramientas que lo sostienen</h4><ul>
-      <li>El cuaderno que gobierna: registro diario de meds, comidas, piel, novedades.</li>
-      <li>La reunión de los domingos (15 min): qué funcionó, qué falló, quién descansa.</li>
-      <li>Celebra los ya-logrados: la moral también se cuida.</li>
-    </ul></div>
-    <div class="quote">"El cuidado es dinámico: lo que funcionó hoy puede no funcionar mañana. Por eso se anota, se reúne y se celebra."</div>
-  </div>
-  <div class="foot">PARTE VI · El plan de acción</div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/Wge2EHT.png" alt="Plan"></div>
+  <div class="kicker">Capítulo 11</div>
+  <h3 class="chap">Los primeros treinta días</h3>
+  <div class="box"><h4>📅 El mes que ordena el caos</h4><ul>
+    <li><strong>Día 1–2:</strong> recorrido de casa (el baño primero) + pastillero con nombre y dosis + Tarjeta de la Nevera.</li>
+    <li><strong>Día 3–4:</strong> rutina de higiene + alimentación y texturas (tose al beber → médico).</li>
+    <li><strong>Día 5–6:</strong> citas médicas (y LA TUYA) + red de apoyo con nombres y turnos.</li>
+    <li><strong>Día 7:</strong> DESCANSA: otra persona se encarga. Es inversión, no gasto.</li>
+    <li><strong>Días 8–21:</strong> rutinas fijas, evalúa y ajusta, pide lo que falte.</li>
+    <li><strong>Días 22–30:</strong> camina 30 minutos, lo legal (testamento, poderes), y tu estado emocional.</li>
+  </ul></div>
+  <div class="box"><h4>📓 Las tres herramientas que lo sostienen</h4><ul>
+    <li>El cuaderno que gobierna: registro diario de meds, comidas, piel, novedades.</li>
+    <li>La reunión de los domingos (15 min): qué funcionó, qué falló, quién descansa.</li>
+    <li>Celebra los ya-logrados: la moral también se cuida.</li>
+  </ul></div>
+  <div class="quote">"El cuidado es dinámico: lo que funcionó hoy puede no funcionar mañana. Por eso se anota, se reúne y se celebra."</div>
 </div>
 
 <!-- ══ PARTE VII ══ -->
 <div class="page part"><div class="num">VII</div><h2>CUANDO LA CASA SE VUELVE HOSPITAL</h2><p>El alta no es una despedida: es un relevo</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/9QDDleL.png" alt="El alta"></div>
+  <div class="kicker">Capítulo 12</div>
+  <h3 class="chap">El que vuelve a casa desde el hospital</h3>
+  <p>El día del alta de doña Ligia llovía finito. Su hija Marta firmó papeles que no leyó, recibió una bolsa de medicamentos que nadie le explicó, y a las dos de la mañana lloraba en la cocina porque el concentrador pitaba y ella no sabía si ese pitido era normal o era su madre muriéndose en el cuarto de al lado. Nadie le había dicho que <strong>el alta no es una despedida: es un relevo.</strong></p>
+  <div class="box"><h4>🏥 Pregunta antes de salir (la pena es mal consejera)</h4><ul>
+    <li>¿Diagnóstico exacto en palabras que entienda? · ¿Meds nuevos, suspendidos, horarios?</li>
+    <li>¿Qué signos me obligan a volver? · ¿Cita de control? · ¿Qué puede comer y hacer?</li>
+    <li>¿A quién llamo un domingo a las 2 a.m.? Escribe las respuestas.</li>
+  </ul></div>
+  <div class="box"><h4>⏰ Las primeras 72 horas</h4><ul>
+    <li>Día 1: pastillero armado + cita agendada. Una sola persona al mando del medicamento.</li>
+    <li>Anclas contra el delirio: reloj, calendario grande, fotos, silla junto a la ventana.</li>
+    <li>La primera noche: luz nocturna, campana al alcance, y permiso: "si le da miedo, despiérteme".</li>
+  </ul></div>
+  <div class="alerta">🚨 Alarma en 72h: fiebre, confusión nueva, no orina en 12h, aire corto, dolor que no calma, herida que huele. Y sí: la vecina vendrá con sopa y la tía con compresas: amor torpe; pero el medicamento lo maneja una sola persona.</div>
+  <p>Meses después, Marta me dijo: <strong>"El hospital me devolvió a mi mamá en una camilla. En la casa me tocó devolvérmela a la vida."</strong></p>
+  <div class="quote">"El alta no es el final de la enfermedad: es el comienzo del cuidado en casa. Y ese comienzo se gana en las primeras 72 horas."</div>
+  <p>Si te reconociste —la cocina, el pitido, las respiraciones contadas— <strong>no tienes que seguir cargándolas solo.</strong></p>
 
-<!-- CAP 12 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/9QDDleL.png" alt="El alta">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 12</div>
-    <h3 class="chap">El que vuelve a casa desde el hospital</h3>
-    <p>El día del alta de doña Ligia llovía finito. Su hija Marta firmó papeles que no leyó, recibió una bolsa de medicamentos que nadie le explicó, y a las dos de la mañana lloraba en la cocina porque el concentrador pitaba y ella no sabía si ese pitido era normal o era su madre muriéndose en el cuarto de al lado. Nadie le había dicho que <strong>el alta no es una despedida: es un relevo.</strong></p>
-    <div class="box"><h4>🏥 Pregunta antes de salir (la pena es mal consejera)</h4><ul>
-      <li>¿Diagnóstico exacto en palabras que entienda? · ¿Meds nuevos, suspendidos, horarios?</li>
-      <li>¿Qué signos me obligan a volver? · ¿Cita de control? · ¿Qué puede comer y hacer?</li>
-      <li>¿A quién llamo un domingo a las 2 a.m.? Escribe las respuestas.</li>
-    </ul></div>
-    <div class="box"><h4>⏰ Las primeras 72 horas</h4><ul>
-      <li>Día 1: pastillero armado + cita agendada. Una sola persona al mando del medicamento.</li>
-      <li>Anclas contra el delirio: reloj, calendario grande, fotos, silla junto a la ventana.</li>
-      <li>La primera noche: luz nocturna, campana al alcance, y permiso: "si le da miedo, despiérteme".</li>
-    </ul></div>
-    <div class="alerta">🚨 Alarma en 72h: fiebre, confusión nueva, no orina en 12h, aire corto, dolor que no calma, herida que huele. Y sí: la vecina vendrá con sopa y la tía con compresas: amor torpe; pero el medicamento lo maneja una sola persona.</div>
-    <p>Meses después, Marta me dijo: <strong>"El hospital me devolvió a mi mamá en una camilla. En la casa me tocó devolvérmela a la vida."</strong></p>
-    <div class="quote">"El alta no es el final de la enfermedad: es el comienzo del cuidado en casa. Y ese comienzo se gana en las primeras 72 horas."</div>
-    <p>Si te reconociste —la cocina, el pitido, las respiraciones contadas— <strong>no tienes que seguir cargándolas solo.</strong></p>
-  </div>
-  <div class="foot">PARTE VII · Cuando la casa se vuelve hospital</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 13 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/hpuBO0b.png" alt="Oxígeno">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 13</div>
-    <h3 class="chap">Oxígeno y signos vitales: aprender a leer el miedo</h3>
-    <p>Don Hernán, conductor de bus toda la vida, se fumó la vida "con gusto y sin filtro". A los setenta, el EPOC lo sentó con un concentrador al lado. Su hija Paola vivía pegada al oxímetro, hasta que él, sin abrir los ojos, dijo: <strong>"Mija, suélteme el dedo y préndame el televisor, que ese aparato a veces miente."</strong> El médico completó: "Trate al paciente, no al aparato. En el EPOC, el 92 de su papá puede ser su 100."</p>
-    <div class="box"><h4>🫁 Oxímetro sin pánico y oxígeno sin muerte</h4><ul>
-      <li>Dedo tibio, sin esmalte, un minuto de espera: el primer número es mentira. Pregunta al médico la META de tu paciente.</li>
-      <li>El flujo NO se sube por pánico: en el EPOC, demasiado oxígeno apaga el ganas de respirar.</li>
-      <li>Oxígeno = fuego invisible: ni cigarrillo ni estufa cerca; humidificador con agua estéril diaria.</li>
-      <li>Pulso 60–100 · temperatura 38 en el viejo es alarma · tensión 180/110 con síntomas = urgencias.</li>
-      <li>El cuaderno del paciente: hora + número + pulso + cómo se VE: la tendencia vale más que el dato.</li>
-    </ul></div>
-    <div class="alerta">🚨 Corre: labios morados, confusión, no poder decir una frase completa, oxímetro bajo la meta sin subir.</div>
-    <p>Don Hernán vivió cuatro años más llamando al concentrador "el compañero de cuarto". Murió en su sillón, con su televisor, y su hija leyéndole el pulso como quien lee un rosario.</p>
-    <div class="quote">"Las máquinas miden oxígeno; tú mides el miedo. Aprende a leer los dos."</div>
-  </div>
-  <div class="foot">PARTE VII · Cuando la casa se vuelve hospital</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/hpuBO0b.png" alt="Oxígeno"></div>
+  <div class="kicker">Capítulo 13</div>
+  <h3 class="chap">Oxígeno y signos vitales: aprender a leer el miedo</h3>
+  <p>Don Hernán, conductor de bus toda la vida, se fumó la vida "con gusto y sin filtro". A los setenta, el EPOC lo sentó con un concentrador al lado. Su hija Paola vivía pegada al oxímetro, hasta que él, sin abrir los ojos, dijo: <strong>"Mija, suélteme el dedo y préndame el televisor, que ese aparato a veces miente."</strong> El médico completó: "Trate al paciente, no al aparato. En el EPOC, el 92 de su papá puede ser su 100."</p>
+  <div class="box"><h4>🫁 Oxímetro sin pánico y oxígeno sin muerte</h4><ul>
+    <li>Dedo tibio, sin esmalte, un minuto de espera: el primer número es mentira. Pregunta al médico la META de tu paciente.</li>
+    <li>El flujo NO se sube por pánico: en el EPOC, demasiado oxígeno apaga el ganas de respirar.</li>
+    <li>Oxígeno = fuego invisible: ni cigarrillo ni estufa cerca; humidificador con agua estéril diaria.</li>
+    <li>Pulso 60–100 · temperatura 38 en el viejo es alarma · tensión 180/110 con síntomas = urgencias.</li>
+    <li>El cuaderno del paciente: hora + número + pulso + cómo se VE: la tendencia vale más que el dato.</li>
+  </ul></div>
+  <div class="alerta">🚨 Corre: labios morados, confusión, no poder decir una frase completa, oxímetro bajo la meta sin subir.</div>
+  <p>Don Hernán vivió cuatro años más llamando al concentrador "el compañero de cuarto". Murió en su sillón, con su televisor, y su hija leyéndole el pulso como quien lee un rosario.</p>
+  <div class="quote">"Las máquinas miden oxígeno; tú mides el miedo. Aprende a leer los dos."</div>
 
-<!-- CAP 14 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/kouc1Bj.png" alt="Glucosa">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 14</div>
-    <h3 class="chap">Los silenciosos: diabetes e hipertensión</h3>
-    <p>A doña Cecilia la encontraron "hablando raro" y la familia gritó ACV. El nieto, buscando gaseosa, dijo la frase que la salvó: "Abuela, ¿te comiste el dulce de la costurera?" No era derrame: era una hipoglucemia de 45 disfrazada. <strong>En la diabetes, el enemigo no siempre es lo alto: a veces es lo bajo, y lo bajo mata en minutos.</strong></p>
-    <div class="box"><h4>🩸 Reglas de los silenciosos</h4><ul>
-      <li>Hipoglucemia (menos de 70): regla 15/15 — 15 g de azúcar rápida, esperar 15 min, medir. Nunca agua, nunca insulina "para el susto".</li>
-      <li>Pie diabático: espejo bajo la planta diario; nunca descalzo, ni cuchilla, ni calor en los pies.</li>
-      <li>Hipertensión: "me sentí bien y suspendí la pastilla" es el error que estrena en el cerebro: la pastilla se toma por disciplina.</li>
-      <li>Insulina: ni congelada ni al sol; sitios rotados; agujas usadas en frasco duro.</li>
-      <li>Kit del bolsillo: jugo o panelita SIEMPRE en cartera y mesa de noche.</li>
-      <li>Cocina que acompaña: mitad verduras, cuarto proteína, cuarto carbohidrato; menos sal, más hierbas.</li>
-    </ul></div>
-    <p>La abuela y el nieto hicieron el pacto que yo receto: el dulce del domingo, uno solo, compartido en la mesa, con tinto y sin culpa. La prohibición total revienta; el pacto sostiene.</p>
-    <div class="quote">"A los silenciosos no se les oye: se les escucha. Y se les acompaña con rutina, no con policía."</div>
-  </div>
-  <div class="foot">PARTE VII · Cuando la casa se vuelve hospital</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 15 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/00Phsz2.png" alt="El veterano">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 15</div>
-    <h3 class="chap">Los que dejaron la piel en el camino: amputados y heridos en combate</h3>
-    <p>El sargento Ruiz tenía veintinueve años cuando pisó lo que no debía en una trocha de las que no salen en los mapas. Una noche, doña Rosa lo encontró llorando en el baño: <strong>"Mami, me pica el pie que no tengo."</strong> Esa noche aprendió la palabra que le devolvió la calma: dolor fantasma. No es locura: es el cuerpo llorando lo que perdió.</p>
-    <div class="box"><h4>🪞 Lo que se hace (y lo que jamás se dice)</h4><ul>
-      <li>Nunca "eso no existe": se valida — "te creo, y vamos a calmarlo".</li>
-      <li>Terapia del espejo 15 min/día: el cerebro ve las dos piernas y el fantasma descansa.</li>
-      <li>Muñón: inspección diaria con espejo, secado perfecto, media de compresión; NUNCA almohada permanente bajo la rodilla.</li>
-      <li>Prótesis gradual, nunca con la media húmeda; casa sin escalones mentales.</li>
-      <li>El veterano y la pólvora: el 31 de diciembre el barrio estalla y él vuelve a la trocha: rincón seguro, puertas sin golpes, y nunca despertar tocando: se despierta con la voz.</li>
-      <li>Ni "el mocho" ni "el inválido": el nombre propio. El motorista del semáforo dejó el mismo pedazo: mismo respeto.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Alarma: muñón con pus o fiebre, ennegrecido, hinchazón repentina, y el que deja de mirar la prótesis: eso es alma, y se atiende sin demora.</div>
-    <p>Meses después, el sargento enseñó a los niños del barrio a montar bici con su prótesis. Doña Rosa, riendo y llorando: <strong>"Me devolvieron a mi hijo en pedazos, y yo aprendí que los pedazos también abrazan."</strong></p>
-    <div class="quote">"El que dejó la piel en el camino no perdió la dignidad: tu trabajo es custodiársela."</div>
-    <p>Si en tu casa hay un soldado o un motorista que dejó un pedazo en una trocha o un semáforo: <strong>no tienes que seguir cargándolo solo.</strong></p>
-  </div>
-  <div class="foot">PARTE VII · Cuando la casa se vuelve hospital</div>
+  <div class="fig"><img src="https://i.imgur.com/kouc1Bj.png" alt="Glucosa"></div>
+  <div class="kicker">Capítulo 14</div>
+  <h3 class="chap">Los silenciosos: diabetes e hipertensión</h3>
+  <p>A doña Cecilia la encontraron "hablando raro" y la familia gritó ACV. El nieto, buscando gaseosa, dijo la frase que la salvó: "Abuela, ¿te comiste el dulce de la costurera?" No era derrame: era una hipoglucemia de 45 disfrazada. <strong>En la diabetes, el enemigo no siempre es lo alto: a veces es lo bajo, y lo bajo mata en minutos.</strong></p>
+  <div class="box"><h4>🩸 Reglas de los silenciosos</h4><ul>
+    <li>Hipoglucemia (menos de 70): regla 15/15 — 15 g de azúcar rápida, esperar 15 min, medir. Nunca agua, nunca insulina "para el susto".</li>
+    <li>Pie diabético: espejo bajo la planta diario; nunca descalzo, ni cuchilla, ni calor en los pies.</li>
+    <li>Hipertensión: "me sentí bien y suspendí la pastilla" es el error que estrena en el cerebro: la pastilla se toma por disciplina.</li>
+    <li>Insulina: ni congelada ni al sol; sitios rotados; agujas usadas en frasco duro.</li>
+    <li>Kit del bolsillo: jugo o panelita SIEMPRE en cartera y mesa de noche.</li>
+    <li>Cocina que acompaña: mitad verduras, cuarto proteína, cuarto carbohidrato; menos sal, más hierbas.</li>
+  </ul></div>
+  <p>La abuela y el nieto hicieron el pacto que yo receto: el dulce del domingo, uno solo, compartido en la mesa, con tinto y sin culpa. La prohibición total revienta; el pacto sostiene.</p>
+  <div class="quote">"A los silenciosos no se les oye: se les escucha. Y se les acompaña con rutina, no con policía."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/00Phsz2.png" alt="El veterano"></div>
+  <div class="kicker">Capítulo 15</div>
+  <h3 class="chap">Los que dejaron la piel en el camino: amputados y heridos en combate</h3>
+  <p>El sargento Ruiz tenía veintinueve años cuando pisó lo que no debía en una trocha de las que no salen en los mapas. Una noche, doña Rosa lo encontró llorando en el baño: <strong>"Mami, me pica el pie que no tengo."</strong> Esa noche aprendió la palabra que le devolvió la calma: dolor fantasma. No es locura: es el cuerpo llorando lo que perdió.</p>
+  <div class="box"><h4>🪞 Lo que se hace (y lo que jamás se dice)</h4><ul>
+    <li>Nunca "eso no existe": se valida — "te creo, y vamos a calmarlo".</li>
+    <li>Terapia del espejo 15 min/día: el cerebro ve las dos piernas y el fantasma descansa.</li>
+    <li>Muñón: inspección diaria con espejo, secado perfecto, media de compresión; NUNCA almohada permanente bajo la rodilla.</li>
+    <li>Prótesis gradual, nunca con la media húmeda; casa sin escalones mentales.</li>
+    <li>El veterano y la pólvora: el 31 de diciembre el barrio estalla y él vuelve a la trocha: rincón seguro, puertas sin golpes, y nunca despertar tocando: se despierta con la voz.</li>
+    <li>Ni "el mocho" ni "el inválido": el nombre propio. El motorista del semáforo dejó el mismo pedazo: mismo respeto.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Alarma: muñón con pus o fiebre, ennegrecido, hinchazón repentina, y el que deja de mirar la prótesis: eso es alma, y se atiende sin demora.</div>
+  <p>Meses después, el sargento enseñó a los niños del barrio a montar bici con su prótesis. Doña Rosa, riendo y llorando: <strong>"Me devolvieron a mi hijo en pedazos, y yo aprendí que los pedazos también abrazan."</strong></p>
+  <div class="quote">"El que dejó la piel en el camino no perdió la dignidad: tu trabajo es custodiársela."</div>
+  <p>Si en tu casa hay un soldado o un motorista que dejó un pedazo en una trocha o un semáforo: <strong>no tienes que seguir cargándolo solo.</strong></p>
 </div>
 
 <!-- ══ PARTE VIII ══ -->
 <div class="page part"><div class="num">VIII</div><h2>EL HOSPITAL QUE CABE EN UNA MALETA</h2><p>Ostomías, quemados y líneas: vivir con dignidad cuando el cuerpo cambia</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/nSZ7jeN.png" alt="Ostomía"></div>
+  <div class="kicker">Capítulo 16</div>
+  <h3 class="chap">Ostomías, sondas y tubos: vivir con dignidad cuando el cuerpo cambia de mapa</h3>
+  <p>La primera vez que don Gilberto vio la bolsa en su barriga, volteó la cara: <strong>"Eso no soy yo."</strong> Su esposa Amparo aprendió a cambiarla antes que él, en silencio, y el día en que por fin se miró al espejo, ella le dijo lo que ninguna enfermera supo decir: <strong>"Gilberto, eso no es una vergüenza. Eso es lo que peleó por ti para que te quedaras conmigo."</strong></p>
+  <div class="box"><h4>🎒 La bolsa: ceremonia, no trámite</h4><ul>
+    <li>Estoma sano = rojo y húmedo (no te asustes); negro o hundido = consulta YA.</li>
+    <li>Agua tibia, nunca alcohol; placa recortada a la medida; el enemigo es la fuga: piel protegida y bolsa vaciada al tercio.</li>
+    <li>La ducha no daña el estoma; la comida de a un alimento nuevo por día; la intimidad no se negocia.</li>
+    <li>Sonda Foley: bolsa SIEMPRE bajo la vejiga, nunca desconectar "para lavar".</li>
+    <li>Gastrostomía: cabeza a 45°, agua antes y después; obstruida = llama, no alambre.</li>
+  </ul></div>
+  <div class="alerta">🚨 Alarma: no orina con dolor bajo el vientre, orina turbia + fiebre, estoma negro, sitio con pus.</div>
+  <p>En el dominó, sus amigos lo curaron con una broma: "Ahora usted carga su propio mercado." Se rieron todos, él el primero. <strong>El humor entre amigos cura lo que la medicina no alcanza.</strong></p>
+  <div class="quote">"La dignidad no está en el cuerpo que cambió: está en los ojos que lo miran sin miedo."</div>
 
-<!-- CAP 16 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/nSZ7jeN.png" alt="Ostomía">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 16</div>
-    <h3 class="chap">Ostomías, sondas y tubos: vivir con dignidad cuando el cuerpo cambia de mapa</h3>
-    <p>La primera vez que don Gilberto vio la bolsa en su barriga, volteó la cara: <strong>"Eso no soy yo."</strong> Su esposa Amparo aprendió a cambiarla antes que él, en silencio, y el día en que por fin se miró al espejo, ella le dijo lo que ninguna enfermera supo decir: <strong>"Gilberto, eso no es una vergüenza. Eso es lo que peleó por ti para que te quedaras conmigo."</strong></p>
-    <div class="box"><h4>🎒 La bolsa: ceremonia, no trámite</h4><ul>
-      <li>Estoma sano = rojo y húmedo (no te asustes); negro o hundido = consulta YA.</li>
-      <li>Agua tibia, nunca alcohol; placa recortada a la medida; el enemigo es la fuga: piel protegida y bolsa vaciada al tercio.</li>
-      <li>La ducha no daña el estoma; la comida de a un alimento nuevo por día; la intimidad no se negocia.</li>
-      <li>Sonda Foley: bolsa SIEMPRE bajo la vejiga, nunca desconectar "para lavar".</li>
-      <li>Gastrostomía: cabeza a 45°, agua antes y después; obstruida = llama, no alambre.</li>
-    </ul></div>
-    <div class="alerta">🚨 Alarma: no orina con dolor bajo el vientre, orina turbia + fiebre, estoma negro, sitio con pus.</div>
-    <p>En el dominó, sus amigos lo curaron con una broma: "Ahora usted carga su propio mercado." Se rieron todos, él el primero. <strong>El humor entre amigos cura lo que la medicina no alcanza.</strong></p>
-    <div class="quote">"La dignidad no está en el cuerpo que cambió: está en los ojos que lo miran sin miedo."</div>
-  </div>
-  <div class="foot">PARTE VIII · El hospital que cabe en una maleta</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 17 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/2oCB4Ey.png" alt="Quemados">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 17</div>
-    <h3 class="chap">Quemados, venoclisis y quimio en casa: cuando el tratamiento vive contigo</h3>
-    <p>Kevin, siete años, la olla de agua hirviendo en el segundo exacto en que su mamá volteó por la sal. La primera curación, doña Marcela la hizo llorando por dentro y sonriendo por fuera, porque aprendió la regla que lo cambia todo: <strong>al niño no se le miente. "No te va a doler" rompe la confianza; "te va a picar un poquito y no te voy a soltar" la construye.</strong></p>
-    <div class="box"><h4>🔥 Curación, espejo y línea sagrada</h4><ul>
-      <li>Apósito pegado: agua tibia hasta que suelte solo; nunca arrancar en seco.</li>
-      <li>Solo lo del médico: la cocina es para la comida, no para las heridas (nada de pasta, café o clara de huevo).</li>
-      <li>El espejo acompañado: ni escondido para siempre ni impuesto: la primera mirada con tu mano en su hombro. Kevin llamó a su cicatriz "la marca del dragón".</li>
-      <li>Venoclisis/quimio: manos lavadas, tapón limpio, línea que no se moja; fiebre con línea = corre.</li>
-      <li>Quimio: guantes, ropa aparte, inodoro con tapa y doble descarga 48h: el cuidador también se cuida.</li>
-    </ul></div>
-    <p>Doña Marcela terminó con un cuaderno de curaciones tan bueno que la enfermera lo fotocopió. Kevin hoy dibuja dragones con el brazo completo.</p>
-    <div class="quote">"En el tratamiento en casa, la cura entra por las manos y se queda por la confianza."</div>
-    <p>Si en tu casa hay una curación, una línea o un ciclo que llegó a vivir con ustedes: <strong>no tienes que seguir cargándolo solo.</strong></p>
-  </div>
-  <div class="foot">PARTE VIII · El hospital que cabe en una maleta</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/2oCB4Ey.png" alt="Quemados"></div>
+  <div class="kicker">Capítulo 17</div>
+  <h3 class="chap">Quemados, venoclisis y quimio en casa: cuando el tratamiento vive contigo</h3>
+  <p>Kevin, siete años, la olla de agua hirviendo en el segundo exacto en que su mamá volteó por la sal. La primera curación, doña Marcela la hizo llorando por dentro y sonriendo por fuera, porque aprendió la regla que lo cambia todo: <strong>al niño no se le miente. "No te va a doler" rompe la confianza; "te va a picar un poquito y no te voy a soltar" la construye.</strong></p>
+  <div class="box"><h4>🔥 Curación, espejo y línea sagrada</h4><ul>
+    <li>Apósito pegado: agua tibia hasta que suelte solo; nunca arrancar en seco.</li>
+    <li>Solo lo del médico: la cocina es para la comida, no para las heridas (nada de pasta, café o clara de huevo).</li>
+    <li>El espejo acompañado: ni escondido para siempre ni impuesto: la primera mirada con tu mano en su hombro. Kevin llamó a su cicatriz "la marca del dragón".</li>
+    <li>Venoclisis/quimio: manos lavadas, tapón limpio, línea que no se moja; fiebre con línea = corre.</li>
+    <li>Quimio: guantes, ropa aparte, inodoro con tapa y doble descarga 48h: el cuidador también se cuida.</li>
+  </ul></div>
+  <p>Doña Marcela terminó con un cuaderno de curaciones tan bueno que la enfermera lo fotocopió. Kevin hoy dibuja dragones con el brazo completo.</p>
+  <div class="quote">"En el tratamiento en casa, la cura entra por las manos y se queda por la confianza."</div>
+  <p>Si en tu casa hay una curación, una línea o un ciclo que llegó a vivir con ustedes: <strong>no tienes que seguir cargándolo solo.</strong></p>
 
-<!-- CAP 18 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/GYuTWOt.png" alt="ACV">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 18</div>
-    <h3 class="chap">ACV, medulares, ELA y Parkinson: cuidar el cuerpo que traiciona</h3>
-    <p>Don Álvaro fue profesor de matemáticas treinta y un años. El ACV le llevó media movilidad y casi toda el habla, pero no la vocación: cuando su exalumno lo visitó, le corrigió la tarea con la mano buena. <strong>El cuerpo traiciona; la vocación no.</strong></p>
-    <div class="box"><h4>🧠 Cada traición tiene su técnica</h4><ul>
-      <li><strong>ACV:</strong> el brazo afectado nunca se hala (se luxa); almohada que lo sostiene; texturas espesas, mentón abajo; el que no habla no está ausente: no le completes las frases.</li>
-      <li><strong>Medular (biplejia/cuadriplejia):</strong> la piel es el reino: 2 horas; vejiga e intestino con horario; <strong>disreflexia</strong> (cefalea + sudor + tensión por las nubes) = siéntalo, revisa sonda, corre.</li>
-      <li><strong>ELA:</strong> el cuerpo se encierra, la mente queda encendida: tablero de comunicación desde el día uno; nunca hables de él como si no estuviera; las decisiones son suyas.</li>
-      <li><strong>Parkinson:</strong> el temblor no es nervios: no regañes la sopa; dale el triple de tiempo; "uno, dos, tres" y a caminar; la pastilla A SU HORA.</li>
-      <li>Terapia de la cocina y el dominó: el cerebro se ejercita donde hubo amor.</li>
-    </ul></div>
-    <div class="alerta">🚨 Alarma: cara o brazo que se caen de nuevo, fiebre sin foco en el medular (revisa orina), cianosis al tragar, disreflexia.</div>
-    <div class="quote">"Cuando el cuerpo traiciona, queda lo que siempre estuvo: el amor, la vocación, la historia. Cuida eso: es lo único que no se paraliza."</div>
-    <p>Si en tu casa hay un profesor, una madre, un motorista en un cuerpo que lo traiciona: <strong>no tienes que seguir cargándolo solo.</strong></p>
-  </div>
-  <div class="foot">PARTE VIII · El hospital que cabe en una maleta</div>
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/GYuTWOt.png" alt="ACV"></div>
+  <div class="kicker">Capítulo 18</div>
+  <h3 class="chap">ACV, medulares, ELA y Parkinson: cuidar el cuerpo que traiciona</h3>
+  <p>Don Álvaro fue profesor de matemáticas treinta y un años. El ACV le llevó media movilidad y casi toda el habla, pero no la vocación: cuando su exalumno lo visitó, le corrigió la tarea con la mano buena. <strong>El cuerpo traiciona; la vocación no.</strong></p>
+  <div class="box"><h4>🧠 Cada traición tiene su técnica</h4><ul>
+    <li><strong>ACV:</strong> el brazo afectado nunca se hala (se luxa); almohada que lo sostiene; texturas espesas, mentón abajo; el que no habla no está ausente: no le completes las frases.</li>
+    <li><strong>Medular (biplejia/cuadriplejia):</strong> la piel es el reino: 2 horas; vejiga e intestino con horario; <strong>disreflexia</strong> (cefalea + sudor + tensión por las nubes) = siéntalo, revisa sonda, corre.</li>
+    <li><strong>ELA:</strong> el cuerpo se encierra, la mente queda encendida: tablero de comunicación desde el día uno; nunca hables de él como si no estuviera; las decisiones son suyas.</li>
+    <li><strong>Parkinson:</strong> el temblor no es nervios: no regañes la sopa; dale el triple de tiempo; "uno, dos, tres" y a caminar; la pastilla A SU HORA.</li>
+    <li>Terapia de la cocina y el dominó: el cerebro se ejercita donde hubo amor.</li>
+  </ul></div>
+  <div class="alerta">🚨 Alarma: cara o brazo que se caen de nuevo, fiebre sin foco en el medular (revisa orina), cianosis al tragar, disreflexia.</div>
+  <div class="quote">"Cuando el cuerpo traiciona, queda lo que siempre estuvo: el amor, la vocación, la historia. Cuida eso: es lo único que no se paraliza."</div>
+  <p>Si en tu casa hay un profesor, una madre, un motorista en un cuerpo que lo traiciona: <strong>no tienes que seguir cargándolo solo.</strong></p>
 </div>
 
 <!-- ══ PARTE IX ══ -->
 <div class="page part"><div class="num">IX</div><h2>LAS MENTES QUE SUFREN</h2><p>Porque el alma también se fractura como un hueso</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/bYGe2fW.png" alt="Alzheimer"></div>
+  <div class="kicker">Capítulo 19</div>
+  <h3 class="chap">Alzheimer y demencia senil: cómo entrar a su mundo</h3>
+  <p>Doña Teresa empacaba su maleta todas las tardes a las cinco: "Me voy para mi casa." Su hija Claudia le respondía con la verdad y la hacía llorar. Hasta que entendió: <strong>doña Teresa no quería ir a una dirección: quería volver a un tiempo.</strong> Esa tarde dejó de corregir y dijo: "Cuéntame de tu casa, mami. ¿Qué olía en esa cocina?" Y la crisis se volvió viaje, y el viaje se volvió el ritual de las cinco con el álbum.</p>
+  <div class="box"><h4>🗝️ Las llaves de su mundo</h4><ul>
+    <li>No discutas ni corrijas: para él, su realidad ES la realidad.</li>
+    <li>Responde a la emoción, no a la geografía: "quiero ir a mi casa" = "me siento insegura".</li>
+    <li>Frases cortas, dos opciones ("¿azul o roja?"); nunca lo examines con "¿te acuerdas?".</li>
+    <li>Atardecer agitado: baja el volumen de la casa, luz tibia, música de su época.</li>
+    <li>Casa segura: estufa con llave tuya, candados arriba y abajo, carné con dirección y foto reciente.</li>
+    <li>La memoria emocional: olvidará tu visita, no cómo lo hiciste sentir: despide con caricia.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Confusión REPENTINA no es "que avanzó": es orina, fiebre escondida, medicamento nuevo: consulta hoy.</div>
+  <div class="quote">"No puedes traerlo a tu mundo. Pero puedes visitar el suyo. Y en su mundo, todavía te espera con amor."</div>
+  <p>Si en tu casa hay alguien que empaca maletas hacia el pasado: <strong>no tienes que seguir cargándolo solo.</strong></p>
 
-<!-- CAP 19 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/bYGe2fW.png" alt="Alzheimer">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 19</div>
-    <h3 class="chap">Alzheimer y demencia senil: cómo entrar a su mundo</h3>
-    <p>Doña Teresa empacaba su maleta todas las tardes a las cinco: "Me voy para mi casa." Su hija Claudia le respondía con la verdad y la hacía llorar. Hasta que entendió: <strong>doña Teresa no quería ir a una dirección: quería volver a un tiempo.</strong> Esa tarde dejó de corregir y dijo: "Cuéntame de tu casa, mami. ¿Qué olía en esa cocina?" Y la crisis se volvió viaje, y el viaje se volvió el ritual de las cinco con el álbum.</p>
-    <div class="box"><h4>🗝️ Las llaves de su mundo</h4><ul>
-      <li>No discutas ni corrijas: para él, su realidad ES la realidad.</li>
-      <li>Responde a la emoción, no a la geografía: "quiero ir a mi casa" = "me siento insegura".</li>
-      <li>Frases cortas, dos opciones ("¿azul o roja?"); nunca lo examines con "¿te acuerdas?".</li>
-      <li>Atardecer agitado: baja el volumen de la casa, luz tibia, música de su época.</li>
-      <li>Casa segura: estufa con llave tuya, candados arriba y abajo, carné con dirección y foto reciente.</li>
-      <li>La memoria emocional: olvidará tu visita, no cómo lo hiciste sentir: despide con caricia.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Confusión REPENTINA no es "que avanzó": es orina, fiebre escondida, medicamento nuevo: consulta hoy.</div>
-    <div class="quote">"No puedes traerlo a tu mundo. Pero puedes visitar el suyo. Y en su mundo, todavía te espera con amor."</div>
-    <p>Si en tu casa hay alguien que empaca maletas hacia el pasado: <strong>no tienes que seguir cargándolo solo.</strong></p>
-  </div>
-  <div class="foot">PARTE IX · Las mentes que sufren</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 20 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/3TVOAxG.png" alt="Psiquiatría">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 20</div>
-    <h3 class="chap">Psiquiatría en casa: la mente también se fractura</h3>
-    <p>La señora Nubia escondió veinte años la esquizofrenia de su hijo Andrés: de las vecinas, de la familia, de sí misma. Hasta la crisis, cuando entendió que <strong>lo que mata no es la enfermedad: es el silencio.</strong></p>
-    <div class="box"><h4>💊 Reglas de la mente fracturada</h4><ul>
-      <li>La pastilla es sagrada: "lo veo bien" ES la pastilla trabajando; suspenderla es apagar el paracaídas en pleno vuelo.</li>
-      <li>Si se niega: no discutas el delirio, habla de la meta: "tómala para dormir mejor".</li>
-      <li>Al que oye voces: "Entiendo que tengas miedo. Yo no las oigo, pero te creo que tú las oyes. Estoy aquí."</li>
-      <li>Depresión: "échale ganas" no cura; tareas pequeñas, sol de mañana, compañía sin discurso.</li>
-      <li>El sueño es el termómetro: insomnio nuevo = sirena de rebrote.</li>
-      <li>Crisis en casa: voz baja, poca gente, no bloquees la salida; después, repara confianza, no culpa.</li>
-    </ul></div>
-    <div class="alerta">🚨 Pregunta directo ante la sospecha: "¿has pensado en hacerte daño?" Preguntar NO siembra: abre la puerta. Y el que estaba hundido y queda extrañamente en calma o regala sus cosas: no mejoró: decidió. Corre.</div>
-    <p>Nubia llegó al grupo de apoyo y salió diciendo: <strong>"Veinte años escondiéndolo, y era yo la que estaba enferma de silencio."</strong></p>
-    <div class="quote">"La mente también se fractura como un hueso. Y merece el mismo yeso: tratamiento, descanso y cero juicios."</div>
-  </div>
-  <div class="foot">PARTE IX · Las mentes que sufren</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/3TVOAxG.png" alt="Psiquiatría"></div>
+  <div class="kicker">Capítulo 20</div>
+  <h3 class="chap">Psiquiatría en casa: la mente también se fractura</h3>
+  <p>La señora Nubia escondió veinte años la esquizofrenia de su hijo Andrés: de las vecinas, de la familia, de sí misma. Hasta la crisis, cuando entendió que <strong>lo que mata no es la enfermedad: es el silencio.</strong></p>
+  <div class="box"><h4>💊 Reglas de la mente fracturada</h4><ul>
+    <li>La pastilla es sagrada: "lo veo bien" ES la pastilla trabajando; suspenderla es apagar el paracaídas en pleno vuelo.</li>
+    <li>Si se niega: no discutas el delirio, habla de la meta: "tómala para dormir mejor".</li>
+    <li>Al que oye voces: "Entiendo que tengas miedo. Yo no las oigo, pero te creo que tú las oyes. Estoy aquí."</li>
+    <li>Depresión: "échale ganas" no cura; tareas pequeñas, sol de mañana, compañía sin discurso.</li>
+    <li>El sueño es el termómetro: insomnio nuevo = sirena de rebrote.</li>
+    <li>Crisis en casa: voz baja, poca gente, no bloquees la salida; después, repara confianza, no culpa.</li>
+  </ul></div>
+  <div class="alerta">🚨 Pregunta directo ante la sospecha: "¿has pensado en hacerte daño?" Preguntar NO siembra: abre la puerta. Y el que estaba hundido y queda extrañamente en calma o regala sus cosas: no mejoró: decidió. Corre.</div>
+  <p>Nubia llegó al grupo de apoyo y salió diciendo: <strong>"Veinte años escondiéndolo, y era yo la que estaba enferma de silencio."</strong></p>
+  <div class="quote">"La mente también se fractura como un hueso. Y merece el mismo yeso: tratamiento, descanso y cero juicios."</div>
 
-<!-- CAP 21 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/2wrASeN.png" alt="La herida invisible">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 21</div>
-    <h3 class="chap">La herida invisible: sobrevivientes de violencia y el niño que lo dice con el cuerpo</h3>
-    <p>Este capítulo se escribe con el volumen bajo. Doña Elvira cuida a su nieta de nueve años desde que la niña volvió con el cuerpo callado y los ojos en otra parte. Lo primero que quiso hacer fue preguntar; lo primero que aprendió fue a <strong>no preguntar.</strong></p>
-    <div class="box"><h4>🏠 El cuerpo es territorio seguro</h4><ul>
-      <li>Anuncia cada contacto: "te voy a tomar la mano". El tacto anunciado deja de ser emboscada.</li>
-      <li>El abrazo no se exige, ni "de tío": en esta casa, el cuerpo manda.</li>
-      <li>Deja que elija: ropa, puerta abierta o cerrada: al que le robaron el control, se le devuelve en dosis diarias.</li>
-      <li>La historia se cuenta cuando el sobreviviente quiera, a quien deba oírla: tú cuidas, no investigas.</li>
-      <li>El acompañamiento profesional NO es opcional: esta herida la maneja especialista.</li>
-    </ul></div>
-    <div class="box"><h4>🧸 El niño que lo dice con el cuerpo</h4><ul>
-      <li>Señales: conducta sexual que no corresponde a la edad, dibujos que gritan, miedo a una persona, regresiones, moretones sin causa.</li>
-      <li>Si cuenta: créelo entero, no lo interroges, y denuncia YA (ICBF, 123): la duda protege al agresor.</li>
-      <li>Nunca confrontes tú al agresor ni te mudes sin denunciar: el silencio viaja con la familia.</li>
-      <li>Y sí: también las abuelas: miedo al baño, encogerse ante un hombre, moretones "de la nada": se escucha, se cree, se denuncia.</li>
-    </ul></div>
-    <p>Doña Elvira entendió que su rabia era normal y no era el camino: <strong>"Mi venganza va a ser que en esta casa no vuelva a haber miedo."</strong></p>
-    <div class="quote">"El que sobrevivió no necesita salvadores: necesita casa segura y tiempo. Tu trabajo es ser la casa."</div>
-    <p>Si en tu casa hay una herida invisible: <strong>no tienes que seguir cargándola solo.</strong></p>
-  </div>
-  <div class="foot">PARTE IX · Las mentes que sufren</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 22 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/84nc4s4.png" alt="TDAH">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 22</div>
-    <h3 class="chap">TDAH y las infancias invisibles</h3>
-    <p>A Tomás lo expulsaron de dos colegios antes de los nueve: "el que no queda". Su mamá lloró en tres reuniones antes de que alguien, en vez de regaño, le diera un nombre: <strong>TDAH. Y con el nombre llegó el alivio: "mi hijo no es malcriado: su cerebro va a 220."</strong></p>
-    <div class="box"><h4>🧠 Encauzar el 220</h4><ul>
-      <li>Rutina con dibujos y avisos cortos: "cinco minutos y apagamos".</li>
-      <li>Instrucciones: una a la vez, con contacto visual, y que te la repita.</li>
-      <li>El movimiento es el motor: pausas cada 20 minutos y encargos de peso.</li>
-      <li>La pastilla: herramienta, no milagro ni veneno: abre la ventana; la familia siembra.</li>
-      <li>Elogia el esfuerzo invisible: "te vi sentarte tres veces a terminar la tarea".</li>
-      <li>El truco de oro: que te ESCUCHE hablando bien de él: el elogio escuchado se cree más.</li>
-      <li>Deporte diario y pantallas apagadas una hora antes de dormir.</li>
-    </ul></div>
-    <p>Hoy Tomás arma y desarma bicicletas. Su mamá dice que el día que entendió que el molde era pequeño, dejó de empujar al niño y empezó a ensanchar el molde.</p>
-    <div class="quote">"El niño que no queda en el molde no está roto: el molde es pequeño. Tu trabajo no es arreglarlo: es ensanchar el molde."</div>
-    <p>Si en tu casa hay un cerebro a 220 y una mamá agotada de reuniones: <strong>no tienen que seguir cargándolo solos.</strong></p>
-  </div>
-  <div class="foot">PARTE IX · Las mentes que sufren</div>
+  <div class="fig"><img src="https://i.imgur.com/2wrASeN.png" alt="La herida invisible"></div>
+  <div class="kicker">Capítulo 21</div>
+  <h3 class="chap">La herida invisible: sobrevivientes de violencia y el niño que lo dice con el cuerpo</h3>
+  <p>Este capítulo se escribe con el volumen bajo. Doña Elvira cuida a su nieta de nueve años desde que la niña volvió con el cuerpo callado y los ojos en otra parte. Lo primero que quiso hacer fue preguntar; lo primero que aprendió fue a <strong>no preguntar.</strong></p>
+  <div class="box"><h4>🏠 El cuerpo es territorio seguro</h4><ul>
+    <li>Anuncia cada contacto: "te voy a tomar la mano". El tacto anunciado deja de ser emboscada.</li>
+    <li>El abrazo no se exige, ni "de tío": en esta casa, el cuerpo manda.</li>
+    <li>Deja que elija: ropa, puerta abierta o cerrada: al que le robaron el control, se le devuelve en dosis diarias.</li>
+    <li>La historia se cuenta cuando el sobreviviente quiera, a quien deba oírla: tú cuidas, no investigas.</li>
+    <li>El acompañamiento profesional NO es opcional: esta herida la maneja especialista.</li>
+  </ul></div>
+  <div class="box"><h4>🧸 El niño que lo dice con el cuerpo</h4><ul>
+    <li>Señales: conducta sexual que no corresponde a la edad, dibujos que gritan, miedo a una persona, regresiones, moretones sin causa.</li>
+    <li>Si cuenta: créelo entero, no lo interroges, y denuncia YA (ICBF, 123): la duda protege al agresor.</li>
+    <li>Nunca confrontes tú al agresor ni te mudes sin denunciar: el silencio viaja con la familia.</li>
+    <li>Y sí: también las abuelas: miedo al baño, encogerse ante un hombre, moretones "de la nada": se escucha, se cree, se denuncia.</li>
+  </ul></div>
+  <p>Doña Elvira entendió que su rabia era normal y no era el camino: <strong>"Mi venganza va a ser que en esta casa no vuelva a haber miedo."</strong></p>
+  <div class="quote">"El que sobrevivió no necesita salvadores: necesita casa segura y tiempo. Tu trabajo es ser la casa."</div>
+  <p>Si en tu casa hay una herida invisible: <strong>no tienes que seguir cargándola solo.</strong></p>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/84nc4s4.png" alt="TDAH"></div>
+  <div class="kicker">Capítulo 22</div>
+  <h3 class="chap">TDAH y las infancias invisibles</h3>
+  <p>A Tomás lo expulsaron de dos colegios antes de los nueve: "el que no queda". Su mamá lloró en tres reuniones antes de que alguien, en vez de regaño, le diera un nombre: <strong>TDAH. Y con el nombre llegó el alivio: "mi hijo no es malcriado: su cerebro va a 220."</strong></p>
+  <div class="box"><h4>🧠 Encauzar el 220</h4><ul>
+    <li>Rutina con dibujos y avisos cortos: "cinco minutos y apagamos".</li>
+    <li>Instrucciones: una a la vez, con contacto visual, y que te la repita.</li>
+    <li>El movimiento es el motor: pausas cada 20 minutos y encargos de peso.</li>
+    <li>La pastilla: herramienta, no milagro ni veneno: abre la ventana; la familia siembra.</li>
+    <li>Elogia el esfuerzo invisible: "te vi sentarte tres veces a terminar la tarea".</li>
+    <li>El truco de oro: que te ESCUCHE hablando bien de él: el elogio escuchado se cree más.</li>
+    <li>Deporte diario y pantallas apagadas una hora antes de dormir.</li>
+  </ul></div>
+  <p>Hoy Tomás arma y desarma bicicletas. Su mamá dice que el día que entendió que el molde era pequeño, dejó de empujar al niño y empezó a ensanchar el molde.</p>
+  <div class="quote">"El niño que no queda en el molde no está roto: el molde es pequeño. Tu trabajo no es arreglarlo: es ensanchar el molde."</div>
+  <p>Si en tu casa hay un cerebro a 220 y una mamá agotada de reuniones: <strong>no tienen que seguir cargándolo solos.</strong></p>
 </div>
 
 <!-- ══ PARTE X ══ -->
 <div class="page part"><div class="num">X</div><h2>CUANDO EL MUNDO TIEMBLA</h2><p>COVID, UCI y desastres: cuidar en medio de la tormenta</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/RoIwq8p.png" alt="COVID"></div>
+  <div class="kicker">Capítulo 23</div>
+  <h3 class="chap">COVID y el paciente infeccioso: distancia al cuerpo, nunca al alma</h3>
+  <p>En 2020, cuando don Rodrigo llegó positivo, la casa se partió en dos: su cuarto y "el resto del mundo". Su esposa Cecilia le pasaba la bandeja por la puerta con el corazón en una mano y el tapabocas en la otra. Esa casa aprendió lo que el país aprendió a golpes: <strong>el virus entra por la puerta, pero el miedo no puede entrar al corazón.</strong></p>
+  <div class="box"><h4>🦠 La frontera de la puerta</h4><ul>
+    <li>Cuarto con ventana abierta: el aire que circula no infecta.</li>
+    <li>Tapabocas los DOS; bata exclusiva del cuarto; bandeja en el umbral; manos lavadas al cruzar.</li>
+    <li>Loza aparte con jabón: con jabón, no con miedo.</li>
+    <li>Oxímetro dos veces al día en el cuaderno; corre si: no habla de corrido, dolor de pecho, labios morados.</li>
+    <li>La soledad también contagia: videollamada diaria con hora fija, cartas bajo la puerta, su música.</li>
+  </ul></div>
+  <p>Cecilia empezó a cantarle desde el otro lado de la puerta. A las siete, los vecinos se unieron desde la calle. <strong>La puerta se volvió escenario.</strong> Y al que volvió con fatiga y "niebla": caminatas que crecen de a minutos y frascos de café, limón y eucalipto para reentrenar la nariz. Y a los que no pudieron despedirse: la carta que no se escribió, se escribe hoy.</p>
+  <div class="quote">"Al virus se le pelea con distancia; al enfermo se le acompaña con ingenio. Distancia el cuerpo; jamás el alma."</div>
 
-<!-- CAP 23 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/RoIwq8p.png" alt="COVID">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 23</div>
-    <h3 class="chap">COVID y el paciente infeccioso: distancia al cuerpo, nunca al alma</h3>
-    <p>En 2020, cuando don Rodrigo llegó positivo, la casa se partió en dos: su cuarto y "el resto del mundo". Su esposa Cecilia le pasaba la bandeja por la puerta con el corazón en una mano y el tapabocas en la otra. Esa casa aprendió lo que el país aprendió a golpes: <strong>el virus entra por la puerta, pero el miedo no puede entrar al corazón.</strong></p>
-    <div class="box"><h4>🦠 La frontera de la puerta</h4><ul>
-      <li>Cuarto con ventana abierta: el aire que circula no infecta.</li>
-      <li>Tapabocas los DOS; bata exclusiva del cuarto; bandeja en el umbral; manos lavadas al cruzar.</li>
-      <li>Loza aparte con jabón: con jabón, no con miedo.</li>
-      <li>Oxímetro dos veces al día en el cuaderno; corre si: no habla de corrido, dolor de pecho, labios morados.</li>
-      <li>La soledad también contagia: videollamada diaria con hora fija, cartas bajo la puerta, su música.</li>
-    </ul></div>
-    <p>Cecilia empezó a cantarle desde el otro lado de la puerta. A las siete, los vecinos se unieron desde la calle. <strong>La puerta se volvió escenario.</strong> Y al que volvió con fatiga y "niebla": caminatas que crecen de a minutos y frascos de café, limón y eucalipto para reentrenar la nariz. Y a los que no pudieron despedirse: la carta que no se escribió, se escribe hoy.</p>
-    <div class="quote">"Al virus se le pelea con distancia; al enfermo se le acompaña con ingenio. Distancia el cuerpo; jamás el alma."</div>
-  </div>
-  <div class="foot">PARTE X · Cuando el mundo tiembla</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 24 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/Tp2g6XK.png" alt="UCI">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 24</div>
-    <h3 class="chap">El que vuelve de la UCI: la casa que devuelve a la persona</h3>
-    <p>Doña Yolanda pasó 34 días en UCI. Volvió un cuerpo de papel, con pesadillas de máquinas, preguntando si la guerra ya había pasado. <strong>No había guerra: había UCI.</strong> Su esposo Germán aprendió que el que vuelve no es el que se fue — y que esa no es mala noticia: es el punto de partida.</p>
-    <div class="box"><h4>🧩 El síndrome post-UCI se trata en casa</h4><ul>
-      <li>Músculo: rehabilitación desde el día uno; 34 días acostados no se recuperan en 3 parados.</li>
-      <li>Mente: no niegues las pesadillas: "eso pasó, ya pasó, estás en casa"; reloj, calendario, luz de día y oscuridad de noche.</li>
-      <li>Voz y tragar: ronquera y atragantamientos: texturas espesas, terapia de lenguaje.</li>
-      <li>Tráquea o gastrostomía que llegan a casa: se aprenden ANTES del alta, con supervisión.</li>
-      <li>PICS-F: el que esperó en el pasillo también estuvo enfermo: si las pesadillas son tuyas, también se tratan.</li>
-    </ul></div>
-    <p>Doña Yolanda volvió a sostener su taza al mes y medio. Germán lloró sobre esa taza como si fuera un trofeo. Lo era.</p>
-    <div class="quote">"La UCI salva la vida; la casa la devuelve. Una entrega el cuerpo; la otra, la persona."</div>
-    <p>Si en tu casa hay alguien que volvió de la UCI con el cuerpo de papel: <strong>no tienes que seguir cargándolo solo.</strong></p>
-  </div>
-  <div class="foot">PARTE X · Cuando el mundo tiembla</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/Tp2g6XK.png" alt="UCI"></div>
+  <div class="kicker">Capítulo 24</div>
+  <h3 class="chap">El que vuelve de la UCI: la casa que devuelve a la persona</h3>
+  <p>Doña Yolanda pasó 34 días en UCI. Volvió un cuerpo de papel, con pesadillas de máquinas, preguntando si la guerra ya había pasado. <strong>No había guerra: había UCI.</strong> Su esposo Germán aprendió que el que vuelve no es el que se fue — y que esa no es mala noticia: es el punto de partida.</p>
+  <div class="box"><h4>🧩 El síndrome post-UCI se trata en casa</h4><ul>
+    <li>Músculo: rehabilitación desde el día uno; 34 días acostados no se recuperan en 3 parados.</li>
+    <li>Mente: no niegues las pesadillas: "eso pasó, ya pasó, estás en casa"; reloj, calendario, luz de día y oscuridad de noche.</li>
+    <li>Voz y tragar: ronquera y atragantamientos: texturas espesas, terapia de lenguaje.</li>
+    <li>Tráquea o gastrostomía que llegan a casa: se aprenden ANTES del alta, con supervisión.</li>
+    <li>PICS-F: el que esperó en el pasillo también estuvo enfermo: si las pesadillas son tuyas, también se tratan.</li>
+  </ul></div>
+  <p>Doña Yolanda volvió a sostener su taza al mes y medio. Germán lloró sobre esa taza como si fuera un trofeo. Lo era.</p>
+  <div class="quote">"La UCI salva la vida; la casa la devuelve. Una entrega el cuerpo; la otra, la persona."</div>
+  <p>Si en tu casa hay alguien que volvió de la UCI con el cuerpo de papel: <strong>no tienes que seguir cargándolo solo.</strong></p>
 
-<!-- CAP 25 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/74BP4Kn.png" alt="Desastre">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 25</div>
-    <h3 class="chap">Cuidar cuando la tierra se abre: desastres y desplazamiento</h3>
-    <p>Cuando la avalancha se llevó medio barrio, doña Mercedes salió con su esposo postrado en hombros del vecino. Perdió la casa, la silla, los medicamentos, la historia. En el albergue, su drama era invisible: <strong>el enfermo crónico que no sangra no sale en la foto.</strong></p>
-    <div class="box"><h4>🎒 El kit que se arma en la calma</h4><ul>
-      <li>Meds para 7–14 días + lista escrita · historia clínica en bolsa plástica · agua, alimento especial, pilas, documentos, muda.</li>
-      <li>En el desastre: reporta al puesto de salud: "tengo paciente postrado/insulino-dependiente": el invisible que se reporta, sobrevive.</li>
-      <li>Insulina: cadena de frío con nevera de icopor, nunca hielo directo: la congelada no sirve.</li>
-      <li>Postrado en el piso de un albergue: la piel no negocia: 2 horas igual; una cobija es colchón, una almohada es posición.</li>
-      <li>El desplazado pierde el mapa: devuélvele anclas: su nombre, su historia: "cuéntame de tu casa".</li>
-      <li>A los niños: el juego no es lujo: es digestión del trauma.</li>
-    </ul></div>
-    <div class="quote">"Cuando la tierra se abre, al enfermo no lo sostiene el cemento: lo sostiene la continuidad del cuidado y alguien que se sepa su nombre."</div>
-  </div>
-  <div class="foot">PARTE X · Cuando el mundo tiembla</div>
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/74BP4Kn.png" alt="Desastre"></div>
+  <div class="kicker">Capítulo 25</div>
+  <h3 class="chap">Cuidar cuando la tierra se abre: desastres y desplazamiento</h3>
+  <p>Cuando la avalancha se llevó medio barrio, doña Mercedes salió con su esposo postrado en hombros del vecino. Perdió la casa, la silla, los medicamentos, la historia. En el albergue, su drama era invisible: <strong>el enfermo crónico que no sangra no sale en la foto.</strong></p>
+  <div class="box"><h4>🎒 El kit que se arma en la calma</h4><ul>
+    <li>Meds para 7–14 días + lista escrita · historia clínica en bolsa plástica · agua, alimento especial, pilas, documentos, muda.</li>
+    <li>En el desastre: reporta al puesto de salud: "tengo paciente postrado/insulino-dependiente": el invisible que se reporta, sobrevive.</li>
+    <li>Insulina: cadena de frío con nevera de icopor, nunca hielo directo: la congelada no sirve.</li>
+    <li>Postrado en el piso de un albergue: la piel no negocia: 2 horas igual; una cobija es colchón, una almohada es posición.</li>
+    <li>El desplazado pierde el mapa: devuélvele anclas: su nombre, su historia: "cuéntame de tu casa".</li>
+    <li>A los niños: el juego no es lujo: es digestión del trauma.</li>
+  </ul></div>
+  <div class="quote">"Cuando la tierra se abre, al enfermo no lo sostiene el cemento: lo sostiene la continuidad del cuidado y alguien que se sepa su nombre."</div>
 </div>
 
 <!-- ══ PARTE XI ══ -->
 <div class="page part"><div class="num">XI</div><h2>LOS MÁS PEQUEÑOS</h2><p>La verdad en pedacitos, sostenida de la mano</p></div>
-
-<!-- CAP 26 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/lap3LtM.png" alt="Niño enfermo">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 26</div>
-    <h3 class="chap">El niño enfermo en casa</h3>
-    <p>Valentina, cinco años, asma y una neumonía que la tuvo tres veces en urgencias. Su mamá aprendió a nebulizar, a leer costillas, y a responder la pregunta que más miedo da: <strong>"Mami, ¿me voy a morir?"</strong></p>
-    <div class="box"><h4>🗣️ La verdad según su tamaño</h4><ul>
-      <li>Al niño no se le esconde la verdad: se le entrega en pedacitos: "estás enferma y te estamos cuidando" cura más que "no es nada".</li>
-      <li>Ante la muerte, nunca "se quedó dormido" (da miedo dormir) ni "Dios se lo llevó" (da rabia a Dios): "su cuerpecito dejó de funcionar y lo vamos a querer siempre". Llorar juntos es medicina.</li>
-      <li>La nebulización es una nave: el medicamento no se negocia, el juego sí. El que juega con el tratamiento, se trata.</li>
-      <li>La maleta del consuelo: manta, juguete, el olor de casa.</li>
-      <li>El procedimiento se ensaya en el muñeco antes que en el niño.</li>
-    </ul></div>
-    <div class="alerta">🚨 Corre si: se hunden las costillas · respira muy rápido y no puede hablar · labios morados · <strong>el niño que no juega ni toma líquido</strong>: el juego es el termómetro del alma. Y fiebre: trata al niño, no al número.</div>
-    <div class="quote">"Al niño no se le esconde la verdad: se le entrega en pedacitos, sostenida de la mano. Lo que no soporta es la soledad de la mentira."</div>
-    <p>Si en tu casa hay un niño enfermo haciendo preguntas grandes: <strong>no tienen que seguir cargándolas solos.</strong></p>
-  </div>
-  <div class="foot">PARTE XI · Los más pequeños</div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/lap3LtM.png" alt="Niño enfermo"></div>
+  <div class="kicker">Capítulo 26</div>
+  <h3 class="chap">El niño enfermo en casa</h3>
+  <p>Valentina, cinco años, asma y una neumonía que la tuvo tres veces en urgencias. Su mamá aprendió a nebulizar, a leer costillas, y a responder la pregunta que más miedo da: <strong>"Mami, ¿me voy a morir?"</strong></p>
+  <div class="box"><h4>🗣️ La verdad según su tamaño</h4><ul>
+    <li>Al niño no se le esconde la verdad: se le entrega en pedacitos: "estás enferma y te estamos cuidando" cura más que "no es nada".</li>
+    <li>Ante la muerte, nunca "se quedó dormido" (da miedo dormir) ni "Dios se lo llevó" (da rabia a Dios): "su cuerpecito dejó de funcionar y lo vamos a querer siempre". Llorar juntos es medicina.</li>
+    <li>La nebulización es una nave: el medicamento no se negocia, el juego sí. El que juega con el tratamiento, se trata.</li>
+    <li>La maleta del consuelo: manta, juguete, el olor de casa.</li>
+    <li>El procedimiento se ensaya en el muñeco antes que en el niño.</li>
+  </ul></div>
+  <div class="alerta">🚨 Corre si: se hunden las costillas · respira muy rápido y no puede hablar · labios morados · <strong>el niño que no juega ni toma líquido</strong>: el juego es el termómetro del alma. Y fiebre: trata al niño, no al número.</div>
+  <div class="quote">"Al niño no se le esconde la verdad: se le entrega en pedacitos, sostenida de la mano. Lo que no soporta es la soledad de la mentira."</div>
+  <p>Si en tu casa hay un niño enfermo haciendo preguntas grandes: <strong>no tienen que seguir cargándolas solos.</strong></p>
 </div>
 
 <!-- ══ PARTE XII ══ -->
 <div class="page part"><div class="num">XII</div><h2>EL FINAL Y EL PRINCIPIO</h2><p>Acompañar hasta el último minuto, y conversar lo imposible</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/m10BPD3.png" alt="Paliativos"></div>
+  <div class="kicker">Capítulo 27</div>
+  <h3 class="chap">Cuidados paliativos: acompañar hasta el último minuto</h3>
+  <p>Este capítulo ya lo conoces: es el del señor de noventa y un años que me dijo <strong>"gracias por no dejarme solo."</strong> Hoy te doy lo que esa noche aprendí con las manos.</p>
+  <div class="box"><h4>🕯️ Las señales y lo que se hace</h4><ul>
+    <li>Come menos, duerme más, piel moteada, respiración con pausas: no es emergencia: es el cuerpo despidiéndose. El confort manda; ya no mandan los números.</li>
+    <li>El oído es lo último que se va: háblale hasta el final; no digas delante de él lo que no quieras que escuche; no se discuten deudas en la cama.</li>
+    <li>Las cinco frases que no fallan: gracias · te perdono · perdóname · te amo · hasta luego.</li>
+    <li>Confort de bolsillo: labios húmedos, mano sostenida, su música.</li>
+    <li>El velador también duerme: turnos para el que acompaña.</li>
+    <li>La voluntad anticipada se respeta: honrar "no me vuelvan a hospitalizar" es amor, no abandono.</li>
+    <li>Después: primero el tiempo del adiós; después los papeles.</li>
+  </ul></div>
+  <div class="quote">"Acompañar el final no es apurar la muerte: es llenar de compañía la vida hasta el último minuto."</div>
 
-<!-- CAP 27 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/m10BPD3.png" alt="Paliativos">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 27</div>
-    <h3 class="chap">Cuidados paliativos: acompañar hasta el último minuto</h3>
-    <p>Este capítulo ya lo conoces: es el del señor de noventa y un años que me dijo <strong>"gracias por no dejarme solo."</strong> Hoy te doy lo que esa noche aprendí con las manos.</p>
-    <div class="box"><h4>🕯️ Las señales y lo que se hace</h4><ul>
-      <li>Come menos, duerme más, piel moteada, respiración con pausas: no es emergencia: es el cuerpo despidiéndose. El confort manda; ya no mandan los números.</li>
-      <li>El oído es lo último que se va: háblale hasta el final; no digas delante de él lo que no quieras que escuche; no se discuten deudas en la cama.</li>
-      <li>Las cinco frases que no fallan: gracias · te perdono · perdóname · te amo · hasta luego.</li>
-      <li>Confort de bolsillo: labios húmedos, mano sostenida, su música.</li>
-      <li>El velador también duerme: turnos para el que acompaña.</li>
-      <li>La voluntad anticipada se respeta: honrar "no me vuelvan a hospitalizar" es amor, no abandono.</li>
-      <li>Después: primero el tiempo del adiós; después los papeles.</li>
-    </ul></div>
-    <div class="quote">"Acompañar el final no es apurar la muerte: es llenar de compañía la vida hasta el último minuto."</div>
-  </div>
-  <div class="foot">PARTE XII · El final y el principio</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 28 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/Yt14R66.png" alt="Conversaciones">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 28</div>
-    <h3 class="chap">Conversaciones difíciles: los guiones que abren puertas</h3>
-    <p>Casi ningún conflicto de cuidado se pelea: <strong>se conversa.</strong> Aquí van los guiones, palabra por palabra.</p>
-    <div class="box"><h4>🗣️ Los guiones</h4><ul>
-      <li><strong>"No quiero bañarme":</strong> "¿ahora o después de la novela? ¿toalla azul o blanca?" El que elige, coopera.</li>
-      <li><strong>"No quiero comer":</strong> dos cucharadas, su favorita, compañía sin TV; la mesa no es campo de batalla.</li>
-      <li><strong>"Quiero morirme":</strong> siéntate y di "cuéntame más". A veces es cansancio, dolor o depresión: los tres tienen tratamiento. Preguntar no siembra: abre la puerta.</li>
-      <li><strong>La familia que no ayuda:</strong> "No los necesito con pena, los necesito con turno: sábado de 2 a 5."</li>
-      <li><strong>"No quiero que me cuiden":</strong> muchas veces es "me da miedo ser carga": "cuidarte es mi manera de quererte".</li>
-      <li><strong>"No quiero ir al médico":</strong> "Vamos juntos, me quedo contigo, y después pasamos por el tinto que te gusta."</li>
-      <li><strong>El cuñado que "sabe de medicina":</strong> "Gracias, tío; pero aquí decide el médico que lo tiene historiado."</li>
-    </ul></div>
-    <div class="quote">"Las conversaciones difíciles no se ganan con argumentos: se abren con preguntas y se sostienen con presencia."</div>
-  </div>
-  <div class="foot">PARTE XII · El final y el principio</div>
+  <div class="fig"><img src="https://i.imgur.com/Yt14R66.png" alt="Conversaciones"></div>
+  <div class="kicker">Capítulo 28</div>
+  <h3 class="chap">Conversaciones difíciles: los guiones que abren puertas</h3>
+  <p>Casi ningún conflicto de cuidado se pelea: <strong>se conversa.</strong> Aquí van los guiones, palabra por palabra.</p>
+  <div class="box"><h4>🗣️ Los guiones</h4><ul>
+    <li><strong>"No quiero bañarme":</strong> "¿ahora o después de la novela? ¿toalla azul o blanca?" El que elige, coopera.</li>
+    <li><strong>"No quiero comer":</strong> dos cucharadas, su favorita, compañía sin TV; la mesa no es campo de batalla.</li>
+    <li><strong>"Quiero morirme":</strong> siéntate y di "cuéntame más". A veces es cansancio, dolor o depresión: los tres tienen tratamiento. Preguntar no siembra: abre la puerta.</li>
+    <li><strong>La familia que no ayuda:</strong> "No los necesito con pena, los necesito con turno: sábado de 2 a 5."</li>
+    <li><strong>"No quiero que me cuiden":</strong> muchas veces es "me da miedo ser carga": "cuidarte es mi manera de quererte".</li>
+    <li><strong>"No quiero ir al médico":</strong> "Vamos juntos, me quedo contigo, y después pasamos por el tinto que te gusta."</li>
+    <li><strong>El cuñado que "sabe de medicina":</strong> "Gracias, tío; pero aquí decide el médico que lo tiene historiado."</li>
+  </ul></div>
+  <div class="quote">"Las conversaciones difíciles no se ganan con argumentos: se abren con preguntas y se sostienen con presencia."</div>
 </div>
 
 <!-- ══ PARTE XIII ══ -->
 <div class="page part"><div class="num">XIII</div><h2>EL CUERPO QUE SORPRENDE</h2><p>Epilepsia, los primeros tres minutos, y ver con las manos</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/4fPtUsL.png" alt="Epilepsia"></div>
+  <div class="kicker">Capítulo 29</div>
+  <h3 class="chap">Epilepsia: la convulsión que asusta al vecindario</h3>
+  <p>Samuel, doce años, primera convulsión en el salón. La profesora, con amor y pánico, le metió una cuchara en la boca "para que no se tragara la lengua". Samuel despertó con la lengua mordida y dos dientes rotos. <strong>La lengua no se traga; la cuchara sí rompe.</strong></p>
+  <div class="box"><h4>⚡ Lo que se hace (y lo que jamás)</h4><ul>
+    <li>No lo sujetes, no le metas NADA en la boca; aflója ropa, algo suave bajo la cabeza, gíralo de lado al ceder.</li>
+    <li>Mira el reloj: la convulsión se cronometra, no se reza.</li>
+    <li>Después: somnoliento es normal; agua solo despierto del todo.</li>
+    <li>Corre si: más de 5 minutos · se repite · es la primera · fue en el agua.</li>
+    <li>La pastilla no se negocia: suspenderla de golpe invita al estado epiléptico.</li>
+    <li>Casa segura: baño sin seguro por dentro, ducha no tina; tarjeta "en caso de convulsión" en el morral.</li>
+    <li>El epiléptico no es de porcelana: que juegue y viva: la sobreprotección también convulsiona.</li>
+  </ul></div>
+  <div class="quote">"La convulsión no se pelea con cucharas: se acompaña con calma. El mito rompe dientes; la calma salva."</div>
 
-<!-- CAP 29 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/4fPtUsL.png" alt="Epilepsia">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 29</div>
-    <h3 class="chap">Epilepsia: la convulsión que asusta al vecindario</h3>
-    <p>Samuel, doce años, primera convulsión en el salón. La profesora, con amor y pánico, le metió una cuchara en la boca "para que no se tragara la lengua". Samuel despertó con la lengua mordida y dos dientes rotos. <strong>La lengua no se traga; la cuchara sí rompe.</strong></p>
-    <div class="box"><h4>⚡ Lo que se hace (y lo que jamás)</h4><ul>
-      <li>No lo sujetes, no le metas NADA en la boca; aflója ropa, algo suave bajo la cabeza, gíralo de lado al ceder.</li>
-      <li>Mira el reloj: la convulsión se cronometra, no se reza.</li>
-      <li>Después: somnoliento es normal; agua solo despierto del todo.</li>
-      <li>Corre si: más de 5 minutos · se repite · es la primera · fue en el agua.</li>
-      <li>La pastilla no se negocia: suspenderla de golpe invita al estado epiléptico.</li>
-      <li>Casa segura: baño sin seguro por dentro, ducha no tina; tarjeta "en caso de convulsión" en el morral.</li>
-      <li>El epiléptico no es de porcelana: que juegue y viva: la sobreprotección también convulsiona.</li>
-    </ul></div>
-    <div class="quote">"La convulsión no se pelea con cucharas: se acompaña con calma. El mito rompe dientes; la calma salva."</div>
-  </div>
-  <div class="foot">PARTE XIII · El cuerpo que sorprende</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 30 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/L3ibp0k.png" alt="Primeros auxilios">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 30</div>
-    <h3 class="chap">Los primeros tres minutos: ahogados, quemados, envenenados</h3>
-    <p>Al primo de don Ernesto lo sacaron del río y lo colgaron boca abajo "para que botara el agua". Casi lo mata el remedio: <strong>el agua que ahoga está en el pulmón, no en la barriga.</strong></p>
-    <div class="box"><h4>🚨 Lo que salva</h4><ul>
-      <li><strong>Ahogado:</strong> lanza lo que flota, no te lances sin saber; fuera: 123 y compresiones fuerte y rápido en el centro del pecho. Nunca boca abajo.</li>
-      <li><strong>Quemado:</strong> agua fresca corriendo 10–20 min (no hielo), paño limpio, no rompas ampollas; la cocina se queda en la cocina.</li>
-      <li><strong>Envenenado:</strong> no lo hagas vomitar; trae el frasco y llama al 123.</li>
-      <li><strong>Electrocutado:</strong> NO lo toques hasta cortar la corriente: el héroe improvisado es la segunda víctima.</li>
-      <li><strong>Mordedura:</strong> agua y jabón 10–15 min y consulta.</li>
-      <li><strong>Caído con dolor de cuello:</strong> no lo muevas.</li>
-      <li>Botiquín real revisado el primer domingo de cada mes: gasas, vendas, suero, termómetro, tijeras, guantes, jabón, y la Tarjeta de la Nevera.</li>
-    </ul></div>
-    <div class="quote">"En los primeros tres minutos no salva el más fuerte: salva el más sereno."</div>
-  </div>
-  <div class="foot">PARTE XIII · El cuerpo que sorprende</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/L3ibp0k.png" alt="Primeros auxilios"></div>
+  <div class="kicker">Capítulo 30</div>
+  <h3 class="chap">Los primeros tres minutos: ahogados, quemados, envenenados</h3>
+  <p>Al primo de don Ernesto lo sacaron del río y lo colgaron boca abajo "para que botara el agua". Casi lo mata el remedio: <strong>el agua que ahoga está en el pulmón, no en la barriga.</strong></p>
+  <div class="box"><h4>🚨 Lo que salva</h4><ul>
+    <li><strong>Ahogado:</strong> lanza lo que flota, no te lances sin saber; fuera: 123 y compresiones fuerte y rápido en el centro del pecho. Nunca boca abajo.</li>
+    <li><strong>Quemado:</strong> agua fresca corriendo 10–20 min (no hielo), paño limpio, no rompas ampollas; la cocina se queda en la cocina.</li>
+    <li><strong>Envenenado:</strong> no lo hagas vomitar; trae el frasco y llama al 123.</li>
+    <li><strong>Electrocutado:</strong> NO lo toques hasta cortar la corriente: el héroe improvisado es la segunda víctima.</li>
+    <li><strong>Mordedura:</strong> agua y jabón 10–15 min y consulta.</li>
+    <li><strong>Caído con dolor de cuello:</strong> no lo muevas.</li>
+    <li>Botiquín real revisado el primer domingo de cada mes: gasas, vendas, suero, termómetro, tijeras, guantes, jabón, y la Tarjeta de la Nevera.</li>
+  </ul></div>
+  <div class="quote">"En los primeros tres minutos no salva el más fuerte: salva el más sereno."</div>
 
-<!-- CAP 31 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/IKKpTWZ.png" alt="Ciegos y sordos">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 31</div>
-    <h3 class="chap">Ver con las manos: cuidar al ciego y al sordo</h3>
-    <p>Don Anselmo perdió la vista por la diabetes. Su nieta aprendió lo que ningún manual dijo: <strong>al ciego no se le empuja: se le anuncia.</strong></p>
-    <div class="box"><h4>🦯 Al que no ve · 🧏 Al que no oye</h4><ul>
-      <li>Di tu nombre antes de tocar: la voz es tu rostro.</li>
-      <li>El bastón no se agarra: ofrece TU brazo, medio paso adelante.</li>
-      <li>Describe como reloj: "la silla a tus tres en punto"; no reordenes la casa sin avisar.</li>
-      <li>Al perro guía no lo acaricies: está trabajando.</li>
-      <li>Contraste es luz: plato blanco sobre mantel oscuro; rutas fijas.</li>
-      <li>Al sordo: de frente antes de hablar; no grites: lee los labios; papel si hace falta.</li>
-      <li>El que se aísla por oír o ver menos, se apaga: acércale el mundo.</li>
-      <li>Y la regla de oro: no hables de él como si no estuviera.</li>
-    </ul></div>
-    <div class="quote">"El ciego no necesita tu lástima: necesita tu voz y su mapa intacto. El sordo no necesita tu grito: necesita tu cara."</div>
-  </div>
-  <div class="foot">PARTE XIII · El cuerpo que sorprende</div>
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/IKKpTWZ.png" alt="Ciegos y sordos"></div>
+  <div class="kicker">Capítulo 31</div>
+  <h3 class="chap">Ver con las manos: cuidar al ciego y al sordo</h3>
+  <p>Don Anselmo perdió la vista por la diabetes. Su nieta aprendió lo que ningún manual dijo: <strong>al ciego no se le empuja: se le anuncia.</strong></p>
+  <div class="box"><h4>🦯 Al que no ve · 🧏 Al que no oye</h4><ul>
+    <li>Di tu nombre antes de tocar: la voz es tu rostro.</li>
+    <li>El bastón no se agarra: ofrece TU brazo, medio paso adelante.</li>
+    <li>Describe como reloj: "la silla a tus tres en punto"; no reordenes la casa sin avisar.</li>
+    <li>Al perro guía no lo acaricies: está trabajando.</li>
+    <li>Contraste es luz: plato blanco sobre mantel oscuro; rutas fijas.</li>
+    <li>Al sordo: de frente antes de hablar; no grites: lee los labios; papel si hace falta.</li>
+    <li>El que se aísla por oír o ver menos, se apaga: acércale el mundo.</li>
+    <li>Y la regla de oro: no hables de él como si no estuviera.</li>
+  </ul></div>
+  <div class="quote">"El ciego no necesita tu lástima: necesita tu voz y su mapa intacto. El sordo no necesita tu grito: necesita tu cara."</div>
 </div>
 
 <!-- ══ PARTE XIV ══ -->
 <div class="page part"><div class="num">XIV</div><h2>AMOR QUE ESPERA</h2><p>Amar con un virus, y esperar a dos</p></div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/AWsVAam.png" alt="Virus"></div>
+  <div class="kicker">Capítulo 32</div>
+  <h3 class="chap">Amar con un virus: VIH, SIDA e ITS en casa</h3>
+  <p>Marina tenía treinta años y un diagnóstico que su mamá recibió como un entierro. Hasta que la enfermera dijo la frase que resucitó a las dos: <strong>"Señora, el VIH se transmite por tres vías. El abrazo no es ninguna."</strong></p>
+  <div class="box"><h4>🧪 La ciencia del cuidado</h4><ul>
+    <li>Precauciones universales: guantes ante la sangre, no compartir cuchillas ni cepillos. El resto es vida normal: abrazos, mesa, baño, ropa junta.</li>
+    <li>La pastilla es sagrada: indetectable = intransmisible (I=I): la adherencia es el muro.</li>
+    <li>Alarma: fiebre que no cede, placas blancas en la boca, pérdida de peso: consulta hoy.</li>
+    <li>Casa que protege al inmunosuprimido: alimentos cocidos, agua limpia, boca sana, la caja del gato la limpia otro.</li>
+    <li>Contar o no contar: lo decide el paciente: tú no eres el boletín.</li>
+    <li>Con adolescentes: informar no es autorizar: es proteger: condón, vacuna del VPH, prueba sin vergüenza.</li>
+  </ul></div>
+  <p>El duelo del diagnóstico se llora como una muerte; después se vive. La afectividad no se pone en cuarentena.</p>
+  <div class="quote">"El virus se transmite por tres vías; el estigma, por todas. No seas portador de estigma."</div>
 
-<!-- CAP 32 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/AWsVAam.png" alt="Virus">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 32</div>
-    <h3 class="chap">Amar con un virus: VIH, SIDA e ITS en casa</h3>
-    <p>Marina tenía treinta años y un diagnóstico que su mamá recibió como un entierro. Hasta que la enfermera dijo la frase que resucitó a las dos: <strong>"Señora, el VIH se transmite por tres vías. El abrazo no es ninguna."</strong></p>
-    <div class="box"><h4>🧪 La ciencia del cuidado</h4><ul>
-      <li>Precauciones universales: guantes ante la sangre, no compartir cuchillas ni cepillos. El resto es vida normal: abrazos, mesa, baño, ropa junta.</li>
-      <li>La pastilla es sagrada: indetectable = intransmisible (I=I): la adherencia es el muro.</li>
-      <li>Alarma: fiebre que no cede, placas blancas en la boca, pérdida de peso: consulta hoy.</li>
-      <li>Casa que protege al inmunosuprimido: alimentos cocidos, agua limpia, boca sana, la caja del gato la limpia otro.</li>
-      <li>Contar o no contar: lo decide el paciente: tú no eres el boletín.</li>
-      <li>Con adolescentes: informar no es autorizar: es proteger: condón, vacuna del VPH, prueba sin vergüenza.</li>
-    </ul></div>
-    <p>El duelo del diagnóstico se llora como una muerte; después se vive. La afectividad no se pone en cuarentena.</p>
-    <div class="quote">"El virus se transmite por tres vías; el estigma, por todas. No seas portador de estigma."</div>
-  </div>
-  <div class="foot">PARTE XIV · Amor que espera</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 33 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/tafhpz5.png" alt="Embarazo">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 33</div>
-    <h3 class="chap">Esperando a dos: embarazo y posparto en casa</h3>
-    <p>A los cuarenta y uno, con preeclampsia, a doña Ruth el médico la mandó a "reposo absoluto" — y nadie le dijo que el reposo también se cuida. Y a Valentina, dieciséis, el embarazo le llegó con el colegio suspendido y la casa en silencio. <strong>Las dos necesitaban lo mismo: que la casa creciera.</strong></p>
-    <div class="box"><h4>🌸 Señales que no esperan y cuidados que sostienen</h4><ul>
-      <li>Corre si: sangrado · cefalea con "lucecitas" o visión borrosa · hinchazón repentina de cara y manos · el bebé se mueve menos · agua antes de tiempo.</li>
-      <li>Cuaderno de tensión de la embarazada: la preeclampsia se caza en casa.</li>
-      <li>Reposo no es abandono: piel, piernas en marcha, agua, compañía.</li>
-      <li>Posparto: "debería estar feliz y quiero llorar" es enfermedad, no malagradecida: consulta. Alarma: empapar más de una toalla/hora, fiebre, olor fétido.</li>
-      <li>Turnos para que la mamá duerma: el sueño de la que amamanta es sagrado.</li>
-      <li>Recién nacido: no mama · se hunde · amarillo desde el primer día · fiebre = corre. Sueño seguro: boca arriba, cuna despejada.</li>
-      <li>La adolescente: ni sermón ni castigo: red. "No estás sola" es el primer medicamento.</li>
-    </ul></div>
-    <div class="quote">"Esperar a dos es cuidar a dos. Y cuando la madre es niña, el amor tiene que crecer por tres."</div>
-    <p>Si en tu casa hay una mujer esperando —de dieciséis o de cuarenta—: <strong>no tiene que seguir cargándolo sola.</strong></p>
-  </div>
-  <div class="foot">PARTE XIV · Amor que espera</div>
+  <div class="fig"><img src="https://i.imgur.com/tafhpz5.png" alt="Embarazo"></div>
+  <div class="kicker">Capítulo 33</div>
+  <h3 class="chap">Esperando a dos: embarazo y posparto en casa</h3>
+  <p>A los cuarenta y uno, con preeclampsia, a doña Ruth el médico la mandó a "reposo absoluto" — y nadie le dijo que el reposo también se cuida. Y a Valentina, dieciséis, el embarazo le llegó con el colegio suspendido y la casa en silencio. <strong>Las dos necesitaban lo mismo: que la casa creciera.</strong></p>
+  <div class="box"><h4>🌸 Señales que no esperan y cuidados que sostienen</h4><ul>
+    <li>Corre si: sangrado · cefalea con "lucecitas" o visión borrosa · hinchazón repentina de cara y manos · el bebé se mueve menos · agua antes de tiempo.</li>
+    <li>Cuaderno de tensión de la embarazada: la preeclampsia se caza en casa.</li>
+    <li>Reposo no es abandono: piel, piernas en marcha, agua, compañía.</li>
+    <li>Posparto: "debería estar feliz y quiero llorar" es enfermedad, no malagradecida: consulta. Alarma: empapar más de una toalla/hora, fiebre, olor fétido.</li>
+    <li>Turnos para que la mamá duerma: el sueño de la que amamanta es sagrado.</li>
+    <li>Recién nacido: no mama · se hunde · amarillo desde el primer día · fiebre = corre. Sueño seguro: boca arriba, cuna despejada.</li>
+    <li>La adolescente: ni sermón ni castigo: red. "No estás sola" es el primer medicamento.</li>
+  </ul></div>
+  <div class="quote">"Esperar a dos es cuidar a dos. Y cuando la madre es niña, el amor tiene que crecer por tres."</div>
+  <p>Si en tu casa hay una mujer esperando —de dieciséis o de cuarenta—: <strong>no tiene que seguir cargándolo sola.</strong></p>
 </div>
 
 <!-- ══ EPÍLOGO ══ -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/5QukO0s.png" alt="Epílogo">
-  <div class="chap-body">
-    <div class="kicker">Epílogo</div>
-    <h3 class="chap">La última lección</h3>
-    <p>En 2024 cuidé a un señor de noventa y un años en sus últimos días. Cáncer terminal. La familia cumplió su deseo: morir en casa. La última noche me senté a su lado. No hablaba; respiraba lento. Le tomé la mano y sentí cómo la presión de sus dedos se iba apagando. A las tres de la mañana abrió los ojos, me miró y dijo:</p>
-    <div class="quote">"Gracias por no dejarme solo."</div>
-    <p>Cerró los ojos. Y no los volvió a abrir.</p>
-    <p>Casi treinta años. Miles de pacientes. Pero esa frase es la que me define. Porque al final no se trata de técnicas, protocolos ni medicamentos: se trata de <strong>no dejar solo a nadie en el momento más vulnerable de su vida.</strong></p>
-    <p>Tú que cuidas hoy, escúchame: no necesitas saberlo todo ni hacerlo perfecto. Solo necesitas estar ahí. Presente. Con las manos listas y el corazón dispuesto. El resto se aprende en el camino. Yo llevo casi treinta años aprendiendo. <strong>Y todavía me falta.</strong></p>
-    <p>Doña Mercedes tenía razón: el día que se me quite el miedo, renuncio. Casi treinta años después, sigo temblando un poquito cada vez que sostengo una mano nueva. <strong>Y sigo aquí.</strong></p>
-    <p style="text-align:right; font-style:italic;">— El Autor</p>
-    <p style="margin-top:10px; text-align:center; font-size:9.5pt;"><strong>CIERRE DE LA OBRA:</strong> Este libro termina aquí, pero tu historia no. En casi treinta años aprendí que el cuidado no es un oficio: es una forma de amar con las mangas arremangadas. Y que nadie —ni la hija que llora en el baño, ni el esposo que cuenta respiraciones, ni la abuela que rasca un pie fantasma— <strong>nadie tiene que seguir cargándolo solo.</strong> Si estas páginas te encontraron, ya sabes dónde estamos. 🏠</p>
-  </div>
-  <div class="foot">LAS MANOS QUE CUIDAN · Epílogo</div>
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/5QukO0s.png" alt="Epílogo"></div>
+  <div class="kicker">Epílogo</div>
+  <h3 class="chap">La última lección</h3>
+  <p>En 2024 cuidé a un señor de noventa y un años en sus últimos días. Cáncer terminal. La familia cumplió su deseo: morir en casa. La última noche me senté a su lado. No hablaba; respiraba lento. Le tomé la mano y sentí cómo la presión de sus dedos se iba apagando. A las tres de la mañana abrió los ojos, me miró y dijo:</p>
+  <div class="quote">"Gracias por no dejarme solo."</div>
+  <p>Cerró los ojos. Y no los volvió a abrir.</p>
+  <p>Casi treinta años. Miles de pacientes. Pero esa frase es la que me define. Porque al final no se trata de técnicas, protocolos ni medicamentos: se trata de <strong>no dejar solo a nadie en el momento más vulnerable de su vida.</strong></p>
+  <p>Tú que cuidas hoy, escúchame: no necesitas saberlo todo ni hacerlo perfecto. Solo necesitas estar ahí. Presente. Con las manos listas y el corazón dispuesto. El resto se aprende en el camino. Yo llevo casi treinta años aprendiendo. <strong>Y todavía me falta.</strong></p>
+  <p>Doña Mercedes tenía razón: el día que se me quite el miedo, renuncio. Casi treinta años después, sigo temblando un poquito cada vez que sostengo una mano nueva. <strong>Y sigo aquí.</strong></p>
+  <p style="text-align:right; font-style:italic;">— El Autor</p>
+  <div class="sep">❦</div>
+  <p style="text-align:center; margin-top:10mm;"><strong>CIERRE DE LA OBRA:</strong> Este libro termina aquí, pero tu historia no. En casi treinta años aprendí que el cuidado no es un oficio: es una forma de amar con las mangas arremangadas. Y que nadie —ni la hija que llora en el baño, ni el esposo que cuenta respiraciones, ni la abuela que rasca un pie fantasma— <strong>nadie tiene que seguir cargándolo solo.</strong> Si estas páginas te encontraron, ya sabes dónde estamos. 🏠</p>
 </div>
 
-<!-- ══ CONTRAPORTADA ══ -->
-<div class="page"><div class="full">
-  <img src="https://i.imgur.com/gpNgkyV.png" alt="Vital Hogar">
-  <div class="ov-dark">
-    <h1 style="font-size:1.7em;">NO TIENES QUE<br>HACERLO SOLO</h1>
-    <p class="sub">Si al terminar este libro sientes que el peso es demasiado, que las noches son muy largas o que tus manos ya no alcanzan: no es falla. Es la señal.</p>
-    <p class="sub" style="font-weight:bold;">Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas, auxiliares verificados y el mismo respeto que aprendí en casi treinta años.</p>
-    <div class="autor">VITAL HOGAR · Cuidados Domiciliarios<br>Cuidamos con amor y profesionalismo<br>📲 Familias: wa.link/8zq5xe · 🩺 Auxiliares: wa.link/lrrq79<br>🌐 vital-landing-gamma.vercel.app</div>
-    <p class="sub" style="font-size:.85em;">Porque cuidar es sagrado. Y nadie debería hacerlo con las manos vacías ni el corazón solo.<br><strong style="color:#E8C766; letter-spacing:1px;">PRÓXIMAMENTE EN LA COLECCIÓN: TOMO II — LAS HERIDAS DEL PAÍS</strong></p>
-  </div>
-</div></div>
+<!-- ══ CONTRAPORTADA PREMIUM ══ -->
+<div class="page cover">
+  <div class="c-brand">VITAL HOGAR · CUIDADOS DOMICILIARIOS</div>
+  <h1 style="font-size:1.8em;">NO TIENES QUE<br>HACERLO SOLO</h1>
+  <div class="c-img"><img src="https://i.imgur.com/gpNgkyV.png" alt="Vital Hogar"></div>
+  <div class="c-sub">Si al terminar este libro sientes que el peso es demasiado, que las noches son muy largas o que tus manos ya no alcanzan: no es falla. Es la señal. Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas, auxiliares verificados y el mismo respeto que aprendí en casi treinta años.</div>
+  <div class="banda">🎁 GRATIS CON CUALQUIER PLAN MENSUAL</div>
+  <div class="c-autor">📲 Familias: wa.link/8zq5xe · 🩺 Auxiliares: wa.link/lrrq79<br>🌐 vital-landing-gamma.vercel.app</div>
+  <p class="c-sub" style="font-size:.8em; margin-top:6mm;">Porque cuidar es sagrado. Y nadie debería hacerlo con las manos vacías ni el corazón solo.<br><strong style="color:#E8C766; letter-spacing:1px;">PRÓXIMAMENTE EN LA COLECCIÓN: TOMO II — LAS HERIDAS DEL PAÍS</strong></p>
+</div>
 
 </body>
 </html>
