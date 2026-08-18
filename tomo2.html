@@ -8,49 +8,49 @@
   @page { size: A4; margin: 0; }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body { background: #cfd8e0; font-family: Georgia, 'Times New Roman', serif; color: #222; }
-  .page { width: 210mm; min-height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; display: flex; flex-direction: column; }
-  .full { position: relative; height: 296mm; }
-  .full img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-  .ov-dark { position: absolute; inset: 0; background: linear-gradient(to top, rgba(40,10,10,.96) 0%, rgba(40,10,10,.5) 50%, rgba(40,10,10,.15) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 14mm; color: white; text-align: center; gap: 8px; }
-  .ov-dark .brand { letter-spacing: 4px; font-size: .85em; color: #E8C766; font-weight: bold; }
-  .ov-dark h1 { font-size: 2.4em; letter-spacing: 3px; color: #E8C766; line-height: 1.1; text-shadow: 0 2px 8px rgba(0,0,0,.5); }
-  .ov-dark .sub { font-size: 1em; font-style: italic; opacity: .95; max-width: 150mm; margin: 0 auto; }
-  .banda { background: #E8C766; color: #5a1414; font-weight: bold; font-size: .85em; letter-spacing: 2px; padding: 5px 14px; border-radius: 20px; margin: 0 auto; }
-  .ov-dark .autor { margin-top: 6px; font-size: .9em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 6px 0; max-width: 120mm; margin-left: auto; margin-right: auto; }
-  .chap-img { width: 100%; height: 70mm; object-fit: cover; display: block; }
-  .chap-body { flex: 1; padding: 7mm 12mm 12mm; }
-  .kicker { color: #8a2b2b; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; }
-  h3.chap { color: #5a1414; font-size: 1.35em; margin: 4px 0 10px; }
-  p { text-align: justify; font-size: 9.6pt; line-height: 1.55; margin-bottom: 8px; }
-  p strong { color: #5a1414; }
-  .quote { border-left: 4px solid #E8C766; margin: 10px 0; padding: 7px 12px; font-style: italic; color: #6b4a1f; background: #faf3ea; font-size: 10pt; }
-  .box { background: white; border: 1px solid #d8ccc4; border-radius: 10px; padding: 10px 12px; margin: 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
-  .box h4 { color: #5a1414; font-size: .9em; margin-bottom: 5px; }
-  .box ul { margin-left: 15px; } .box li { font-size: 9.2pt; line-height: 1.45; margin-bottom: 3px; text-align: justify; }
-  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 8px 10px; border-radius: 8px; margin: 8px 0; font-size: 9.2pt; }
-  .foot { position: absolute; bottom: 5mm; left: 0; right: 0; text-align: center; font-size: .72em; color: #a09a8c; letter-spacing: 1px; }
+  .page { width: 210mm; height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; }
+  .page:last-of-type { page-break-after: auto; }
+  .cover { background: #0e2a4d; color: white; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16mm 14mm; text-align: center; }
+  .c-brand { letter-spacing: 4px; font-size: .8em; color: #E8C766; font-weight: bold; }
+  .cover h1 { font-size: 2.5em; letter-spacing: 3px; color: #E8C766; line-height: 1.15; margin-top: 4mm; }
+  .c-img { width: 100%; border: 1px solid #E8C766; padding: 2mm; background: #0a2038; }
+  .c-img img { width: 100%; height: 118mm; object-fit: contain; display: block; }
+  .c-sub { font-style: italic; font-size: .95em; opacity: .95; max-width: 160mm; }
+  .banda { background: #E8C766; color: #5a1414; font-weight: bold; font-size: .8em; letter-spacing: 2px; padding: 4px 16px; border-radius: 20px; }
+  .c-autor { font-size: .85em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 5px 0; max-width: 130mm; }
+  .flow { width: 210mm; margin: 0 auto; background: #FDFBF7; padding: 12mm 14mm; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+  .flow p { text-align: justify; font-size: 10pt; line-height: 1.6; margin-bottom: 9px; }
+  .flow p strong { color: #5a1414; }
+  .kicker { color: #8a2b2b; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; margin-top: 10mm; }
+  h3.chap { color: #5a1414; font-size: 1.4em; margin: 3px 0 10px; break-after: avoid; }
+  .sep { text-align: center; color: #b08a2e; font-size: 1.2em; margin: 10mm 0; }
+  .fig { margin: 6mm 0; background: #5a1414; padding: 2mm; border: 1px solid #d8ccc4; break-inside: avoid; }
+  .fig img { width: 100%; height: 88mm; object-fit: contain; display: block; }
+  .quote { border-left: 4px solid #E8C766; margin: 10px 0; padding: 8px 14px; font-style: italic; color: #6b4a1f; background: #faf3ea; font-size: 10.5pt; break-inside: avoid; }
+  .box { background: white; border: 1px solid #d8ccc4; border-radius: 10px; padding: 12px 14px; margin: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); break-inside: avoid; }
+  .box h4 { color: #5a1414; font-size: .95em; margin-bottom: 6px; }
+  .box ul { margin-left: 16px; } .box li { font-size: 9.6pt; line-height: 1.5; margin-bottom: 3px; text-align: justify; }
+  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 10px 12px; border-radius: 8px; margin: 10px 0; font-size: 9.6pt; break-inside: avoid; }
   .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; font-family: Arial; }
-  @media (max-width: 800px) { .page { width: 100%; min-height: auto; } .chap-img { height: 220px; } .full { height: 92vh; } }
-  @media print { body { background: white; } .page { margin: 0; box-shadow: none; height: 296mm; min-height: auto; } .full { height: 296mm; } .chap-img { height: 70mm; } .btn-pdf { display: none; } }
+  @media print { body { background: white; } .page, .flow { margin: 0; box-shadow: none; } .flow { padding: 12mm 14mm; } .btn-pdf { display: none; } }
+  @media (max-width: 800px) { .page, .flow { width: 100%; } .c-img img, .fig img { height: auto; } }
 </style>
 </head>
 <body>
 <button class="btn-pdf" onclick="window.print()">📥 COMPRAR / DESCARGAR PDF</button>
 
 <!-- ══ PORTADA TOMO II ══ -->
-<div class="page"><div class="full">
-  <img src="https://i.imgur.com/1W3M9C1.png" alt="Portada Tomo II">
-  <div class="ov-dark">
-    <div class="brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO II</div>
-    <h1>LAS HERIDAS<br>DEL PAÍS</h1>
-    <div class="sub">Lo que nadie se atreve a nombrar, este libro lo cuida</div>
-    <div class="banda">16 HISTORIAS REALES DE COLOMBIA</div>
-    <div class="autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta · VITAL HOGAR</div>
-  </div>
-</div></div>
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO II</div>
+  <h1>LAS HERIDAS<br>DEL PAÍS</h1>
+  <div class="c-img"><img src="https://i.imgur.com/1W3M9C1.png" alt="Portada Tomo II"></div>
+  <div class="c-sub">Lo que nadie se atreve a nombrar, este libro lo cuida</div>
+  <div class="banda">16 HISTORIAS REALES DE COLOMBIA</div>
+  <div class="c-autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta · VITAL HOGAR</div>
+</div>
 
-<!-- ══ PRÓLOGO TOMO II ══ -->
-<div class="page"><div class="chap-body" style="padding-top:25mm;">
+<!-- ══ PRÓLOGO ══ -->
+<div class="flow">
   <h3 class="chap" style="text-align:center;">PRÓLOGO — Este tomo se escribe con la voz baja</h3>
   <p>Hay libros que se escriben con la puerta abierta, para que entren los aplausos. Este se escribió con la puerta cerrada, para que entraran solo las voces que nunca nadie quiso oír.</p>
   <p>Aquí no hay morbo. Hay memoria con manual de instrucciones: el niño que la guerra reclutó y no sabe jugar, la niña que volvió de la selva con el cuerpo callado, la madre que cava el tiempo con una pala, la abuela que a los sesenta vuelve a ser mamá, el que pagó en la celda y sigue pagando en la mirada del barrio.</p>
@@ -59,343 +59,281 @@
   <div class="quote">"Un país no sana tapando sus heridas: sana cuando aprende a cuidarlas. Este tomo es ese aprendizaje."</div>
   <p style="text-align:right; font-style:italic;">— El Autor</p>
 </div>
-<div class="foot">LAS HERIDAS DEL PAÍS · Tomo II</div></div>
 
-<!-- CAP 1 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/fuCSsNq.png" alt="El niño reclutado">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 1</div>
-    <h3 class="chap">El niño que la guerra reclutó</h3>
-    <p>En la casa de acogida lo llamaban "el menor". Quince años, la mirada en la puerta siempre, y una verdad que la educadora tardó meses en entender: <strong>el niño no sabía jugar.</strong> Sabía disparar, montar guardia, obedecer. Perder le daba pánico, porque donde él aprendió, perder era morirse.</p>
-    <p>Hasta el día del fútbol. Metió el gol, el rival empató, y él se puso a temblar esperando el castigo. Y ella hizo lo que ningún general hizo por él: se rió con cariño y dijo: <strong>"Perder no mata. Aquí perder es apenas un partido."</strong> Ese día el niño empezó a volver.</p>
-    <div class="box"><h4>🏠 Cuando el niño vuelve a una casa</h4><ul>
-      <li>La desconfianza no es ingratitud: se reconstruye con promesas pequeñas y cumplidas.</li>
-      <li>Cero preguntas sobre el pasado: su historia tiene rutas legales y psicológicas; tú ofreces casa, no interrogatorio.</li>
-      <li>Ruido con aviso: pólvora, gritos, portazos: el cuerpo que fue emboscado necesita que nada lo embosque.</li>
-      <li>Límites sin grito: la firmeza sin miedo también es abrazo.</li>
-      <li>El juego es repatriación: si pierde y no pasa nada, ganó dos veces.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Pesadillas con uniforme · hipervigilancia que no baja · silencio de piedra: no es mala maña: es la guerra que aún suena adentro: ayuda profesional.</div>
-    <div class="quote">"Al niño que enseñaron a disparar, alguien tiene que enseñarle a perder al fútbol y que no pase nada."</div>
-    <p>Si tu casa o tu comunidad recibe a un niño que vuelve de la guerra: <strong>no tienen que hacerlo solos.</strong></p>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 1</div>
+<!-- ══ CAPS 1–8 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/fuCSsNq.png" alt="El niño reclutado"></div>
+  <div class="kicker">Capítulo 1</div>
+  <h3 class="chap">El niño que la guerra reclutó</h3>
+  <p>En la casa de acogida lo llamaban "el menor". Quince años, la mirada en la puerta siempre, y una verdad que la educadora tardó meses en entender: <strong>el niño no sabía jugar.</strong> Sabía disparar, montar guardia, obedecer. Perder le daba pánico, porque donde él aprendió, perder era morirse.</p>
+  <p>Hasta el día del fútbol. Metió el gol, el rival empató, y él se puso a temblar esperando el castigo. Y ella hizo lo que ningún general hizo por él: se rió con cariño y dijo: <strong>"Perder no mata. Aquí perder es apenas un partido."</strong> Ese día el niño empezó a volver.</p>
+  <div class="box"><h4>🏠 Cuando el niño vuelve a una casa</h4><ul>
+    <li>La desconfianza no es ingratitud: se reconstruye con promesas pequeñas y cumplidas.</li>
+    <li>Cero preguntas sobre el pasado: su historia tiene rutas legales y psicológicas; tú ofreces casa, no interrogatorio.</li>
+    <li>Ruido con aviso: pólvora, gritos, portazos: el cuerpo que fue emboscado necesita que nada lo embosque.</li>
+    <li>Límites sin grito: la firmeza sin miedo también es abrazo.</li>
+    <li>El juego es repatriación: si pierde y no pasa nada, ganó dos veces.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Pesadillas con uniforme · hipervigilancia que no baja · silencio de piedra: no es mala maña: es la guerra que aún suena adentro: ayuda profesional.</div>
+  <div class="quote">"Al niño que enseñaron a disparar, alguien tiene que enseñarle a perder al fútbol y que no pase nada."</div>
+  <p>Si tu casa o tu comunidad recibe a un niño que vuelve de la guerra: <strong>no tienen que hacerlo solos.</strong></p>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/TGgG9W2.png" alt="Las niñas de la guerra"></div>
+  <div class="kicker">Capítulo 2</div>
+  <h3 class="chap">Las niñas de la guerra</h3>
+  <p>Este capítulo se escribe con la puerta cerrada y la voz baja. "La Mona" llegó a los dieciséis, escapada de un grupo armado, con una hija de ocho meses nacida en la selva. Su cuerpo había sido territorio de guerra. En la casa que la recibió, lo primero que hizo fue dormir tres días seguidos. <strong>El cuerpo que por fin no vigila, se derrumba a descansar.</strong></p>
+  <div class="box"><h4>🏠 Lo que se hace (y lo que jamás se pregunta)</h4><ul>
+    <li>Primero seguridad, después historia: techo, comida caliente, silencio sin interrogatorio.</li>
+    <li>El cuerpo se devuelve con especialistas: ningún examen forzado: el cuerpo que fue invadido decide cuándo se deja cuidar.</li>
+    <li>Ni "la guerrillera" ni "la usada": el nombre que ella elija: las palabras también desmovilizan.</li>
+    <li>Su hijo no es hijo del enemigo: es un niño: se cuida a los dos sin estigma.</li>
+    <li>La recuperación no es línea recta: los retrocesos son el camino.</li>
+    <li>Rutas que protegen: ICBF, Fiscalía, Ruta de Víctimas: denunciar acompañado es ponerle candado a la puerta.</li>
+  </ul></div>
+  <div class="quote">"A la niña que la guerra usó no se le pregunta su historia: se le da casa. La historia la contará ella cuando el alma le alcance."</div>
+  <p>Si en tu comunidad hay una niña que volvió: <strong>la casa segura empieza por un adulto que no pregunta y sostiene.</strong></p>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/MAoLJ7D.png" alt="La mina"></div>
+  <div class="kicker">Capítulo 3</div>
+  <h3 class="chap">La mina que esperaba</h3>
+  <p>Don Jair pisó la mina en su propia finca, veinte metros después de la puerta de su cocina. Sobrevivió; su pierna no. Pero la herida que más dolía era otra: <strong>la tierra que lo crió se volvió su enemiga</strong>, y sus nietos ya no podían jugar donde él aprendió a montar a caballo.</p>
+  <div class="box"><h4>🏠 El cuidado que sigue después del hospital</h4><ul>
+    <li>Muñón y fantasma: espejo, compresión, validación: en el campo, la prótesis es el arado que devuelve el oficio.</li>
+    <li>La tierra se reaprende acompañada: el desminado humanitario marca el camino: el miedo se va de a metros, no de a discursos.</li>
+    <li>Niños en zona contaminada: lo que no conoces no se toca · donde hay señal no se entra · lo que parece juguete puede no serlo: se enseña con dibujos y repetición de madre.</li>
+    <li>El sobreviviente no es mal agüero: es un maestro de la precaución.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Muñón con pus o fiebre · dolor fantasma que no cede · el que deja de mirar la tierra como quien deja de mirar el futuro.</div>
+  <p>Meses después, don Jair sembró yuca en la parte limpia y puso un letrero pintado por sus nietos: <strong>"Aquí se siembra, no se pisa miedo."</strong></p>
+  <div class="quote">"La mina no avisa. Pero la casa que recibe al que la pisó decide si vuelve a caminar."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/GaGLkLZ.png" alt="Drones"></div>
+  <div class="kicker">Capítulo 4</div>
+  <h3 class="chap">El cielo que mata: drones y la guerra nueva</h3>
+  <p>En la vereda de doña Reina ya nadie mira el cielo con gusto. Desde que la guerra llegó con drones, el zumbido se metió en las casas: los niños dibujan el cielo con aparatos que botan fuego, y el adulto que vigila ya no duerme. <strong>El TEPT de esta guerra tiene sonido propio.</strong></p>
+  <div class="box"><h4>🏠 Cuidar al que vive bajo el zumbido</h4><ul>
+    <li>Reeducar el oído: enseñar la diferencia de sonidos: el drone de carga, el de fumigación, el de la guerra: el oído que distingue, descansa.</li>
+    <li>El rincón sin cielo: lugar interno, cobija gruesa, música baja, juguetes: el cuerpo que no ve cielo, baja la guardia.</li>
+    <li>El dibujo es testimonio: se acompaña, no se interpreta, y se guarda para el especialista.</li>
+    <li>Turnos de vigilia: vigilar acompañado es cuidar al que cuida.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Pesadillas con zumbido · sobresalto con cualquier avión · el niño que deja de jugar: el trauma con sonido se trata con terapia, no con tiempo solo.</div>
+  <div class="quote">"Al que aprendió a temerle al cielo se le da techo, rutina y alguien que vigile con él, hasta que el zumbido vuelva a ser viento."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/qw66lIj.png" alt="El fuego"></div>
+  <div class="kicker">Capítulo 5</div>
+  <h3 class="chap">El cuerpo que recuerda el fuego</h3>
+  <p>Andrés tenía veintidós años cuando la explosión en el retén lo volvió una antorcha. Sobrevivió. Y cuando por fin se paró frente al espejo, se tapó la cara con las manos quemadas y preguntó en voz baja: <strong>"¿Y ahora quién me va a querer?"</strong> Esa pregunta, y no el fuego, era la herida más honda.</p>
+  <div class="box"><h4>🪞 El espejo por etapas (nunca forzado)</h4><ul>
+    <li>Etapa 1 — cubierto: el espejo se tapa mientras él no lo pida.</li>
+    <li>Etapa 2 — parcial: un brazo, una zona, con la mano del acompañante en el hombro.</li>
+    <li>Etapa 3 — completo: cuando él lo decida: ese día se celebra como un alta.</li>
+    <li>Prenda de presión 23 horas al día · el picor se hidrata, no se rasca · estirar es libertad · el sol mancha para siempre.</li>
+    <li>La primera salida: comunidad avisada protege · respuesta corta que cierra el tema: "Tuve un accidente, estoy sanando."</li>
+    <li>Los niños que miran preguntan con los ojos: "se quemó, se curó, y ahora es más fuerte" los calma.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Cicatriz que cierra sobre una articulación · fiebre · el que se tapa la cara para siempre: eso es alma, y se atiende.</div>
+  <div class="quote">"El fuego se llevó un pedazo de piel, pero no la persona entera. El espejo devuelve la imagen; la casa devuelve el nombre."</div>
+  <p>Si en tu casa hay alguien que el fuego marcó: <strong>no tienen que reconstruirse solos.</strong></p>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/DJDVMNn.png" alt="El duelo"></div>
+  <div class="kicker">Capítulo 6</div>
+  <h3 class="chap">El duelo que se quedó a vivir</h3>
+  <p>Doña Rosa puso el plato de su hijo en la mesa durante un año. El hijo que la guerra se llevó y no devolvió. La nuera, con amor y con cansancio, le dijo un día: "Mamá, ya quite el plato." Y doña Rosa respondió con la frase que ninguna nuera debería oír: <strong>"Es lo único que me queda de él que yo pueda poner."</strong></p>
+  <div class="box"><h4>🪑 Las reglas del duelo que no tiene tumba</h4><ul>
+    <li>El duelo no tiene calendario: "ya pasó un año y sigues igual" es violencia.</li>
+    <li>La silla vacía se respeta: y el día que el doliente la mueva, tampoco es traición: las dos cosas son amor.</li>
+    <li>Los aniversarios se planean: la vela, el plato de él, la canción: el ritual sana más que el olvido.</li>
+    <li>La búsqueda también se acompaña: caminar con las familias buscadoras es parte del duelo.</li>
+    <li>La casa entera se duele distinto: uno llora, otro trabaja, otro se enoja: nadie está mal.</li>
+    <li>El niño juega su duelo en dosis: el niño que ríe no traiciona: respira.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Insomnio de meses · culpa de "debí haber…" · el deseo de morirse para verlo: es duelo complicado y tiene tratamiento: y si hay ideas de hacerse daño, ayuda HOY.</div>
+  <div class="quote">"El duelo no se olvida: se acomoda. Y el día que la silla se mueve, no es traición: es amor que aprendió a vivir de pie."</div>
+  <p>Si en tu casa hay una silla vacía: <strong>no tienen que llorarla solos.</strong></p>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/0Q02kkE.png" alt="La casa múltiple"></div>
+  <div class="kicker">Capítulo 7</div>
+  <h3 class="chap">La casa que cuida a varios</h3>
+  <p>Doña Ligia, cincuenta y ocho años: madre con secuela de ACV, esposo diabético con pie en riesgo, y el nieto de seis que la mamá dejó. Tres camas, tres tratamientos, tres horarios. Cuando llegué, doña Ligia no lloraba: <strong>operaba. Y eso era exactamente el problema: nadie opera sin descansar ni un turno.</strong></p>
+  <div class="box"><h4>🏥 El triage de la casa</h4><ul>
+    <li>El mapa semanal de los tres en la nevera: la memoria de uno solo es tiranía.</li>
+    <li>Cada paciente tiene un segundo: un familiar, un vecino, un turno pagado.</li>
+    <li>Tres cuadernos, no uno revuelto: el médico de cada uno lee el suyo.</li>
+    <li>La agenda del cuidador también va en la nevera: si no está escrita, no existe.</li>
+    <li>La red por cabeza: ICBF y colegio para el nieto · adulto mayor para mamá · grupo de diabéticos para el esposo.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El que deja de dormir · come de pie · responde cortado · dice "no me pasa nada" con los ojos llenos: necesita un turno de respiro esta semana, no el próximo mes.</div>
+  <div class="quote">"La casa que cuida a varios necesita varias manos. Pedirlas no es debilidad: es la gerencia del amor."</div>
+  <p>Si tu casa cuida a más de uno: <strong>no tienes que ser el Atlas de nadie.</strong></p>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/v7TIlCY.png" alt="El desplazado"></div>
+  <div class="kicker">Capítulo 8</div>
+  <h3 class="chap">El corazón desplazado</h3>
+  <p>La familia de doña Mery llegó a Cúcuta con dos maletas y una mata de albahaca que sobrevivió al viaje. En la pieza arrendada, la abuela no se hallaba: miraba por la ventana un cielo que no era el suyo y decía: <strong>"Aquí hasta el viento es distinto."</strong> El destierro también es una herida: no sangra, pero desarraiga.</p>
+  <div class="box"><h4>🌱 El cuidado del desarraigado</h4><ul>
+    <li>El desplazamiento es un duelo: se trata como duelo, no como ingratitud con la ciudad nueva.</li>
+    <li>Las anclas se siembran por el olfato: la mata, el sofrito, la música, el santo: la casa se reconstruye empezando por el olor.</li>
+    <li>"Quiero volver": no alimentes la promesa ni la mates de un golpe: "cuéntame de tu tierra" es terapia: el que narra la tierra, la siembra adentro.</li>
+    <li>Los niños: vigila el matoneo del "venido", denúncialo, y siembra orgullo de origen.</li>
+    <li>El mapa nuevo con nombres nuevos: la vecina, el comedor, la iglesia: el desplazado vuelve a tener mapa cuando tiene nombres que lo saludan.</li>
+    <li>Los silenciosos se descuadran con el susto: tensión y glucosa doble los primeros meses: RUV, afiliación a salud, historia clínica: el desplazado tiene derecho sin papeles perfectos.</li>
+  </ul></div>
+  <p>La mata de albahaca de doña Mery dio para tres cocinas del barrio. Ella no trajo una mata: <strong>trajo la tierra entera en una olla.</strong></p>
+  <div class="quote">"El desplazado perdió la tierra, pero carga la semilla. La casa que lo recibe es el suelo donde vuelve a florecer."</div>
 </div>
 
-<!-- CAP 2 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/TGgG9W2.png" alt="Las niñas de la guerra">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 2</div>
-    <h3 class="chap">Las niñas de la guerra</h3>
-    <p>Este capítulo se escribe con la puerta cerrada y la voz baja. "La Mona" llegó a los dieciséis, escapada de un grupo armado, con una hija de ocho meses nacida en la selva. Su cuerpo había sido territorio de guerra. En la casa que la recibió, lo primero que hizo fue dormir tres días seguidos. <strong>El cuerpo que por fin no vigila, se derrumba a descansar.</strong></p>
-    <div class="box"><h4>🏠 Lo que se hace (y lo que jamás se pregunta)</h4><ul>
-      <li>Primero seguridad, después historia: techo, comida caliente, silencio sin interrogatorio.</li>
-      <li>El cuerpo se devuelve con especialistas: ningún examen forzado: el cuerpo que fue invadido decide cuándo se deja cuidar.</li>
-      <li>Ni "la guerrillera" ni "la usada": el nombre que ella elija: las palabras también desmovilizan.</li>
-      <li>Su hijo no es hijo del enemigo: es un niño: se cuida a los dos sin estigma.</li>
-      <li>La recuperación no es línea recta: los retrocesos son el camino.</li>
-      <li>Rutas que protegen: ICBF, Fiscalía, Ruta de Víctimas: denunciar acompañado es ponerle candado a la puerta.</li>
-    </ul></div>
-    <div class="quote">"A la niña que la guerra usó no se le pregunta su historia: se le da casa. La historia la contará ella cuando el alma le alcance."</div>
-    <p>Si en tu comunidad hay una niña que volvió: <strong>la casa segura empieza por un adulto que no pregunta y sostiene.</strong></p>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 2</div>
-</div>
+<!-- ══ CAPS 9–16 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/hk2yzys.png" alt="Líder asesinado"></div>
+  <div class="kicker">Capítulo 9</div>
+  <h3 class="chap">La familia del líder asesinado</h3>
+  <p>El día del entierro llovió y hubo banderas, discursos y cámaras. Claudia sostuvo la mano de su hijo Samuel de siete años mientras el país lloraba a su esposo. Tres semanas después, las cámaras se fueron, las banderas se guardaron, y en la casa quedó lo que nadie filma: <strong>un niño al que en el colegio le dicen "el hijo del héroe" unos y "el hijo del loco" otros, y una viuda a la que todo el mundo le pide fortaleza y nadie le pregunta cómo está.</strong></p>
+  <div class="box"><h4>🏠 Lo que nadie le dice a la familia</h4><ul>
+    <li>El duelo con audiencia es doble: se le da el derecho al duelo con la puerta cerrada: el país ya hizo su misa; la familia tiene derecho a la suya.</li>
+    <li>El niño decide su adiós: si no quiere ver el féretro, no lo ve: no es accesorio del protocolo.</li>
+    <li>Cuando la escolta se va, el miedo se queda: rutas, avisos y red que acompaña sin preguntar.</li>
+    <li>La familia que se parte: "seguir su lucha" e "irse lejos" son las dos cosas amor y duelo: no se vota: se conversa con ayuda.</li>
+    <li>A la viuda se le pregunta: "¿cómo estás tú?" — una vez por semana, alguien que no quiera informe.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El niño que se vuelve "el que no llora" · la viuda que agenda discursos a las 3 a.m. · el adolescente que quiere vengar: duelo congelado, y se descongela con ayuda.</div>
+  <div class="quote">"El país llora una semana; la familia, toda la vida. Al que abraza a la viuda cuando se van las cámaras, a ese se le llama cuidar."</div>
 
-<!-- CAP 3 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/MAoLJ7D.png" alt="La mina">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 3</div>
-    <h3 class="chap">La mina que esperaba</h3>
-    <p>Don Jair pisó la mina en su propia finca, veinte metros después de la puerta de su cocina. Sobrevivió; su pierna no. Pero la herida que más dolía era otra: <strong>la tierra que lo crió se volvió su enemiga</strong>, y sus nietos ya no podían jugar donde él aprendió a montar a caballo.</p>
-    <div class="box"><h4>🏠 El cuidado que sigue después del hospital</h4><ul>
-      <li>Muñón y fantasma: espejo, compresión, validación: en el campo, la prótesis es el arado que devuelve el oficio.</li>
-      <li>La tierra se reaprende acompañada: el desminado humanitario marca el camino: el miedo se va de a metros, no de a discursos.</li>
-      <li>Niños en zona contaminada: lo que no conoces no se toca · donde hay señal no se entra · lo que parece juguete puede no serlo: se enseña con dibujos y repetición de madre.</li>
-      <li>El sobreviviente no es mal agüero: es un maestro de la precaución.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Muñón con pus o fiebre · dolor fantasma que no cede · el que deja de mirar la tierra como quien deja de mirar el futuro.</div>
-    <p>Meses después, don Jair sembró yuca en la parte limpia y puso un letrero pintado por sus nietos: <strong>"Aquí se siembra, no se pisa miedo."</strong></p>
-    <div class="quote">"La mina no avisa. Pero la casa que recibe al que la pisó decide si vuelve a caminar."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 3</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 4 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/GaGLkLZ.png" alt="Drones">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 4</div>
-    <h3 class="chap">El cielo que mata: drones y la guerra nueva</h3>
-    <p>En la vereda de doña Reina ya nadie mira el cielo con gusto. Desde que la guerra llegó con drones, el zumbido se metió en las casas: los niños dibujan el cielo con aparatos que botan fuego, y el adulto que vigila ya no duerme. <strong>El TEPT de esta guerra tiene sonido propio.</strong></p>
-    <div class="box"><h4>🏠 Cuidar al que vive bajo el zumbido</h4><ul>
-      <li>Reeducar el oído: enseñar la diferencia de sonidos: el drone de carga, el de fumigación, el de la guerra: el oído que distingue, descansa.</li>
-      <li>El rincón sin cielo: lugar interno, cobija gruesa, música baja, juguetes: el cuerpo que no ve cielo, baja la guardia.</li>
-      <li>El dibujo es testimonio: se acompaña, no se interpreta, y se guarda para el especialista.</li>
-      <li>Turnos de vigilia: vigilar acompañado es cuidar al que cuida.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Pesadillas con zumbido · sobresalto con cualquier avión · el niño que deja de jugar: el trauma con sonido se trata con terapia, no con tiempo solo.</div>
-    <div class="quote">"Al que aprendió a temerle al cielo se le da techo, rutina y alguien que vigile con él, hasta que el zumbido vuelva a ser viento."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 4</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/7AjZpaf.png" alt="Periodista amenazado"></div>
+  <div class="kicker">Capítulo 10</div>
+  <h3 class="chap">La familia del periodista amenazado</h3>
+  <p>A Luisa le llegó el miedo en un sobre sin remitente: una bala y un recorte de su última columna. Esa noche hicieron lo que hacen las familias de los que cuentan la verdad: <strong>cenaron en silencio, y después de la cena, entre todos, volvieron a amarla con rabia.</strong> Su hija de nueve años aprendió ese mismo mes a no publicar fotos de su casa y a memorizar dos rutas distintas para el colegio.</p>
+  <div class="box"><h4>🗞️ Cuidar al que cuenta la verdad</h4><ul>
+    <li>El miedo se administra, no se niega: protocolos sí, pero la casa no se vuelve redacción de pánico: en la mesa se habla de la vida.</li>
+    <li>El hijo no hereda el miedo: "mamá hace un trabajo que a algunos no les gusta, y por eso nos cuidamos más": el niño informado no imagina monstruos peores.</li>
+    <li>El exilio también es destierro: anclas de olor, nombres nuevos, duelo de la tierra: y duelo del oficio silenciado: sigue siendo el que cuenta, aunque hoy cuide su silencio.</li>
+    <li>La red de colegas es familia: el periodista amenazado no debe ser el único que carga su propia verdad.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Insomnio de vigilancia · la pareja que deja de preguntar por protección · el que borra su archivo como quien se despide: eso pide ayuda profesional y red, hoy.</div>
+  <p>Luisa sigue escribiendo, con seudónimo, desde una ciudad que no es la suya. Su hija ya no memoriza rutas: ahora memoriza los títulos de mamá. <strong>"Me los sé todos. Incluso los que no puede firmar."</strong></p>
+  <div class="quote">"El que cuenta la verdad carga el miedo hasta la casa; la familia que lo sostiene sin callarlo es la otra mitad de la valentía."</div>
 
-<!-- CAP 5 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/qw66lIj.png" alt="El fuego">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 5</div>
-    <h3 class="chap">El cuerpo que recuerda el fuego</h3>
-    <p>Andrés tenía veintidós años cuando la explosión en el retén lo volvió una antorcha. Sobrevivió. Y cuando por fin se paró frente al espejo, se tapó la cara con las manos quemadas y preguntó en voz baja: <strong>"¿Y ahora quién me va a querer?"</strong> Esa pregunta, y no el fuego, era la herida más honda.</p>
-    <div class="box"><h4>🪞 El espejo por etapas (nunca forzado)</h4><ul>
-      <li>Etapa 1 — cubierto: el espejo se tapa mientras él no lo pida.</li>
-      <li>Etapa 2 — parcial: un brazo, una zona, con la mano del acompañante en el hombro.</li>
-      <li>Etapa 3 — completo: cuando él lo decida: ese día se celebra como un alta.</li>
-      <li>Prenda de presión 23 horas al día · el picor se hidrata, no se rasca · estirar es libertad · el sol mancha para siempre.</li>
-      <li>La primera salida: comunidad avisada protege · respuesta corta que cierra el tema: "Tuve un accidente, estoy sanando."</li>
-      <li>Los niños que miran preguntan con los ojos: "se quemó, se curó, y ahora es más fuerte" los calma.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Cicatriz que cierra sobre una articulación · fiebre · el que se tapa la cara para siempre: eso es alma, y se atiende.</div>
-    <div class="quote">"El fuego se llevó un pedazo de piel, pero no la persona entera. El espejo devuelve la imagen; la casa devuelve el nombre."</div>
-    <p>Si en tu casa hay alguien que el fuego marcó: <strong>no tienen que reconstruirse solos.</strong></p>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 5</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 6 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/DJDVMNn.png" alt="El duelo">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 6</div>
-    <h3 class="chap">El duelo que se quedó a vivir</h3>
-    <p>Doña Rosa puso el plato de su hijo en la mesa durante un año. El hijo que la guerra se llevó y no devolvió. La nuera, con amor y con cansancio, le dijo un día: "Mamá, ya quite el plato." Y doña Rosa respondió con la frase que ninguna nuera debería oír: <strong>"Es lo único que me queda de él que yo pueda poner."</strong></p>
-    <div class="box"><h4>🪑 Las reglas del duelo que no tiene tumba</h4><ul>
-      <li>El duelo no tiene calendario: "ya pasó un año y sigues igual" es violencia.</li>
-      <li>La silla vacía se respeta: y el día que el doliente la mueva, tampoco es traición: las dos cosas son amor.</li>
-      <li>Los aniversarios se planean: la vela, el plato de él, la canción: el ritual sana más que el olvido.</li>
-      <li>La búsqueda también se acompaña: caminar con las familias buscadoras es parte del duelo.</li>
-      <li>La casa entera se duele distinto: uno llora, otro trabaja, otro se enoja: nadie está mal.</li>
-      <li>El niño juega su duelo en dosis: el niño que ríe no traiciona: respira.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Insomnio de meses · culpa de "debí haber…" · el deseo de morirse para verlo: es duelo complicado y tiene tratamiento: y si hay ideas de hacerse daño, ayuda HOY.</div>
-    <div class="quote">"El duelo no se olvida: se acomoda. Y el día que la silla se mueve, no es traición: es amor que aprendió a vivir de pie."</div>
-    <p>Si en tu casa hay una silla vacía: <strong>no tienen que llorarla solos.</strong></p>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 6</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/6wP1Bhi.png" alt="Los huérfanos"></div>
+  <div class="kicker">Capítulo 11</div>
+  <h3 class="chap">Los huérfanos: la abuela que vuelve a ser mamá</h3>
+  <p>En Colombia, más de 23.000 niños perdieron a su madre por feminicidio en la última década; casi 800 en un solo año. Y detrás de cada cifra hay una escena que nadie fotografía: <strong>la abuela que a los sesenta y tantos entierra a su hija y vuelve a ser mamá de sus nietos.</strong> Doña Carmen firmó el mismo mes dos papeles: el de la funeraria y el del colegio. "Matrícula a nombre de la acudiente: abuela." Esa palabra le pesó más que el ataúd.</p>
+  <div class="box"><h4>🧸 La verdad que se entrega en pedacitos</h4><ul>
+    <li>La pregunta doble ("¿dónde está mamá?" y, más tarde, "¿por qué papá?"): la verdad se entrega por entregas, con psicólogo infantil, según la edad: el niño no se rompe con la verdad: se rompe con la mentira.</li>
+    <li>La culpa del niño se desactiva en voz alta: "esto no pasó porque tú te portaras mal": hay que decirlo aunque no lo pregunten.</li>
+    <li>La abuela tiene duelo de hija Y crianza nueva: su cita médica y su terapia van en la nevera, con imán: es la paciente invisible.</li>
+    <li>La familia paterna: con juez y psicólogo: el niño no es paquete de la disputa: es el doliente.</li>
+    <li>La ruta existe: pensión y protección del huérfano: se reclama acompañada: la abuela no hace filas sola.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Regresiones · el niño que idealiza o imita con rabia · la abuela que no duerme y dice "no me pasa nada": duelo doble, y se trata.</div>
+  <p>Doña Carmen puso en la sala dos fotos: la de su hija riendo y la del primer día de clases de los nietos. <strong>"Ella los tuvo hasta donde pudo; yo los tengo hasta donde pueda. Y entre las dos, los criamos enteros."</strong></p>
+  <div class="quote">"La abuela que vuelve a ser mamá no entierra a su hija: la siembra. Y el niño que recibe la verdad en pedacitos no se rompe: entiende."</div>
 
-<!-- CAP 7 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/0Q02kkE.png" alt="La casa múltiple">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 7</div>
-    <h3 class="chap">La casa que cuida a varios</h3>
-    <p>Doña Ligia, cincuenta y ocho años: madre con secuela de ACV, esposo diabético con pie en riesgo, y el nieto de seis que la mamá dejó. Tres camas, tres tratamientos, tres horarios. Cuando llegué, doña Ligia no lloraba: <strong>operaba. Y eso era exactamente el problema: nadie opera sin descansar ni un turno.</strong></p>
-    <div class="box"><h4>🏥 El triage de la casa</h4><ul>
-      <li>El mapa semanal de los tres en la nevera: la memoria de uno solo es tiranía.</li>
-      <li>Cada paciente tiene un segundo: un familiar, un vecino, un turno pagado.</li>
-      <li>Tres cuadernos, no uno revuelto: el médico de cada uno lee el suyo.</li>
-      <li>La agenda del cuidador también va en la nevera: si no está escrita, no existe.</li>
-      <li>La red por cabeza: ICBF y colegio para el nieto · adulto mayor para mamá · grupo de diabéticos para el esposo.</li>
-    </ul></div>
-    <div class="alerta">⚠️ El que deja de dormir · come de pie · responde cortado · dice "no me pasa nada" con los ojos llenos: necesita un turno de respiro esta semana, no el próximo mes.</div>
-    <div class="quote">"La casa que cuida a varios necesita varias manos. Pedirlas no es debilidad: es la gerencia del amor."</div>
-    <p>Si tu casa cuida a más de uno: <strong>no tienes que ser el Atlas de nadie.</strong></p>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 7</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 8 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/v7TIlCY.png" alt="El desplazado">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 8</div>
-    <h3 class="chap">El corazón desplazado</h3>
-    <p>La familia de doña Mery llegó a Cúcuta con dos maletas y una mata de albahaca que sobrevivió al viaje. En la pieza arrendada, la abuela no se hallaba: miraba por la ventana un cielo que no era el suyo y decía: <strong>"Aquí hasta el viento es distinto."</strong> El destierro también es una herida: no sangra, pero desarraiga.</p>
-    <div class="box"><h4>🌱 El cuidado del desarraigado</h4><ul>
-      <li>El desplazamiento es un duelo: se trata como duelo, no como ingratitud con la ciudad nueva.</li>
-      <li>Las anclas se siembran por el olfato: la mata, el sofrito, la música, el santo: la casa se reconstruye empezando por el olor.</li>
-      <li>"Quiero volver": no alimentes la promesa ni la mates de un golpe: "cuéntame de tu tierra" es terapia: el que narra la tierra, la siembra adentro.</li>
-      <li>Los niños: vigila el matoneo del "venido", denúncialo, y siembra orgullo de origen.</li>
-      <li>El mapa nuevo con nombres nuevos: la vecina, el comedor, la iglesia: el desplazado vuelve a tener mapa cuando tiene nombres que lo saludan.</li>
-      <li>Los silenciosos se descuadran con el susto: tensión y glucosa doble los primeros meses: RUV, afiliación a salud, historia clínica: el desplazado tiene derecho sin papeles perfectos.</li>
-    </ul></div>
-    <p>La mata de albahaca de doña Mery dio para tres cocinas del barrio. Ella no trajo una mata: <strong>trajo la tierra entera en una olla.</strong></p>
-    <div class="quote">"El desplazado perdió la tierra, pero carga la semilla. La casa que lo recibe es el suelo donde vuelve a florecer."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 8</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/1W3M9C1.png" alt="Madres buscadoras"></div>
+  <div class="kicker">Capítulo 12</div>
+  <h3 class="chap">Las madres buscadoras: la mujer que cava el tiempo</h3>
+  <p>En Colombia hay 136.010 personas desaparecidas, y más de 26.000 mujeres que las buscan. El 95% de quienes buscan son mujeres. Cuarenta y tres buscadoras han sido asesinadas buscando. Doña Mariela lleva ocho años con una pala, un sombrero y una carpeta. Le dijeron "olvídelo, ya está muerto". Y ella respondió la frase que debería estar en la entrada de este país: <strong>"Yo no lo busco porque esté muerto. Lo busco porque lo amo. Y el día que lo encuentre, así sea un huesito, por fin voy a poder dormir."</strong></p>
+  <div class="box"><h4>⛏️ Cuidar a la que busca</h4><ul>
+    <li>La búsqueda es duelo en movimiento: no se le dice "suelta": se le acompaña: agua, sombra, turnos de pala.</li>
+    <li>El cuerpo de la buscadora también es paciente: rodillas, tensión, corazón: su cita médica es parte de la búsqueda.</li>
+    <li>La familia que se queda: el esposo que espera, los otros hijos que sienten que "se busca más al que no está": ellos también duelen.</li>
+    <li>El colectivo es terapia: las que cavan juntas se sostienen: la red de buscadoras es un sistema de soporte vital.</li>
+    <li>Cuando el hallazgo llega, aunque sea huesito, es un alta: por fin hay tumba y nombre: y empieza el "segundo duelo": el de la vida sin búsqueda: acompáñale también el vacío del día siguiente.</li>
+  </ul></div>
+  <div class="alerta">⚠️ La buscadora que deja de comer · la que dice "si lo encuentro, me muero tranquila" con tono de despedida: eso es ideación, y se atiende HOY, con amor y sin sermón.</div>
+  <div class="quote">"La madre buscadora no cava tierra: cava tiempo. Y el día que encuentra, así sea un huesito, duerme: acompáñale también ese sueño."</div>
 
-<!-- CAP 9 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/hk2yzys.png" alt="Líder asesinado">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 9</div>
-    <h3 class="chap">La familia del líder asesinado</h3>
-    <p>El día del entierro llovió y hubo banderas, discursos y cámaras. Claudia sostuvo la mano de su hijo Samuel de siete años mientras el país lloraba a su esposo. Tres semanas después, las cámaras se fueron, las banderas se guardaron, y en la casa quedó lo que nadie filma: <strong>un niño al que en el colegio le dicen "el hijo del héroe" unos y "el hijo del loco" otros, y una viuda a la que todo el mundo le pide fortaleza y nadie le pregunta cómo está.</strong></p>
-    <div class="box"><h4>🏠 Lo que nadie le dice a la familia</h4><ul>
-      <li>El duelo con audiencia es doble: se le da el derecho al duelo con la puerta cerrada: el país ya hizo su misa; la familia tiene derecho a la suya.</li>
-      <li>El niño decide su adiós: si no quiere ver el féretro, no lo ve: no es accesorio del protocolo.</li>
-      <li>Cuando la escolta se va, el miedo se queda: rutas, avisos y red que acompaña sin preguntar.</li>
-      <li>La familia que se parte: "seguir su lucha" e "irse lejos" son las dos cosas amor y duelo: no se vota: se conversa con ayuda.</li>
-      <li>A la viuda se le pregunta: "¿cómo estás tú?" — una vez por semana, alguien que no quiera informe.</li>
-    </ul></div>
-    <div class="alerta">⚠️ El niño que se vuelve "el que no llora" · la viuda que agenda discursos a las 3 a.m. · el adolescente que quiere vengar: duelo congelado, y se descongela con ayuda.</div>
-    <div class="quote">"El país llora una semana; la familia, toda la vida. Al que abraza a la viuda cuando se van las cámaras, a ese se le llama cuidar."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 9</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 10 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/7AjZpaf.png" alt="Periodista amenazado">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 10</div>
-    <h3 class="chap">La familia del periodista amenazado</h3>
-    <p>A Luisa le llegó el miedo en un sobre sin remitente: una bala y un recorte de su última columna. Esa noche hicieron lo que hacen las familias de los que cuentan la verdad: <strong>cenaron en silencio, y después de la cena, entre todos, volvieron a amarla con rabia.</strong> Su hija de nueve años aprendió ese mismo mes a no publicar fotos de su casa y a memorizar dos rutas distintas para el colegio.</p>
-    <div class="box"><h4>🗞️ Cuidar al que cuenta la verdad</h4><ul>
-      <li>El miedo se administra, no se niega: protocolos sí, pero la casa no se vuelve redacción de pánico: en la mesa se habla de la vida.</li>
-      <li>El hijo no hereda el miedo: "mamá hace un trabajo que a algunos no les gusta, y por eso nos cuidamos más": el niño informado no imagina monstruos peores.</li>
-      <li>El exilio también es destierro: anclas de olor, nombres nuevos, duelo de la tierra: y duelo del oficio silenciado: sigue siendo el que cuenta, aunque hoy cuide su silencio.</li>
-      <li>La red de colegas es familia: el periodista amenazado no debe ser el único que carga su propia verdad.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Insomnio de vigilancia · la pareja que deja de preguntar por protección · el que borra su archivo como quien se despide: eso pide ayuda profesional y red, hoy.</div>
-    <p>Luisa sigue escribiendo, con seudónimo, desde una ciudad que no es la suya. Su hija ya no memoriza rutas: ahora memoriza los títulos de mamá. <strong>"Me los sé todos. Incluso los que no puede firmar."</strong></p>
-    <div class="quote">"El que cuenta la verdad carga el miedo hasta la casa; la familia que lo sostiene sin callarlo es la otra mitad de la valentía."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 10</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/v58NXJi.png" alt="El niño del Darién"></div>
+  <div class="kicker">Capítulo 13</div>
+  <h3 class="chap">El niño que cruzó la selva</h3>
+  <p>En cuatro meses, más de 30.000 niños cruzaron el Darién. En un año: 55 migrantes muertos y 180 niños abandonados en la selva; los menores cruzando solos crecieron 35%. Tomás, seis años, cruzó de la mano de su madre. Perdió el osito en el río. Vio cosas que ningún niño debería ver. Hoy no duerme, y dibuja siempre el mismo dibujo: <strong>un río verde y una mano que lo suelta.</strong></p>
+  <div class="box"><h4>🌴 La selva se queda en el cuerpo</h4><ul>
+    <li>El niño no cuenta: dibuja, juega, pesadilla: no se le interroga: se le acompaña con terapia infantil: el dibujo es su testimonio.</li>
+    <li>Disparadores con sonido de agua: lluvia, ríos, helicópteros: se avisan y se acompañan.</li>
+    <li>El osito perdido no se reemplaza con mentira: "se quedó cuidando el río" es un ritual que sana.</li>
+    <li>La madre que cruzó también está rota: la culpa de "yo lo metí en eso" se trata: ella no eligió entre lo bueno y lo malo: eligió entre lo malo y lo peor.</li>
+    <li>Papeles y escuela sin documentos: la matrícula es un derecho: se exige con calma y con la ley.</li>
+    <li>El que cruzó solo: ICBF, protección, y la comunidad que lo recibe sin apodos: el niño de la selva no es "el migra": es Tomás.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Silencio total · terrores nocturnos con agua · enuresis nueva · agresión con mordiscos: la selva se trata con especialistas, no con tiempo.</div>
+  <p>La maestra de Tomás enmarcó el dibujo del río verde y le puso debajo, con letra de él: <strong>"Ya lo crucé."</strong> Tomás lo miró, y esa noche durmió de corrido.</p>
+  <div class="quote">"Al niño que cruzó la selva no hay que explicarle que valió la pena: hay que darle cama seca, pupitre con nombre y un adulto que no le pregunte por el río."</div>
 
-<!-- CAP 11 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/6wP1Bhi.png" alt="Los huérfanos">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 11</div>
-    <h3 class="chap">Los huérfanos: la abuela que vuelve a ser mamá</h3>
-    <p>En Colombia, más de 23.000 niños perdieron a su madre por feminicidio en la última década; casi 800 en un solo año. Y detrás de cada cifra hay una escena que nadie fotografía: <strong>la abuela que a los sesenta y tantos entierra a su hija y vuelve a ser mamá de sus nietos.</strong> Doña Carmen firmó el mismo mes dos papeles: el de la funeraria y el del colegio. "Matrícula a nombre de la acudiente: abuela." Esa palabra le pesó más que el ataúd.</p>
-    <div class="box"><h4>🧸 La verdad que se entrega en pedacitos</h4><ul>
-      <li>La pregunta doble ("¿dónde está mamá?" y, más tarde, "¿por qué papá?"): la verdad se entrega por entregas, con psicólogo infantil, según la edad: el niño no se rompe con la verdad: se rompe con la mentira.</li>
-      <li>La culpa del niño se desactiva en voz alta: "esto no pasó porque tú te portaras mal": hay que decirlo aunque no lo pregunten.</li>
-      <li>La abuela tiene duelo de hija Y crianza nueva: su cita médica y su terapia van en la nevera, con imán: es la paciente invisible.</li>
-      <li>La familia paterna: con juez y psicólogo: el niño no es paquete de la disputa: es el doliente.</li>
-      <li>La ruta existe: pensión y protección del huérfano: se reclama acompañada: la abuela no hace filas sola.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Regresiones · el niño que idealiza o imita con rabia · la abuela que no duerme y dice "no me pasa nada": duelo doble, y se trata.</div>
-    <p>Doña Carmen puso en la sala dos fotos: la de su hija riendo y la del primer día de clases de los nietos. <strong>"Ella los tuvo hasta donde pudo; yo los tengo hasta donde pueda. Y entre las dos, los criamos enteros."</strong></p>
-    <div class="quote">"La abuela que vuelve a ser mamá no entierra a su hija: la siembra. Y el niño que recibe la verdad en pedacitos no se rompe: entiende."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 11</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 12 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/1W3M9C1.png" alt="Madres buscadoras">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 12</div>
-    <h3 class="chap">Las madres buscadoras: la mujer que cava el tiempo</h3>
-    <p>En Colombia hay 136.010 personas desaparecidas, y más de 26.000 mujeres que las buscan. El 95% de quienes buscan son mujeres. Cuarenta y tres buscadoras han sido asesinadas buscando. Doña Mariela lleva ocho años con una pala, un sombrero y una carpeta. Le dijeron "olvídelo, ya está muerto". Y ella respondió la frase que debería estar en la entrada de este país: <strong>"Yo no lo busco porque esté muerto. Lo busco porque lo amo. Y el día que lo encuentre, así sea un huesito, por fin voy a poder dormir."</strong></p>
-    <div class="box"><h4>⛏️ Cuidar a la que busca</h4><ul>
-      <li>La búsqueda es duelo en movimiento: no se le dice "suelta": se le acompaña: agua, sombra, turnos de pala.</li>
-      <li>El cuerpo de la buscadora también es paciente: rodillas, tensión, corazón: su cita médica es parte de la búsqueda.</li>
-      <li>La familia que se queda: el esposo que espera, los otros hijos que sienten que "se busca más al que no está": ellos también duelen.</li>
-      <li>El colectivo es terapia: las que cavan juntas se sostienen: la red de buscadoras es un sistema de soporte vital.</li>
-      <li>Cuando el hallazgo llega, aunque sea huesito, es un alta: por fin hay tumba y nombre: y empieza el "segundo duelo": el de la vida sin búsqueda: acompáñale también el vacío del día siguiente.</li>
-    </ul></div>
-    <div class="alerta">⚠️ La buscadora que deja de comer · la que dice "si lo encuentro, me muero tranquila" con tono de despedida: eso es ideación, y se atiende HOY, con amor y sin sermón.</div>
-    <div class="quote">"La madre buscadora no cava tierra: cava tiempo. Y el día que encuentra, así sea un huesito, duerme: acompáñale también ese sueño."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 12</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/tMVay0S.png" alt="El que vuelve de prisión"></div>
+  <div class="kicker">Capítulo 14</div>
+  <h3 class="chap">El hijo que vuelve de la prisión</h3>
+  <p>Doña Alicia lavó la fachada de la casa dos veces el día que Jhon salió. No por sucia: <strong>para que el barrio no tuviera ni el gusto de la lástima.</strong> Ocho años adentro. Y afuera, una verdad que nadie le dijo en la puerta de la cárcel: la condena se cumple dos veces: la primera en la celda; la segunda, en la mirada del barrio.</p>
+  <div class="box"><h4>🏠 La familia que recibe sin juicio</h4><ul>
+    <li>El pasado se cuenta cuando él quiera: la casa no es juzgado de repetición: se pregunta por el futuro, no por el expediente.</li>
+    <li>El estigma se responde con dignidad, no con discursos: "Pagó lo que debía. Volvió. Es mi hijo." Dicho una vez, con calma, basta.</li>
+    <li>La salud mental también salió en la maleta: depresión, ansiedad o medicación suspendida de un día para otro: continuidad de tratamiento desde la primera semana.</li>
+    <li>El oficio de adentro se pule afuera: la primera oportunidad es de la casa y del barrio: el que trabaja, se queda.</li>
+    <li>El hijo que creció sin papá: ahora hay un extraño en la mesa: la autoridad no se estrena el día uno: el vínculo se construye con rutinas.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Aislamiento total · rabia de noche · las viejas compañías que tocan la puerta: se acompaña sin espiar: la confianza también es tratamiento.</div>
+  <p>Jhon le arregló el techo a la vecina que más lo señalaba. Ella no dijo gracias: dijo "quedó bien hecho". Y con eso, en el barrio, <strong>empezó la segunda libertad.</strong></p>
+  <div class="quote">"El que pagó no le debe a la familia: la familia no es la segunda condena. Es la primera libertad."</div>
 
-<!-- CAP 13 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/v58NXJi.png" alt="El niño del Darién">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 13</div>
-    <h3 class="chap">El niño que cruzó la selva</h3>
-    <p>En cuatro meses, más de 30.000 niños cruzaron el Darién. En un año: 55 migrantes muertos y 180 niños abandonados en la selva; los menores cruzando solos crecieron 35%. Tomás, seis años, cruzó de la mano de su madre. Perdió el osito en el río. Vio cosas que ningún niño debería ver. Hoy no duerme, y dibuja siempre el mismo dibujo: <strong>un río verde y una mano que lo suelta.</strong></p>
-    <div class="box"><h4>🌴 La selva se queda en el cuerpo</h4><ul>
-      <li>El niño no cuenta: dibuja, juega, pesadilla: no se le interroga: se le acompaña con terapia infantil: el dibujo es su testimonio.</li>
-      <li>Disparadores con sonido de agua: lluvia, ríos, helicópteros: se avisan y se acompañan.</li>
-      <li>El osito perdido no se reemplaza con mentira: "se quedó cuidando el río" es un ritual que sana.</li>
-      <li>La madre que cruzó también está rota: la culpa de "yo lo metí en eso" se trata: ella no eligió entre lo bueno y lo malo: eligió entre lo malo y lo peor.</li>
-      <li>Papeles y escuela sin documentos: la matrícula es un derecho: se exige con calma y con la ley.</li>
-      <li>El que cruzó solo: ICBF, protección, y la comunidad que lo recibe sin apodos: el niño de la selva no es "el migra": es Tomás.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Silencio total · terrores nocturnos con agua · enuresis nueva · agresión con mordiscos: la selva se trata con especialistas, no con tiempo.</div>
-    <p>La maestra de Tomás enmarcó el dibujo del río verde y le puso debajo, con letra de él: <strong>"Ya lo crucé."</strong> Tomás lo miró, y esa noche durmió de corrido.</p>
-    <div class="quote">"Al niño que cruzó la selva no hay que explicarle que valió la pena: hay que darle cama seca, pupitre con nombre y un adulto que no le pregunte por el río."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 13</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 14 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/tMVay0S.png" alt="El que vuelve de prisión">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 14</div>
-    <h3 class="chap">El hijo que vuelve de la prisión</h3>
-    <p>Doña Alicia lavó la fachada de la casa dos veces el día que Jhon salió. No por sucia: <strong>para que el barrio no tuviera ni el gusto de la lástima.</strong> Ocho años adentro. Y afuera, una verdad que nadie le dijo en la puerta de la cárcel: la condena se cumple dos veces: la primera en la celda; la segunda, en la mirada del barrio.</p>
-    <div class="box"><h4>🏠 La familia que recibe sin juicio</h4><ul>
-      <li>El pasado se cuenta cuando él quiera: la casa no es juzgado de repetición: se pregunta por el futuro, no por el expediente.</li>
-      <li>El estigma se responde con dignidad, no con discursos: "Pagó lo que debía. Volvió. Es mi hijo." Dicho una vez, con calma, basta.</li>
-      <li>La salud mental también salió en la maleta: depresión, ansiedad o medicación suspendida de un día para otro: continuidad de tratamiento desde la primera semana.</li>
-      <li>El oficio de adentro se pule afuera: la primera oportunidad es de la casa y del barrio: el que trabaja, se queda.</li>
-      <li>El hijo que creció sin papá: ahora hay un extraño en la mesa: la autoridad no se estrena el día uno: el vínculo se construye con rutinas.</li>
-    </ul></div>
-    <div class="alerta">⚠️ Aislamiento total · rabia de noche · las viejas compañías que tocan la puerta: se acompaña sin espiar: la confianza también es tratamiento.</div>
-    <p>Jhon le arregló el techo a la vecina que más lo señalaba. Ella no dijo gracias: dijo "quedó bien hecho". Y con eso, en el barrio, <strong>empezó la segunda libertad.</strong></p>
-    <div class="quote">"El que pagó no le debe a la familia: la familia no es la segunda condena. Es la primera libertad."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 14</div>
-</div>
+  <div class="fig"><img src="https://i.imgur.com/eoQkGr3.png" alt="Líder amenazado"></div>
+  <div class="kicker">Capítulo 15</div>
+  <h3 class="chap">El líder amenazado: el miedo sentado a la mesa</h3>
+  <p>A don Rodrigo el panfleto le llegó un martes, doblado en la rendija de la puerta. Desde ese día, <strong>el miedo se sentó a la mesa con la familia: come primero, duerme de último.</strong> Su hija de diez años aprendió a reconocer las motos que se quedan parqueadas mucho tiempo. Eso no es crianza: eso es guerra servida en el plato.</p>
+  <div class="box"><h4>🪑 Cuidar a la familia que vive en alerta</h4><ul>
+    <li>Protocolos sin cárcel: rutas variables, avisos, denuncia, esquema: la seguridad se administra, pero la casa no se vuelve cuartel.</li>
+    <li>El hijo no hereda la vigilia: "papá defiende el río y a algunos no les gusta; por eso nos cuidamos más": el niño informado no inventa monstruos peores.</li>
+    <li>La salud mental bajo amenaza es tratamiento: hipervigilancia, insomnio, sobresalto: el líder que va a terapia no es débil: es el que quiere seguir vivo y entero.</li>
+    <li>Si toca irse, es destierro con nombre propio: anclas, olores, mapa nuevo: y el duelo de la causa que queda a medias.</li>
+    <li>La comunidad que protege: el vecino que mira, la tienda que avisa, la junta que acompaña.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El líder que borra su archivo como quien se despide · la esposa que no duerme y no lo dice · el hijo que quiere volver arma el miedo: eso pide red y ayuda HOY.</div>
+  <p>La hija de don Rodrigo hoy defiende el río en el colegio, con una maqueta. <strong>"Mi papá lo cuida afuera; yo lo cuido adentro de mí."</strong></p>
+  <div class="quote">"Al líder lo amenaza el cobarde; al líder lo sostiene la casa. Cuidar al que cuida a todos también es tarea del pueblo."</div>
 
-<!-- CAP 15 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/eoQkGr3.png" alt="Líder amenazado">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 15</div>
-    <h3 class="chap">El líder amenazado: el miedo sentado a la mesa</h3>
-    <p>A don Rodrigo el panfleto le llegó un martes, doblado en la rendija de la puerta. Desde ese día, <strong>el miedo se sentó a la mesa con la familia: come primero, duerme de último.</strong> Su hija de diez años aprendió a reconocer las motos que se quedan parqueadas mucho tiempo. Eso no es crianza: eso es guerra servida en el plato.</p>
-    <div class="box"><h4>🪑 Cuidar a la familia que vive en alerta</h4><ul>
-      <li>Protocolos sin cárcel: rutas variables, avisos, denuncia, esquema: la seguridad se administra, pero la casa no se vuelve cuartel.</li>
-      <li>El hijo no hereda la vigilia: "papá defiende el río y a algunos no les gusta; por eso nos cuidamos más": el niño informado no inventa monstruos peores.</li>
-      <li>La salud mental bajo amenaza es tratamiento: hipervigilancia, insomnio, sobresalto: el líder que va a terapia no es débil: es el que quiere seguir vivo y entero.</li>
-      <li>Si toca irse, es destierro con nombre propio: anclas, olores, mapa nuevo: y el duelo de la causa que queda a medias.</li>
-      <li>La comunidad que protege: el vecino que mira, la tienda que avisa, la junta que acompaña.</li>
-    </ul></div>
-    <div class="alerta">⚠️ El líder que borra su archivo como quien se despide · la esposa que no duerme y no lo dice · el hijo que quiere volver arma el miedo: eso pide red y ayuda HOY.</div>
-    <p>La hija de don Rodrigo hoy defiende el río en el colegio, con una maqueta. <strong>"Mi papá lo cuida afuera; yo lo cuido adentro de mí."</strong></p>
-    <div class="quote">"Al líder lo amenaza el cobarde; al líder lo sostiene la casa. Cuidar al que cuida a todos también es tarea del pueblo."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 15</div>
-</div>
+  <div class="sep">❦</div>
 
-<!-- CAP 16 -->
-<div class="page">
-  <img class="chap-img" src="https://i.imgur.com/K40pK9z.png" alt="El pueblo que recibe">
-  <div class="chap-body">
-    <div class="kicker">Capítulo 16</div>
-    <h3 class="chap">El pueblo que recibe: la red que cura</h3>
-    <p>Cuando la familia de doña Mery llegó con la mata de albahaca, nadie hizo reunión. Pero la parroquia abrió el salón el primer domingo, la escuela matriculó sin papeles, la tienda fió sin libreta de cobro, y la vecina prestó una olla "que se devuelve con sancocho". <strong>Nadie la salvó: todos la recibieron. Y esa es la diferencia.</strong></p>
-    <div class="box"><h4>🤝 La comunidad como cuidadora</h4><ul>
-      <li>Cada uno su pedazo: la parroquia el salón · la escuela el pupitre · la tienda el fiao · el vecino el nombre: la red que cura no la teje un héroe: la tejen diez manos tibias.</li>
-      <li>Ayudar sin exhibir: el que ayuda gritando, cobra; el que ayuda callado, siembra.</li>
-      <li>El que llega también da: la albahaca dio para tres cocinas: el desplazado trae semilla, oficio, memoria: la integración es intercambio, no limosna.</li>
-      <li>El pueblo que recibe también sana: la comunidad que acoge descubre que sus propias heridas tienen casa: el que abre la puerta, se abre.</li>
-    </ul></div>
-    <div class="alerta">⚠️ El recibido que a los tres meses sigue sin nombre que lo salude · el niño sin pupitre · el viejo sin misa: eso no es pobreza: es soledad con techo: la red se activa.</div>
-    <p>Hoy, en el salón parroquial, el cartel lo pintó el hijo de doña Mery: <strong>"Bienvenido el que llega, porque el que llega también trae."</strong></p>
-    <div class="quote">"Un pueblo no se mide por lo que produce: se mide por cómo recibe. La red que cura se teje con nombres que saludan."</div>
-  </div>
-  <div class="foot">LAS HERIDAS DEL PAÍS · Cap. 16</div>
+  <div class="fig"><img src="https://i.imgur.com/K40pK9z.png" alt="El pueblo que recibe"></div>
+  <div class="kicker">Capítulo 16</div>
+  <h3 class="chap">El pueblo que recibe: la red que cura</h3>
+  <p>Cuando la familia de doña Mery llegó con la mata de albahaca, nadie hizo reunión. Pero la parroquia abrió el salón el primer domingo, la escuela matriculó sin papeles, la tienda fió sin libreta de cobro, y la vecina prestó una olla "que se devuelve con sancocho". <strong>Nadie la salvó: todos la recibieron. Y esa es la diferencia.</strong></p>
+  <div class="box"><h4>🤝 La comunidad como cuidadora</h4><ul>
+    <li>Cada uno su pedazo: la parroquia el salón · la escuela el pupitre · la tienda el fiao · el vecino el nombre: la red que cura no la teje un héroe: la tejen diez manos tibias.</li>
+    <li>Ayudar sin exhibir: el que ayuda gritando, cobra; el que ayuda callado, siembra.</li>
+    <li>El que llega también da: la albahaca dio para tres cocinas: el desplazado trae semilla, oficio, memoria: la integración es intercambio, no limosna.</li>
+    <li>El pueblo que recibe también sana: la comunidad que acoge descubre que sus propias heridas tienen casa: el que abre la puerta, se abre.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El recibido que a los tres meses sigue sin nombre que lo salude · el niño sin pupitre · el viejo sin misa: eso no es pobreza: es soledad con techo: la red se activa.</div>
+  <p>Hoy, en el salón parroquial, el cartel lo pintó el hijo de doña Mery: <strong>"Bienvenido el que llega, porque el que llega también trae."</strong></p>
+  <div class="quote">"Un pueblo no se mide por lo que produce: se mide por cómo recibe. La red que cura se teje con nombres que saludan."</div>
 </div>
 
 <!-- ══ CIERRE DEL TOMO II ══ -->
-<div class="page"><div class="chap-body" style="padding-top:25mm;">
+<div class="flow">
+  <div class="sep">❦</div>
   <h3 class="chap" style="text-align:center;">CIERRE — Las dieciséis puertas</h3>
   <p>Este tomo tuvo dieciséis puertas: la del campito de fútbol donde un niño aprende a perder, la de la casa donde una niña por fin duerme, la de la finca donde se siembra yuca sobre el miedo, la del rincón sin cielo, la del espejo destapado, la de la mesa con el plato puesto, la de la nevera con el mapa de tres, la de la ventana con la albahaca, la del sofá con las banderas dobladas, la de la ciudad nueva donde se escribe con seudónimo, la del cuarto donde una abuela trenza el pelo de la nieta, la del camino con las palas al amanecer, la del salón con el río enmarcado, la del techo que se arregla, la de la mesa con el panfleto boca abajo, y la del salón con el sol pintado.</p>
   <p>Ninguna de esas puertas se abrió sola. Todas tuvieron una mano que las empujó con cariño. <strong>A esa mano se le llama país.</strong></p>
@@ -403,19 +341,17 @@
   <div class="quote">"Las heridas del país no las cura un gobierno: las cura una casa a la vez. Y tú, que leíste hasta aquí, ya sabes cuidarlas."</div>
   <p style="text-align:right; font-style:italic;">— El Autor</p>
 </div>
-<div class="foot">LAS HERIDAS DEL PAÍS · Cierre</div></div>
 
 <!-- ══ CONTRAPORTADA TOMO II ══ -->
-<div class="page"><div class="full">
-  <img src="https://i.imgur.com/K40pK9z.png" alt="Vital Hogar">
-  <div class="ov-dark">
-    <h1 style="font-size:1.7em;">NADIE SE SALVA SOLO.<br>NADIE SANA SOLO.</h1>
-    <p class="sub">Si este tomo te reconoció, ya sabes que la casa es el primer hospital y el último refugio. Y que ninguna de estas dieciséis heridas se cuida en soledad.</p>
-    <p class="sub" style="font-weight:bold;">Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas, auxiliares verificados y el mismo respeto que aprendí en casi treinta años.</p>
-    <div class="autor">VITAL HOGAR · Cuidados Domiciliarios<br>📲 Familias: wa.link/8zq5xe · 🩺 Auxiliares: wa.link/lrrq79<br>🌐 vital-landing-gamma.vercel.app</div>
-    <p class="sub" style="font-size:.85em;">Porque cuidar es sagrado. Y nadie debería hacerlo con las manos vacías ni el corazón solo.<br><strong style="color:#E8C766; letter-spacing:1px;">PRÓXIMAMENTE EN LA COLECCIÓN: TOMO III — LOS COMIENZOS FRÁGILES</strong></p>
-  </div>
-</div></div>
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO II</div>
+  <h1 style="font-size:1.8em;">NADIE SE SALVA SOLO.<br>NADIE SANA SOLO.</h1>
+  <div class="c-img"><img src="https://i.imgur.com/K40pK9z.png" alt="Vital Hogar"></div>
+  <div class="c-sub">Si este tomo te reconoció, ya sabes que la casa es el primer hospital y el último refugio. Y que ninguna de estas dieciséis heridas se cuida en soledad. Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas y el mismo respeto que aprendí en casi treinta años.</div>
+  <div class="banda">VITAL HOGAR · 📲 wa.link/8zq5xe</div>
+  <div class="c-autor">Porque cuidar es sagrado. Y nadie debería hacerlo<br>con las manos vacías ni el corazón solo.</div>
+  <p class="c-sub" style="font-size:.8em; margin-top:6mm;"><strong style="color:#E8C766; letter-spacing:1px;">PRÓXIMAMENTE EN LA COLECCIÓN: TOMO III — LOS COMIENZOS FRÁGILES</strong></p>
+</div>
 
 </body>
-</html>>
+</html>
