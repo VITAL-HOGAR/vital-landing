@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Los Comienzos Frágiles — Tomo III | Las Manos Que Cuidan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: #cfd8e0; font-family: Georgia, 'Times New Roman', serif; color: #222; }
+  .page { width: 210mm; height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; }
+  .page:last-of-type { page-break-after: auto; }
+  .cover { background: #1e4d38; color: white; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16mm 14mm; text-align: center; }
+  .c-brand { letter-spacing: 4px; font-size: .8em; color: #E8C766; font-weight: bold; }
+  .cover h1 { font-size: 2.5em; letter-spacing: 3px; color: #E8C766; line-height: 1.15; margin-top: 4mm; }
+  .c-img { width: 100%; border: 1px solid #E8C766; padding: 2mm; background: #143826; }
+  .c-img img { width: 100%; height: 118mm; object-fit: contain; display: block; }
+  .c-sub { font-style: italic; font-size: .95em; opacity: .95; max-width: 160mm; }
+  .banda { background: #E8C766; color: #1e4d38; font-weight: bold; font-size: .8em; letter-spacing: 2px; padding: 4px 16px; border-radius: 20px; }
+  .c-autor { font-size: .85em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 5px 0; max-width: 130mm; }
+  .flow { width: 210mm; margin: 0 auto; background: #FDFBF7; padding: 12mm 14mm; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+  .flow p { text-align: justify; font-size: 10pt; line-height: 1.6; margin-bottom: 9px; }
+  .flow p strong { color: #1e4d38; }
+  .kicker { color: #7a9a3a; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; margin-top: 10mm; }
+  h3.chap { color: #1e4d38; font-size: 1.4em; margin: 3px 0 10px; break-after: avoid; }
+  .sep { text-align: center; color: #b08a2e; font-size: 1.2em; margin: 10mm 0; }
+  .fig { margin: 6mm 0; background: #1e4d38; padding: 2mm; border: 1px solid #d8d2c4; break-inside: avoid; }
+  .fig img { width: 100%; height: 88mm; object-fit: contain; display: block; }
+  .quote { border-left: 4px solid #E8C766; margin: 10px 0; padding: 8px 14px; font-style: italic; color: #5a6b2f; background: #f6f8ea; font-size: 10.5pt; break-inside: avoid; }
+  .box { background: white; border: 1px solid #d4dcc4; border-radius: 10px; padding: 12px 14px; margin: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); break-inside: avoid; }
+  .box h4 { color: #1e4d38; font-size: .95em; margin-bottom: 6px; }
+  .box ul { margin-left: 16px; } .box li { font-size: 9.6pt; line-height: 1.5; margin-bottom: 3px; text-align: justify; }
+  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 10px 12px; border-radius: 8px; margin: 10px 0; font-size: 9.6pt; break-inside: avoid; }
+  .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; font-family: Arial; }
+  @media print { body { background: white; } .page, .flow { margin: 0; box-shadow: none; } .flow { padding: 12mm 14mm; } .btn-pdf { display: none; } }
+  @media (max-width: 800px) { .page, .flow { width: 100%; } .c-img img, .fig img { height: auto; } }
+</style>
+</head>
+<body>
+<button class="btn-pdf" onclick="window.print()">📥 COMPRAR / DESCARGAR PDF</button>
+
+<!-- ══ PORTADA TOMO III ══ -->
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO III</div>
+  <h1>LOS COMIENZOS<br>FRÁGILES</h1>
+  <div class="c-img"><img src="https://i.imgur.com/Bx22ILO.png" alt="Portada Tomo III"></div>
+  <div class="c-sub">Para el que cuida al que apenas empieza</div>
+  <div class="banda">10 HISTORIAS DE CUNAS, MALETAS Y SEGUNDAS OPORTUNIDADES</div>
+  <div class="c-autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta · VITAL HOGAR</div>
+</div>
+
+<!-- ══ PRÓLOGO ══ -->
+<div class="flow">
+  <h3 class="chap" style="text-align:center;">PRÓLOGO — El tomo de los que empiezan</h3>
+  <p>Los otros tomos cuidan al que ya vivió. Este cuida al que apenas empieza: a la niña que un sueño mal acompañado casi vende, al niño que desempaca la maleta donde hay paz, al bebé que volvió de la UCI con la vida por estrenar, al que nació con un cromosoma de más y un ritmo distinto, al que habla un idioma que solo su mamá traduce.</p>
+  <p>Los comienzos son frágiles porque todo está por escribirse: la primera palabra, la primera visita, la primera carta, el primer pan. Y porque un comienzo roto no se rompe solo: lo rompen los grandes. Por eso este tomo no les habla a los niños: les habla a los adultos que los sostienen.</p>
+  <div class="quote">"Un comienzo frágil no es un destino: es una invitación. La casa que lo sostiene, lo endereza."</div>
+  <p style="text-align:right; font-style:italic;">— El Autor</p>
+</div>
+
+<!-- ══ CAPS 1–5 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/uLsvtlC.png" alt="La trata"></div>
+  <div class="kicker">Capítulo 1</div>
+  <h3 class="chap">La trata: el crimen silencioso</h3>
+  <p>Valentina tenía catorce años y un sueño de peluquera. Por eso, cuando "el novio" que conoció en el celular le ofreció llevarla a la ciudad a un curso de belleza, no empacó ropa: empacó el sueño. La madre se dio cuenta por lo que NO pasó: no hubo despedida, no hubo dirección, no hubo una sola llamada desde el número de siempre. <strong>El tratante no secuestra el cuerpo: secuestra el sueño.</strong></p>
+  <div class="box"><h4>🚨 Las señales que gritan bajito</h4><ul>
+    <li>Regalos caros sin explicación · celular con secreto y "novio" mayor que nadie ha visto · baja del colegio sin pelea · marca nueva · viajes "de trabajo" que nadie acompañó.</li>
+    <li>El grooming es la antesala: el adulto que se vuelve "el único que te entiende".</li>
+  </ul></div>
+  <div class="box"><h4>🏠 Lo que se hace</h4><ul>
+    <li>Denuncia YA: Línea Nacional contra la Trata 141 · ICBF · 123: la duda también se denuncia.</li>
+    <li>La casa que recibe a la rescatada: no preguntas, techo, comida, silencio seguro.</li>
+    <li>El cuerpo primero: revisión médica y salud mental con especialistas.</li>
+    <li>Prevención que sí funciona: el celular se acompaña, no se espía: el niño que se siente amado en casa, no sale a buscar amor que lo vende.</li>
+  </ul></div>
+  <div class="alerta">⚠️ La niña que vuelve con marcas, con miedo a un número, o con el silencio de quien fue amenazada: eso es trata hasta que se demuestre lo contrario: se actúa HOY.</div>
+  <p>La madre de Valentina hoy acompaña a otras madres con un cartel pintado a mano: <strong>"Acompaño sueños buenos."</strong></p>
+  <div class="quote">"El tratante no secuestra el cuerpo: secuestra el sueño. La casa que llena el sueño de amor real le cierra la puerta a la trampa."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/neKN55E.png" alt="Después de la denuncia"></div>
+  <div class="kicker">Capítulo 2</div>
+  <h3 class="chap">El después de la denuncia</h3>
+  <p>Nadie le dice a la familia qué pasa DESPUÉS de denunciar. Doña Sandra lo aprendió a golpes: la denuncia no es el final: es el comienzo de un camino donde el niño, si nadie lo cuida, vuelve a ser víctima — esta vez del proceso. <strong>La denuncia protege al niño del agresor; la casa lo protege del proceso. Las dos son justicia.</strong></p>
+  <div class="box"><h4>⚖️ El proceso sin revictimizar</h4><ul>
+    <li>El niño no repite la historia veinte veces: la entrevista única y la cámara de Gesell existen: se exige que se respeten.</li>
+    <li>En la casa, la historia la cuenta él, cuando quiera: tú no investigas: tú sostienes.</li>
+    <li>El niño juega el proceso con muñecos y dibujos: es digestión, no morbo.</li>
+    <li>La culpa de "no me di cuenta" es la herida de la madre: se trata: no ver no fue descuido: fue el plan del agresor.</li>
+    <li>El agresor suele tener nombre y llave de la casa: la medida de protección se cumple aunque duela: proteger al niño vale más que la paz de un almuerzo.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El niño que deja de jugar del todo, la madre que no duerme desde la denuncia: el proceso se aguanta con red y terapia, no a pulso solo.</div>
+  <p>Doña Sandra cerró el cuaderno del proceso escribiendo: <strong>"Hoy terminó el juicio. En mi casa terminó el miedo el día que denuncié."</strong></p>
+  <div class="quote">"La denuncia protege al niño del agresor; la casa lo protege del proceso. Las dos son justicia."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/4q7moGl.png" alt="El niño paquete"></div>
+  <div class="kicker">Capítulo 3</div>
+  <h3 class="chap">El niño paquete</h3>
+  <p>Andrés, nueve años, vive con una maleta que no desempaca. "Los viernes con mamá, los lunes con papá." En las dos casas tiene cepillo de dientes; en ninguna tiene su caja de legos completa. Y aprendió algo que ningún niño debería aprender: <strong>a no contarle nada a nadie, porque todo lo que dice se vuelve munición.</strong> El niño del divorcio no sufre por la separación: sufre por la guerra.</p>
+  <div class="box"><h4>🎒 El niño no es paquete, ni mensajero, ni espía</h4><ul>
+    <li>Los adultos hablan entre adultos: ni recados ni "dile a tu papá": el niño que espía a un padre, traiciona al otro.</li>
+    <li>No se habla mal del otro delante del niño: insultar al otro es insultarle la mitad.</li>
+    <li>La maleta se aligiana: sus cosas viajan como suyas; en las dos casas tiene SU cuarto.</li>
+    <li>Las mismas reglas en las dos casas: el niño descansa de negociar.</li>
+    <li>La culpa se desactiva en voz alta: "nos separamos nosotros; no fue por ti".</li>
+    <li>El juez y el psicólogo escuchan al niño: no elige entre papá y mamá: elige dónde descansa.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El niño "perfecto" en las dos casas · el que se orina los lunes · el que esconde la maleta: es un niño en tregua, y la tregua también se trata.</div>
+  <p>El día que los papás acordaron que la caja de legos viviera en las dos casas por turnos, Andrés desempacó. <strong>Primero la caja. Después, él.</strong></p>
+  <div class="quote">"Al niño del divorcio no le hacen falta dos casas que se pelean: le hacen falta dos casas que se respetan. La maleta se desempaca donde hay paz."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/TD7PFMl.png" alt="La calle"></div>
+  <div class="kicker">Capítulo 4</div>
+  <h3 class="chap">La calle que los crió</h3>
+  <p>"La Gata" volvió a casa a los dieciséis, después de tres años en la calle. La primera noche no durmió: la cama era "muy quieta". A las tres de la mañana abrió la puerta y se quedó mirando la esquina, no por ganas de irse: por costumbre de sobrevivir. <strong>La calle no es solo un lugar: es una adicción y una familia: se desintoxica y se duele, las dos cosas.</strong></p>
+  <div class="box"><h4>🏠 La casa que recibe al sobreviviente</h4><ul>
+    <li>El pegante y la droga se desintoxican con médico: el cuerpo que inhaló tres años no se limpia con sermón.</li>
+    <li>La "familia de la calle" se duele: extrañar no es volver.</li>
+    <li>El cuerpo primero: sueño de meses, comida en porciones pequeñas, piel, dientes: sin drama, con método.</li>
+    <li>Reglas claras con cariño: "sales, vuelves a esta hora": la confianza se construye de a milímetros.</li>
+    <li>La recaída es parte del camino: si vuelve a la calle, se le vuelve a abrir la puerta: la tercera vez también.</li>
+    <li>El hermano menor se protege sin volverlo guardia.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El que esconde objetos "por si toca volver" · el que duerme vigilando la puerta: el cuerpo tarda en creer la paz: se acompaña con terapia, no con regaño.</div>
+  <p>Al mes, "la Gata" durmió de corrido. Su mamá no dijo nada: solo dejó la puerta sin seguro y la sopa en la olla.</p>
+  <div class="quote">"La calle cría con hambre y con silencio; la casa cura con sopa y con paciencia. El que vuelve no es un malagradecido: es un sobreviviente de dos mundos."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/mIxhhsn.png" alt="La niña madre"></div>
+  <div class="kicker">Capítulo 5</div>
+  <h3 class="chap">La niña madre</h3>
+  <p>A Valentina, dieciséis, el embarazo le llegó con el colegio suspendido y un novio que desapareció antes del primer eco. Su mamá tomó esa noche la decisión que cambió las dos vidas: <strong>"No vas a cargar esto sola, pero tampoco voy a cargarlo por ti. Vamos a cargarlo juntas."</strong> Esa diferencia —apoyo sin sustitución— separa a la madre adolescente que sobrevive de la que se hunde.</p>
+  <div class="box"><h4>🌸 La que sigue estudiando</h4><ul>
+    <li>El colegio no se abandona: la ley prohíbe expulsar por embarazo: se exige el cupo y se arma la ruta.</li>
+    <li>La abuela apoya, no cría: "yo cuido al bebé cuando tú estudies; cuando tú estés, él es tuyo".</li>
+    <li>El papá que se fue: no se le obliga a volver, pero sí se le exige la cuota por el ICBF.</li>
+    <li>La niña madre llora dos duelos: la infancia que se fue y el novio que no volvió: no se minimizan.</li>
+    <li>Turnos para que duerma cuatro horas seguidas: el sueño es sagrado.</li>
+    <li>La lactancia se acompaña, no se impone: ninguna madre es menos por no amamantar.</li>
+  </ul></div>
+  <div class="alerta">⚠️ La niña madre que no quiere ver al bebé · la que llora al cargarlo · "ojalá no hubiera nacido": depresión posparto adolescente: se trata HOY.</div>
+  <p>Hoy Valentina es enfermera. Debajo de la foto de grado, doña Rosa escribió: <strong>"Ella no me arruinó la vida: me la enseñó."</strong></p>
+  <div class="quote">"La niña madre no necesita sermón: necesita casa, colegio y una abuela que apoye sin sustituir. El amor que crece por tres, también sana por tres."</div>
+</div>
+
+<!-- ══ CAPS 6–10 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/Bx22ILO.png" alt="El neonato"></div>
+  <div class="kicker">Capítulo 6</div>
+  <h3 class="chap">El neonato que vuelve distinto</h3>
+  <p>A Mateo le faltaban seis semanas cuando nació. Pasó cuarenta días en la UCI neonatal. El día del alta, doña Carolina salió con una maleta de pañales Y una carpeta de instrucciones que pesaba más que el bebé. Nadie le dijo que <strong>el alta de un neonato de alto riesgo no es una despedida: es un traslado de UCI a casa.</strong> Y ella, que era contadora, se volvió intensivista de la noche a la mañana.</p>
+  <div class="box"><h4>🏥 La UCI que se arma en la cocina</h4><ul>
+    <li>Oxígeno: el concentrador se aprende ANTES del alta: flujos, alarmas, humidificador: el oxígeno es fuego invisible.</li>
+    <li>Sonda nasogástrica: se aprende en el hospital con supervisión: nunca se pasa en casa por primera vez.</li>
+    <li>Monitor de apneas: la alarma de noche se atiende sin pánico: se mira al niño, no al número.</li>
+    <li>El prematuro pierde calor: gorro, calcetines, método canguro: el pecho es incubadora.</li>
+    <li>Sueño seguro: boca arriba, cuna despejada: salva más vidas que el monitor.</li>
+    <li>Visitas limitadas los primeros meses: el abuelo resfriado, no entra.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El bebé que no mama · se hunde el pecho · amarillo desde el primer día · fiebre = corre. Y la mamá que no duerme ni con el monitor en silencio: posparto complicado: se atiende HOY.</div>
+  <p>Mateo hoy tiene tres años y corre. Doña Carolina guarda la carpeta del alta y la abre cada cumpleaños como quien lee un rosario: <strong>"El día que aprendí a pasarle la sonda, aprendí que el amor también es técnica."</strong></p>
+  <div class="quote">"El neonato que vuelve distinto no vuelve roto: vuelve a aprender afuera. Y la casa que lo recibe es la UCI más amorosa que existe."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/B7iW13j.png" alt="El duelo de la cuna"></div>
+  <div class="kicker">Capítulo 7</div>
+  <h3 class="chap">El duelo de la cuna</h3>
+  <p>Este capítulo se escribe con la puerta cerrada y la voz más baja de toda la colección. A doña Lucía le dijeron en la semana veinte: "No hay latido." Salió del hospital con los brazos vacíos y una carpeta con un nombre que nadie pronunció en voz alta. En la casa, el cuarto seguía armado. <strong>El duelo perinatal es el duelo que nadie ve: no hay cuerpo, no hay tumba, no hay foto en la sala: pero hay un nombre, y hay un amor que no tuvo a quién llegar.</strong></p>
+  <div class="box"><h4>🕯️ El duelo que sí existe</h4><ul>
+    <li>El nombre se pronuncia: "Santiago murió en la semana veinte": el nombre es la prueba de que existió.</li>
+    <li>El cuarto se desarma cuando la mamá pueda: no hay fecha: el día que se desarma, también se llora.</li>
+    <li>La huella de pie se enmarca: el recuerdo tangible es el altar del duelo invisible.</li>
+    <li>La pareja se duele distinta: él quiere "seguir", ella quiere "recordar": los dos tienen razón.</li>
+    <li>No se dice "ya tendrás otro" ni "mejor así": el duelo no se minimiza: se acompaña.</li>
+    <li>El aniversario se planea: vela, carta: el ritual sana más que el olvido.</li>
+    <li>Los hermanos también duelen: verdad en pedacitos: "tu hermanito no pudo vivir afuera; lo vamos a querer siempre".</li>
+  </ul></div>
+  <div class="alerta">⚠️ La mamá que no sale del cuarto · la pareja que se separa al mes: duelo perinatal complicado: se trata con ayuda profesional: no es debilidad: es amor que necesita sostén.</div>
+  <p>Doña Lucía abre cada 15 de octubre la caja con la primera muda y la huella de pie: <strong>"Mi hijo vivió veinte semanas. Y esas veinte semanas me enseñaron que el amor no necesita tiempo para ser amor."</strong></p>
+  <div class="quote">"El duelo perinatal es el duelo que nadie ve. Pero existe. Y la casa que lo nombra, lo sostiene."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/nIPYN9Z.png" alt="Mamá en prisión"></div>
+  <div class="kicker">Capítulo 8</div>
+  <h3 class="chap">El niño con mamá en prisión</h3>
+  <p>Samuel, seis años, conoce la palabra "requisa" desde los cuatro. Cada quince días, su abuela lo lleva a la cárcel de mujeres: el bus de las seis, la fila, el detector, el patio. Su mamá paga una condena de ocho años. Pero Samuel paga otra que no dictó ningún juez: <strong>la condena de esperar.</strong></p>
+  <div class="box"><h4>🔒 La visita sin trauma</h4><ul>
+    <li>Prepara al niño para lo que verá: rejas, uniforme, requisa: el niño informado no imagina monstruos peores.</li>
+    <li>El abrazo es sagrado: vale más que mil visitas de vidrio.</li>
+    <li>La verdad en pedacitos: "mamá se equivocó y está pagando; no es tu culpa; te ama".</li>
+    <li>La abuela es la paciente invisible: carga el duelo de la hija presa Y la crianza: su descanso va en la nevera.</li>
+    <li>El niño no hereda el estigma: en el colegio no se le obliga a contar.</li>
+    <li>Lactancia tras los barrotes: el niño puede vivir con su mamá hasta los tres años: el tránsito a la abuela se prepara con psicólogo.</li>
+    <li>Cartas, dibujos, llamadas: el vínculo se mantiene sin la cárcel.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El niño que deja de dibujar · el que se avergüenza · la abuela que "aguanta": eso es colapso, y se atiende.</div>
+  <p>La última carta de Samuel decía: <strong>"Mami, ya sé leer. Cuando salgas, te leo yo."</strong> La mamá la tiene pegada en la litera. La condena termina; el amor no.</p>
+  <div class="quote">"El niño de la presa no hereda la condena: hereda la espera. La casa que lo sostiene le acorta la condena."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/AMVk7Rf.png" alt="Síndrome de Down"></div>
+  <div class="kicker">Capítulo 9</div>
+  <h3 class="chap">El cromosoma de más</h3>
+  <p>Cuando Daniel nació, el médico dijo "lo siento". La mamá, sin soltar al bebé, respondió la frase que abre este capítulo: <strong>"¿Lo siente por qué?"</strong> El médico no supo contestar. Ella sí: "Porque tiene un cromosoma de más. Eso no es una tragedia: es un ritmo distinto." Treinta años después, Daniel trabaja en una panadería.</p>
+  <div class="box"><h4>🧬 El ritmo distinto se acompaña desde el día uno</h4><ul>
+    <li>Estimulación temprana desde el primer mes: el juego es la terapia.</li>
+    <li>Daniel es niño primero, síndrome después: ni mascota ni foto: persona con carácter y derechos.</li>
+    <li>Inclusión escolar es derecho: el cupo se exige; la maestra aliada se construye.</li>
+    <li>Salud con calendario: corazón, tiroides, audición, vista.</li>
+    <li><strong>La pregunta de las tres de la mañana:</strong> "¿quién lo cuida cuando yo muera?" — el plan de futuro se hace EN VIDA: hermanos, tutor, red: se nombra, se escribe: no es pesimismo: es amor con testamento.</li>
+    <li>El hermano que hereda sin haber elegido: se le habla desde niño, no el día del entierro.</li>
+    <li>El adulto con Down envejece antes: su calendario se anticipa.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Regresión · hipotiroidismo · pérdida de audición · el adulto que deja de ir a la panadería: el cuerpo con Down avisa, y se escucha.</div>
+  <p>Daniel le lleva pan a su mamá cada sábado. Ella dice que el médico, cuando lo vio trabajar, por fin entendió: <strong>"No era una tragedia. Era un ritmo distinto. Y el ritmo distinto también llega."</strong></p>
+  <div class="quote">"El cromosoma de más no es condena: es ritmo distinto. La casa que baila a ese ritmo, baila completa."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/RvtCNUQ.png" alt="Autismo adulto"></div>
+  <div class="kicker">Capítulo 10</div>
+  <h3 class="chap">El hijo que habla otro idioma y envejece con mamá</h3>
+  <p>Julián tiene treinta y ocho años y autismo. Su mamá, doña Marta, setenta y dos. Cada mañana, a las siete, el mismo desayuno, el mismo plato, la misma ventana. Si el plato cambia de lugar, Julián grita. Y doña Marta, que lo ha traducido al mundo durante treinta y ocho años, se hace cada noche la misma pregunta: <strong>"Cuando yo me muera, ¿quién le traduce el mundo a mi hijo?"</strong> En Colombia, el 87% de los adultos autistas sigue viviendo con sus padres. El sistema los olvidó cuando dejaron de ser niños.</p>
+  <div class="box"><h4>🗣️ El idioma que solo la mamá habla</h4><ul>
+    <li>La rutina es el idioma: cambiarla sin aviso es violencia: se respeta y se anuncia.</li>
+    <li>La sobrecarga sensorial: ruido, luces, tacto: la casa se adapta: el rincón sin ruido es el refugio.</li>
+    <li>El cuaderno de Julián (qué le gusta, qué lo altera, cómo se calma) es el testamento más importante de la casa: ese saber no se improvisa: se documenta.</li>
+    <li>El plan de futuro se construye EN VIDA: centro de día, hogar de apoyo, tutor: se visita con Julián antes de que la mamá falte.</li>
+    <li>El hermano que hereda sin haber elegido: se le da lugar, no carga.</li>
+    <li>La mamá carga cuarenta años de traducción: su relevo se planea con amor: descansar no es traicionar: es durar.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Regresión · crisis nuevas · la mamá que dice "yo aguanto hasta que Dios quiera": eso no es fe: es colapso: se atiende HOY, con red y con plan.</div>
+  <p>Doña Marta empezó el cuaderno la semana pasada. En la primera página escribió: <strong>"Este es mi hijo. Así se calma. Así se ríe. Así se ama. El que lo lea, que lo quiera como yo."</strong></p>
+  <div class="quote">"El hijo que habla otro idioma no está roto: el mundo es el que no lo escucha. La casa que aprende su idioma, traduce el amor."</div>
+</div>
+
+<!-- ══ CIERRE DEL TOMO III ══ -->
+<div class="flow">
+  <div class="sep">❦</div>
+  <h3 class="chap" style="text-align:center;">CIERRE — Los diez comienzos</h3>
+  <p>Este tomo tuvo diez comienzos: el sueño que casi vende y ahora se acompaña, el proceso que ya no revictimiza, la maleta que por fin se desempaca, la calle que se desintoxica con sopa, la niña que estudia con su hija de la mano, el bebé que volvió de la UCI con la vida por estrenar, el nombre que por fin se pronuncia, la carta que promete leer, el pan del sábado, y el cuaderno que traduce a un hijo.</p>
+  <p>Ninguno de esos comienzos se enderezó solo. Todos tuvieron una casa que los sostuvo. <strong>Porque un comienzo frágil no es un destino: es una invitación.</strong></p>
+  <div class="quote">"Los comienzos se cuidan dos veces: la primera, para que arranquen; la segunda, para que no se rompan. Este tomo es las dos."</div>
+  <p style="text-align:right; font-style:italic;">— El Autor</p>
+</div>
+
+<!-- ══ CONTRAPORTADA TOMO III ══ -->
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO III</div>
+  <h1 style="font-size:1.8em;">TODO COMIENZO<br>MERECE UNA CASA</h1>
+  <div class="c-img"><img src="https://i.imgur.com/AMVk7Rf.png" alt="Vital Hogar"></div>
+  <div class="c-sub">Si este tomo te reconoció —la abuela que sostiene, la mamá que traduce, la niña que estudia con su hija— ya sabes que ningún comienzo se endereza solo. Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas y el mismo respeto que aprendí en casi treinta años.</div>
+  <div class="banda">VITAL HOGAR · 📲 wa.link/8zq5xe</div>
+  <div class="c-autor">Porque cuidar es sagrado. Y nadie debería hacerlo<br>con las manos vacías ni el corazón solo.</div>
+  <p class="c-sub" style="font-size:.8em; margin-top:6mm;"><strong style="color:#E8C766; letter-spacing:1px;">PRÓXIMAMENTE EN LA COLECCIÓN: TOMO IV — LAS MENTES QUE SUFREN</strong></p>
+</div>
+
+</body>
+</html>
