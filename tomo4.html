@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Las Mentes que Sufren — Tomo IV | Las Manos Que Cuidan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: #cfd8e0; font-family: Georgia, 'Times New Roman', serif; color: #222; }
+  .page { width: 210mm; height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; }
+  .page:last-of-type { page-break-after: auto; }
+  .cover { background: #3b2352; color: white; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16mm 14mm; text-align: center; }
+  .c-brand { letter-spacing: 4px; font-size: .8em; color: #E8C766; font-weight: bold; }
+  .cover h1 { font-size: 2.5em; letter-spacing: 3px; color: #E8C766; line-height: 1.15; margin-top: 4mm; }
+  .c-img { width: 100%; border: 1px solid #E8C766; padding: 2mm; background: #2a183c; }
+  .c-img img { width: 100%; height: 118mm; object-fit: contain; display: block; }
+  .c-sub { font-style: italic; font-size: .95em; opacity: .95; max-width: 160mm; }
+  .banda { background: #E8C766; color: #3b2352; font-weight: bold; font-size: .8em; letter-spacing: 2px; padding: 4px 16px; border-radius: 20px; }
+  .c-autor { font-size: .85em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 5px 0; max-width: 130mm; }
+  .flow { width: 210mm; margin: 0 auto; background: #FDFBF7; padding: 12mm 14mm; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+  .flow p { text-align: justify; font-size: 10pt; line-height: 1.6; margin-bottom: 9px; }
+  .flow p strong { color: #3b2352; }
+  .kicker { color: #8a5ab5; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; margin-top: 10mm; }
+  h3.chap { color: #3b2352; font-size: 1.4em; margin: 3px 0 10px; break-after: avoid; }
+  .sep { text-align: center; color: #b08a2e; font-size: 1.2em; margin: 10mm 0; }
+  .fig { margin: 6mm 0; background: #3b2352; padding: 2mm; border: 1px solid #d8d2c4; break-inside: avoid; }
+  .fig img { width: 100%; height: 88mm; object-fit: contain; display: block; }
+  .quote { border-left: 4px solid #E8C766; margin: 10px 0; padding: 8px 14px; font-style: italic; color: #5a3a7a; background: #f6f0fa; font-size: 10.5pt; break-inside: avoid; }
+  .box { background: white; border: 1px solid #d8ccd4; border-radius: 10px; padding: 12px 14px; margin: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); break-inside: avoid; }
+  .box h4 { color: #3b2352; font-size: .95em; margin-bottom: 6px; }
+  .box ul { margin-left: 16px; } .box li { font-size: 9.6pt; line-height: 1.5; margin-bottom: 3px; text-align: justify; }
+  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 10px 12px; border-radius: 8px; margin: 10px 0; font-size: 9.6pt; break-inside: avoid; }
+  .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; font-family: Arial; }
+  @media print { body { background: white; } .page, .flow { margin: 0; box-shadow: none; } .flow { padding: 12mm 14mm; } .btn-pdf { display: none; } }
+  @media (max-width: 800px) { .page, .flow { width: 100%; } .c-img img, .fig img { height: auto; } }
+</style>
+</head>
+<body>
+<button class="btn-pdf" onclick="window.print()">📥 COMPRAR / DESCARGAR PDF</button>
+
+<!-- ══ PORTADA TOMO IV ══ -->
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO IV</div>
+  <h1>LAS MENTES<br>QUE SUFREN</h1>
+  <div class="c-img"><img src="https://i.imgur.com/aUHPtrO.png" alt="Portada Tomo IV"></div>
+  <div class="c-sub">Las heridas que no se ven duelan más</div>
+  <div class="banda">15 HISTORIAS DE LA CABEZA Y EL ALMA</div>
+  <div class="c-autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta · VITAL HOGAR</div>
+</div>
+
+<!-- ══ PRÓLOGO ══ -->
+<div class="flow">
+  <h3 class="chap" style="text-align:center;">PRÓLOGO — El tomo de lo invisible</h3>
+  <p>Los otros tomos cuidan heridas que se ven: el muñón, la cicatriz, la sonda. Este cuida las que no se ven: la que se esconde en la manga larga, la que se sienta a la mesa con sonrisa de uniforme, la que revisa la cerradura veinte veces, la que se mide con un espejo que miente.</p>
+  <p>La mente también se fractura como un hueso. Y merece el mismo yeso: tratamiento, descanso y cero juicios. Este tomo existe para que ninguna casa vuelva a decir "eso es cosa de locos" delante de alguien que se está rompiendo por dentro.</p>
+  <div class="quote">"La herida que no se ve no es la que no existe: es la que nadie ha querido mirar. Este tomo la mira."</div>
+  <p style="text-align:right; font-style:italic;">— El Autor</p>
+</div>
+
+<!-- ══ CAPS 1–7 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/aUHPtrO.png" alt="La pregunta que salva"></div>
+  <div class="kicker">Capítulo 1</div>
+  <h3 class="chap">La pregunta que salva</h3>
+  <p>A Camilo, diecisiete, lo delataba la calma. Regaló su bicicleta, ordenó su cuarto, y le dijo a la profesora "gracias por todo, profe". La profesora hizo lo que casi nadie se atreve: se sentó con él, lo miró a los ojos y preguntó: <strong>"Camilo, ¿has pensado en hacerte daño?"</strong> Camilo lloró. Dijo que sí. Y esa pregunta —no el sermón— fue la que lo trajo de vuelta. <strong>Preguntar no siembra la idea: abre la puerta.</strong></p>
+  <div class="box"><h4>🚨 Las señales que gritan bajito</h4><ul>
+    <li>Regala sus cosas · ordena y "cierra cuentas" · calma repentina después de la depresión · despedidas que suenan a final · el que estaba hundido y queda extrañamente en paz: no mejoró: decidió.</li>
+  </ul></div>
+  <div class="box"><h4>💬 Lo que se hace (y lo que jamás)</h4><ul>
+    <li>Pregunta directo, en privado, con calma. Si dice sí: no lo dejes solo, retira medios, y acompáñalo HOY a salud mental.</li>
+    <li>Jamás: "con todo lo que te damos" · "eso es cosa de muchachos": la culpa y la burla empujan.</li>
+    <li>La pastilla y la terapia no se negocian: la ideación es síntoma.</li>
+  </ul></div>
+  <div class="box"><h4>🕯️ Los que quedan después (postvención)</h4><ul>
+    <li>La culpa de "no me di cuenta" se trata: no ver no fue descuido.</li>
+    <li>El sobreviviente no se aísla: grupo de apoyo.</li>
+    <li>La escuela después de un caso: no se glorifica: se acompaña.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El mito de "el que lo dice, no lo hace": el que lo dice, está pidiendo ayuda: se le cree y se actúa.</div>
+  <p>La profesora de Camilo tiene hoy una frase pegada en el tablero: <strong>"Aquí se pregunta todo, hasta lo que da miedo."</strong> Camilo, veintidós, estudia psicología: quiere ser "el que pregunta".</p>
+  <div class="quote">"Preguntar '¿has pensado en hacerte daño?' no siembra la idea: abre la puerta. El que pregunta, salva."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/yE1AtjM.png" alt="La manga"></div>
+  <div class="kicker">Capítulo 2</div>
+  <h3 class="chap">La manga que esconde el alivio</h3>
+  <p>Doña Patricia encontró la navaja lavando la ropa de Sara, quince años: manga larga en pleno marzo de Cúcuta. Esa noche no gritó: se sentó al lado de su hija, le tomó la mano y dijo: <strong>"Cuéntame qué duele, que para el dolor de afuera ya encontré esto; para el de adentro, lo buscamos juntas."</strong> Sara lloró y mostró los brazos. No era un llamado de atención: <strong>era un alivio.</strong></p>
+  <div class="box"><h4>🔪 Lo que el corte significa (y lo que no)</h4><ul>
+    <li>No es por llamar la atención: es la única forma que encontró de sentir algo, o de dejar de sentir todo.</li>
+    <li>No es contra ti: "¿por qué me haces esto?" cierra la puerta.</li>
+  </ul></div>
+  <div class="box"><h4>🏠 Lo que se hace</h4><ul>
+    <li>Reacciona con abrazo, no con castigo: la navaja se retira con calma.</li>
+    <li>Terapia no opcional: el corte es la punta: abajo hay ansiedad, duelo, acoso, abuso.</li>
+    <li>Sustitutos que no hieren: hielo en la mano, marcador rojo, banda elástica.</li>
+    <li>El cuerpo es territorio seguro: se acompaña con presencia, no con interrogatorio.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Corte con intención de no parar · despedidas escritas · "ya no doler": eso ya no es alivio: es ideación: aplica el Capítulo 1, HOY.</div>
+  <p>Sara hoy tiene diecinueve y estudia arte. En su primer cuadro pintó una manga larga abierta y, adentro, un jardín: <strong>"El alivio también se aprende."</strong></p>
+  <div class="quote">"El que se corta no pide atención: pide alivio. La casa que ofrece alivio sin interrogatorio le cura la manga y el adentro."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/w3KTlI1.png" alt="El joven botado"></div>
+  <div class="kicker">Capítulo 3</div>
+  <h3 class="chap">El joven que la casa botó</h3>
+  <p>A Mateo, diecinueve, la casa se le cerró la noche que dijo quién era. El padre: "ese no es mi hijo". La madre: silencio. Mateo durmió un año en el sofá de un amigo, con la maleta sin desempacar. Hasta que la tía del amigo, doña Amparo, le dijo: <strong>"Mijo, esa no es tu casa: esta es tu casa. Y aquí no se bota a nadie por amar."</strong></p>
+  <div class="box"><h4>🏠 La casa que bota vs. la casa que recibe</h4><ul>
+    <li>El rechazo no es crianza: el joven botado tiene tasas de depresión, calle y suicidio que ningún padre quiso causar.</li>
+    <li>La casa que recibe no interroga: solo: "esta es tu casa, tu cuarto, tu nombre".</li>
+    <li>El nombre y el pronombre se usan como él los dice: las palabras también son techo.</li>
+    <li>La familia que quiere volver: se reconcilia acompañado, y al ritmo del joven: él decide cuándo, y si.</li>
+  </ul></div>
+  <div class="box"><h4>🏳️ Cuando el joven botado es trans</h4><ul>
+    <li>El rechazo es doble: lo botan por amar y por nombrarse: la casa que recibe, salva dos veces.</li>
+    <li>El nombre elegido se usa desde el día uno: el nombre viejo no se pronuncia ni "por costumbre": la costumbre también hiere.</li>
+    <li>La transición se acompaña en casa: la cita de salud, la cédula, el uniforme que respeta: el padre que acompaña al registro no está "cediendo": está firmando el acta de nacimiento del alma.</li>
+    <li>El baño y el cuarto se respetan como él los nombra: la casa que pronuncia, protege.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El joven botado que no come, que regala, que dice "ya no estorbo": ideación: Capítulo 1. Y el que vuelve a la casa que lo botó "por no estorbar": casa no es la que te aguanta: es la que te celebra.</div>
+  <p>Mateo hoy cocina los domingos en casa de doña Amparo. La madre volvió en silencio, y un día dijo "hijo". <strong>Una palabra. Y la casa entera volvió a tener puerta.</strong></p>
+  <div class="quote">"La casa que bota hiere; la casa que recibe salva. Al joven no hay que entenderlo: hay que pertenecerlo."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/jFJOG0D.png" alt="El viejo solo"></div>
+  <div class="kicker">Capítulo 4</div>
+  <h3 class="chap">El viejo LGBTQ+ que envejece solo</h3>
+  <p>Don Hernán, setenta y ocho, vivió cuarenta años con Jorge. Cuando Jorge murió, la familia de Jorge llegó a la casa: no por el duelo, sino por la nevera y el televisor. "Usted era el amigo", le dijeron. <strong>Amigo.</strong> Cuarenta años de amor, reducidos a una palabra que no alcanza. Don Hernán envejece solo, con su familia elegida: el vecino del mercado, la amiga del médico.</p>
+  <div class="box"><h4>🕯️ El duelo que nadie reconoce</h4><ul>
+    <li>Su duelo es duelo: cuarenta años de amor no son "amistad": se llora como se llora a un esposo.</li>
+    <li>La familia de sangre que aparece por los bienes: la ley protege al compañero con unión marital y testamento: se reclama acompañado.</li>
+  </ul></div>
+  <div class="box"><h4>👭 Las dos amigas que vivieron juntas cuarenta años</h4><ul>
+    <li>A doña Cecilia y doña Amanda el barrio las llamó "las amigas". Cuando Amanda murió, su familia llegó por la casa, y a Cecilia le dijeron: "usted era la amiga, gracias por acompañarla".</li>
+    <li>El duelo de la sobreviviente es duelo de esposa sin papeles: se llora como lo que fue: amor de vida.</li>
+    <li>La unión marital de hecho protege a la compañera: las vecinas que las vieron envejecer juntas son el testamento vivo.</li>
+    <li>Regla de oro: los papeles se ordenan EN VIDA: testamento, voluntad anticipada, poderes: para que el amor que el mundo llamó "amistad", el papel lo llame por su nombre.</li>
+  </ul></div>
+  <div class="box"><h4>📋 El plan que la sangre no hizo</h4><ul>
+    <li>La familia elegida se nombra en vida: el amigo que firma cuando la sangre no aparece, debe tener el papel que el amor ya le dio.</li>
+    <li>La soledad doble: el viejo LGBTQ+ no está en los clubes ni en las familias: está en la esquina invisible: se acompaña.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El viejo que deja de abrir la puerta · el que regala las fotos "para que no se pierdan": duelo con soledad: se acompaña HOY.</div>
+  <p>Don Hernán le mostró al vecino el álbum de Jorge página por página. Al final dijo: <strong>"Ahora usted sabe que existió. Y eso, mijo, es lo único que yo necesitaba."</strong></p>
+  <div class="quote">"El viejo LGBTQ+ que envejece solo no es un solitario: es un hombre cuya familia el mundo no reconoció. Reconocerla también es cuidar."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/PP70yoI.png" alt="Violencia sin moretón"></div>
+  <div class="kicker">Capítulo 5</div>
+  <h3 class="chap">La violencia que no deja moretón</h3>
+  <p>A doña Carmen le dolía la cabeza cada vez que pedía plata para el mercado. No porque no hubiera: había. Era la frase: "Te doy, pero me rindes cuentas. Porque tú malgastas." Veinte años rindiendo cuentas de la cebolla. Veinte años con su sueldo de maestra "de adorno". El día que la hija le dijo "mami, eso no es normal", doña Carmen respondió: "Pero es que no me pega." Y la hija, con una calma que dolía más: <strong>"Mami, la violencia no siempre deja moretón."</strong></p>
+  <div class="box"><h4>💔 Las señales que no se ven</h4><ul>
+    <li>Control del dinero: "malgastas" · sueldo de ella "de adorno" · cuentas de la cebolla · ella pide, él otorga.</li>
+    <li>Control del tiempo y del cuerpo: "¿a dónde vas?" · "esa ropa no" · "tus amigas no" · el celular revisado.</li>
+    <li>La humillación con testigos: el chiste que te humilla en la mesa · "sin mí no eres nada".</li>
+    <li>El miedo como clima: la casa en silencio porque "él llega de mal genio".</li>
+  </ul></div>
+  <div class="box"><h4>💪 La autonomía financiera como tratamiento</h4><ul>
+    <li>El sueldo de ella no es de adorno: cuenta propia, llave propia: la plata en manos de ella no es rebeldía: es oxígeno.</li>
+    <li>El ahorro secreto no es traición: es ruta de salida: se guarda con calma, no con culpa.</li>
+    <li>El trabajo no se negocia: el que la obliga a renunciar, la encierra: renunciar por orden es violencia.</li>
+    <li>La red: la amiga, la hermana, la vecina: el nombre y el teléfono ANTES de necesitarlos.</li>
+  </ul></div>
+  <div class="box"><h4>🚪 La ruta cuando toca salir</h4><ul>
+    <li>Línea 155 · Comisaría de Familia · Casa de Justicia: la medida de protección existe sin moretón: la violencia psicológica y económica SÍ es violencia, y SÍ se denuncia.</li>
+    <li>Salir con documentos, medicamentos y los niños: la maleta de la calma, no la del pánico.</li>
+  </ul></div>
+  <div class="alerta">⚠️ La que dejó de ver amigas · la que pide permiso hasta para el mercado · la que repite "es que yo malgasto": el agresor ya vive en su cabeza: se desaloja con red y terapia.</div>
+  <p>Doña Carmen abrió su cuenta el mismo mes. El primer depósito fue de diez mil pesos. Dice que ese día no compró nada: <strong>"Compré la costumbre de poder."</strong></p>
+  <div class="quote">"El moretón se ve; el control se siente. La violencia que no deja marca en la piel la deja en el alma: y también se denuncia."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/hVs71yj.png" alt="El espejo que miente"></div>
+  <div class="kicker">Capítulo 6</div>
+  <h3 class="chap">El espejo que miente</h3>
+  <p>A Valentina, dieciséis, bailarina de folclor desde los seis, el espejo del salón de danza empezó a mentirle. Le decía "gorda" donde había músculo, "ancha" donde había fuerza. Dejó el arroz, luego la carne, luego el pan. Cuando la mamá la encontró midiendo cucharadas de agua, entendió que el enemigo no era la comida: era el espejo. <strong>Y que el espejo tenía cómplices: los filtros, los comentarios, el "qué bonita te ves flaca".</strong></p>
+  <div class="box"><h4>🪞 Lo que la familia ve (y lo que no)</h4><ul>
+    <li>Señales: porciones en pedacitos · idas al baño después de comer · ejercicio como castigo · ropa ancha en el calor · la báscula como juez de la mañana.</li>
+    <li>No es vanidad: la anorexia y la bulimia son el cuerpo pagando un dolor que no tiene palabras: se trata el dolor, no el plato.</li>
+  </ul></div>
+  <div class="box"><h4>🍽️ La mesa sin batalla</h4><ul>
+    <li>La comida no se pelea: en la mesa no se cuentan calorías, no se vigila el bocado, no se aplaude el plato limpio.</li>
+    <li>El menú lo arma el tratamiento: nutricionista y terapeuta: la familia acompaña, no dicta.</li>
+    <li>Nada de comentarios de cuerpo: ni "qué flaca te ves" (premia la enfermedad) ni "come que estás esquelética" (alimenta el miedo): del cuerpo no se opina: se cuida.</li>
+    <li>Los filtros se conversan: el celular que compara, se apaga con compañía.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Desmayo · pulso lento · vello fino · la regla que no llega · vómito con sangre: eso ya no es espejo: es cuerpo en emergencia: hospital HOY.</div>
+  <p>Valentina volvió a bailar al año. El día del estreno, la mamá no le dijo "qué linda te ves". Le dijo: <strong>"Qué fuerte bailas."</strong> Y Valentina, por primera vez en años, sonrió al espejo. Porque el espejo, al fin, decía la verdad.</p>
+  <div class="quote">"El espejo que miente tiene cómplices: los filtros y los comentarios. La familia que deja de opinar del cuerpo y empieza a cuidar el dolor, le quita los cómplices."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/YySnnES.png" alt="El patio que mata"></div>
+  <div class="kicker">Capítulo 7</div>
+  <h3 class="chap">El patio que mata</h3>
+  <p>A Tomás lo apodaron "la lombriz" en el colegio militar al que lo mandaron "para que se hiciera hombre". Se volvió callado, bajó las notas, y una noche le dijo a la mamá: <strong>"Mami, no me quiero despertar mañana."</strong> La mamá, que creía que el matoneo era "cosa de niños", entendió esa noche que el patio que humilla no forma hombres: forma heridas. Y que el colegio que lo calla, lo cómplice.</p>
+  <div class="box"><h4>🚨 Las señales del que lo sufre</h4><ul>
+    <li>No quiere ir al colegio · "se me perdió el almuerzo" · moretones "de jugar" · pesadillas · notas que caen sin razón · el que se ríe de sí mismo antes de que lo hagan otros: se está blindando.</li>
+  </ul></div>
+  <div class="box"><h4>🗣️ Lo que se hace</h4><ul>
+    <li>Se cree entero, sin interrogatorio: la duda protege al agresor.</li>
+    <li>Se denuncia en el colegio POR ESCRITO: el caso queda con número: el matoneo no se conversa de pasillo: se documenta.</li>
+    <li>El cambio de colegio no es huir: es sacar al niño del campo minado: primero la seguridad, después la justicia.</li>
+    <li>La casa es el refugio: no "defiéndete": "aquí estás seguro": el que tiene refugio, aguanta; el que no, se rompe.</li>
+  </ul></div>
+  <div class="box"><h4>👦 El que señala también es paciente</h4><ul>
+    <li>El agresor suele repetir en casa lo que sufre en casa: se trata también a él: castigar sin tratar siembra el próximo agresor.</li>
+    <li>Los que miran y callan: se les enseña a ser testigos que hablan: el patio cambia cuando el que mira, habla.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Ideación ("no me quiero despertar") · autolesión · el que regala sus cosas: Capítulo 1, HOY. Y el colegio que "no se dio por enterado": se escala a Secretaría de Educación: el silencio institucional también es violencia.</div>
+  <p>Tomás cambió de colegio. Hoy dibuja cómics donde "la lombriz" es un superhéroe que se estira y no se rompe. La mamá enmarcó el primero: <strong>"Mi hijo no se hizo hombre en el patio: se hizo hombre donde lo respetaron."</strong></p>
+  <div class="quote">"El patio que humilla no forma: fractura. El matoneo no es cosa de niños: es cosa de adultos que miran. El que mira y habla, salva."</div>
+</div>
+
+<!-- ══ CAPS 8–15 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/87cbIBQ.png" alt="La familia experta"></div>
+  <div class="kicker">Capítulo 8</div>
+  <h3 class="chap">La familia experta en lo que nadie conoce</h3>
+  <p>A la hija de doña Rosa le diagnosticaron a los cuatro años una enfermedad con nombre de trabalenguas. El primer médico le dijo "no sé qué es". El segundo, "no tengo cómo tratarla". El tercero le dio un papel: "Busque en internet." Doña Rosa no buscó en internet: <strong>se volvió la experta.</strong> Aprendió a leer exámenes que ningún médico le explicó, a gestionar medicamentos que llegan por tutela, a cuidar un cuerpo que los especialistas miran como caso de revista.</p>
+  <div class="box"><h4>🧬 La familia que se vuelve especialista</h4><ul>
+    <li>El cuaderno maestro: síntomas, dosis, reacciones, nombres de cada médico: la familia que documenta le gana al sistema que olvida.</li>
+    <li>La tutela es un derecho, no un favor: medicamentos y tratamientos de enfermedades huérfanas están protegidos por ley: la familia no ruega: exige.</li>
+    <li>La red de familias raras: las asociaciones de pacientes existen: el que encuentra a otro con la misma enfermedad, deja de estar solo en el desierto.</li>
+    <li>El niño primero, la enfermedad después: la niña con enfermedad huérfana también quiere jugar, ir al colegio, tener cumpleaños: la vida no se suspende por el diagnóstico.</li>
+  </ul></div>
+  <div class="box"><h4>💔 El cuidador de lo raro</h4><ul>
+    <li>La soledad del experto: nadie entiende lo que doña Rosa sabe: su cansancio es doble: cuidar y traducir: su terapia y su descanso van en la nevera.</li>
+    <li>El matrimonio que se parte: la enfermedad rara prueba parejas: las que quedan, son equipo.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Reacción nueva al medicamento · fiebre sin foco · el cuidador que dice "yo puedo con todo" sin dormir: el experto también colapsa: se atiende.</div>
+  <p>Doña Rosa hoy da charlas a médicos residentes. En la primera diapositiva pone una foto de su hija en el cumpleaños de quince. Y dice: <strong>"Ustedes ven un caso. Yo veo a mi hija. Trátenla como las dos cosas."</strong></p>
+  <div class="quote">"La enfermedad huérfana no huérfana a la familia: la vuelve experta. Y al sistema que olvida, la familia que documenta le gana."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/bKxBWHc.png" alt="El cuerpo que alarma"></div>
+  <div class="kicker">Capítulo 9</div>
+  <h3 class="chap">El cuerpo que alarma</h3>
+  <p>Don Ernesto revisaba la cerradura veinte veces antes de dormir. Y una noche, en la tienda, el corazón se le aceleró, el aire no llegaba, y creyó que se moría: era un ataque de pánico. La ambulancia lo declaró sano; el psiquiatra le puso nombre: ansiedad. Don Ernesto, hombre de campo, respondió: <strong>"Entonces el cuerpo me está avisando algo que yo no quiero oír."</strong> La ansiedad no es locura ni debilidad: <strong>es un cuerpo que alarma.</strong></p>
+  <div class="box"><h4>⚡ El pánico se acompaña, no se ridiculiza</h4><ul>
+    <li>El ataque de pánico no mata, pero se siente como infarto: no se dice "cálmate, no es nada": se acompaña: "estoy aquí, esto pasa en minutos, respira conmigo".</li>
+    <li>Respiración 4-7-8 y anclaje 5-4-3-2-1: el cuerpo que aterriza, calma.</li>
+    <li>El TOC no se burla: el que revisa veinte veces no es "manías": es miedo con ritual: la familia no alimenta el ritual ni lo pelea a gritos.</li>
+    <li>La pastilla de la ansiedad no es "de loco": es como la de la tensión: se toma con disciplina.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Pánico que no cede · insomnio de semanas · el que deja de salir "por si acaso": la ansiedad que encierra es enfermedad: se trata HOY.</div>
+  <p>Don Ernesto hoy revisa la cerradura dos veces. Dice que la tercera la guarda "por si acaso". Y se ríe. <strong>El cuerpo que alarma, cuando lo escuchan, deja de gritar.</strong></p>
+  <div class="quote">"La ansiedad no es cobardía: es un cuerpo que alarma. El que acompaña el alarma sin burlarlo, le baja el volumen a la tormenta."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/HskOjS6.png" alt="El pegante"></div>
+  <div class="kicker">Capítulo 10</div>
+  <h3 class="chap">El pegante y la esquina</h3>
+  <p>"El Pecas" tenía catorce años y una esquina. El pegante llegó después del hambre: primero fue la bolsa de pan que no alcanzaba, después la bolsa de pegante que apagaba el hambre y el resto. La mamá lo encontró una noche dormido en el andén. No lo jaló: se sentó al lado y esperó a que abriera los ojos. <strong>"Mami", dijo él. "Aquí estoy", dijo ella.</strong> Esa noche empezó el camino de vuelta.</p>
+  <div class="box"><h4>🧠 El inhalante no es vicio de mala crianza</h4><ul>
+    <li>El pegante daña el cerebro y el corazón: la desintoxicación es con médico: el cuerpo que inhaló no se limpia con sermón.</li>
+    <li>La esquina es familia y adicción: se desintoxica y se duele: extrañar no es volver.</li>
+    <li>El hambre primero: el niño que llegó al pegante por hambre, se alimenta primero: el cuerpo es la puerta.</li>
+  </ul></div>
+  <div class="box"><h4>🏠 La casa que recibe sin vergüenza</h4><ul>
+    <li>Sin humillación pública: "el drogado del barrio" es una condena: la casa no la repite.</li>
+    <li>El hermano menor se protege sin volverlo guardia.</li>
+    <li>La recaída es parte: si vuelve a la esquina, se le vuelve a abrir la puerta: la tercera vez también.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Arritmias · convulsiones · el que deja de comer del todo: el inhalante mata en silencio: urgencias HOY.</div>
+  <p>"El Pecas" hoy tiene diecinueve y estudia electricidad. La esquina sigue ahí, a media cuadra. Dice que la pasa caminando rápido, "como quien pasa por un cementerio". <strong>Y sigue caminando.</strong></p>
+  <div class="quote">"El pegante adormece lo que duele; la casa cura lo que el pegante adormeció. El que vuelve de la esquina no es un vicioso: es un niño que dolía."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/K7SzsoX.png" alt="El racismo"></div>
+  <div class="kicker">Capítulo 11</div>
+  <h3 class="chap">El niño al que le dijeron "aquí no entras"</h3>
+  <p>A Yuri, nueve años, afro, de trenzas recién hechas por su abuela, una compañera le dijo en el salón: "Tú aquí no entras, tú eres negra." La profesora no oyó. Yuri sí. Esa noche se quiso soltar las trenzas. La abuela le sostuvo las manos y dijo: <strong>"Estas trenzas son tu corona, mija. El que no la ve, es porque está ciego: no es tu problema."</strong> Pero el racismo no es el problema del niño: es el problema del adulto que lo deja pasar.</p>
+  <div class="box"><h4>👑 El racismo hiere donde no se ve</h4><ul>
+    <li>La discriminación racial golpea la autoestima y la salud mental de los niños afro: está documentado en Colombia: no es "cosa de niños".</li>
+    <li>El niño que se quiere soltar las trenzas, aclarar la piel, borrar el nombre: está pidiendo auxilio: se le devuelve el orgullo, no el silencio.</li>
+  </ul></div>
+  <div class="box"><h4>🏠 La casa que trenza la corona</h4><ul>
+    <li>El nombre completo se dice con orgullo: el nombre afro es historia: sin apodos que blanquean.</li>
+    <li>Las trenzas, la piel, el pelo se celebran en casa: el espejo de la casa dice lo que el espejo del mundo niega.</li>
+    <li>La historia se cuenta: el niño que sabe de dónde viene, no se esconde.</li>
+    <li>Se denuncia por escrito: el racismo escolar es violencia: el colegio que lo calla, lo siembra.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El niño que se blanquea la piel · el que se ríe de sí mismo antes que otros · el que deja de hablar: racismo internalizado: se trata con red y terapia.</div>
+  <p>Yuri hoy tiene quince y defiende a los nuevos del salón. La abuela le sigue haciendo las trenzas: <strong>"Corona nueva, semana nueva", dice.</strong></p>
+  <div class="quote">"El racismo no es problema del niño: es problema del adulto que lo deja pasar. La casa que trenza la corona, le endereza el alma."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/tqOMhhI.png" alt="El cuerpo que eligió su nombre"></div>
+  <div class="kicker">Capítulo 12</div>
+  <h3 class="chap">El cuerpo que eligió su nombre</h3>
+  <p>A Laura, diecisiete, la casa se le abrió cuando su mamá aprendió a decir su nombre. Antes, en la casa se decía el nombre viejo, y Laura se apagaba. Hasta el día que la mamá dijo: <strong>"Laura. Ven a comer, Laura."</strong> Laura lloró en la mesa. No era un nombre: <strong>era un permiso para existir.</strong> Y a "la Francia", travesti de setenta años, el mundo no le dijo su nombre ni en la cédula: envejeció sin papeles que la nombraran, con su familia elegida de peluquería como único testigo de quién fue.</p>
+  <div class="box"><h4>🏳️ El nombre y el pronombre son salud</h4><ul>
+    <li>Usar el nombre elegido reduce la depresión y el suicidio trans: está probado: nombrar es tratamiento.</li>
+    <li>La transición se acompaña: salud con acompañamiento, cédula con el nombre: son derechos, no favores.</li>
+    <li>La casa que recibe: "esta es tu casa, tu cuarto, tu nombre": sin interrogatorio de "¿desde cuándo?".</li>
+  </ul></div>
+  <div class="box"><h4>❤️ El amor que no se renegotia</h4><ul>
+    <li>La pareja de una persona trans: el amor no se renegotia: se acompaña: el que ama, aprende el nombre.</li>
+    <li>La familia elegida firma: cuando la sangre no aparece, la elegida tiene el papel que el amor ya le dio.</li>
+    <li>La travesti mayor: su historia es memoria: pregúntale por su nombre: sus papeles se ordenan en vida: para que al final, el nombre que el mundo negó, lo diga el papel.</li>
+  </ul></div>
+  <div class="alerta">⚠️ El joven trans botado que regala, que no come: ideación: Capítulo 1. Y la travesti mayor que se aísla: la soledad con nombre negado mata doble: se acompaña.</div>
+  <p>Laura hoy estudia y su mamá preside el grupo de familias que aprenden a nombrar: <strong>"Yo no perdí un hijo: gané una hija. Y el que no lo entienda, que aprenda: el amor también se conjuga."</strong></p>
+  <div class="quote">"La persona trans no eligió ser trans: eligió ser libre. La casa que dice su nombre en voz alta, le salva la vida."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/zhUR3x1.png" alt="Las dos estaciones"></div>
+  <div class="kicker">Capítulo 13</div>
+  <h3 class="chap">La casa de las dos estaciones</h3>
+  <p>A Héctor, treinta y cuatro, el diagnóstico le llegó tarde: después de pintar la casa entera de amarillo y comprar tres motos en una semana (verano), y de no pararse de la cama en un mes (invierno). Su esposa, doña Nubia, fue la que puso el nombre que ningún psiquiatra le dio: <strong>"Mi casa tiene dos estaciones. Y yo aprendí a leer el cielo."</strong> El trastorno bipolar no es mal genio ni doble cara: es un clima. Y al clima no se le regaña: se le prepara.</p>
+  <div class="box"><h4>🌦️ La familia que lee el cielo</h4><ul>
+    <li>El verano (manía) avisa: duerme poco y no se cansa · habla rápido y gasta rápido · "nunca estuve mejor": el que no duerme y no se cansa, no está feliz: está en manía.</li>
+    <li>El invierno (depresión) también: la cama, la culpa: aplica el Capítulo 1.</li>
+    <li>El cuaderno de las estaciones: sueño, gasto, habla: la tendencia avisa antes que el estallido.</li>
+  </ul></div>
+  <div class="box"><h4>💊 La pastilla que sostiene el clima</h4><ul>
+    <li>El estabilizador es sagrado: suspenderlo "porque ya estoy bien" es apagar el paracaídas en pleno vuelo.</li>
+    <li>En verano, se protege la cosecha: tarjetas y claves en custodia compartida, decisiones grandes congeladas: no es control: es amor con candado.</li>
+    <li>En invierno, compañía sin discurso: presencia, sol de mañana, tareas de a una.</li>
+    <li>La pareja ama a la persona, no al clima: lo que dice el verano no es Héctor; lo que calla el invierno tampoco.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Verano con gasto de patrimonio · invierno con despedidas · mezcla de los dos (estado mixto): el mixto es el más peligroso: consulta HOY.</div>
+  <p>Doña Nubia tiene el cuaderno de las estaciones en la nevera. En la última página escribió: <strong>"Este año hubo dos veranos y un invierno. Y seguimos juntos: la cosecha se salvó."</strong></p>
+  <div class="quote">"El bipolar no es doble cara: es un clima. La casa que aprende las estaciones, le salva la cosecha."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/tPh4uGI.png" alt="Un solo cuerpo"></div>
+  <div class="kicker">Capítulo 14</div>
+  <h3 class="chap">Los que habitan un solo cuerpo</h3>
+  <p>Este capítulo se escribe sin morbo de película, porque el tema lo merece. Elena tenía treinta años cuando su familia entendió que "la otra" que contestaba el teléfono no era una mentira. Identidad disociada: el escudo que la mente construyó cuando el trauma de niña era demasiado para una sola. <strong>No es posesión, no es show, no es maldad: es supervivencia.</strong> Las partes que habitan su cuerpo no son enemigas: son las que protegieron a la niña cuando nadie más pudo.</p>
+  <div class="box"><h4>🕯️ Lo que es (y lo que jamás)</h4><ul>
+    <li>No es exorcismo ni teatro: es respuesta a trauma extremo: se trata con terapia especializada en disociación: el que ofrece "sacarle el demonio", la revictimiza.</li>
+    <li>Las partes no se pelean: se escuchan: el tratamiento no es guerra: es cooperación e integración.</li>
+  </ul></div>
+  <div class="box"><h4>🏠 La casa que no se burla</h4><ul>
+    <li>Cuando aparece otra parte: no se burla, no se reta, no se graba para el barrio: se habla con calma: la confidencialidad es sagrada.</li>
+    <li>Rutinas predecibles: los sustos abren puertas: la casa segura baja los interruptores.</li>
+    <li>La rabia de una parte no es contra ti: viene de antes: no se toma personal.</li>
+    <li>El cuaderno de las partes: quién es quién, qué calma a cada una: ese cuaderno es el mapa que el terapeuta agradece.</li>
+  </ul></div>
+  <div class="alerta">⚠️ Autolesión entre partes · ideación en cualquiera de ellas: caps. 1 y 2, con el terapeuta al frente: la disociación con dolor se trata en equipo, no en casa sola.</div>
+  <p>Elena hoy está en terapia y su familia aprendió a saludar por nombre a quien contesta: <strong>"No somos un show: somos sobrevivientes. Y por primera vez, en esta casa, todas estamos seguras."</strong></p>
+  <div class="quote">"Los que habitan un solo cuerpo no son espectáculo: son sobrevivientes. La casa que no se burla ni pelea, les da refugio a todos."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/25jes5g.png" alt="La cabeza que no descansa"></div>
+  <div class="kicker">Capítulo 15</div>
+  <h3 class="chap">La cabeza que no descansa</h3>
+  <p>A Marcela, cuarenta y dos, todos la conocían como "la que siempre sonríe": la del puesto, la de la reunión de padres, la del sancocho de la junta. Hasta el martes que no subió del garaje: se quedó sentada en el carro dos horas, con el motor apagado, sin llorar, sin sentir nada. <strong>"No estoy triste", le dijo al médico. "Estoy vacía."</strong> Eso también es depresión: la que no llora: la que sirve. La sonrisa de Marcela no era alegría: <strong>era uniforme.</strong></p>
+  <div class="box"><h4>🎭 La depresión que no se ve</h4><ul>
+    <li>No todo deprimido llora: algunos sirven: la funcionalidad no es salud.</li>
+    <li>Señales: el cansancio del garaje · el domingo de angustia · "no siento nada" · el sueño que no descansa · la alegría que no alegra.</li>
+    <li>No es malagradecido: "tienes todo y estás así" hiere: la depresión no pide motivos: pide tratamiento.</li>
+  </ul></div>
+  <div class="box"><h4>🏠 La casa que da permiso de estar triste</h4><ul>
+    <li>"Aquí puedes no sonreír": la frase que desabrocha el uniforme.</li>
+    <li>Terapia y medicación sin vergüenza: el antidepresivo no es debilidad: es yeso.</li>
+    <li>La carga se reparte: la que siempre sirve, que sea servida una semana.</li>
+    <li>El cuidador quemado del Tomo I también llega aquí: si te reconociste, aplica el termómetro del cuidador y este capítulo.</li>
+  </ul></div>
+  <div class="alerta">⚠️ La ideación escondida detrás de la eficiencia: "sería mejor desaparecer para no estorbar" · regalar cosas: Capítulo 1, HOY: el funcional también se va si nadie pregunta.</div>
+  <p>Marcela hoy sigue sonriendo en el puesto. Pero ahora también dice "hoy no puedo", y en su nevera hay un letrero: <strong>"Aquí se permite estar triste."</strong> Dice que ese letrero la salvó antes que la pastilla.</p>
+  <div class="quote">"No todo deprimido llora: algunos sirven. La casa que da permiso de tristeza, le quita el uniforme a la sonrisa."</div>
+</div>
+
+<!-- ══ CIERRE DEL TOMO IV ══ -->
+<div class="flow">
+  <div class="sep">❦</div>
+  <h3 class="chap" style="text-align:center;">CIERRE — Las quince puertas de la mente</h3>
+  <p>Este tomo tuvo quince puertas: la del salón donde se pregunta todo, la de la manga que se abrió en jardín, la de la casa que volvió a tener puerta, la del álbum que por fin se mostró, la del banco donde se compró la costumbre de poder, la del escenario donde se bailó fuerte, la del cómic del elástico, la del aula donde una madre enseñó a los médicos, la de la cerradura que se cuenta dos veces, la de la esquina que se pasa como cementerio, la del espejo donde la corona se vio entera, la del tablero donde por fin se escribió Laura, la de la pared amarilla que se pintó en verano, la de la terapia donde todas están seguras, y la del garaje donde por fin se permitió estar triste.</p>
+  <p>Ninguna de esas puertas se abrió con llave ajena. Todas se abrieron con una palabra dicha a tiempo. <strong>Porque la mente también se fractura como un hueso: y merece el mismo yeso.</strong></p>
+  <div class="quote">"Las heridas que no se ven no son las que no existen: son las que nadie ha querido mirar. Este tomo las miró. Y al mirarlas, las acompañó."</div>
+  <p style="text-align:right; font-style:italic;">— El Autor</p>
+</div>
+
+<!-- ══ CONTRAPORTADA TOMO IV ══ -->
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO IV</div>
+  <h1 style="font-size:1.8em;">LA MENTE TAMBIÉN<br>SE FRACTURA</h1>
+  <div class="c-img"><img src="https://i.imgur.com/25jes5g.png" alt="Vital Hogar"></div>
+  <div class="c-sub">Si este tomo te reconoció —la manga, el espejo, el garaje, la cerradura— ya sabes que la mente merece el mismo yeso que un hueso. Y que ninguna fractura se cura en soledad. Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas y el mismo respeto que aprendí en casi treinta años.</div>
+  <div class="banda">VITAL HOGAR · 📲 wa.link/8zq5xe</div>
+  <div class="c-autor">Porque cuidar es sagrado. Y nadie debería hacerlo<br>con las manos vacías ni el corazón solo.</div>
+  <p class="c-sub" style="font-size:.8em; margin-top:6mm;"><strong style="color:#E8C766; letter-spacing:1px;">PRÓXIMAMENTE EN LA COLECCIÓN: TOMO V — LA CIUDAD QUE DUELE</strong></p>
+</div>
+
+</body>
+</html>
