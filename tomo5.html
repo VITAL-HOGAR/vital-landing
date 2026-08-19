@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>La Ciudad que Duele — Tomo V | Las Manos Que Cuidan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: #cfd8e0; font-family: Georgia, 'Times New Roman', serif; color: #222; }
+  .page { width: 210mm; height: 296mm; margin: 10px auto; background: #FDFBF7; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.2); page-break-after: always; }
+  .page:last-of-type { page-break-after: auto; }
+  .cover { background: #8b2323; color: white; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 16mm 14mm; text-align: center; }
+  .c-brand { letter-spacing: 4px; font-size: .8em; color: #E8C766; font-weight: bold; }
+  .cover h1 { font-size: 2.5em; letter-spacing: 3px; color: #E8C766; line-height: 1.15; margin-top: 4mm; }
+  .c-img { width: 100%; border: 1px solid #E8C766; padding: 2mm; background: #5a1818; }
+  .c-img img { width: 100%; height: 118mm; object-fit: contain; display: block; }
+  .c-sub { font-style: italic; font-size: .95em; opacity: .95; max-width: 160mm; }
+  .banda { background: #E8C766; color: #8b2323; font-weight: bold; font-size: .8em; letter-spacing: 2px; padding: 4px 16px; border-radius: 20px; }
+  .c-autor { font-size: .85em; border-top: 1px solid #E8C766; border-bottom: 1px solid #E8C766; padding: 5px 0; max-width: 130mm; }
+  .flow { width: 210mm; margin: 0 auto; background: #FDFBF7; padding: 12mm 14mm; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+  .flow p { text-align: justify; font-size: 10pt; line-height: 1.6; margin-bottom: 9px; }
+  .flow p strong { color: #8b2323; }
+  .kicker { color: #a0522d; letter-spacing: 3px; font-size: .75em; font-weight: bold; text-transform: uppercase; margin-top: 10mm; }
+  h3.chap { color: #8b2323; font-size: 1.4em; margin: 3px 0 10px; break-after: avoid; }
+  .sep { text-align: center; color: #b08a2e; font-size: 1.2em; margin: 10mm 0; }
+  .fig { margin: 6mm 0; background: #8b2323; padding: 2mm; border: 1px solid #d8d2c4; break-inside: avoid; }
+  .fig img { width: 100%; height: 88mm; object-fit: contain; display: block; }
+  .quote { border-left: 4px solid #E8C766; margin: 10px 0; padding: 8px 14px; font-style: italic; color: #8b4513; background: #f6f0e0; font-size: 10.5pt; break-inside: avoid; }
+  .box { background: white; border: 1px solid #d4c4b4; border-radius: 10px; padding: 12px 14px; margin: 10px 0; box-shadow: 0 2px 8px rgba(0,0,0,.06); break-inside: avoid; }
+  .box h4 { color: #8b2323; font-size: .95em; margin-bottom: 6px; }
+  .box ul { margin-left: 16px; } .box li { font-size: 9.6pt; line-height: 1.5; margin-bottom: 3px; text-align: justify; }
+  .alerta { background: #fdecea; border-left: 5px solid #c0392b; padding: 10px 12px; border-radius: 8px; margin: 10px 0; font-size: 9.6pt; break-inside: avoid; }
+  .btn-pdf { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border: none; padding: 16px 24px; border-radius: 50px; font-size: 1.1em; font-weight: bold; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.3); z-index: 99; font-family: Arial; }
+  @media print { body { background: white; } .page, .flow { margin: 0; box-shadow: none; } .flow { padding: 12mm 14mm; } .btn-pdf { display: none; } }
+  @media (max-width: 800px) { .page, .flow { width: 100%; } .c-img img, .fig img { height: auto; } }
+</style>
+</head>
+<body>
+<button class="btn-pdf" onclick="window.print()"> COMPRAR / DESCARGAR PDF</button>
+
+<!-- ══ PORTADA TOMO V ══ -->
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO V</div>
+  <h1>LA CIUDAD<br>QUE DUELE</h1>
+  <div class="c-img"><img src="https://i.imgur.com/LeBk19a.png" alt="Portada Tomo V"></div>
+  <div class="c-sub">Cuidar en medio del ruido, la noche y la trampa</div>
+  <div class="banda">15 HISTORIAS DE ASFALTO Y ALMA</div>
+  <div class="c-autor">Por un enfermero que ya no tiene las rodillas sanas,<br>pero tiene el alma intacta · VITAL HOGAR</div>
+</div>
+
+<!-- ══ PRÓLOGO ═ -->
+<div class="flow">
+  <h3 class="chap" style="text-align:center;">PRÓLOGO — El tomo del asfalto</h3>
+  <p>Los otros tomos cuidan en la casa. Este cuida en la calle: en la discoteca donde la copa apaga el no, en el cruce donde el volante miente, en la esquina donde el robo se lleva la casa aunque deje las paredes, en el CAI donde el uniforme a veces olvida su juramento, en el mostrador donde la pobreza se vuelve apellido, en la pantalla donde el lobo aprendió a escribir, en la aplicación donde la apuesta no pierde sola.</p>
+  <p>La ciudad duele, sí. Pero la ciudad también cuida: en la amiga que saca a la amiga, en el testigo que cuenta los votos, en la madre que espera en el bordillo, en el joven que siembra el árbol que no verá crecer. Este tomo existe para que ninguna herida urbana se cure en soledad.</p>
+  <div class="quote">"La ciudad que duele es la misma ciudad que abraza. Y en el abrazo de esta gente, hay más medicina que en todas las farmacias del mundo."</div>
+  <p style="text-align:right; font-style:italic;">— El Autor</p>
+</div>
+
+<!-- ═ CAPS 1–7 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/LeBk19a.png" alt="El pulmón de moda"></div>
+  <div class="kicker">Capítulo 1</div>
+  <h3 class="chap">El pulmón de moda</h3>
+  <p>La primera vez que Carolina olió el mango en el baño, pensó que era el champú nuevo. La segunda vez fue a las dos de la mañana. Se despertó con sed, y al pasar frente al cuarto de Santiago vio la luz por debajo de la puerta, y el olor otra vez: mango, dulce, empalagoso, saliendo por la ventana entreabierta como un fantasma con perfume. Tocó. Nadie abrió. Tocó más fuerte. Y cuando por fin la puerta cedió, el vapor salió como un fantasma dulce, y su hijo de quince años estaba sentado en la cama con el aparato aún tibio en la mano, y los ojos de quien ya ensayó la mentira.</p>
+  <p>—Tranquila, mami —dijo, y hasta sonrió—. Es de mentiritas. No tiene nada. Es sabor.</p>
+  <p>Carolina no gritó esa noche. Las madres pobres no gastamos pólvora en la primera batalla. Agarró el aparato con dos dedos, como quien agarra una culebra, y se lo llevó a la cocina. Santiago detrás diciendo mami que es de mentiritas, mami que todos en el colegio, mami que tú no entiendes.</p>
+  <p>—Yo no entiendo de eso —dijo ella, y lo miró por primera vez como se mira a un hombre y no a un niño—. Pero entiendo de humo. A tu papá lo mató el humo del cigarrillo. Y tú me vas a explicar, con respeto, qué humo es este.</p>
+  <p>Yo entré en esta historia dos meses después, cuando a Santiago lo subieron a urgencias con la tos que yo reconozco de oídas: la tos seca, cortica, de quien se está ahogando por dentro sin agua. Le decían EVALI: la lesión del pulmón por vapear. En la sala de observación, con el oxígeno puesto y el susto en la cara, Santiago me miró y me dijo, con la voz raspada:</p>
+  <p>—¿Entonces no era de mentiritas?</p>
+  <p>—No, mijo —le dije, y le acomodé la cánula con la mano que ya no tiembla—. El humo nunca es de mentiritas. Lo que es de mentiritas es el vendedor.</p>
+  <div class="box"><h4>🫁 La ruta para tu casa</h4><ul>
+    <li>El vapeo adolescente huele a mango, a fresa, a dulzón: ese olor en el baño es la señal.</li>
+    <li>"De mentiritas" es el argumento del vendedor, no del médico: el EVALI existe y ha matado.</li>
+    <li>No confiscar a gritos: confiscar con calma y explicar con historia, no con sermón.</li>
+    <li>Tos seca + aire corto en un adolescente que vapea = urgencias, no espera.</li>
+  </ul></div>
+  <div class="quote">"El humo nunca es de mentiritas. Lo que es de mentiritas es el vendedor."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/UCYTq19.png" alt="La copa que apaga"></div>
+  <div class="kicker">Capítulo 2</div>
+  <h3 class="chap">La copa que apaga</h3>
+  <p>Luisa no dejó sola a Katherine ni un minuto. Esa es la verdad que hay que contar primero, porque en esta historia la heroína no es la que se enfermó: es la que no se fue. Estaban en la discoteca de la avenida, esa donde la música se siente en el piso y las luces vuelven a todo el mundo joven y confiado. Un tipo que Katherine conocía de vista —de vista, nada más— le ofreció una copa. Katherine dijo que no, que ella misma se servía, y fue a la barra y volvió con su vaso. Pero al rato, cuando volvió del baño, el vaso ya no estaba donde lo dejó: estaba dos puestos más allá, medio lleno, y nadie lo cuidaba. Katherine, que tenía sed y quince minutos de música en las piernas, se lo tomó.</p>
+  <p>Luisa lo vio desde la barra. Y Luisa, que había visto un video de esos que una comparte en el grupo del barrio con el corazón apretado, hizo la cuenta antes que nadie: vaso que cambia de puesto, vaso que nadie cuidó, vaso que se bebe. Cruzó la pista en diez segundos.</p>
+  <p>—Ese vaso no era el tuyo —le dijo.</p>
+  <p>—Ay, Luisa, no seas… —empezó Katherine, y se quedó en el "no seas". Porque la frase se le partió a la mitad, como si alguien le hubiera bajado el volumen a la boca.</p>
+  <p>Lo que siguió, Luisa lo cuenta con la voz de la que todavía tiembla: Katherine no se desmayó. Eso es lo que la gente no sabe. <strong>La escopolamina no apaga el cuerpo: apaga el "no".</strong> Katherine seguía despierta, caminando, sonriendo incluso. Pero cuando el tipo le dijo "dame el celular", se lo dio. Cuando le dijo "dame la clave", se la dijo. Cuando le dijo "vámonos", se iba. La voluntad, apagada; el cuerpo, obediente. <strong>El polvo que no te duerme: te duerme el no.</strong></p>
+  <p>Luisa la agarró del brazo con la fuerza de la que no pregunta, la sacó de la discoteca, la sentó en la acera, le quitó el bolso de las manos al tipo que ya decía "yo la acompaño, soy amigo", y llamó a la mamá. En urgencias, con Katherine ya volviendo en sí y llorando de rabia y de susto, la enfermera que las recibió me contó después: "La amiga hizo todo bien. No la dejó sola, no la dejó dormir en la calle, no le dio nada de comer, trajo el vaso. Sí —dijo—: trajo el vaso en la bolsa. Para el examen."</p>
+  <div class="box"><h4> La ruta para tu casa</h4><ul>
+    <li>La copa no se deja sola ni se acepta de manos que no viste servir: el vaso que cambió de puesto, no se bebe.</li>
+    <li>La escopolamina no duerme el cuerpo: duerme el "no": si alguien está "despierto pero obediente", es emergencia, no borrachera.</li>
+    <li>El amigo que cuida al amigo no se va: lo saca, lo sienta, llama a la familia, guarda el vaso para el examen.</li>
+    <li>El fentanilo miente dos veces: miente sobre lo que es y miente sobre cuánto basta: labios morados + pecho quieto = 123, posición lateral, naloxona si existe.</li>
+  </ul></div>
+  <div class="quote">"La escopolamina no te duerme: te duerme el no. Y el fentanilo miente dos veces. Por eso el amigo que no se va vale más que cien policías."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/hXuKqr1.png" alt="El volante que mintió"></div>
+  <div class="kicker">Capítulo 3</div>
+  <h3 class="chap">El volante que mintió</h3>
+  <p>La llamada que le partió la vida a doña Blanca duró tres segundos. No más. Porque las llamadas que parten vidas no necesitan discursos: necesitan una dirección. "Venga al hospital, señora. Hubo un accidente en la avenida." Y doña Blanca, que había criado a Andrés sola, con un turno de cocina y medio de panadería, entendió antes de llegar que ya no había nada que criar: el camión que cruzó el semáforo en rojo, con el conductor que venía de una fiesta con el vaso aún tibio en la mano, había decidido por ella.</p>
+  <p>Andrés tenía veinticuatro años. Estudiaba sistemas de noche y arreglaba celulares de día. El domingo siguiente, en el cruce de la avenida, alguien puso una bicicleta blanca y un ramo de girasoles. La ciudad entera pasó por al lado, apurada, y siguió. <strong>Porque esa es la crueldad de los accidentes: el que los sufre se detiene para siempre, y el que los ve, frena dos segundos.</strong></p>
+  <p>Yo entré en esta historia cuatro meses después, cuando a doña Blanca la tensión se le volvió montaña y la hija de la vecina me llamó: "es que la señora no come, no duerme, y se sienta en la ventana a ver el cruce." El duelo de la carretera no tiene velorio largo: tiene un proceso. Y el proceso, me dijo ella misma con la voz de la que ya no llora, "es el segundo entierro: el primero lo hace el médico; el segundo, el juzgado."</p>
+  <p>Al que manejaba el camión lo llamaban Rodrigo. Veintisiete años. Sobrevivió. Y sobrevivió con el número que la prueba de alcoholemia le puso en la frente: <strong>1.4.</strong> Ese número, que para el juzgado era un dato, para mí era una traducción: <strong>el número de la vergüenza. Con 0.5, el alcohol te miente y te dice que manejas bien. Con 1.0, el volante deja de obedecerte. Con 1.5, el carro ya no es un carro: es un arma.</strong> Rodrigo estaba en 1.4. A dos décimas del arma.</p>
+  <p>El día que Rodrigo fue a la casa de doña Blanca, yo estaba ahí. No fue a pedir perdón. Fue a pedir otra cosa, que era más difícil:</p>
+  <p>—No vengo a que me perdone —dijo, de pie en la puerta, con las manos de un hombre que ya no sabe qué hacer con las manos—. Vengo a que me deje ver la silla.</p>
+  <p>Doña Blanca lo miró largo. Y después hizo lo que hacen las madres que han entendido que el odio también es una jaula: abrió la puerta del todo, lo pasó a la sala, y señaló la silla de Andrés, la del rincón, la que nadie había movido.</p>
+  <p>—Mírela —dijo—. Mírela bien. Porque yo la veo todos los días, y usted la va a ver una vez, y se va a ir, y esa es la diferencia entre usted y yo. Así que mírela hasta que se le grabe. Y después haga con eso lo que le dé la gana.</p>
+  <p>Rodrigo la miró. No sé cuánto tiempo. Yo sé que cuando salió de esa casa, salió distinto. Porque la silla vacía, que para doña Blanca era el infierno de todos los días, para Rodrigo se volvió el maestro. Hoy Rodrigo va a los colegios y a las escuelas de conducción y cuenta el número —1.4— y cuenta la silla. Y termina la charla siempre con la misma frase, que yo le oí en la puerta de esa casa, dicha con la voz del que ya no miente:</p>
+  <p>—El alcohol me dijo tres mentiras: que manejaba bien, que no era para tanto, que a mí no me pasaba. Y el cruce me enseñó la cuarta verdad: <strong>que siempre le pasa al otro, hasta que el otro eres tú.</strong></p>
+  <div class="box"><h4>🚗 La ruta para tu casa</h4><ul>
+    <li>El que bebe no maneja: ni "una solita", ni "aquí cerca", ni "yo voy despacio": el alcohol no se negocia con el volante.</li>
+    <li>El número de la vergüenza se enseña a los muchachos antes de que saquen licencia: 0.5 miente, 1.0 desobedece, 1.5 mata.</li>
+    <li>La familia que entrega llaves a un borracho, entrega el arma: la llave se quita con amor, no con pelea.</li>
+    <li>El duelo de carretera tiene dos entierros: el del médico y el del juzgado: se acompañan los dos.</li>
+  </ul></div>
+  <div class="quote">"El alcohol le dice al conductor tres mentiras: que maneja bien, que no es para tanto, que no le pasa. El cruce guarda la cuarta: siempre le pasa al otro, hasta que el otro eres tú."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/EJVhhk7.png" alt="La casa después del robo"></div>
+  <div class="kicker">Capítulo 4</div>
+  <h3 class="chap">La casa después del robo</h3>
+  <p>El robo no fue a las dos de la mañana. El robo fue después. A las dos de la mañana fue el ruido de la cerradura cediendo, las linternas, los gritos, el revólver que olía a metal y a sudor, y don Óscar poniéndose delante del cuarto de Esteban con el brazo abierto como una puerta de carne. El golpe en el antebrazo, el hueso que crujió, las cosas que salieron en la maleta que él mismo tuvo que ayudar a llenar —porque esa es la humillación que nadie cuenta: al ladrón le ayudas a llevarte la vida—. A las tres, el portazo. Y a las tres y un minuto empezó el robo verdadero: <strong>el de la sensación de estar en casa.</strong></p>
+  <p>Porque la casa quedó. Las paredes quedaron, la olla quedó, el santo en la repisa quedó. Pero la puerta dejó de ser puerta: se volvió una amenaza con bisagras. Don Óscar, que antes dormía con la ventana abierta por el calor, empezó a dormir con una silla atrancada y los zapatos puestos. Doña Miriam revisaba la cerradura treinta veces, y a la trigésima lloraba, no de miedo: de rabia, porque contaba y le salían cuentas distintas, y el cuerpo le pedía una más. Y Esteban, que tenía diecisiete años y había visto el revólver a un metro de la cara, apagaba la luz y se quedaba sentado en el piso del cuarto, escuchando la calle, <strong>montando guardia en una guerra que ya había terminado pero que él no sabía que había terminado.</strong></p>
+  <p>Esa es la traducción que yo les llevé, cuando la hija me llamó para el cuidado del brazo y me encontré con que el brazo era lo de menos: la psicóloga había dicho TEPT, trastorno de estrés postraumático, y don Óscar había entendido "trastorno" como "loco", y se había ofendido, y no quería volver. Se lo expliqué como se explica en las casas:</p>
+  <p>—Mire, don Óscar: el TEPT es cuando el cuerpo no se entera de que el peligro ya pasó. El robo ya fue, pero el cuerpo sigue montando guardia. El ruido ya pasó, pero el cuerpo lo sigue oyendo. <strong>No es locura: es un cuerpo leal que no recibió la noticia de que ya terminó.</strong> Y la noticia, se la damos nosotros.</p>
+  <p>—¿Y cómo se le da la noticia al cuerpo? —preguntó, con el yeso lleno de firmas y los ojos llenos de otra cosa.</p>
+  <p>—Room by room —dije, y me corregí—: cuarto por cuarto. La casa se reconquista como se reconquista una tierra después de la inundación: no de una vez: por pedazos.</p>
+  <p>Y lo hicimos. Primero la luz: cambiamos los bombillos por unos más fuertes, y el patio dejó de ser una boca. Después la puerta: la arreglamos entre los dos, con el martillo y la cerradura nueva, y el día que don Óscar la abrió y la cerró con su propia llave, la abrió y la cerró tres veces, no por miedo: <strong>por gusto.</strong> Después el comedor: volvimos a comer a la misma hora, con la misma olla, y la historia del robo se contó en la mesa, una vez, entera, con todos escuchando, y después no se escondió: se dejó vivir, como se deja vivir una cicatriz. Después el perro: un criollo que se llamaba Centavo y que llegó del barrio, y que montaba guardia con más gusto que don Óscar y mejor dormido. Y después el vecino: el que avisa, el que mira, el que acompaña: <strong>porque la casa que se reconquista sola, se reconquista a medias.</strong></p>
+  <p>A Esteban le tocó más duro, porque a los diecisiete el revólver se graba en un lugar que no es la memoria: es el hueso. Con él no usamos palabras: usamos oficio. Le pedí que me ayudara con el huerto de doña Miriam, que estaba muerto de abandono, y entre los dos revivimos las matas, y el muchacho aprendió que lo que se cuida, vuelve. El día que floreció la primera mata de albahaca, Esteban la olió largo, y dijo, sin mirarme, la frase con la que este capítulo se cierra:</p>
+  <p>—Huele igual que antes del robo.</p>
+  <p>Y era cierto. El olor de la casa no se lo habían llevado. <strong>Porque el ladrón se lleva las cosas, pero no los olores: los olores son lo último que se roban, y lo primero que devuelve la vida.</strong></p>
+  <div class="box"><h4>🏠 La ruta para tu casa</h4><ul>
+    <li>Después del robo, la víctima no está "exagerando": tiene el cuerpo montando guardia: se le da la noticia cuarto por cuarto.</li>
+    <li>La casa se reconquista por pedazos: la luz, la puerta, la mesa, el olor: cada cuarto reconquistado es una victoria que se celebra.</li>
+    <li>La historia se cuenta una vez, entera, en familia: no se esconde: lo que se esconde, manda.</li>
+    <li>El niño y el adolescente que vieron el arma no se interrogan: se les da oficio, no palabras: el que cuida algo, vuelve.</li>
+  </ul></div>
+  <div class="quote">"El ladrón se lleva las cosas; el miedo se lleva la casa. La casa se reconquista cuarto por cuarto: con luz, con historia, y con una puerta que se vuelve a abrir por gusto."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/kkPC5hf.png" alt="El que destapó la olla"></div>
+  <div class="kicker">Capítulo 5</div>
+  <h3 class="chap">El que destapó la olla</h3>
+  <p>Gonzalo no era héroe. Era bodeguero. Y esa es la primera verdad de este capítulo, porque los héroes de este país no salen en los noticieros: salen a las cinco de la mañana con la lonchera y el bus mal dormido. Gonzalo llevaba once años en la bodega del hospital regional, contando cajas, y una noche contó de más: <strong>las cajas de la quimioterapia de los pacientes salían por la puerta de atrás, y entraban por la puerta de la farmacia que las cobraba.</strong> Gonzalo no hizo un discurso. Hizo lo que hace un bodeguero: contó. Fotografió. Y firmó.</p>
+  <p>La denuncia la metió un martes. El jueves, la moto se parqueó por primera vez frente a la casa. No hacía nada. Solo se parqueaba. Con el motor apagado y dos hombres mirando la puerta, como quien mira un negocio que todavía no abre. El sábado, la llamada: "Su hijo sale del colegio a las 3:15. Qué muchacho tan juicioso." Y el domingo, el mensaje al celular de Nidia, su esposa, con una foto de la familia tomada desde la esquina: <strong>"Cuiden lo que más quieren."</strong></p>
+  <p>Nidia me llamó por la tensión. La tenía en 180 y no bajaba con nada, y el insomnio era de los que miran el techo contando motos. Cuando llegué, la casa tenía el clima que yo conozco de las casas amenazadas: la voz baja, la cortina entreabierta, el niño que ya no juega en el patio. Nicolás, el hijo, tenía catorce años y había dejado de salir a la esquina, y esa noche, en la mesa, dijo la frase que parte a cualquier padre:</p>
+  <p>—Papi, retire la denuncia. Yo no quiero que lo maten por unas cajas.</p>
+  <p>Y Gonzalo, que había cargado once años de cajas ajenas sin chistar, bajó la mirada y no dijo nada. Fue Nidia la que habló. La que había recibido la foto, la que tenía la tensión en 180, la que contaba motos por la cortina. Lo miró largo, y dijo:</p>
+  <p>—Yo no me casé con un cobarde, Gonzalo. Y no voy a criar a uno. <strong>La denuncia no se retira. Se aguanta.</strong></p>
+  <p>Yo les traduje esa noche lo que el cuerpo de Nidia estaba haciendo, porque el médico había dicho "hipervigilancia" y ella había entendido "paranoia", y se sentía loca. Y no lo estaba. Se los expliqué como se explica en las casas:</p>
+  <p>—La paranoia es el miedo que inventa: ve motos donde no hay. La hipervigilancia es el miedo que cuenta: ve las motos que SÍ hay. <strong>Usted no está loca, doña Nidia: usted está contando. Y el que cuenta, no inventa: calcula.</strong> La diferencia es que al que calcula, se le acompaña con ruta; al que inventa, con medicina. Usted tiene ruta.</p>
+  <p>Y la ruta la hicimos juntos. La denuncia ya estaba; faltaba el blindaje: el expediente con fechas y placas de cada moto, guardado en tres partes —una en la casa de la hermana, una en el trabajo, una en el correo—; la red del barrio avisada, no para pelear: para mirar; la ruta del colegio de Nicolás cambiada y acompañada; la protección solicitada por escrito, con el papel sellado que obliga; y la cita de salud mental de los tres, porque <strong>la familia amenazada no se cuida solo con candados: se cuida con sueño, con tensión bajada y con un muchacho que vuelva a la esquina.</strong></p>
+  <p>El caso duró un año. Cayó el de la farmacia, cayó el de la bodega de al lado, y la quimioterapia volvió a entrar por la puerta de adelante, con factura. Gonzalo no recibió homenaje. Recibió algo mejor: el saludo de las señoras de la quimio, que un día lo pararon en el pasillo y no le dijeron gracias: le dijeron <strong>"siga contando, mijo"</strong>, que es el gracias de los que ya no tienen fuerzas para las palabras bonitas.</p>
+  <p>Y Nicolás, que hoy tiene diecisiete y quiere estudiar derecho, me dijo hace poco la frase con la que se cierra este capítulo, dicha con la serenidad del que ya no tiene miedo de tener miedo:</p>
+  <p>—Yo le pedí que se rindiera. Y me alegro de que no me obedeciera.</p>
+  <div class="box"><h4>📋 La ruta para tu casa</h4><ul>
+    <li>El que denuncia no rompe la olla: la destapa: el vapor ya estaba: no se le culpa por el olor.</li>
+    <li>La familia amenazada no está loca: está contando: al que calcula se le acompaña con ruta; al que inventa, con medicina.</li>
+    <li>El expediente en tres partes, la red que mira, la ruta cambiada, el papel sellado: la protección se exige por escrito.</li>
+    <li>El hijo que pide rendirse no es cobarde: es un niño con miedo: se le escucha, y se le devuelve la esquina.</li>
+  </ul></div>
+  <div class="quote">"El que destapa la olla no la rompe: la destapa. Y la familia que aguanta el vapor con él, no se quema: se temple."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/4fbOfwS.png" alt="El pueblo sin hospital"></div>
+  <div class="kicker">Capítulo 6</div>
+  <h3 class="chap">El pueblo sin hospital</h3>
+  <p>En Agualarga, el hospital tiene candado desde hace doce años. El cartel de la entrada dice "CERRADO POR REESTRUCTURACIÓN", y la pintura del cartel se fue cayendo a pedazos, primero la R, después la E, y hoy dice "CERRADO POR REESTRUCTURACIÓN" sin las dos primeras letras, que es una manera honesta de decirlo: <strong>porque lo que se reestructuró fue el presupuesto, y se lo llevó un señor que hoy tiene finca, y el pueblo se quedó con el candado.</strong></p>
+  <p>La UCI nunca abrió. Los ventiladores que llegaron en foto, se fueron en camión. Y la ambulancia —una sola, vieja, con la puerta que no cierra— tarda dos horas hasta el hospital del municipio grande, si la carretera está seca. Si está mojada, son tres. <strong>Y tres horas, en este pueblo, es la diferencia entre contar el cuento y ser el cuento.</strong></p>
+  <p>Yo llegué a Agualarga porque la hija de doña Tránsito me escribió por el grupo de WhatsApp del barrio de Cúcuta, de esos grupos que la gente cree que son para chisme y resultan siendo la red de salud más rápida del país. "Necesito que me enseñe a cuidar a mi mamá", decía el mensaje. "Aquí ya no hay hospital."</p>
+  <p>Doña Tránsito tenía setenta y cuatro años y un corazón cansado. El médico de la ciudad, en el papel del alta, había escrito "insuficiencia cardíaca", y Mireya, la hija, leyó eso como quien lee un veredicto. Se lo traduje como se traduce en las casas:</p>
+  <p>—Mire, doña Mireya: el corazón es una bomba. Cuando se cansa, ya no empuja con fuerza, y el agua que la sangre carga se queda quieta donde no debe: en las piernas, que se hinchan; en los pulmones, que se ahogan. <strong>La insuficiencia no es un dolor: es un agua mal repartida.</strong> Y el cuidado en casa es repartirla: la pastilla del agua, la sal por la mitad, el peso cada mañana, y la cabecera de la cama levantada para que los pulmones respiren.</p>
+  <p>—¿Y eso lo puedo hacer yo? —preguntó, con las manos de la que ha lavado ropa ajena cuarenta años y no le tiene miedo al trabajo: le tiene miedo a no saber.</p>
+  <p>—Usted puede —le dije—. Y no va a estar sola. Porque en este pueblo, el hospital se fue, pero el pueblo se quedó. <strong>Y el pueblo es el hospital.</strong></p>
+  <p>Y era cierto. Lo fuimos armando entre todos, como se arma una minga: el padre Danilo prestó el concentrador de oxígeno que la parroquia tenía para los viejos del asilo, y lo puso en la casa de Tránsito "mientras la señora lo necesite, y después para el que siga"; don Ulises, el del carro de la leche, anotó la casa en su ruta de las cuatro de la mañana "por si toca salir corriendo, que yo conozco los huecos de la carretera hasta con los ojos cerrados"; la muchacha del teléfono, que es nieta de la tendera, aprendió a hacer la videollamada con el médico de la ciudad y a tomarle la presión a la abuela con el aparato nuevo que mandó la otra hija desde Bogotá; y yo volví cada quince días, a enseñar y a aprender.</p>
+  <p>Porque eso fue lo que aprendí en Agualarga: que <strong>la corrupción no roba plata: roba tiempo.</strong> Las dos horas de la carretera son la vida que el señor de la finca le robó a cada enfermo del pueblo. Pero también aprendí que el tiempo robado se recupera con red: el pueblo que se organiza le descuenta minutos a la muerte, y minutos, en la carretera, son personas.</p>
+  <p>La crisis llegó un noviembre, con el río crecido. A doña Tránsito se le subió el agua a los pulmones en la madrugada: la respiración cortica, la espuma, el susto. Mireya no gritó: hizo la ruta. Llamó al médico por video, que le dijo la dosis de rescate; llamó a don Ulises, que llegó en doce minutos con el carro caliente; el padre Danilo dejó el concentrador enchufado a la batería del carro "que para eso es de la parroquia"; y salieron. En el hueco grande de la carretera, don Ulises frenó, miró a Mireya por el espejo, y dijo: "Respire usted también, mija, que allá la necesitan entera."</p>
+  <p>Doña Tránsito llegó viva. Volvió al mes, con el alta y el papel nuevo. Y el día que la bajaron del carro, el pueblo entero estaba en la puerta, no por curiosidad: por turno. Porque ya todos sabían su parte. Tránsito miró el candado del hospital de reojo, y después miró a su gente, y dijo la frase con la que este capítulo se cierra, dicha con la voz de la que ya no le debe nada a ningún gobernador:</p>
+  <p>—El hospital se fue. El pueblo se quedó. <strong>Y el pueblo es mi hospital.</strong></p>
+  <div class="box"><h4>🏥 La ruta para tu casa (y para tu pueblo)</h4><ul>
+    <li>Cuando el hospital no existe, la casa se vuelve hospital: pero no sola: con red.</li>
+    <li>El corazón cansado se cuida repartiendo el agua: pastilla, sal, peso cada mañana, cabecera arriba.</li>
+    <li>El oxígeno del pueblo es de todos: la parroquia, la junta, la red: se comparte como se comparte el agua en la sequía.</li>
+    <li>La ruta de la carretera se ensaya antes de la emergencia: el que conoce los huecos, maneja.</li>
+    <li>La videollamada con el médico de la ciudad es el puente: el pueblo sin hospital no es pueblo sin médico: es pueblo con médico lejano y red cercana.</li>
+  </ul></div>
+  <div class="quote">"La corrupción no roba plata: roba tiempo. Y el pueblo que se organiza, le descuenta minutos a la muerte."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/MN0TMcI.png" alt="El testigo que contó los votos"></div>
+  <div class="kicker">Capítulo 7</div>
+  <h3 class="chap">El testigo que contó los votos</h3>
+  <p>En La Bifurcada, el día de las elecciones de 2026, doña Nelly se levantó a las cuatro de la mañana con el termo de tinto y la libreta de tapas duras. Setenta y un años, treinta y dos de ellos siendo testigo electoral, porque —decía— <strong>"los votos no se cuidan solos, mijo: los cuida el que los cuenta."</strong></p>
+  <p>Pero ese año, el aire venía cargado como nunca. En la tienda, en el bus, en el grupo de WhatsApp del barrio, corrían los rumores que la televisión nacional había puesto en boca de todo el mundo: que el <strong>voto fusil</strong> —el constreñimiento por grupos armados en las veredas donde nadie se atreve a decir que no— había movido cifras; que había compra de votos a doscientos mil por cabeza; que había formularios adulterados; que hasta el presidente había hablado de fraude, y el del otro lado también, y que todos tenían pruebas y nadie tenía razón. El país entero estaba en ese clima, y La Bifurcada no era la excepción: era el microscopio.</p>
+  <p>Un muchacho, de los que votan por primera vez y desconfían por última vez, se le cruzó en la puerta de la escuela y le dijo, sin maldad, con el cansancio de los que nacieron con el miedo puesto:</p>
+  <p>—No se canse, doña Nelly. Eso ya está fusionado desde Bogotá. Ya todo se adulteró.</p>
+  <p>Y doña Nelly, que no era de discursos, lo miró por encima de las gafas y dijo la frase que ese día se regó por La Bifurcada más rápido que el rumor:</p>
+  <p>—<strong>Mijo, mientras más lo adulteren, más lo cuento yo.</strong> Porque el voto que fusionan es el que no dejan contar delante de uno. Por eso yo lo cuento delante de todo el mundo.</p>
+  <p>A las seis de la tarde, cuando cerraron la mesa, doña Nelly tenía 214 votos contados, con su raya al cinco y el acta E-14 —el papel donde queda escrita la cuenta de la mesa— firmada y huellada delante de los testigos, y fotografiada, porque los jurados sabios fotografían. A las ocho, el boletín del puesto decía 314. Cien votos que no habían pasado por su libreta, ni por la urna, ni por el pueblo: habían pasado por otro lado. Y doña Nelly no gritó. Anotó. Firmó. Y reclamó por escrito, con la libreta abierta como un libro de contabilidad del alma.</p>
+  <p>Fue ahí cuando La Bifurcada mostró su otra cara. Porque el reclamo de los cien votos le tocaba al hermano del candidato, y el hermano del candidato tenía moto, tenía radio, y tenía memoria. Esa noche, la moto pasó dos veces por la casa de doña Nelly, despacio, con el motor ronco. Y al día siguiente, en la tienda, la señora del mostrador le vendió el pan pero no le dio el buenos días, que en los pueblos es la primera amenaza.</p>
+  <p>Yo llegué a La Bifurcada tres semanas después, llamado por la hija desde Cúcuta: "es que a mi mamá se le subió la tensión y no duerme, y dice que la están siguiendo." Y era cierto: la tensión en 190, el ojo pendiente de la ventana, y la libreta de tapas duras dormida bajo la almohada, como quien duerme con el único testigo de su verdad. Se lo traduje como se traduce en las casas, cuando el médico dijo "hipervigilancia":</p>
+  <p>—Doña Nelly, usted no está loca: usted está contando. <strong>El que cuenta motos no inventa: calcula.</strong> Pero al cuerpo que calcula, también se le descansa: la libreta ya hizo su trabajo; ahora le toca a la ruta.</p>
+  <p>Y la ruta la hicimos: el reclamo ya estaba radicado con copia sellada; la copia de la libreta, en tres partes —la hija en Cúcuta, el sobrino en el municipio, el correo—; la protección solicitada por escrito; y la red del pueblo avisada, no para pelear: para mirar. <strong>Porque el testigo electoral no es un héroe solitario: es el ojo de un pueblo, y el ojo solo ve si el pueblo lo sostiene.</strong></p>
+  <p>Pero este capítulo tiene segunda herida, y es la que nadie cuenta.</p>
+  <p>En la misma tienda donde a doña Nelly le negaron el buenos días, se sentaba Ramiro. Sesenta y tres años, jornalero, y una culpa que le pesaba más que el azadón: Ramiro había vendido su voto. Cincuenta mil pesos y un mercado, la víspera de la elección, porque la nieta necesitaba zapatos y el hambre no espera boletines. Y el que pagó los cincuenta mil fue el mismo que cerró el hospital de Agualarga, el pueblo de al lado, dos años después. Ramiro lo supo el día que su compadre se murió en la carretera, en la ambulancia de las dos horas, y desde entonces no duerme.</p>
+  <p>—Yo me vendí por cincuenta mil —me dijo, con la voz del que ya no se respeta—. Y el compadre se murió por eso. <strong>Yo fui el más barato del pueblo, enfermero.</strong></p>
+  <p>Con Ramiro no usé la libreta: usé la otra medicina. Le traduje la culpa, que es la enfermedad de los que se creen el único responsable:</p>
+  <p>—Ramiro, usted no cerró el hospital: lo cerró el que se robó la plata. Usted tuvo hambre, y el que compra votos con hambre es el que la fabrica. <strong>La culpa no se borra con vergüenza: se borra con reparación.</strong></p>
+  <p>Y la reparación la inventó él mismo. Hoy Ramiro es el que, en cada elección, se para en la tienda de La Bifurcada con una tabla y una frase que ya es del pueblo: <strong>"El que vende el voto, vende el hospital. Yo lo sé porque yo lo vendí."</strong> Y la gente se ríe, y después se queda pensando, que es exactamente el orden en que se aprende.</p>
+  <p>El día que la tensión le bajó y el sueño le volvió, doña Nelly abrió la libreta de tapas duras por última vez, y en la página de los 214 escribió la frase con la que este capítulo se cierra:</p>
+  <p>—<strong>Yo no conté votos, mijo. Yo conté el futuro.</strong> Y el futuro, aunque me lo roben en cien, lo sigo contando.</p>
+  <div class="box"><h4>🗳️ La ruta para tu casa</h4><ul>
+    <li>El rumor del voto fusil, la compra y la adulteración se combate con una sola cosa: contar delante de todos: el voto que se cuenta en público no se adultera en privado.</li>
+    <li>El testigo no es un héroe solitario: es el ojo del pueblo: el ojo solo ve si el pueblo lo sostiene.</li>
+    <li>La libreta del testigo se copia en tres partes: la verdad no se guarda en un solo bolsillo.</li>
+    <li>Al cuerpo que calcula, también se le descansa: la tensión del que vigila se cuida.</li>
+    <li>El que vendió su voto no es el enemigo: es la otra víctima del que compra: la culpa se borra con reparación, no con vergüenza.</li>
+    <li>"El que vende el voto, vende el hospital": se enseña en la tienda, en la escuela y en la mesa: el voto no es una venta: es el hospital de mañana.</li>
+  </ul></div>
+  <div class="quote">"El testigo no cuenta votos: cuenta el futuro. Y el que vendió el suyo por hambre, puede volver a comprarlo con verdad: la reparación también es un voto."</div>
+</div>
+
+<!-- ══ CAPS 8–15 ══ -->
+<div class="flow">
+  <div class="fig"><img src="https://i.imgur.com/ULs1FhZ.png" alt="La botella que manda"></div>
+  <div class="kicker">Capítulo 8</div>
+  <h3 class="chap">La botella que manda</h3>
+  <p>En la casa de don Ramón, la cena no se servía a las siete. La cena se servía cuando la botella lo permitía. Esa es la primera verdad de este capítulo, y la que ninguna familia de alcohólico quiere decir en voz alta: <strong>en la casa del que bebe, el horario lo pone la botella.</strong> Doña Rocío lo sabía de memoria sin haberlo dicho nunca: si el camión de la ruta llegaba a las seis y media con el paso firme, la cena se servía a las siete y se comía en paz. Si llegaba a las siete y media con el paso largo y la voz alta, la cena se recalentaba una vez. Y si llegaba a las ocho con el paso corto y el ojo vidrioso, la cena se recalentaba dos veces, se servía en silencio, y nadie —ni la hija, ni el hijo, ni el perro— respiraba fuerte. <strong>Treinta años recalentando la cena. Treinta años leyendo el paso en la escalera.</strong></p>
+  <p>Mauricio, el hijo, aprendió a leer ese paso antes de aprender a leer de corrido. A los seis años ya sabía que el paso firme era papá-bueno, el paso largo era papá-cansado-con-cerveza, y el paso corto era papá-otro. Y desarrolló la habilidad que desarrollan todos los hijos de alcohólico del mundo, que es la más triste de las habilidades: <strong>la de hacer invisible la casa.</strong> No traer amigos, no hacer bulla, no salir en las fotos del barrio, no contar nada en el colegio. La casa del que bebe se vuelve una casa con candado por dentro, y el hijo es el que guarda la llave sin saber por qué.</p>
+  <p>Doña Rocío, mientras tanto, hacía lo que hacen las esposas de los que beben: ayudaba. Y cuando digo ayudaba, digo lo contrario. Escondía las botellas —y él encontraba el escondite con una puntería que parecía de otro sentido—. Le servía la cerveza "para que no saliera a la tienda, que en la tienda es peor". Le calentaba la cena "para que no se fuera con hambre, que con hambre busca trago". Y cuando la vecina preguntaba "¿y don Ramón?", doña Rocío decía la frase que es el himno nacional de las casas con botella: <strong>"Está cansado del trabajo."</strong> Treinta años de cansancio del trabajo. El trabajo más descansado del barrio, y el más cansado del mundo.</p>
+  <p>Yo entré en esta historia cuando el hígado dijo basta. Fue un martes. Don Ramón vomitó sangre —así, como suena, porque el hígado que se endurece revienta las venas del esófago, y esas venas no avisan: estallan— y Mauricio, que ya tenía veintidós y el paso de la escalera tatuado en el oído, lo cargó al hospital con la camisa llena de un rojo que no era de él. En la sala, el médico dijo "cirrosis alcohólica", y doña Rocío entendió "se va a morir", y las dos cosas eran ciertas a medias. Se lo traduje como se traduce en las casas, porque el hígado es el órgano que nadie conoce hasta que grita:</p>
+  <p>—Mire, doña Rocío: el hígado es un filtro. Treinta años filtrando veneno, y el filtro se fue cicatrizando de tanto trabajar. <strong>La cirrosis no es un castigo: es un filtro que quedó cicatrizado de tanto trabajo sucio.</strong> Y lo que queda de filtro, se cuida con una sola medicina que no se compra: que no entre más veneno. Ni una gota. Porque el filtro que queda no perdona ni la cerveza de la esquina.</p>
+  <p>Y ahí fue donde doña Rocío me hizo la pregunta que yo esperaba desde que crucé la puerta, la que hacen todas las que han servido treinta años de cena a una botella:</p>
+  <p>—¿Y yo qué hago, enfermero? Porque yo ya no sé vivir sin estar pendiente.</p>
+  <p>Y ahí fue donde les traduje la palabra que a ella la absolvía y la condenaba al mismo tiempo: codependencia.</p>
+  <p>—Doña Rocío, usted no está loca y usted no es débil: usted es codependiente. Y eso no es un insulto: es un oficio que se aprende. <strong>La codependencia es cuando el amor aprende a servirle a la enfermedad en vez de servirle a la persona.</strong> Usted esconde la botella para que no se enfade, sirve la cena para que no salga, dice "está cansado" para que no se sepa. Y sin darse cuenta, usted se volvió la enfermera de la botella, no la esposa del marido. Y la botella, que es muy inteligente, se dejó cuidar por usted: porque mientras usted escondía y servía y excusaba, él no tenía que enfrentar nada. <strong>El que bebe solo deja de beber cuando el mundo deja de taparle las consecuencias.</strong></p>
+  <p>—¿Y entonces qué hago? —dijo, con la voz de la que lleva treinta años haciendo exactamente lo contrario.</p>
+  <p>—Nada de lo que hacía —le dije—. No esconda: el escondite lo encuentra. No excuse: el cansancio ya no se lo cree nadie. No sirva la cena a la botella: sírvala al hombre, y si el hombre no viene sobrio, la cena se queda en la olla. <strong>Usted no puede querer por él. Pero puede dejar de tapar por él.</strong></p>
+  <p>El cambio no fue de un día. Fue de meses, con recaídas, con la olla llena dos veces, con la vecina que preguntó y esta vez oyó la verdad —"está enfermo del trago, y estamos en tratamiento"— dicha sin vergüenza, que es como se dicen las verdades que ya no duelen. Don Ramón fue a los grupos, que es donde el alcohólico encuentra a los únicos que no le creen las mentiras porque se las saben de memoria. Y Mauricio, que era el que más callado había vivido, fue el que más necesitó ayuda: porque el hijo que creció leyendo pasos en la escalera carga una vergüenza que no es suya, y esa vergüenza se trata, no se hereda.</p>
+  <p>El día que don Ramón cumplió seis meses sin beber, no hubo fiesta. Hubo una cena, a las siete en punto, servida una sola vez, y Mauricio dijo la frase con la que este capítulo se cierra, dicha con la voz del que por fin no tiene que leer ningún paso:</p>
+  <p>—Papi, yo aprendí a vivir con usted borracho. <strong>Ahora quiero conocerlo sobrio.</strong></p>
+  <p>Y doña Rocío, que llevaba treinta años recalentando, sirvió la cena caliente a la primera, y dijo, riéndose y llorando al tiempo, la otra frase del capítulo:</p>
+  <p>—Yo serví treinta años de cena a la botella. Ahora se la sirvo al marido, y resulta que no era la misma persona.</p>
+  <div class="box"><h4>🍺 La ruta para tu casa</h4><ul>
+    <li>El alcoholismo no es vicio: es enfermedad: el que bebe no es débil de carácter: es un enfermo con memoria para la botella.</li>
+    <li>La codependencia es el amor que aprendió a servir a la enfermedad: esconder, excusar, servir: tapar las consecuencias es alimentar la botella.</li>
+    <li>No se esconde la botella: se deja que el que beba enfrente lo que la botella rompe: el mundo que deja de tapar es el principio de la cura.</li>
+    <li>Al borracho no se le discute borracho: se le habla sobrio, con la ruta en la mano: grupo, médico, familia.</li>
+    <li>El hijo que creció leyendo pasos en la escalera carga una vergüenza que no es suya: se trata: los hijos de alcohólico también son pacientes.</li>
+    <li>Y la cena se sirve una vez: al hombre, no a la botella: si no viene sobrio, la cena se queda en la olla: el amor que no tapa, es el que cura.</li>
+  </ul></div>
+  <div class="quote">"En la casa del que bebe, el horario lo pone la botella. Y el día que la cena se sirve una sola vez, a las siete en punto, empieza la casa a mandar otra vez."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/yNrlxsU.png" alt="La apuesta que no pierde sola"></div>
+  <div class="kicker">Capítulo 9</div>
+  <h3 class="chap">La apuesta que no pierde sola</h3>
+  <p>Antes, la esquina estaba en la esquina. Doña Flor lo dice así, con esa frase, cada vez que cuenta esta historia, y no hay forma más exacta de decirlo: <strong>antes, la esquina estaba en la esquina, y yo la veía desde la ventana.</strong> Si el hijo se paraba donde no debía, ella lo veía, cruzaba la calle, y lo traía por el brazo. La esquina tenía horario, tenía dueño, y tenía testigos.</p>
+  <p>Pero a Brayan, veintiún años, mototaxista, la esquina le quedó quedando en el bolsillo. Empezó con el bono. La aplicación le regaló diez mil pesos "de bienvenida" para apostar al partido de la Selección, y Brayan, que nunca había apostado, apostó, y ganó. <strong>Esa es la trampa que nadie cuenta: la primera ganancia.</strong> Porque el que pierde la primera vez, se va; el que gana la primera vez, se queda. Y Brayan se quedó.</p>
+  <p>Al mes, la aplicación era lo primero que abría en la mañana y lo último que cerraba en la noche. Al partido de la Selección le siguió el partido de la liga de Turquía, que Brayan no sabía ni que existía, y al de Turquía el de la segunda división de Japón, y al de Japón la ruleta, que ya ni partido necesitaba: era una rueda girando a las tres de la mañana en la pantalla del celular, con la luz esa azulada que vuelve de madrugada a cualquier muchacho un extraño.</p>
+  <p>Cuando perdió la moto —la de verdad, la del trabajo, la que vendió "por una oportunidad de negocio" que era una apuesta doble para recuperar lo de la semana—, la deuda ya no era con la aplicación: era con las aplicaciones de préstamos rápidos que la misma aplicación le ofrecía "para seguir jugando", y esas no cobran con mensajes: cobran con llamadas a todos los contactos del teléfono. <strong>Así fue como doña Flor se enteró: no por el hijo: por el cobrador.</strong> Un número desconocido le dijo, con una amabilidad que era un cuchillo: "Señora, su hijo debe un millón doscientos, y usted aparece como referencia."</p>
+  <p>Doña Flor no gritó. Hizo lo que hacen las madres cuando el golpe es tan grande que ya no cabe el grito: se sentó, llamó a la hija mayor, y me llamó a mí, porque la hija me conocía del cuidado de la abuela. Y en la sala de esa casa, con Brayan mirando el piso y el celular apagado sobre la mesa como un acusado, les traduje la palabra que el médico de la cabeza usa y que en las casas se dice de otra manera: ludopatía.</p>
+  <p>—Miren —les dije—: la ludopatía no es un vicio: es la enfermedad del casi. <strong>El cerebro del que apuesta no registra el "casi gané" como una pérdida: lo registra como una deuda que la suerte tiene con él.</strong> Y vuelve a apostar para cobrarla. Por eso el que casi gana, apuesta más que el que perdió: porque el que perdió sabe que perdió, y el que casi ganó, quedó debiéndole al azar. Y la aplicación lo sabe: por eso le muestra el casi, le resalta el casi, le celebra el casi. <strong>La aplicación no vende apuestas, doña Flor: vende casi. Y el casi es el anzuelo.</strong></p>
+  <p>—¿Y entonces por qué no para? —preguntó ella, con la voz de la que ya pagó una cuota de la deuda y siente que se le va la casa.</p>
+  <p>—Porque el casi no se cura con vergüenza —dije—. Se cura con ruta. Y la ruta tiene una regla que a usted le va a doler, porque usted es de las que paga: <strong>la deuda del juego no se tapa: se enfrenta.</strong> Al cobrador de la esquina peligrosa se le negocia con acompañamiento, porque ese sí amenaza; pero la deuda de la aplicación no se paga en secreto: se paga con plan, con el muchacho delante, con cuotas que él sostiene con el trabajo que le quede, porque si usted paga todo en secreto, Brayan no pierde nada, y el que no pierde nada, vuelve a apostar. <strong>El que tapó la botella, aprendió a tapar la apuesta.</strong></p>
+  <p>Y la ruta la hicimos completa: el celular nuevo sin aplicaciones de apuesta y sin aplicaciones de préstamo —porque vienen enlazadas, y la una le abre la puerta a la otra—; el autoexcluido de las plataformas de juego, que es un papel que se firma y que le cierra la cuenta en todas las que están registradas, <strong>que es el candado que el mismo enfermo se pone en la esquina del bolsillo</strong>; el manejo de la plata con la hermana los primeros meses —no por desconfianza: por descanso—; y la terapia, porque debajo del casi de Brayan había otra cosa: había el padre que se fue, y la apuesta era la única conversación que él tenía con la suerte desde que la suerte lo dejó sin papá.</p>
+  <p>El día que Brayan borró la última aplicación, lo hizo delante de la mesa, con el celular en la mano y la madre mirando, y dijo la frase con la que los muchachos de ahora dicen las verdades viejas:</p>
+  <p>—Mami, yo no perdí la plata. <strong>Yo perdí el casi.</strong> Y el casi me costó la moto.</p>
+  <p>Y doña Flor, que había cruzado la calle mil veces a traer hijos de la esquina de verdad, lo miró y le dijo, con la voz de la que ya entendió que la esquina nueva no se ve desde la ventana:</p>
+  <p>—La aplicación no te robó, mijo. <strong>Te prestó un sueño y te cobró la casa.</strong> Por eso la esquina ahora la cuidamos entre los dos: tú la del bolsillo, y yo la de la mesa.</p>
+  <div class="box"><h4>💰 La ruta para tu casa</h4><ul>
+    <li>La primera ganancia es la trampa: el que gana la primera vez, se queda: hable del bono de bienvenida antes de que lo regalen.</li>
+    <li>La esquina ya no está en la esquina: está en el bolsillo, y abre a las tres de la mañana: el celular del muchacho se acompaña, no se espía: se conversa.</li>
+    <li>La ludopatía es la enfermedad del casi: el casi gané no es pérdida: es anzuelo: se traduce en la casa para que el que casi gana entienda por qué no puede parar.</li>
+    <li>La deuda del juego no se tapa: se enfrenta con plan y con el deudor delante: el que paga en secreto, siembra la próxima apuesta.</li>
+    <li>El autoexcluido de las plataformas de juego es el candado del bolsillo: se firma, y se celebra.</li>
+    <li>Y debajo del casi siempre hay otra cosa: un padre que se fue, una vergüenza, un vacío: la apuesta es el síntoma: el vacío es la causa: se tratan los dos.</li>
+  </ul></div>
+  <div class="quote">"Antes la esquina estaba en la esquina, y la madre la veía desde la ventana. Ahora la esquina está en el bolsillo, y abre a las tres de la mañana: por eso la apuesta no pierde sola: pierde la moto, la matrícula y la paz de la mesa."</div>
+
+  <div class="sep"></div>
+
+  <div class="fig"><img src="https://i.imgur.com/JX5RpdA.png" alt="El bolsillo que no duerme"></div>
+  <div class="kicker">Capítulo 10</div>
+  <h3 class="chap">El bolsillo que no duerme</h3>
+  <p>Mariana, catorce años, tenía una amiga nueva que se llamaba Valentina. O eso decía la pantalla. La Valentina del celular era perfecta: la entendía como nadie, se reía de sus chistes, le decía que era la más linda del grado, y le contaba cosas que Mariana no le contaba ni a la hermana. Le escribió primero por el comentario de una foto. Después por el privado. Después a toda hora. Y una noche, la Valentina perfecta le pidió lo que las Valentinas perfectas de pantalla piden cuando ya tienen la confianza amarrada: una foto. "Pero solo para mí. ¿O es que no confías?" Y Mariana, que confiaba, mandó una. Después otra. Y la tercera noche, la Valentina perfecta dejó de ser perfecta, y el que escribió ya no escribía con emojis de corazones: escribía con la voz de un hombre hecho y derecho, con la foto de Mariana en la mano y una frase que a los catorce años pesa como una lápida: <strong>"O me mandas más, o la publico en el grupo del colegio."</strong></p>
+  <p>Eso tiene nombre, y yo se los traduje esa misma noche, cuando la mamá de Mariana me llamó con la voz partida, porque la niña no quería salir del cuarto y en el celular del hermano ya estaba rodando la foto.</p>
+  <p>—Lo que le pasó a Mariana se llama grooming —le dije—. Y es cuando el lobo aprende a escribir. <strong>El adulto que se disfraza de muchacha en la pantalla, que se gana la confianza con paciencia de cazador, y que al final cobra en fotos.</strong> No es una amiga que traicionó: es un hombre mayor cazando a una niña. Y lo que vino después, el chantaje, se llama sextorsión: la foto que se vuelve deuda. "Manda más o publico." Y escúcheme bien, doña, porque esto es lo más importante que le voy a decir en la vida: <strong>la vergüenza no es de Mariana. La vergüenza es del que chantajea. La ley es de la niña.</strong></p>
+  <p>—Pero la foto ya rodó, enfermero —dijo ella, con el celular del hijo en la mano, temblando.</p>
+  <p>—Pues que ruede para el lado que sirve —dije—. La foto no se borra del teléfono de Mariana: se guarda, con capturas de todo: del perfil de la Valentina, de los mensajes, del chantaje. <strong>Porque la captura es la prueba, y la prueba es la que mete al lobo.</strong> Y al que le reenvíe la foto de una menor, se le dice con la ley en la mano: reenviar es distribuir, y distribuir foto de una niña es delito: el grupo que reenvía no es espectador: es cómplice.</p>
+  <p>Y la ruta la hicimos esa misma noche, sin esperar a la mañana, porque el lobo digital cobra rápido: denuncia en la Fiscalía con el CAI virtual y las capturas en un USB; el perfil reportado en la plataforma, que lo tumba pero no lo borra —porque la plataforma guarda el rastro que el juez pide—; el colegio avisado por escrito, para que el grupo del salón se cierre y se eduque, no para que se castigue a la que ya está castigada; y a Mariana, lo primero de todo: <strong>no se le preguntó "por qué lo hiciste": se le dijo "tú no hiciste nada malo: te cazaron, y los cazadores existen porque hay niñas buenas como tú, no porque haya niñas malas".</strong> Porque la niña que se siente culpable se calla la próxima, y el lobo lo sabe.</p>
+  <p>El lobo cayó en cuatro meses. No era una Valentina: era un señor de cincuenta y dos años, de otra ciudad, con un archivo de veintisiete niñas en el computador. <strong>Veintisiete.</strong> La Fiscalía lo dijo en el papel, y yo lo digo aquí porque es la cifra que las madres necesitan oír para entender que esto no le pasa a "las otras": le pasa a las buenas, a las inteligentes, a las de las notas altas, porque el lobo no busca niñas tontas: busca niñas que necesitan que alguien las entienda, y ese es el hueco que él llena. <strong>Por eso la vacuna no es el castigo del celular: es la casa donde una niña de catorce años puede decir "mami, me pasó algo" sin miedo a que la regañen primero.</strong></p>
+  <p>Y ahí es donde este capítulo toca la otra herida del bolsillo, la que no es lobo pero es puerta: el celular que apacigua. Porque Mariana llevaba años con el bolsillo encendido desde antes del lobo: el video que calma la pataleta, la tablet que reemplaza la sobremesa, la pantalla que la mamá usaba para que la niña "no moleste", que es la frase con la que se abren las puertas que uno no ve. No se lo digo para culparla: se lo digo porque el lobo entra por las puertas que el cansancio deja abiertas. <strong>El celular que apacigua en la sala es el mismo que deja sola a la niña en el privado.</strong></p>
+  <p>La mamá de Mariana entendió sin que yo terminara. Cambió la casa, no el celular: la sobremesa sin pantalla, la hora de contar el día antes de dormir, y la frase que ella misma inventó y que hoy tiene escrita en la puerta del cuarto de la muchacha, y que es la frase con la que este capítulo se cierra:</p>
+  <p>—<strong>Aquí no se castiga la verdad, mija. Aquí se castiga el silencio.</strong> Lo que te pase, me lo cuentas: el regaño puede esperar; tú, no.</p>
+  <div class="box"><h4>📱 La ruta para tu casa</h4><ul>
+    <li>El lobo aprendió a escribir: el adulto que se disfraza de muchacha en la pantalla no es una amiga: es un cazador: se llama grooming, y en Colombia hay miles de casos al año.</li>
+    <li>"Manda más o publico" es sextorsión: la foto que se vuelve deuda: la vergüenza es del que chantajea; la ley es de la niña.</li>
+    <li>La captura es la prueba: no se borra nada hasta denunciar: Fiscalía, CAI virtual, colegio por escrito.</li>
+    <li>Reenviar foto de una menor es distribuir: el grupo que reenvía no es espectador: es cómplice: se enseña en el salón.</li>
+    <li>La vacuna no es el castigo del celular: es la casa donde "me pasó algo" se puede decir sin miedo al regaño.</li>
+    <li>Y el celular que apacigua la pataleta es la puerta que el lobo encuentra abierta: la sobremesa sin pantalla vale más que mil candados digitales.</li>
+  </ul></div>
+  <div class="quote">"El lobo ya no aúlla en el monte: escribe con emojis en el privado. Y la única puerta que él no sabe abrir es la de la casa donde una niña puede decir 'mami, me pasó algo' sin miedo al regaño."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/1D9sbIv.png" alt="La mamá que espera en la puerta del CAI"></div>
+  <div class="kicker">Capítulo 11</div>
+  <h3 class="chap">La mamá que espera en la puerta del CAI</h3>
+  <p>Doña Imelda pasó la noche sentada en el bordillo de la puerta del CAI, con la chaqueta doblada en el brazo y el termo de tinto en la mano. Adentro estaba Alejandro, su hijo, diecinueve años, estudiante de sistemas, que a las once de la noche volvía del turno de la biblioteca y pasó por la esquina equivocada en el momento equivocado: la pelea que no era suya, la patrulla que llegó, y el "quieto, manos arriba" que se lo llevó a él y no a los de la pelea, porque los de la pelea corrieron y él se quedó quieto, <strong>que es lo que le enseñaron a uno de niño: que al ver la autoridad, uno se queda quieto.</strong></p>
+  <p>Y quedó quieto seis horas. Lo que pasó adentro, Alejandro lo contó al día siguiente, despacio, con el labio partido y la voz de al que le arrancaron algo que no era el labio. La requisa que se volvió empujón. El empujón que se volvió insulto. El insulto que se volvió golpe "por respondón", porque preguntar "¿por qué me pega?" es responder, y responder es ser respondón, y ser respondón es ganarse la segunda. <strong>Y el papel de la multa que le ofrecieron "para que se vaya callado", que es la firma que entierra la verdad.</strong> Alejandro no firmó. Ese fue su acto de valentía de esa noche: no firmar.</p>
+  <p>Yo llegué a la casa al mediodía, llamado por la hermana, y me encontré con las dos heridas: la del labio, que se cura con puntos, y la del uniforme, que se cura con ruta. Porque Alejandro, que era el que volvía a casa de noche sin miedo, ahora le daba la vuelta a la cuadra cuando oía una moto, y al bus de la universidad se subía por la puerta de atrás, y la hermana me dijo la frase que me dijo que le partía el alma: "es que mi hermano ahora le tiene miedo a los buenos también."</p>
+  <p>Y ahí fue donde les traduje lo que el cuerpo de Alejandro estaba sintiendo, porque el médico dijo "reacción aguda al estrés" y él había entendido "cobarde":</p>
+  <p>—Alejandro, lo que tú tienes no es cobardía: es memoria. <strong>El cuerpo que fue golpeado con uniforme no distingue, por un tiempo, el uniforme que protege del uniforme que abusa.</strong> No es falta de respeto a la policía: es el cuerpo acordándose. Y se desacuerda con ruta, no con vergüenza.</p>
+  <p>Y la ruta la hicimos con doña Imelda al frente, porque esa mujer del bordillo y el termo no era una madre llorando: era una madre contando. Primero el cuerpo: el examen médico el mismo día, con el parte de las lesiones, porque <strong>el golpe que no se documenta el mismo día, se vuelve "que se lo hizo él"</strong>; después la denuncia en la Fiscalía, con el parte y los testigos de la esquina —el tendero que vio el empujón, la señora del bus que oyó el insulto—; después la queja en la oficina que vigila a la policía, con el número del uniforme y la hora, porque <strong>el abuso se denuncia por dos puertas a la vez: la del juez y la del disciplinario</strong>; y después, el papel de que no firmó la multa, que era la prueba de que la noche no terminó como ellos querían.</p>
+  <p>Y ahí fue donde doña Imelda dijo la frase que yo le traduje a todo el que me pregunta si este capítulo es contra la policía:</p>
+  <p>—Yo no estoy criando a mi hijo para que le tema al uniforme: <strong>estoy criando a mi hijo para que el uniforme se gane el respeto que mi hijo sí se ganó.</strong> El policía bueno, que los hay y muchos, que se madruga y se juega la piel por el barrio, ese no tiene nada que temerle a mi denuncia: mi denuncia lo limpia. <strong>El que le hace daño al muchacho es el que mancha al bueno.</strong> Por eso yo no espero en esa puerta por rabia: espero por limpieza.</p>
+  <p>Y era cierto. Porque la denuncia de Alejandro no se quedó sola: se juntó con otras dos del mismo turno de la misma patrulla, y el número del uniforme salió repetido en los tres papeles, que es como sale la verdad: repetida. Al cuarto mes, el del uniforme fue suspendido, y el policía bueno del barrio —el que saluda a doña Imelda desde antes de todo esto— pasó un día por la casa, se quitó la gorra en la puerta, y le dijo a Alejandro: <strong>"Gracias por firmar el papel, muchacho. Usted nos hizo un favor a los que sí hacemos esto bien."</strong></p>
+  <p>Alejandro volvió a la biblioteca de noche al semestre siguiente. El día que pasó por primera vez frente al CAI, no miró al piso: miró al frente. Y doña Imelda, que lo esperaba en la esquina con el termo, como lo esperó toda la vida, me dijo la frase con la que este capítulo se cierra, dicha con la voz de la que ya no necesita el bordillo:</p>
+  <p>—En esa puerta yo no esperé a mi hijo, enfermero. <strong>Esperé a que la justicia saliera por la misma puerta que él.</strong> Y salió. Demoró, pero salió.</p>
+  <div class="box"><h4>️ La ruta para tu casa</h4><ul>
+    <li>El golpe con uniforme se documenta el mismo día: parte médico, testigos, hora, número: el golpe que no se documenta, se vuelve "se lo hizo él".</li>
+    <li>La denuncia va por dos puertas: la Fiscalía y la oficina que vigila a la policía: el abuso se denuncia dos veces.</li>
+    <li>No firmar el papel que te ofrecen "para que te vayas callado": la firma que entierra la verdad es la única derrota de esa noche.</li>
+    <li>El miedo al uniforme no es cobardía: es memoria: el cuerpo se desacuerda con ruta y terapia, no con vergüenza.</li>
+    <li>Este capítulo no es contra la policía: es a favor del uniforme limpio: el policía bueno es el primero al que le conviene la denuncia: lo limpia.</li>
+    <li>Y la madre que espera en la puerta del CAI no es enemiga del orden: es el espejo: el bueno se mira y se endereza; el malo se mira y se esconde.</li>
+  </ul></div>
+  <div class="quote">"La mamá del bordillo no espera por rabia: espera por limpieza. Porque el uniforme que protege necesita que el uniforme que abusa salga del turno: la denuncia del malo es el homenaje del bueno."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/XAYgEa5.png" alt="El paciente sin apellido"></div>
+  <div class="kicker">Capítulo 12</div>
+  <h3 class="chap">El paciente sin apellido</h3>
+  <p>Don Evelio llegó al mostrador de la IPS a las cinco de la mañana, con el número 47 en la mano y el dolor en el pecho que ya no era un dolor: era un huésped. Sesenta y ocho años, cincuenta de ellos cogiendo café en la loma, afiliado al régimen subsidiado, que es como decir, en el idioma de los mostradores de este país, <strong>que uno llega con el carné que dice que uno no alcanza a pagar, y ese carné, sin que nadie lo diga en voz alta, se vuelve un apellido.</strong></p>
+  <p>Porque en el mostrador, don Evelio no era don Evelio. Era "el del subsidiado". Era "el 47". Era "vuelva mañana". Y mientras él volvía mañana, entraba por la misma puerta el señor del bus, que no tenía número, que mencionó en voz baja el nombre de un primo que trabaja en la administración, y que pasó de una al consultorio con la naturalidad del que entra a su casa. <strong>La palanca no hace fila. La palanca es la fila.</strong></p>
+  <p>Yo estaba ahí ese día. No de enfermero: de acompañante de mi propia madre, que es otra de las que madrugan a los mostradores. Y vi la escena entera, y vi la cara de don Evelio cuando el de la palanca pasó, y vi lo que vi mil veces en casi treinta años de mostradores: <strong>la humillación que se traga en silencio, porque al pobre le enseñaron que quejarse es malgastar el tiempo de los que mandan.</strong></p>
+  <p>A don Evelio le dieron la cita para tres meses después. El medicamento "no está disponible", que es la frase con la que este país le dice al pobre que la salud es un favor que se acabó por hoy. Y el dolor del pecho, que no entiende de agendas, se volvió infarto una madrugada de esas en que la ambulancia del pueblo es la del capítulo de Agualarga, la de las dos horas. Don Evelio llegó vivo de milagro, y en el hospital grande, con el carné del subsidiado en la mano, volvió a ser el 47 de otra fila, hasta que la hija, Luz Mery, que trabaja en Bogotá y sabe leer papeles, hizo lo que en este país se volvió la única puerta que se abre sin palanca: <strong>una tutela.</strong></p>
+  <p>Y ahí fue donde les traduje, en la sala de espera, las dos palabras que explican la humillación sin explicarla con rabia:</p>
+  <p>—Mire, don Evelio —le dije—: lo que le hacen a usted en el mostrador tiene nombre: aporofobia. <strong>Es el miedo al pobre. Es tratarlo distinto por los zapatos.</strong> No lo dicen en voz alta, pero lo dicen con el "vuelva mañana". Y lo otro, lo de que la salud le llegue solo con el papel del juez, también tiene nombre: es la salud por tutela. <strong>Y esa es la más triste de todas: porque la tutela no es un favor: es un derecho que toca rogar. Y el día que el derecho se ruega, el que lo ruega se vuelve mendigo de lo suyo.</strong></p>
+  <p>—¿Y entonces yo soy un mendigo? —preguntó él, con la voz del que cogió café cincuenta años y nunca le pidió nada a nadie.</p>
+  <p>—No, don Evelio —le dije—. <strong>Usted es un acreedor.</strong> El mendigo pide lo que no es de él. El acreedor cobra lo suyo. La tutela no es la limosna del sistema: es el cobro del derecho. Y el que cobra con papel, no ruega: exige.</p>
+  <p>La tutela salió en diez días. El tratamiento llegó "por orden judicial", que es como llega la salud a media Colombia: no por la puerta del derecho, sino por la puerta del juzgado. Y don Evelio, el día que le pusieron el medicamento en la mano, no sonrió: miró el papel, miró el carné, y dijo la frase con la que este capítulo se duele:</p>
+  <p>—En el mostrador yo no tenía apellido. <strong>Con el papel del juez me lo devolvieron.</strong></p>
+  <p>Y Luz Mery, que fue la que escribió la tutela a las dos de la mañana con el celular y una plantilla de internet, dijo la otra, la que yo les repito a todos los que me preguntan si este capítulo es exagerado:</p>
+  <p>—En este país la salud no es un derecho, enfermero: <strong>es una pelea.</strong> Y mi papá la peleó con papeles, porque era lo único que tenía. El que no tiene ni papeles, ¿con qué la pelea?</p>
+  <p>Y esa es la pregunta que este capítulo deja abierta, porque es la que duele: la de los que no tienen ni la hija que escribe a las dos de la mañana. Pero también dejo la otra verdad, para que el capítulo no sea rabia sino mapa: en ese mismo hospital, la enfermera del turno de la noche le consiguió a don Evelio la cita que el mostrador le negó, y el médico joven lo vio en su almuerzo, sin que nadie se lo pidiera, porque hay gente buena adentro del sistema enfermo. <strong>El sistema está enfermo; la gente intenta. Y el paciente sin apellido tiene que aprender a buscar a los que intentan, y a cobrarles a los que no.</strong></p>
+  <div class="box"><h4>💊 La ruta para tu casa</h4><ul>
+    <li>La tutela no es un favor: es el cobro del derecho: se escribe sin abogado, gratis, y el juez tiene diez días: el que no sabe, busca la plantilla y la hija que escribe a las dos de la mañana.</li>
+    <li>La humillación se documenta: fecha, nombre del mostrador, número de la fila, frase dicha: el "vuelva mañana" con testigos es prueba.</li>
+    <li>La palanca que salta la fila se reporta: el que entra con el nombre del primo deja rastro: SuperSalud recibe la queja.</li>
+    <li>El carné del subsidiado no cambia el derecho: el derecho no depende de la billetera: se repite hasta que se oiga.</li>
+    <li>Busque a los que intentan: la enfermera de la noche, el médico de la almuerzo: el sistema enfermo tiene gente sana: se les busca y se les agradece.</li>
+    <li>Y el paciente sin apellido es, en verdad, un acreedor: el mendigo pide lo ajeno; el acreedor cobra lo suyo.</li>
+  </ul></div>
+  <div class="quote">"El factor plata se volvió el amo de la salud, y el pobre se volvió mendigo de su propio derecho. Pero el mendigo con papel ya no es mendigo: es acreedor. Y el acreedor no ruega: cobra."</div>
+
+  <div class="sep"></div>
+
+  <div class="fig"><img src="https://i.imgur.com/JI2fDRD.png" alt="El acento como herida"></div>
+  <div class="kicker">Capítulo 13</div>
+  <h3 class="chap">El acento como herida</h3>
+  <p>Doña Carmen tenía la tienda en la esquina de la avenida, la de siempre, la de los treinta años. Y una noche, a las once, entraron dos. Hablaron con el acento, pidieron el tinto, se ganaron la confianza con la sonrisa de los que saben que el acento ablanda, y cuando doña Carmen se agachó a buscar el cambio, uno la golpeó con la culata del revólver en la nuca, y el otro vació la caja. <strong>Doce mil pesos. Una vida de treinta años en doce mil pesos.</strong></p>
+  <p>Doña Carmen sobrevivió. El golpe le dejó una cicatriz en la nuca y una frase que repite cada vez que ve a un venezolano en la fila: <strong>"Yo no odio al venezolano. Yo odio al que me pegó. Pero los dos hablan igual."</strong></p>
+  <p>Esa frase es el corazón de este capítulo, y es la más difícil de escribir, porque toca la herida que nadie quiere tocar: <strong>sí, hay venezolanos que vinieron a hacer daño.</strong> Y no son pocos. Y no son invento de la derecha ni de la izquierda: son los que salieron en los noticieros, los que mataron a la señora del barrio, los que estafaron al viejo de la pensión, los que montaron la red de trata en la frontera, los que cobran veinte mil pesos en la esquina y dañan el comercio de la mujer que cobra sesenta y tiene que mantener tres hijos. <strong>Eso existe. Y negarlo es traicionar a doña Carmen.</strong></p>
+  <p>Pero también existe lo otro: el venezolano que llegó con el título de ingeniero y hoy barre las calles, el que abrió la panadería y le da trabajo a tres colombianos, el que salvó a la niña del río, el que llora en el consultorio porque extraña a su mamá y no tiene con qué llamarla. <strong>Y generalizar es traicionar a ese también.</strong></p>
+  <p>Yo entré en esta historia cuando a doña Carmen la tensión se le volvió montaña y el sueño se volvió guardia, igual que a doña Nelly del capítulo 7, porque el miedo no distingue de frontera: el que fue asaltado con acento, le teme a todos los acentos. Y en la sala de su casa, con ella temblando y el nieto de doce años escuchando, les traduje las dos palabras que explican el nudo:</p>
+  <p>—Doña Carmen, lo que usted tiene se llama TEPT: el cuerpo que no se entera de que el peligro ya pasó. Y lo que usted siente hacia los venezolanos se llama generalización: <strong>el cerebro que fue herido por uno, le teme a todos.</strong> No es odio: es memoria. Pero la memoria que generaliza, se vuelve cárcel: para usted, que no sale de la tienda; y para el venezolano bueno, que pasa por la puerta y usted le cierra.</p>
+  <p>—¿Y entonces qué hago? —preguntó ella, con la voz de la que no quiere ser racista pero no puede evitarlo—. ¿Le abro la puerta al que me puede volver a pegar?</p>
+  <p>—No —le dije—. <strong>Le abre la puerta al que se gana la confianza, sin importar el acento.</strong> Porque el que la asaltó no la asaltó por venezolano: la asaltó por delincuente. Y el delincuente tiene acento de donde sea: hay colombianos que roban con acento paisa, con acento costeño, con acento cucuteño. <strong>El acento no delinque: delinque el que lo usa.</strong></p>
+  <p>Y ahí fue donde el nieto, que había estado callado, dijo la frase que me partió el alma:</p>
+  <p>—Abuela, yo tengo un amigo venezolano en el colegio. Se llama José. Y él me defiende de los que me matonean. ¿Él también es malo?</p>
+  <p>Y doña Carmen lo miró largo, y dijo la frase con la que este capítulo se abre y se cierra:</p>
+  <p>—No, mijo. <strong>José no es malo. José es José. Y el que me pegó no era venezolano: era un ladrón.</strong> Yo los confundí porque los dos hablan igual. Pero tú no los confundas: tú los conoces uno por uno.</p>
+  <div class="box"><h4>🌎 La ruta para tu casa</h4><ul>
+    <li>El venezolano que delinque no delinque por venezolano: delinque por delincuente: hay colombianos que roban con acento colombiano.</li>
+    <li>La víctima colombiana tiene TEPT: el cuerpo que fue herido con acento, le teme a todos los acentos: se trata con terapia, no con odio.</li>
+    <li>La generalización es la cárcel de la víctima: el que le teme a todos, no sale de la casa: se abre la puerta al que se gana la confianza, sin importar el acento.</li>
+    <li>La explotación sexual existe: la que cobra barato daña el comercio de la que cobra justo: se denuncia la trata, no se generaliza a la mujer migrante.</li>
+    <li>El venezolano bueno existe: el ingeniero que barre, el panadero que da trabajo, el que salva a la niña: no se le cierra la puerta por el acento de los otros.</li>
+    <li>Y el niño que pregunta "¿él también es malo?" merece la verdad: <strong>no hay pueblos malos: hay personas malas y personas buenas en todos los pueblos.</strong></li>
+  </ul></div>
+  <div class="quote">"El acento no delinque: delinque el que lo usa. Y la víctima que generaliza, se vuelve cárcel de sí misma y del inocente que pasa por la puerta."</div>
+
+  <div class="sep">❦</div>
+
+  <div class="fig"><img src="https://i.imgur.com/LVGxyDE.png" alt="El cielo que preocupa"></div>
+  <div class="kicker">Capítulo 14</div>
+  <h3 class="chap">El cielo que preocupa</h3>
+  <p>Simón, diecinueve años, estudiante de biología, dejó de ver las noticias un martes. O eso creyó su madre, doña Alba. Porque Simón no dejó de verlas: las veía a escondidas, a las tres de la mañana, con el celular bajo la cobija, leyendo sobre los incendios del Amazonas, sobre el glaciar que se derritió, sobre la especie de rana que se extinguió esa semana. Y cada mañana se levantaba con el pecho apretado, con una taquicardia que los médicos del seguro no encontraban en el electrocardiograma, y con una pregunta que le había quitado el hambre: <strong>"¿Para qué voy a estudiar, mami, si no hay futuro?"</strong></p>
+  <p>Doña Alba, que era de las que creen que la angustia se cura con un buen sancocho y un "no piense bobadas", lo llevó al médico. El médico le dijo que el muchacho tenía "ecoansiedad", y doña Alba entendió "alergia al aire", y se quedó mirando al doctor como si le hubiera hablado en chino.</p>
+  <p>Yo llegué a la casa de doña Alba en La Hoya del Viento —ese valle ficticio donde el río de mi infancia se secó hace diez años por la minería ilegal y el calor— llamado por la hermana de Simón, que me dijo: "es que mi hermano no sale del cuarto, y cuando sale, mira el cielo como si le fuera a caer encima".</p>
+  <p>Me senté con Simón en su cuarto, rodeado de libros de biología que él ya no abría, y le pregunté qué sentía cuando miraba el cielo. Y me dijo, con la voz de los que ya lloraron todo lo que tenían que llorar:</p>
+  <p>—Siento que me estoy quedando sin tiempo, enfermero. Siento que mi generación va a pagar la fiesta que hicieron los abuelos. Y me da rabia, y me da miedo, y me da una culpa que no es mía, porque yo no tumbé el árbol, pero yo respiro el humo.</p>
+  <p>Y ahí fue donde les traduje, a él y a doña Alba que escuchaba desde la puerta, las dos palabras que el médico había dicho y que en las casas necesitan traducción:</p>
+  <p>—Mire, doña Alba: la ecoansiedad es cuando el cerebro se da cuenta de que la casa se está quemando, y el cuerpo se prepara para correr. Pero como la casa es el planeta, no hay a dónde correr. Y el cuerpo se queda paralizado, con el corazón acelerado, sin poder comer ni dormir. <strong>No es que su hijo esté loco: es que su hijo entiende lo que pasa, y su cuerpo reacciona.</strong></p>
+  <p>—¿Y la otra palabra? —preguntó doña Alba, que ya no se burlaba—. ¿La que usted dijo que era más triste?</p>
+  <p>—Solastalgia —dije, y vi a Simón levantar la cabeza, porque era la primera vez que alguien le ponía nombre a su fantasma—. La solastalgia es la nostalgia de la tierra que todavía estás pisando. Es echar de menos el río de tu infancia mientras lo ves secarse. Es caminar por el monte y sentir que te están arrancando un pedazo del alma. <strong>No es depresión, doña Alba: es amor por la tierra. El que no ama la tierra, no le duele que se queme.</strong></p>
+  <p>Simón me miró, y por primera vez en meses, sus ojos no estaban vidriosos: estaban vivos.</p>
+  <p>—¿Y cómo se cura? —preguntó—. ¿Dejando de amarla?</p>
+  <p>—No —le dije—. <strong>La ecoansiedad no se cura dejando de sentir: se cura moviendo las manos.</strong> Porque la ansiedad es energía paralizada. Y la energía, cuando se mueve, siembra. El que llora sobre las cenizas, se ahoga en el polvo; el que siembra un árbol, le devuelve un pulmón al mundo. No tienes que salvar el planeta, Simón: tienes que salvar tu pedazo.</p>
+  <p>Y la ruta la hicimos juntos. Primero, el celular: las noticias a una hora fija, no a las tres de la mañana, porque el cerebro que se intoxica de catástrofes a medianoche, no procesa, solo se pudre. Segundo, el cuerpo: salir a caminar al monte, no a leer sobre el monte: tocar la tierra, ensuciarse las manos, oler la resina. Tercero, la acción: Simón se unió al grupo de guardabosques voluntarios de La Hoya del Viento, los que siembran los fines de semana en la ribera seca.</p>
+  <p>El primer sábado que salió a sembrar, doña Alba lo vio volver con las botas llenas de barro y las manos raspadas. No le dijo "qué bonito". Le dijo: "Hijo, ¿y el árbol?" Y Simón sonrió, una sonrisa de las de antes, y le dijo:</p>
+  <p>—Mami, planté un cedro. <strong>Tiene cien años de vida. Yo no voy a estar para verlo grande, pero va a estar.</strong></p>
+  <p>Y doña Alba, que no entendía de botánica pero entendía de hijos, le sirvió el sancocho que llevaba tres días esperando, y dijo la frase con la que este capítulo se cierra:</p>
+  <p>—Yo creí que te estabas muriendo de tristeza, mijo. <strong>Y lo que estabas era naciendo de conciencia.</strong> Come, que el planeta necesita gente con fuerza, no gente con hambre.</p>
+  <div class="box"><h4>🌱 La ruta para tu casa</h4><ul>
+    <li>La ecoansiedad es real: el miedo al cielo que se cae no es "cosa de muchachos": es una respuesta racional a una situación irracional.</li>
+    <li>La solastalgia es la nostalgia de la tierra que aún pisas: se valida, no se minimiza: "no estás loco, estás amando lo que se pierde".</li>
+    <li>El celular de las catástrofes se limita: leer noticias a una hora fija; a las tres de la mañana, el cerebro no procesa, solo se pudre.</li>
+    <li>La ansiedad paraliza; la acción siembra: el que se une a un grupo de siembra, de limpieza, de cuidado, mueve la energía y saca el dolor del pecho.</li>
+    <li>No hay que salvar el planeta entero: hay que salvar el pedazo propio: un árbol, un río, una esquina.</li>
+    <li>Y el joven que pregunta "¿para qué estudiar si no hay futuro?" necesita escuchar: <strong>el futuro no se hereda, se construye; y no se construye llorando, sino sembrando.</strong></li>
+  </ul></div>
+  <div class="quote">"El que ama la tierra, le duele que se queme. Pero el dolor que se queda en el pecho, asfixia; el dolor que se mueve en las manos, siembra. El planeta no necesita gente que llore sobre las cenizas: necesita gente que siembre en la tierra que queda."</div>
+
+  <div class="sep"></div>
+
+  <div class="fig"><img src="https://i.imgur.com/GWK8P4n.png" alt="La vitrina que compara"></div>
+  <div class="kicker">Capítulo 15</div>
+  <h3 class="chap">La vitrina que compara</h3>
+  <p>Doña Berta tiene el restaurante más olido de Montebrisa. El hogao de su olla se huele desde la esquina, y el sancocho de gallina criolla es el que cura la resaca del sábado y el alma del lunes. Pero un mediodía de julio, la puerta de su restaurante se abrió y entró un muchacho de veintitantos años con un aro de luz en la mano, un celular en la otra, y la cara de los que creen que el mundo les debe la cena.</p>
+  <p>Se sentó en la mesa del centro, pidió el sancocho, se lo tomó en fotos desde todos los ángulos, le echó limón, lo volvió a fotografiar, y cuando Doña Berta le llevó la cuenta —cuarenta y cinco mil pesos, justos y merecidos—, el muchacho sonrió con la condescendencia del que está a punto de hacer un favor:</p>
+  <p>—Doña, yo no pago. Yo tengo cien mil seguidores. Con el story que le suba a mi historia, a usted le llega la fila hasta la calle. Es publicidad gratis.</p>
+  <p>Doña Berta, que ha servido sopa cuarenta años y sabe lo que pesa una cuchara, lo miró por encima del delantal, se secó las manos en el trapo, y dijo la frase que ese día se volvió leyenda en Montebrisa:</p>
+  <p>—Mijo, los seguidores no comen. Y mi olla sí se vacía. <strong>La publicidad gratis se la da a la iglesia; aquí la sopa se paga.</strong> Son cuarenta y cinco mil. O se levanta y se lleva las fotos.</p>
+  <p>El muchacho se levantó, ofendido, y se fue sin pagar, murmurando algo de "qué mala actitud, doña". Doña Berta no lo volvió a ver por el restaurante. Pero al día siguiente, su sobrina Valeria, de dieciséis años, le dijo llorando que no quería ir al colegio porque "se le veía la papada en la foto del grupo".</p>
+  <p>Doña Berta me llamó esa tarde. "Enfermero, mi hija se odia en el espejo. Se encierra en el baño, se pone un filtro en el celular que le cambia la nariz y la mandíbula, y cuando se quita el filtro, llora. Dice que la cara de verdad no le gusta. ¿Qué le pasa a esta muchacha?"</p>
+  <p>Fui a la casa, me senté con Valeria en su cuarto —un cuarto donde el espejo estaba tapado con una toalla, porque la muchacha no soportaba verse sin el filtro—, y le traduje a las dos, con la paciencia de la enfermera que ya ha visto esta herida en mil adolescentes, la palabra que los psicólogos usan y que en las casas necesita traducción: dismorfia digital.</p>
+  <p>—Mire, Valeria —le dije, mirándola a los ojos, no a la pantalla—. Lo que te pasa no es vanidad. Es que tu cerebro se acostumbró a la cara de mentira. <strong>Es como cuando uno se acostumbra al azúcar: la fruta natural ya no sabe a nada.</strong> Tu cerebro se acostumbró a la nariz perfecta del filtro, a la piel de porcelana de la aplicación. Y cuando te miras en el espejo, que es la fruta natural, tu cerebro dice que estás rota. No estás rota, Valeria: <strong>estás acostumbrada al engaño.</strong></p>
+  <p>Valeria dejó de llorar. Me miró como si le acabara de quitar un peso de encima que ella misma no sabía que cargaba.</p>
+  <p>—¿Y cómo se me quita la costumbre? —preguntó, con la voz de la que ya no quiere pelear con su propia cara.</p>
+  <p>—Se quita con ayuno de vitrina —le dije—. El celular se usa para llamar y para estudiar, no para mirarse. El espejo se destapa. Y la cara de verdad se vuelve a mirar todos los días, hasta que el cerebro recuerde que esa cara es la que ríe, la que llora, la que besa, la que come el sancocho de la tía. <strong>La cara de verdad no es perfecta: es la que está viva.</strong></p>
+  <p>Y la ruta la hicimos en la casa de Doña Berta. Primero, se destapó el espejo. Segundo, se prohibieron los filtros en la mesa: en la casa de Doña Berta se come con la cara de uno, no con la cara de la aplicación. Tercero, Doña Berta le enseñó a Valeria a cocinar el hogao: porque las manos que crean, no tienen tiempo de compararse.</p>
+  <p>El día que Valeria se miró en el espejo sin filtro y no lloró, Doña Berta le sirvió un plato de sancocho, le puso el limón al lado, y le dijo la frase con la que este capítulo, y este tomo, se cierran:</p>
+  <p>—Come, mija. <strong>Que el mundo está lleno de gente con cara de filtro y alma vacía. Tú tienes cara de verdad y alma de hogao. Y eso, en este país, vale más que cien mil seguidores.</strong></p>
+  <div class="box"><h4> La ruta para tu casa</h4><ul>
+    <li>La dismorfia digital es real: el cerebro se acostumbra al filtro y rechaza la cara real. No es vanidad: es adicción al engaño.</li>
+    <li>El espejo no se tapa: se destapa y se mira todos los días hasta que el cerebro recuerde la cara viva.</li>
+    <li>El celular en la mesa es el enemigo de la sobremesa: en la casa se come con la cara de uno, no con la cara de la aplicación.</li>
+    <li>Al influencer que exige gratis, se le cobra con dignidad: el que no paga con plata, que pague con respeto, o que se vaya.</li>
+    <li>Las manos que crean (cocinar, sembrar, pintar) curan la vitrina: el que hace, no tiene tiempo de compararse.</li>
+    <li>Y la autoestima no se construye en la pantalla: se construye en la mesa, en el abrazo, en el olor del hogao de la tía.</li>
+  </ul></div>
+  <div class="quote">"El espejo no miente: la pantalla sí. Y el que se mide con la pantalla, se rompe con el espejo. La cara de verdad no es perfecta: es la que está viva."</div>
+</div>
+
+<!-- ══ CIERRE DEL TOMO V ══ -->
+<div class="flow">
+  <div class="sep">❦</div>
+  <h3 class="chap" style="text-align:center;">CIERRE — Las quince puertas de la ciudad</h3>
+  <p>Este tomo tuvo quince puertas: la del mango que no era champú, la de la copa que apagó el "no", la de la silla vacía del cruce, la de la casa que volvió a oler a albahaca, la de la olla destapada por el bodeguero, la del hospital con candado en Agualarga, la de la libreta de tapas duras en La Bifurcada, la de la cena que se sirvió una sola vez, la de la esquina que se metió en el bolsillo, la del lobo que aprendió a escribir, la del termo en la puerta del CAI, la del mostrador que negó el apellido, la del acento que no delinque, la del cielo que preocupa, y la del espejo que por fin se destapó.</p>
+  <p>Ninguna de esas puertas se abrió con llave de oro. Se abrieron con la llave de la casa: la que tiene la mano callosa, el ojo atento y el corazón que no se rinde. <strong>Porque la ciudad duele, sí. Pero la ciudad también cuida. Y el que cuida, no deja que el dolor tenga la última palabra.</strong></p>
+  <div class="quote">"La ciudad que duele es la misma ciudad que abraza. Y en el abrazo de esta gente, hay más medicina que en todas las farmacias del mundo."</div>
+  <p style="text-align:right; font-style:italic;">— El Autor</p>
+</div>
+
+<!-- ══ CONTRAPORTADA TOMO V ══ -->
+<div class="page cover">
+  <div class="c-brand">COLECCIÓN LAS MANOS QUE CUIDAN · TOMO V</div>
+  <h1 style="font-size:1.8em;">LA CIUDAD<br>TAMBIÉN CUIDA</h1>
+  <div class="c-img"><img src="https://i.imgur.com/GWK8P4n.png" alt="Vital Hogar"></div>
+  <div class="c-sub">Si este tomo te reconoció —en el mango del baño, en la copa de la discoteca, en el mostrador que humilla, en el filtro que miente— ya sabes que la ciudad enferma, pero también sana. Y que ninguna herida urbana se cura en soledad. Existen manos profesionales que pueden sostener las tuyas: turnos de 6, 8, 12 y 24 horas y el mismo respeto que aprendí en casi treinta años.</div>
+  <div class="banda">VITAL HOGAR · 📲 wa.link/8zq5xe</div>
+  <div class="c-autor">Porque cuidar es sagrado. Y nadie debería hacerlo<br>con las manos vacías ni el corazón solo.</div>
+  <p class="c-sub" style="font-size:.8em; margin-top:6mm;"><strong style="color:#E8C766; letter-spacing:1px;">PRÓXIMAMENTE EN LA COLECCIÓN: TOMO VI — LA ÚLTIMA CASA</strong></p>
+</div>
+
+</body>
+</html>
